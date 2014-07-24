@@ -11,7 +11,7 @@ title: TribTalk Style
     <div class="masthead sixteen columns">
         <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
         <h1 class="sg-header">Stylesheet</h1>
-        <p>Welcome to the style guide for TribTalk, a publication of the Texas Tribune. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find the typography, colors, layout/grid, and other elements that give TribTalk its unique look.</p>
+        <p>Welcome to the style guide for TribTalk, a publication of the Texas Tribune. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find more details about the elements that give TribTalk its unique look.</p>
     </div>
     <div class="four columns">
         <div id='side-nav'>
@@ -47,6 +47,11 @@ title: TribTalk Style
                 <article>
                     <a name="grid-section"></a>
                     <h2>Grid</h2>
+                        <p><a href="http://neat.bourbon.io/">Neat</a> provides the foundation for the grid system for TribTalk.</p>
+                    <h3 class="sg-header">Header</h3>
+                        <p>For the site header, <span class="inline-class">.site-header</span> is used to establish the height, width, and fixed position of the header. A div with class <span class="inline-class">.wrapper</span> is then placed inside the header, and here it specifically utilizes the $pad mixin from Neat to set the padding around the h1 element.</p>
+                    <h3 class="sg-header">Main Content</h3>
+                        <p>The main content is placed within a div with class <span class="inline-class">.wrapper</span> to center it and give it a max width. The span-columns mixin is used to set the number of columns an element should span. The omega mixin is used to remove elements' gutter margin.</p>
                     <hr/>
                 </article>
             </div>
