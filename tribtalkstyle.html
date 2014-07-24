@@ -11,19 +11,19 @@ title: TribTalk Style
         <div class="masthead sixteen columns">
             <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
             <h1 class="sg-header">Stylesheet</h1>
+            <p>Welcome to the style guide for TribTalk. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find the typography, colors, layout/grid, and other elements that give TribTalk its unique look.</p>
         </div>
         <div class="four columns">
             <div id='side-nav'>
                 <ul>
-                    <li class='active'><a href='index.html'><span>Home</span></a></li>
                     <li><a href="#">Branding</a></li>
                     <li><a href="#">Grid</a></li>
                     <li><a href="#">Navigation</a></li>
-                    <li><a href="#">Headings</a></li>
+                    <li><a href="#heading-section">Headings</a></li>
                     <li><a href="#">Credits</a></li>
                     <li><a href="#">Paragraphs</a></li>
                     <li><a href="#color-section">Color</a></li>
-                    <li><a href="#">Inline Elements</a></li>
+                    <li><a href="#inline-elements">Inline Elements</a></li>
                     <li><a href="#">Images</a></li>
                     <li><a href="#">Icons</a></li>
                     <li><a href="#">Charts</a></li>
@@ -161,61 +161,67 @@ title: TribTalk Style
 
         <div class="row article_detail">
             <div class="main">
-            <h2>Headings</h2>
-            <hr/>
+                <a name="heading-section"></a>
                 <article>
-                <h1>H1/Headline</h1>
-                <h2>H2/Static Page Header</h2>
-                <h3>H3/Big Text (Log in)</h3>
-                <h4>H4/Sub Header</h4>
-                <h5>H5/Related Links:</h5>
-            </article>
+                    <h2>Headings</h2>
+                    <hr/>
+                    <h1>H1/Headline</h1>
+                    <h2>H2/Static Page Header</h2>
+                    <h3>H3/Big Text (Log in)</h3>
+                    <h4>H4/Sub Header</h4>
+                    <h5>H5/Related Links:</h5>
+                </article>
             </div>
         </div>
         <br class="clear"/>
-        <div class="row">
-            <h2 class="sg-header">Inline Elements</h2>
-            <hr/>
-            <p><a href="#">This is a text link</a></p>
+        <div class="row article_detail">
+            <div class="main">
+                <a name="inline-elements"></a>
+                <article>
+                    <h2>Inline Elements</h2>
+                    <hr/>
+                    <p><a href="#">This is a text link</a></p>
 
-            <p><strong>Strong is used to indicate strong importance</strong></p>
+                    <p><strong>Strong is used to indicate strong importance</strong></p>
 
-            <p><em>This text has added emphasis</em></p>
+                    <p><em>This text has added emphasis</em></p>
 
-            <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+                    <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
 
-            <p>The <i>i element</i> is text that is set off from the normal text</p>
+                    <p>The <i>i element</i> is text that is set off from the normal text</p>
 
-            <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+                    <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
 
-            <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+                    <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
 
-            <p><s>This text has a strikethrough</s></p>
+                    <p><s>This text has a strikethrough</s></p>
 
-            <p>Superscript<sup>®</sup></p>
+                    <p>Superscript<sup>®</sup></p>
 
-            <p>Subscript for things like H<sub>2</sub>O</p>
+                    <p>Subscript for things like H<sub>2</sub>O</p>
 
-            <p><small>This small text is small for for fine print, etc.</small></p>
+                    <p><small>This small text is small for for fine print, etc.</small></p>
 
-            <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+                    <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
 
-            <p>Keybord input: <kbd>Cmd</kbd></p>
+                    <p>Keybord input: <kbd>Cmd</kbd></p>
 
-            <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+                    <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
 
-            <p><cite>This is a citation</cite>
+                    <p><cite>This is a citation</cite>
 
-            </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+                    </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
 
-            <p>The <mark>mark element</mark> indicates a highlight</p>
+                    <p>The <mark>mark element</mark> indicates a highlight</p>
 
-            <p><code>This is what inline code looks like.</code></p>
+                    <p><code>This is what inline code looks like.</code></p>
 
-            <p><samp>This is sample output from a computer program</samp></p>
+                    <p><samp>This is sample output from a computer program</samp></p>
 
-            <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
-        </div>
+                    <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+                </article>
+            </div><!-- main -->
+        </div><!-- article_detail -->
         <br class="clear"/>
 
         <div class="row">
@@ -232,14 +238,3 @@ title: TribTalk Style
         </div>
 
     </div><!-- container -->
-
-{# <h2>Overview</h2>
-    <p>
-        Welcome to the style guide for TribTalk. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find the typography, colors, layout/grid, and other elements that give TribTalk its unique look.
-    </p>
-<h2>Typography</h2>
-    <h1>H1/Headline</h1>
-    <h2>H2/Static Page Header</h2>
-<h2>Colors</h2>
-<h2>Layout/Grid</h2>
-<h2>Elements</h2> #}
