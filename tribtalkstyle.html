@@ -8,233 +8,229 @@ title: TribTalk Style
     <body>
 
 <div class="container">
-        <div class="masthead sixteen columns">
-            <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
-            <h1 class="sg-header">Stylesheet</h1>
-            <p>Welcome to the style guide for TribTalk. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find the typography, colors, layout/grid, and other elements that give TribTalk its unique look.</p>
+    <div class="masthead sixteen columns">
+        <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
+        <h1 class="sg-header">Stylesheet</h1>
+        <p>Welcome to the style guide for TribTalk, a publication of the Texas Tribune. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find the typography, colors, layout/grid, and other elements that give TribTalk its unique look.</p>
+    </div>
+    <div class="four columns">
+        <div id='side-nav'>
+            <ul>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">Grid</a></li>
+                <li><a href="#">Navigation</a></li>
+                <li><a href="#heading-section">Headings</a></li>
+                <li><a href="#">Credits</a></li>
+                <li><a href="#">Paragraphs</a></li>
+                <li><a href="#color-section">Color</a></li>
+                <li><a href="#grayscale">Grayscale</a></li>
+                <li><a href="#inline-elements">Inline Elements</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#">Icons</a></li>
+                <li><a href="#">Charts</a></li>
+                <li><a href="#">Forms</a></li>
+            </ul>
         </div>
-        <div class="four columns">
-            <div id='side-nav'>
-                <ul>
-                    <li><a href="#">Branding</a></li>
-                    <li><a href="#">Grid</a></li>
-                    <li><a href="#">Navigation</a></li>
-                    <li><a href="#heading-section">Headings</a></li>
-                    <li><a href="#">Credits</a></li>
-                    <li><a href="#">Paragraphs</a></li>
-                    <li><a href="#color-section">Color</a></li>
-                    <li><a href="#inline-elements">Inline Elements</a></li>
-                    <li><a href="#">Images</a></li>
-                    <li><a href="#">Icons</a></li>
-                    <li><a href="#">Charts</a></li>
-                    <li><a href="#">Forms</a></li>
-                </ul>
-            </div>
+    </div>
+    <div class="twelve columns omega">
+    <div class="row article_detail">
+        <div class="main">
+            <article>
+                <a name="color-section"></a>
+                <h2>Color</h2>
+                <hr/>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #44bd6b;"></div>
+                    <span class="label">Environment<br/>#44bd6b<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #9AE6B3;"></div>
+                    <span class="label">Energy<br/>#9ae6b3<br/>rgb(19,19,19)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #7FCFDF;"></div>
+                    <span class="label">Health<br/>#7fcfdf<br/>rgb(40,40,40)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #469DDE;"></div>
+                    <span class="label">Government<br/>#469DDE<br/>rgb(68,68,68)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #1A354E;"></div>
+                    <span class="label">Paid Placement<br/>#1A354E<br/>rgb(102,102,102)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #8164A9;"></div>
+                    <span class="label">Higher Education<br/>#8164A9<br/>rgb(136,136,136)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #C05878;"></div>
+                    <span class="label">Immigration<br/>#C05878<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #C8A2C8;"></div>
+                    <span class="label">Public Education<br/>#C8A2C8<br/>rgb(19,19,19)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #B29674;"></div>
+                    <span class="label">Transportation <br/>#B29674<br/>rgb(40,40,40)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #DBDBA8;"></div>
+                    <span class="label">Economy<br/>#DBDBA8<br/>rgb(68,68,68)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #FFDD20;"></div>
+                    <span class="label">Politics<br/>#FFDD20<br/>rgb(102,102,102)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #FFAD33;"></div>
+                    <span class="label">Law &amp; Order<br/>#FFAD33<br/>rgb(136,136,136)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #FF7957;"></div>
+                    <span class="label">Demographics<br/>#FF7957<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #FF3300;"></div>
+                    <span class="label">Alert Red<br/>#FF3300<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #9DB75C;"></div>
+                    <span class="label">Light Avocado<br/>#9DB75C<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #8AC200;"></div>
+                    <span class="label">Avocado<br/>#8AC200<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #74A600;"></div>
+                    <span class="label">Link Avocado<br/>#74A600<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #4D6B00;"></div>
+                    <span class="label">Dark Avocado<br/>#4D6B00<br/>rgb(0,0,0)</span>
+                </div>
+            </article>
         </div>
-        <div class="twelve columns omega">
-            <a name="color-section"></a>
-        <div class="row">
-            <h2 class="sg-header">Colors</h2>
-            <hr/>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #44bd6b;"></div>
-                <span class="label">Environment<br/>#44bd6b<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #9AE6B3;"></div>
-                <span class="label">Energy<br/>#9ae6b3<br/>rgb(19,19,19)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #7FCFDF;"></div>
-                <span class="label">Health<br/>#7fcfdf<br/>rgb(40,40,40)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #469DDE;"></div>
-                <span class="label">Government<br/>#469DDE<br/>rgb(68,68,68)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #1A354E;"></div>
-                <span class="label">Paid Placement<br/>#1A354E<br/>rgb(102,102,102)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #8164A9;"></div>
-                <span class="label">Higher Education<br/>#8164A9<br/>rgb(136,136,136)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #C05878;"></div>
-                <span class="label">Immigration<br/>#C05878<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #C8A2C8;"></div>
-                <span class="label">Public Education<br/>#C8A2C8<br/>rgb(19,19,19)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #B29674;"></div>
-                <span class="label">Transportation <br/>#B29674<br/>rgb(40,40,40)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #DBDBA8;"></div>
-                <span class="label">Economy<br/>#DBDBA8<br/>rgb(68,68,68)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #FFDD20;"></div>
-                <span class="label">Politics<br/>#FFDD20<br/>rgb(102,102,102)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #FFAD33;"></div>
-                <span class="label">Law &amp; Order<br/>#FFAD33<br/>rgb(136,136,136)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #FF7957;"></div>
-                <span class="label">Demographics<br/>#FF7957<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #FF3300;"></div>
-                <span class="label">Alert Red<br/>#FF3300<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #9DB75C;"></div>
-                <span class="label">Light Avocado<br/>#9DB75C<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #8AC200;"></div>
-                <span class="label">Avocado<br/>#8AC200<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #74A600;"></div>
-                <span class="label">Link Avocado<br/>#74A600<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #4D6B00;"></div>
-                <span class="label">Dark Avocado<br/>#4D6B00<br/>rgb(0,0,0)</span>
-            </div>
+    </div>
+    <br class="clear"/>
+    <div class="row article_detail">
+        <div class="main">
+            <article>
+                <a name="grayscale"></a>
+                <h2>Grayscale</h2>
+                <hr/>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #000;"></div>
+                    <span class="label">#000<br/>rgb(0,0,0)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #131313;"></div>
+                    <span class="label">#131313<br/>rgb(19,19,19)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #282828;"></div>
+                    <span class="label">#282828<br/>rgb(40,40,40)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #444;"></div>
+                    <span class="label">#444<br/>rgb(68,68,68)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #666;"></div>
+                    <span class="label">#666<br/>rgb(102,102,102)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #888;"></div>
+                    <span class="label">#888<br/>rgb(136,136,136)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #aaa;"></div>
+                    <span class="label">#aaa<br/>rgb(170,170,170)</span>
+                </div>
+                <div class="swatch four columns column">
+                    <div class="colorfield" style="background: #ccc;"></div>
+                    <span class="label">#ccc<br/>rgb(204,204,204)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #ddd;"></div>
+                    <span class="label">#ddd<br/>rgb(221,221,221)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #f5f5f5;"></div>
+                    <span class="label">#f5f5f5<br/>rgb(245,245,245)</span>
+                </div>
+                <div class="swatch four columns">
+                    <div class="colorfield" style="background: #fff;"></div>
+                    <span class="label">#fff<br/>rgb(255,255,255)</span>
+                </div>
+            </article>
         </div>
-        <br class="clear"/>
-        <div class="row">
-            <h2 class="sg-header">Grayscale</h2>
-            <hr/>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #000;"></div>
-                <span class="label">#000<br/>rgb(0,0,0)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #131313;"></div>
-                <span class="label">#131313<br/>rgb(19,19,19)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #282828;"></div>
-                <span class="label">#282828<br/>rgb(40,40,40)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #444;"></div>
-                <span class="label">#444<br/>rgb(68,68,68)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #666;"></div>
-                <span class="label">#666<br/>rgb(102,102,102)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #888;"></div>
-                <span class="label">#888<br/>rgb(136,136,136)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #aaa;"></div>
-                <span class="label">#aaa<br/>rgb(170,170,170)</span>
-            </div>
-            <div class="swatch four columns column">
-                <div class="colorfield" style="background: #ccc;"></div>
-                <span class="label">#ccc<br/>rgb(204,204,204)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #ddd;"></div>
-                <span class="label">#ddd<br/>rgb(221,221,221)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #f5f5f5;"></div>
-                <span class="label">#f5f5f5<br/>rgb(245,245,245)</span>
-            </div>
-            <div class="swatch four columns">
-                <div class="colorfield" style="background: #fff;"></div>
-                <span class="label">#fff<br/>rgb(255,255,255)</span>
-            </div>
+    </div>
+    <div class="row article_detail">
+        <div class="main">
+            <a name="heading-section"></a>
+            <article>
+                <h2>Headings</h2>
+                <hr/>
+                <h1>H1/Headline</h1>
+                <h2>H2/Static Page Header</h2>
+                <h3>H3/Big Text (Log in)</h3>
+                <h4>H4/Sub Header</h4>
+                <h5>H5/Related Links:</h5>
+            </article>
         </div>
+    </div>
+    <br class="clear"/>
+    <div class="row article_detail">
+        <div class="main">
+            <a name="inline-elements"></a>
+            <article>
+                <h2>Inline Elements</h2>
+                <hr/>
+                <p><a href="#">This is a text link</a></p>
 
-        <div class="row article_detail">
-            <div class="main">
-                <a name="heading-section"></a>
-                <article>
-                    <h2>Headings</h2>
-                    <hr/>
-                    <h1>H1/Headline</h1>
-                    <h2>H2/Static Page Header</h2>
-                    <h3>H3/Big Text (Log in)</h3>
-                    <h4>H4/Sub Header</h4>
-                    <h5>H5/Related Links:</h5>
-                </article>
-            </div>
+                <p><strong>Strong is used to indicate strong importance</strong></p>
+
+                <p><em>This text has added emphasis</em></p>
+
+                <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+
+                <p>The <i>i element</i> is text that is set off from the normal text</p>
+
+                <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+
+                <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+
+                <p><s>This text has a strikethrough</s></p>
+
+                <p>Superscript<sup>®</sup></p>
+
+                <p>Subscript for things like H<sub>2</sub>O</p>
+
+                <p><small>This small text is small for for fine print, etc.</small></p>
+
+                <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+
+                <p>Keybord input: <kbd>Cmd</kbd></p>
+
+                <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+
+                <p><cite>This is a citation</cite>
+
+                </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+
+                <p>The <mark>mark element</mark> indicates a highlight</p>
+
+                <p><code>This is what inline code looks like.</code></p>
+
+                <p><samp>This is sample output from a computer program</samp></p>
+
+                <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+            </article>
+        </div><!-- main -->
+    </div><!-- article_detail -->
         </div>
-        <br class="clear"/>
-        <div class="row article_detail">
-            <div class="main">
-                <a name="inline-elements"></a>
-                <article>
-                    <h2>Inline Elements</h2>
-                    <hr/>
-                    <p><a href="#">This is a text link</a></p>
-
-                    <p><strong>Strong is used to indicate strong importance</strong></p>
-
-                    <p><em>This text has added emphasis</em></p>
-
-                    <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
-
-                    <p>The <i>i element</i> is text that is set off from the normal text</p>
-
-                    <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
-
-                    <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
-
-                    <p><s>This text has a strikethrough</s></p>
-
-                    <p>Superscript<sup>®</sup></p>
-
-                    <p>Subscript for things like H<sub>2</sub>O</p>
-
-                    <p><small>This small text is small for for fine print, etc.</small></p>
-
-                    <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
-
-                    <p>Keybord input: <kbd>Cmd</kbd></p>
-
-                    <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
-
-                    <p><cite>This is a citation</cite>
-
-                    </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
-
-                    <p>The <mark>mark element</mark> indicates a highlight</p>
-
-                    <p><code>This is what inline code looks like.</code></p>
-
-                    <p><samp>This is sample output from a computer program</samp></p>
-
-                    <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
-                </article>
-            </div><!-- main -->
-        </div><!-- article_detail -->
-        <br class="clear"/>
-
-        <div class="row">
-            <h2 class="sg-header">header</h2>
-            <hr/>
-
-        </div>
-        </div>
-
-
-
-
-
-        </div>
-
-    </div><!-- container -->
+    </div>
+</div><!-- container -->
