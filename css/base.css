@@ -816,10 +816,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Styles */
 
+/* For inline classes to highlight */
 .inline-class {
   color: #8ac200;
 }
 
+/* For code examples */
 .example-code {
   margin-bottom: 1em;
   background-color: #fafafa;
@@ -830,6 +832,14 @@ pre {
   background-color: #fafafa;
   padding: 0;
   white-space: pre-wrap;
+}
+
+#main-page-header {
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: none;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 
