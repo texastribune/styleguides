@@ -12,7 +12,7 @@ title: TribTalk Style
     <div class="masthead sixteen columns">
         <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
         <h1 class="sg-header">Stylesheet</h1>
-        <p>Welcome to the style guide for TribTalk, a publication of the Texas Tribune. TribTalk's styles are written originally in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find more details about the elements that give TribTalk its unique look.</p>
+        <p>This is the style guide for TribTalk, a publication of the Texas Tribune. TribTalk's styles are written in Sass. TribTalk uses the Bourbon mixin library for some addons, CSS3 elements, functions, and helpers. It also uses Neat for its grid system and responsive layout. Below you'll find more details about the elements that give TribTalk its unique look.</p>
     </div>
     <div class="four columns">
         <div id='side-nav'>
@@ -53,11 +53,15 @@ title: TribTalk Style
                     <h3 class="sg-header">Font</h3>
                         <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
                     <h3 class="sg-header">Headings</h3>
-                        <h1>H1/Headline</h1>
-                        <h2>H2/Static Page Header</h2>
+                        <h1 class="small">H1 - Site Header</h1>
+                            <p>This h1 with a class of <span class="inline-class">small</span> is used in the site header.</p>
+                        <h2>H2 - Main Article Detail Header</h2>
+                            <p>This h2 is used on main article detail pages.</p>
+                        <div class="page main">
+                            <h2>H2 - Static Page Header</h2>
+                        </div>
+                            <p>This h2 is used as a static page header.</p>
                         <h3>H3/Big Text (Log in)</h3>
-                        <h4>H4/Sub Header</h4>
-                        <h5>H5/Related Links:</h5>
                 </article>
             </div>
         </div>
@@ -265,7 +269,7 @@ title: TribTalk Style
 
                     <p>Subscript for things like H<sub>2</sub>O</p>
 
-                    <p><small>This small text is small for for fine print, etc.</small></p>
+                    <p><small>This small text is small for fine print, etc.</small></p>
 
                     <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
 
@@ -283,7 +287,7 @@ title: TribTalk Style
 
                     <p><samp>This is sample output from a computer program</samp></p>
 
-                    <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+                    <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var></p>
                 </article>
             </div><!-- main -->
         </div><!-- article_detail -->
