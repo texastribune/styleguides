@@ -820,13 +820,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #8ac200;
 }
 
-.example {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px 4px 0 0;
-  padding: 2em 1em 1em 1em;
-}
-
 .example-code {
   background-color: #fafafa;
   margin-bottom: 1em;
