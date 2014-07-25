@@ -27,7 +27,7 @@ title: TribTalk Style
                 <li><a href="#grayscale-section">Grayscale</a></li>
                 <li><a href="#inline-elements-section">Inline Elements</a></li>
                 <li><a href="#images-section">Images</a></li>
-                <li><a href="#credits-section">Credits</a></li>
+                <li><a href="#credits-section">Bylines & Credits</a></li>
                 <li><a href="#icons-section">Icons</a></li>
                 <li><a href="#charts-section">Charts</a></li>
                 <li><a href="#forms-section">Forms</a></li>
@@ -356,19 +356,34 @@ title: TribTalk Style
             <div class="main">
                 <article>
                     <a name="credits-section"></a>
-                    <h2>Credits</h2>
-                    <p>Photo credits appear as italicized captions beneath the appropriate images. Use an outer paragraph with class <span class="inline-class">caption</span>, and then place a span with a class of <span class="inline-class">credit</span> around the credit. The copy should be "Photo by" followed by the photographer's first and last name.</p>
-                    <div class="code-example">
-                        <pre>
-                            <code>
-                                &lt;p class="caption"&gt;
-                                    &lt;span class="credit"&gt;
-                                        Photo by FirstName LastName
-                                    &lt;/span&gt;
-                                &lt;/p&gt;
-                            </code>
-                        </pre>
-                    </div>
+                    <h2>Bylines & Credits</h2>
+                    </hr>
+                    <h3 class="sg-header">Bylines</h3>
+                        <p>Bylines are placed inside of a paragraph with a class of <span class="inline-class">byline</span> and a span with a class of <span class="inline-class">authors</span>. The copy for bylines is "By FirstName LastName, Month Day, Year". Authors' names should be links going to their author detail page.</p>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+                                    &lt;p class="byline"&gt;
+                                        &lt;span class="authors"&gt;
+                                            By &lt;a href="#"&gt;FirstName LastName&lt;/a&gt;, Month Day, Year
+                                        &lt;/span&gt;
+                                    &lt;/p&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <h3 class="sg-header">Image Credits</h3>
+                        <p>Photo credits appear as italicized captions beneath the appropriate images. Use an outer paragraph with class <span class="inline-class">caption</span>, and then place a span with a class of <span class="inline-class">credit</span> around the credit. The copy should be "Photo by FirstName LastName".</p>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+                                    &lt;p class="caption"&gt;
+                                        &lt;span class="credit"&gt;
+                                            Photo by FirstName LastName
+                                        &lt;/span&gt;
+                                    &lt;/p&gt;
+                                </code>
+                            </pre>
+                        </div>
                     <hr/>
                 </article>
             </div>
