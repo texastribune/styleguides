@@ -19,20 +19,20 @@ title: TribTalk Style
         <div id='side-nav'>
             <ul>
                 <li><a href="#branding-section">Branding</a></li>
-                <li><a href="#grid-section">Grid</a></li>
-                <li><a href="#navigation-section">Navigation</a></li>
                 <li><a href="#typography-section">Typography</a></li>
-                <li><a href="#paragraphs-section">Paragraphs</a></li>
                 <li><a href="#color-section">Color</a></li>
                 <li><a href="#grayscale-section">Grayscale</a></li>
+                <li><a href="#grid-section">Grid</a></li>
+                <li><a href="#navigation-section">Navigation</a></li>
                 <li><a href="#inline-elements-section">Inline Elements</a></li>
-                <li><a href="#hr-section">Horizontal Rules</a></li>
-                <li><a href="#lists-section">Lists</a></li>
                 <li><a href="#images-section">Images</a></li>
                 <li><a href="#credits-section">Bylines & Credits</a></li>
-                <li><a href="#icons-section">Icons</a></li>
-                <li><a href="#charts-section">Charts</a></li>
+                <li><a href="#paragraphs-section">Paragraphs</a></li>
+                <li><a href="#lists-section">Lists</a></li>
                 <li><a href="#forms-section">Forms</a></li>
+                <li><a href="#icons-section">Icons</a></li>
+                <li><a href="#hr-section">Horizontal Rules</a></li>
+                <li><a href="#charts-section">Charts</a></li>
             </ul>
         </div>
     </div>
@@ -48,99 +48,18 @@ title: TribTalk Style
         </div>
         <div class="row article_detail">
             <div class="main">
+                <a name="typography-section"></a>
                 <article>
-                    <a name="grid-section"></a>
-                    <h2>Grid</h2>
-                        <p><a href="http://neat.bourbon.io/" target="_blank">Neat</a> provides the foundation for the grid system for TribTalk.</p>
-                    <h3 class="sg-header">Header</h3>
-                        <p>For the site header, <span class="inline-class">.site-header</span> is used to establish the height, width, and fixed position of the header. A div with class <span class="inline-class">.wrapper</span> is then placed inside the header.</p>
-                        <div class="example-code">
-                            <pre>
-                                <code>
-                                    &lt;header class="site-header"&gt;
-                                        &lt;div class="wrapper"&gt;
-                                        &lt;/div&gt;
-                                    &lt;/header&gt;
-                                </code>
-                            </pre>
-                        </div>
-                    <h3 class="sg-header">Main Content</h3>
-                        <p>The main content is placed within a div with class <span class="inline-class">.wrapper</span> to center it and give it a max width. The span-columns mixin is used to set the number of columns an element should span. The omega mixin is used to remove elements' gutter margin.</p>
-                        <div class="example-code">
-                            <pre>
-                                <code>
-                                    &lt;div class="wrapper"&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </div>
+                    <h2>Typography</h2>
                     <hr/>
-                </article>
-            </div>
-        </div>
-        <div class="row article_detail">
-            <div class="main">
-                <article>
-                    <a name="navigation-section"></a>
-                    <h2>Navigation</h2>
-                    <h3 class="sg-header">Main Menu</h3>
-                        <p>Main site navigation is activated with the hamburger icon. jQuery is used to add classes that toggle the menu open and closed when clicked.</p>
-                        <p>The menu includes About, Authors, Submit, Paid Placement, Donate, and a link to the main Texas Tribune site.</p>
-                    <hr/>
-                </article>
-            </div>
-        </div>
-        <div class="row article_detail">
-            <div class="main">
-                <article>
-                    <a name="paragraphs-section"></a>
-                    <h2>Paragraphs</h2>
-                    <h3 class="sg-header">Homepage - article body</h3>
-                        <p>Paragraphs inside <span class="inline-class">.article_body</span> have a font size of 1.1em, line height of 1.4, color #282828, bottom margin of .75em, top margin of 0, and font weight of 200. This style is found on TribTalk's homepage.</p>
-                        <div class="example-code">
-                            <pre>
-                            <code>
-                                &lt;div class=".article_body"&gt;
-                                    &lt;p&gt;
-                                        ...
-                                    &lt;/p&gt;
-                                &lt;/div&gt;
-                            </code>
-                            </pre>
-                        </div>
-                    <h3 class="sg-header">Main article detail</h3>
-                        <p>Paragraphs inside <span class="inline-class">.article_detail</span> and <span class="inline-class">.main article</span> are styled with font size of 1.1em, line height of 1.4, and color #282828. You'll find this style on individual article pages.</p>
-                        <div class="example-code">
-                            <pre>
-                                <code>
-                                    &lt;body class="article_detail"&gt;
-                                        &lt;div class="main"&gt;
-                                            &lt;article&gt;
-                                                &lt;p&gt;
-                                                    ...
-                                                &lt;/p&gt;
-                                            &lt;/article&gt;
-                                        &lt;/div&gt;
-                                    &lt;/body&gt;
-                                </code>
-                            </pre>
-                        </div>
-                    <h3 class="sg-header">About, Submit & Paid Placement pages</h3>
-                        <p>Paragraphs here have body class <span class="inline-class">.page</span> and div class <span class="inline-class">.main</span>. They're styled the same way as main article detail pages.</p>
-                        <div class="example-code">
-                            <pre>
-                                <code>
-                                    &lt;body class="page"&gt;
-                                        &lt;div class="main"&gt;
-                                            &lt;p&gt;
-                                                ...
-                                            &lt;/p&gt;
-                                        &lt;/div&gt;
-                                    &lt;/body&gt;
-                                </code>
-                            </pre>
-                        </div>
-                    <hr/>
+                    <h3 class="sg-header">Font</h3>
+                        <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
+                    <h3 class="sg-header">Headings</h3>
+                        <h1>H1/Headline</h1>
+                        <h2>H2/Static Page Header</h2>
+                        <h3>H3/Big Text (Log in)</h3>
+                        <h4>H4/Sub Header</h4>
+                        <h5>H5/Related Links:</h5>
                 </article>
             </div>
         </div>
@@ -225,7 +144,6 @@ title: TribTalk Style
                 </article>
             </div>
         </div>
-        <br class="clear"/>
         <div class="row article_detail">
             <div class="main">
                 <article>
@@ -281,22 +199,48 @@ title: TribTalk Style
         </div>
         <div class="row article_detail">
             <div class="main">
-                <a name="typography-section"></a>
                 <article>
-                    <h2>Typography</h2>
+                    <a name="grid-section"></a>
+                    <h2>Grid</h2>
+                        <p><a href="http://neat.bourbon.io/" target="_blank">Neat</a> provides the foundation for the grid system for TribTalk.</p>
+                    <h3 class="sg-header">Header</h3>
+                        <p>For the site header, <span class="inline-class">.site-header</span> is used to establish the height, width, and fixed position of the header. A div with class <span class="inline-class">.wrapper</span> is then placed inside the header.</p>
+                        <div class="example-code">
+                            <pre>
+                                <code>
+                                    &lt;header class="site-header"&gt;
+                                        &lt;div class="wrapper"&gt;
+                                        &lt;/div&gt;
+                                    &lt;/header&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <h3 class="sg-header">Main Content</h3>
+                        <p>The main content is placed within a div with class <span class="inline-class">.wrapper</span> to center it and give it a max width. The span-columns mixin is used to set the number of columns an element should span. The omega mixin is used to remove elements' gutter margin.</p>
+                        <div class="example-code">
+                            <pre>
+                                <code>
+                                    &lt;div class="wrapper"&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
                     <hr/>
-                    <h3 class="sg-header">Font</h3>
-                        <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
-                    <h3 class="sg-header">Headings</h3>
-                        <h1>H1/Headline</h1>
-                        <h2>H2/Static Page Header</h2>
-                        <h3>H3/Big Text (Log in)</h3>
-                        <h4>H4/Sub Header</h4>
-                        <h5>H5/Related Links:</h5>
                 </article>
             </div>
         </div>
-        <br class="clear"/>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="navigation-section"></a>
+                    <h2>Navigation</h2>
+                    <h3 class="sg-header">Main Menu</h3>
+                        <p>Main site navigation is activated with the hamburger icon. jQuery is used to add classes that toggle the menu open and closed when clicked.</p>
+                        <p>The menu includes About, Authors, Submit, Paid Placement, Donate, and a link to the main Texas Tribune site.</p>
+                    <hr/>
+                </article>
+            </div>
+        </div>
         <div class="row article_detail">
             <div class="main">
                 <a name="inline-elements-section"></a>
@@ -345,48 +289,6 @@ title: TribTalk Style
                 </article>
             </div><!-- main -->
         </div><!-- article_detail -->
-        <div class="row article_detail">
-            <div class="main">
-                <article>
-                    <a name="hr-section"></a>
-                    <h2>Horizontal Rules</h2>
-                    <hr/>
-                    <p>Horizontal rules are styled in <span style="color: #8ac200">avocado</span> and are found on the authors page.</p>
-                    <div class="code-example">
-                        <pre>
-                            <code>
-                                &lt;hr&gt;
-                            </code>
-                        </pre>
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="row article_detail">
-            <div class="main">
-                <article>
-                    <a name="lists-section"></a>
-                    <h2>Lists</h2>
-                    <hr/>
-                    <p>Lists can be found on the submit page. Lists are styled with bullets delineating each line to the left of the text.</p>
-                    <div class="code-example">
-                        <pre>
-                            <code>
-                                &lt;body class="page"&gt;
-                                    &lt;div class="main"&gt;
-                                        &lt;ul&gt;
-                                            &lt;li&gt;
-                                                ...
-                                            &lt;/li&gt;
-                                        &lt;/ul&gt;
-                                    &lt;/div&gt;
-                                &lt;/body&gt;
-                            </code>
-                        </pre>
-                    </div>
-                </article>
-            </div>
-        </div>
         <div class="row article_detail">
             <div class="main">
                 <article>
@@ -451,28 +353,79 @@ title: TribTalk Style
         <div class="row article_detail">
             <div class="main">
                 <article>
-                    <a name="icons-section"></a>
-                    <h2>Icons</h2>
-                    <hr/>
-                    <h3 class="sg-header">Social Media</h3>
-                    <p>Font Awesome is used for icons. Facebook and Twitter social media icons are included in the header and footer. On main article detail pages, icons appear both to the right and below the article. Facebook, Twitter, and Linkedin are included here, as well as icons for sharing via email and a link to joining the Tribune. The hover color is <span style="color: #8ac200">avocado</span>. Icons that are links should have target="_blank" to ensure that they open in new windows.</p>
-                    <div class="code-example">
-                        <pre>
+                    <a name="paragraphs-section"></a>
+                    <h2>Paragraphs</h2>
+                    <h3 class="sg-header">Homepage - article body</h3>
+                        <p>Paragraphs inside <span class="inline-class">.article_body</span> have a font size of 1.1em, line height of 1.4, color #282828, bottom margin of .75em, top margin of 0, and font weight of 200. This style is found on TribTalk's homepage.</p>
+                        <div class="example-code">
+                            <pre>
                             <code>
-                                &lt;i class="fa fa-{name}"&gt;
-                                &lt;/i&gt;
+                                &lt;div class=".article_body"&gt;
+                                    &lt;p&gt;
+                                        ...
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
                             </code>
-                        </pre>
-                    </div>
+                            </pre>
+                        </div>
+                    <h3 class="sg-header">Main article detail</h3>
+                        <p>Paragraphs inside <span class="inline-class">.article_detail</span> and <span class="inline-class">.main article</span> are styled with font size of 1.1em, line height of 1.4, and color #282828. You'll find this style on individual article pages.</p>
+                        <div class="example-code">
+                            <pre>
+                                <code>
+                                    &lt;body class="article_detail"&gt;
+                                        &lt;div class="main"&gt;
+                                            &lt;article&gt;
+                                                &lt;p&gt;
+                                                    ...
+                                                &lt;/p&gt;
+                                            &lt;/article&gt;
+                                        &lt;/div&gt;
+                                    &lt;/body&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <h3 class="sg-header">About, Submit & Paid Placement pages</h3>
+                        <p>Paragraphs here have body class <span class="inline-class">.page</span> and div class <span class="inline-class">.main</span>. They're styled the same way as main article detail pages.</p>
+                        <div class="example-code">
+                            <pre>
+                                <code>
+                                    &lt;body class="page"&gt;
+                                        &lt;div class="main"&gt;
+                                            &lt;p&gt;
+                                                ...
+                                            &lt;/p&gt;
+                                        &lt;/div&gt;
+                                    &lt;/body&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <hr/>
                 </article>
             </div>
         </div>
         <div class="row article_detail">
             <div class="main">
                 <article>
-                    <a name="charts-section"></a>
-                    <h2>Charts</h2>
+                    <a name="lists-section"></a>
+                    <h2>Lists</h2>
                     <hr/>
+                    <p>Lists can be found on the submit page. Lists are styled with bullets delineating each line to the left of the text.</p>
+                    <div class="code-example">
+                        <pre>
+                            <code>
+                                &lt;body class="page"&gt;
+                                    &lt;div class="main"&gt;
+                                        &lt;ul&gt;
+                                            &lt;li&gt;
+                                                ...
+                                            &lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/body&gt;
+                            </code>
+                        </pre>
+                    </div>
                 </article>
             </div>
         </div>
@@ -493,6 +446,51 @@ title: TribTalk Style
                             </code>
                             </pre>
                         </div>
+                    <hr/>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="icons-section"></a>
+                    <h2>Icons</h2>
+                    <hr/>
+                    <h3 class="sg-header">Social Media</h3>
+                    <p>Font Awesome is used for icons. Facebook and Twitter social media icons are included in the header and footer. On main article detail pages, icons appear both to the right and below the article. Facebook, Twitter, and Linkedin are included here, as well as icons for sharing via email and a link to joining the Tribune. The hover color is <span style="color: #8ac200">avocado</span>. Icons that are links should have target="_blank" to ensure that they open in new windows.</p>
+                    <div class="code-example">
+                        <pre>
+                            <code>
+                                &lt;i class="fa fa-{name}"&gt;
+                                &lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="hr-section"></a>
+                    <h2>Horizontal Rules</h2>
+                    <hr/>
+                    <p>Horizontal rules are styled in <span style="color: #8ac200">avocado</span> and are found on the authors page.</p>
+                    <div class="code-example">
+                        <pre>
+                            <code>
+                                &lt;hr&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="charts-section"></a>
+                    <h2>Charts</h2>
                     <hr/>
                 </article>
             </div>
