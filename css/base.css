@@ -821,13 +821,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .example-code {
-  background-color: #fafafa;
   margin-bottom: 1em;
+  background-color: #fafafa;
 }
 
 pre {
   margin-bottom: 0;
-  background-color: transparent;
+  background-color: #fafafa;
   padding: 0;
   white-space: pre-wrap;
 }
