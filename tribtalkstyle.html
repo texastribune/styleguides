@@ -297,6 +297,32 @@ title: TribTalk Style
                     <h2>Images</h2>
                     <hr/>
                         <p>It's preferred that img tags always have alt tags to fall back on. Alt tags should communicate as close to the same information as the image as possible.</p>
+                    <h3 class="sg-header">Homepage Slider</h3>
+                        <p>There are three images slated for the slider at the top of the homepage. These images have a class of <span class="inline-class">.lede_art</span>. They are placed inside a div with a class of <span class="inline-class">.flexslider</span>, then a ul with class of <span class="inline-class">.slides</span>, then an li with class <span class="inline-class">.flex-active-slide</span>. These images are inside links that go to the main article detail page.</p>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+                                    &lt;div class="flexslider"&gt;
+                                        &lt;ul class="slides"&gt;
+                                            &lt;li class="flex-active-slide"&gt;
+                                                &lt;img class="lede_art" src=""&gt;
+                                            &lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <h3 class="sg-header">Homepage</h3>
+                        <p>Images on the homepage below the slider are wrapped in divs with a class of <span class="inline-class">.media</span>. They are then images with a class of <span class="inline-class">.lede_art</span>.</p>
+                        <div class="code-example">
+                            <pre>
+                                <code>
+                                    &lt;div class="media"&gt;
+                                        &lt;img class="lede_art" src=""&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
                     <h3 class="sg-header">Main Article Detail Page</h3>
                         <p>Images on the main article detail page have a class of <span class="inline-class">.lede_art</span>.</p>
                         <div class="code-example">
