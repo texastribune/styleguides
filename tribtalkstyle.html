@@ -22,12 +22,12 @@ title: TribTalk Style
                 <li><a href="#grid-section">Grid</a></li>
                 <li><a href="#navigation-section">Navigation</a></li>
                 <li><a href="#typography-section">Typography</a></li>
-                <li><a href="#credits-section">Credits</a></li>
                 <li><a href="#paragraphs-section">Paragraphs</a></li>
                 <li><a href="#color-section">Color</a></li>
                 <li><a href="#grayscale-section">Grayscale</a></li>
                 <li><a href="#inline-elements-section">Inline Elements</a></li>
                 <li><a href="#images-section">Images</a></li>
+                <li><a href="#credits-section">Credits</a></li>
                 <li><a href="#icons-section">Icons</a></li>
                 <li><a href="#charts-section">Charts</a></li>
                 <li><a href="#forms-section">Forms</a></li>
@@ -49,7 +49,7 @@ title: TribTalk Style
                 <article>
                     <a name="grid-section"></a>
                     <h2>Grid</h2>
-                        <p><a href="http://neat.bourbon.io/">Neat</a> provides the foundation for the grid system for TribTalk.</p>
+                        <p><a href="http://neat.bourbon.io/" target="_blank">Neat</a> provides the foundation for the grid system for TribTalk.</p>
                     <h3 class="sg-header">Header</h3>
                         <p>For the site header, <span class="inline-class">.site-header</span> is used to establish the height, width, and fixed position of the header. A div with class <span class="inline-class">.wrapper</span> is then placed inside the header.</p>
                         <div class="example-code">
@@ -84,15 +84,6 @@ title: TribTalk Style
                     <h3 class="sg-header">Main Menu</h3>
                         <p>Main site navigation is activated with the hamburger icon. jQuery is used to add classes that toggle the menu open and closed when clicked.</p>
                         <p>The menu includes About, Authors, Submit, Paid Placement, Donate, and a link to the main Texas Tribune site.</p>
-                    <hr/>
-                </article>
-            </div>
-        </div>
-        <div class="row article_detail">
-            <div class="main">
-                <article>
-                    <a name="credits-section"></a>
-                    <h2>Credits</h2>
                     <hr/>
                 </article>
             </div>
@@ -293,7 +284,7 @@ title: TribTalk Style
                     <h2>Typography</h2>
                     <hr/>
                     <h3 class="sg-header">Font</h3>
-                        <p><a href="https://typekit.com/fonts/freight-sans-pro">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
+                        <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
                     <h3 class="sg-header">Headings</h3>
                         <h1>H1/Headline</h1>
                         <h2>H2/Static Page Header</h2>
@@ -357,6 +348,27 @@ title: TribTalk Style
                 <article>
                     <a name="images-section"></a>
                     <h2>Images</h2>
+                    <hr/>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="credits-section"></a>
+                    <h2>Credits</h2>
+                    <p>Photo credits appear as italicized captions beneath the appropriate images. Use an outer paragraph with class <span class="inline-class">caption</span>, and then place a span with a class of <span class="inline-class">credit</span> around the credit. The copy should be "Photo by" followed by the photographer's first and last name.</p>
+                    <div class="code-example">
+                        <pre>
+                            <code>
+                                &lt;p class="caption"&gt;
+                                    &lt;span class="credit"&gt;
+                                        Photo by FirstName LastName
+                                    &lt;/span&gt;
+                                &lt;/p&gt;
+                            </code>
+                        </pre>
+                    </div>
                     <hr/>
                 </article>
             </div>

@@ -82,8 +82,8 @@
 
 /* #Links
 ================================================== */
-  a, a:visited { color: #74a600; text-decoration: underline; outline: 0; }
-  a:hover, a:focus { color: #4d6b00; }
+  a, a:visited { color: #4d6b00; text-decoration: underline; outline: 0; }
+  a:hover, a:focus { color: #74a600; }
   p a, p a:visited { line-height: inherit; }
 
 
