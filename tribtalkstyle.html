@@ -17,6 +17,9 @@ title: TribTalk Style
     <div class="four columns">
         <div id='side-nav'>
             <ul>
+                <li><a href="#sass-section">Sass/CSS</a></li>
+                <li><a href="#javascript-section">JavaScript</a></li>
+                <li><a href="#requirements-section">Requirements</a></li>
                 <li><a href="#branding-section">Branding</a></li>
                 <li><a href="#typography-section">Typography</a></li>
                 <li><a href="#color-section">Color</a></li>
@@ -38,6 +41,35 @@ title: TribTalk Style
         <div class="row article_detail">
             <div class="main">
                 <article>
+                    <a name="sass-section"></a>
+                    <h2>Sass/CSS</h2>
+                    <hr/>
+                    <p>Sass styles are written in .sass. All Sass files are imported into the project's main Sass file, app.sass, and then Grunt is used to compile it to app.css and minify it. Compiled CSS for TribTalk is not checked into the GitHub repo.</p>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="javascript-section"></a>
+                    <h2>JavaScript</h2>
+                    <hr/>
+                    <p>JavaScript is used to toggle the nav menu and to implement infinite scroll. Backbone is used for adding comments and giving respect to comments. TribTalk also uses one jQuery plugin, <a href="http://simplemodal.com">simple modal</a>.</p>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
+                    <a name="requirements-section"></a>
+                    <h2>Requirements</h2>
+                    <hr/>
+                </article>
+            </div>
+        </div>
+        <div class="row article_detail">
+            <div class="main">
+                <article>
                     <a name="branding-section"></a>
                     <h2>Branding</h2>
                     <hr/>
@@ -51,7 +83,7 @@ title: TribTalk Style
                     <h2>Typography</h2>
                     <hr/>
                     <h3 class="sg-header">Font</h3>
-                        <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif.</p>
+                        <p><a href="https://typekit.com/fonts/freight-sans-pro" target="_blank">Freight Sans Pro</a> is the preferred font family for TribTalk. The first fallback is Helvetica, then Arial, and finally, sans-serif. TribTalk has its own kit in Typekit for fonts to be pulled from.</p>
                     <h3 class="sg-header">Headings</h3>
                         <h1 class="small">H1 - Site Header</h1>
                             <p>This h1 with a class of <span class="inline-class">small</span> is used in the site header.</p>
