@@ -1,0 +1,101 @@
+// DELETEME should be refactored into general purposes instead of page specific
+// logic later
+
+
+// FIXME use someone else's clearfix
+.clearfix
+  overflow: hidden
+
+.drop-label-container
+  border-top: 4px solid $brightGreen
+
+.drop-label
+  background: $brightGreen
+  float: left
+  padding: 0 0.55em 4px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-weight: 600
+  padding: .3em .8em
+  font-size: .86em
+
+.author-header
+  h1
+    text-transform: none
+    font-size: 2.2em
+    margin: 0
+  p
+    margin: 0
+
+.author-title
+  color: $midDarkGray
+  font-size: 1.4em
+  font-weight: 500
+
+.author-twitter
+  font-weight: 500
+  a
+    color: $midLightGray
+    &:hover
+      color: black
+      text-decoration: underline
+
+.author-profile
+  border-bottom: 2px solid $brightGreen
+  text-align: left
+  padding: 1.5em 0
+  p
+    font-size: 1.1em
+    color: $darkGray
+    line-height: 1.4
+  .content
+    min-height: 210px // FIXME same height as the author .media
+.author-detail
+  .avatar
+    // TODO refactor. This is a copy and paste of `.article-summary .media`
+    // pending a "grid" refactor for doing image/text columns
+    float: left
+    position: relative  // offset parent
+    margin: 0 1em 0.5em 0
+    margin-left: 150px //FIXME when there is time to restructure
+    width: 210px  // XXX magic number
+    img
+      display: block  // fix whitespace
+
+  section > h2
+    font-size: 1.2em
+    font-weight: 700
+    text-transform: uppercase
+
+  .article-summary
+    .authors
+      // hide because this is redundant on the author's page
+      display: none
+
+//for the authors list page
+.author-list
+  .clear
+    clear: both
+  hr
+    border-color: $brightGreen
+    background-color: $brightGreen
+    color: $brightGreen
+    height: 2px
+  .author-summary
+    @include span-columns(3)
+    @include omega()
+    text-align: center
+    padding: .5em
+    img
+      width: 100px
+      margin: .5em auto
+      display: block
+    h2
+      font-size: 1.25em
+      font-weight: 700
+      line-height: 1
+      margin: 0 0 (0.25em / 1.75)
+    .author-title
+      font-size: 1.1em
+      color: $darkGray
+      line-height: 1.4

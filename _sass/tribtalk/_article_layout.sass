@@ -1,0 +1,281 @@
+// global .article-summary css
+.article_body
+  h2
+    font-size: 1.75em
+    font-weight: 700
+    line-height: 1
+  p
+    +article-body-text
+    font-weight: 200
+  .byline
+    color: $midLightGray
+    font-size: 1em
+    font-style: italic
+    font-weight: 400
+    letter-spacing: 1px
+    a
+      color: $midLightGray
+      &:hover
+        text-decoration: underline
+
+
+.landing
+  .hero .comment_count
+    // duplicate of .media .comment_count since hero has special markup to
+    // support comments showing up as a child of the header in desktop and a
+    // child of the art in mobile
+    position: absolute
+    right: 0.5em
+    top: 0.5em
+    a:hover
+      color: $brightGreen
+  @include media($desktop)
+    .hero
+      position: relative
+      .article_body
+        border-top-width: 4px  // XXX magic number
+        border-top-style: solid
+        @include span-columns(9)
+        background: rgba(255,255,255,0.8)
+        position: absolute
+        bottom: 1.5em
+        .summary
+          @include visually-hidden
+        .category
+          float: left
+          margin-bottom: .4em
+        h2
+          clear: both
+          font-size: 2.25em
+          margin: 0 1.5em 0 .2em
+        .byline
+          margin: .4em 0 .5em .5em
+          font-weight: 500
+  .article_body
+    @include media($mobile)
+      border-bottom: 1px solid #999999
+      margin-bottom: 1em
+  .secondary_content .article-summary
+    position: relative
+    .article_body
+      @include media($mobile)
+        padding: .5em
+      h2
+        margin: .3em 0
+    .lede_art
+      display: block
+      @include media($mobile)
+        @include visually-hidden
+    .category
+      display: block
+    &.category-paid-placement
+      background-color: $superLightGray
+      color: $darkGray
+      margin-bottom: 1em
+      .article_body
+        border: 3px solid $paidPlacement
+        padding: 0 .25em
+        .byline
+          color: $darkGray
+          a
+            color: $darkGray
+      .category
+        background-color: $paidPlacement
+        color: #fff
+
+.article_detail
+  article
+    position: relative
+  .main
+    // XXX this is the approx height of the fixed header after typekit is
+    // loaded, not 75px
+    padding-top: 88px
+    position: relative
+    .social_bar
+      list-style: none
+      position: absolute
+      right: -5em
+      margin-left: 1em
+      li
+        margin-bottom: .5em
+        a
+          color: $midGray
+          font-size: 1.5em
+          display: block
+          &:hover
+            color: black
+        &.comment_count
+          background-color: $midGray
+          &:before
+            border-color: $midGray
+          &:hover
+            background-color: $black
+            &:before
+              border-color: $black
+          a
+            color: #fff
+            font-size: 1.1em
+            padding: .1em 0
+    article
+      .category
+        letter-spacing: 1px
+        font-weight: 600
+        display: inline
+        padding: .3em .8em
+        font-size: .86em
+        text-transform: uppercase
+      h2
+        color: #111
+        font-weight: 700
+        font-size: 3em
+        line-height: 1
+        margin: .25em 0
+      p
+        font-size: 1.1em
+        color: $darkGray
+        line-height: 1.4
+        &.byline
+          color: $midLightGray
+          font-style: italic
+          letter-spacing: 1px
+          margin: 1em 0
+          a
+            color: $midLightGray
+            &:hover
+              text-decoration: underline
+      .lede_container
+        margin: 0
+        .caption
+          margin: 0
+          font-size: .8em
+          letter-spacing: 1px
+          background: $lightestGray
+          padding: .5em
+          .credit
+            font-style: italic
+    .author_card
+      @include clearfix
+      padding: 1em
+      background-color: #fff
+      margin-bottom: 1em
+      a
+        color: $black
+        &:hover
+          text-decoration: underline
+      .handle
+        a
+          color: $lightGray
+          &:hover
+            color: $black
+
+      .image_wrapper
+        @include media($desktop)
+          @include span-columns(2)
+        .author_avatar
+          width: 100px
+          height: 100px
+          margin-right: 1em
+      .info_wrapper
+        @include media($desktop)
+          @include span-columns(10)
+        p
+          margin: .5em 0
+          color: #111
+          &.name
+            font-weight: 600
+            font-size: 1.3em
+          &.title
+            font-weight: 500
+          &.handle
+            font-weight: 400
+            color: $midLightGray
+            font-size: .9em
+            margin-bottom: 1em
+          &.blurb
+            border-top: 1px solid $lightGray
+            font-weight: 400
+            color: $lightGray
+            font-size: .9em
+            font-style: italic
+            padding-top: .5em
+    .social_links
+      margin: 1em auto
+      display: block
+      text-align: center
+      list-style: none
+      padding-left: 0
+      li
+        display: inline
+        margin: 0 3em
+        a
+          color: $midGray
+          font-weight: 700
+          font-size: 2em
+          &:hover
+            color: $black
+    .detail_count
+      float: right
+      font-family: 'Trebuchet MS', sans-serif
+      font-weight: bold
+      color: $darkGray
+      font-size: 1.5em
+  // actually .main.category-paid-placement
+  .category-paid-placement
+    background: $superLightGray
+    article .category
+      display: block  // override
+      margin-top: -4px  // merge with 4px top border
+    .toggle-info
+      float: right
+      color: #74a600
+      i
+        font-size: 1.4em
+    .comment_count:after
+      background: $superLightGray
+      border-color: $superLightGray
+    .author_card
+      background: #fff
+      color: $darkestGray
+    .social_links li a
+      color: $darkestGray  // override
+    .comment-comment
+      background: $lightestGray
+      border-color: $lightestGray
+    .comment-meta button
+      background: $lightestGray
+
+
+.media
+  .comment_count
+    position: absolute
+    right: 0.5em
+    top: 0.5em
+    a:hover
+      color: $brightGreen
+
+
+// Full-width layout for article summaries
+
+// the vertical gutter between elements in the article summary
+$summary-gutter: 0.2em  // TODO rename me (see immediately below)
+
+// TODO find a common class to group these with
+.author-detail, .comment-detail
+  .article-summary
+    +clearfix
+    .media
+      float: left
+      position: relative  // offset parent
+      margin: 0 1em 0.5em 0
+      width: 210px  // XXX magic number
+      img
+        display: block  // fix whitespace
+      .category
+        display: block  // override
+    // condense vertical whitespace on .author-detail page, need to split it up
+    // because we can't support `rem` units (IE8)
+    h2
+      margin-bottom: ($summary-gutter / 1.75)
+      margin-top: 0  // TODO move to `normalize`
+    .byline
+      margin-bottom: ($summary-gutter / 1)
