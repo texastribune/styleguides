@@ -1,0 +1,19 @@
+{
+  "name": "styleguides",
+  "version": "0.0.0",
+  "homepage": "https://github.com/texastribune/styleguides",
+  "authors": [
+  ],
+  "description": "Freaky Stylin'",
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "**/_*",
+    "bower_components",
+  ],
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0"
+  }
+}
