@@ -10,3 +10,6 @@ baseurl: "/styleguides"
 # Build settings
 markdown: kramdown
 permalink: pretty
+# Configure Jekyll sass's load path
+sass:
+    sass_dir: _sass
