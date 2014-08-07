@@ -9,5 +9,9 @@ running:
 
     gem install jekyll
 
+To start the local jekyll build/serve/watch process, run:
+
+    make serve
+
 [This](http://jekyllrb.com/docs/github-pages/) is a helpful link for an
 overview on Jekyll and deploying GitHub pages.
