@@ -1,0 +1,47 @@
+.trib_editor
+  font-family: $sansserif
+  form
+    img
+      width: auto //override 100% for icons
+    .form_thumb
+      max-width: 500px
+  ul
+    list-style: none
+    padding-left: 0
+    &.latest_drafts
+      li
+        border: 1px solid $midLightGray
+        padding: 1em
+        margin-bottom: .25em
+        a
+          color: $midLightGray
+  .admin_nav
+    position: fixed
+    left: 0
+    top: 97px
+    padding: 0 1em
+    background: $darkestGray
+    a
+      color: $white
+
+//article form styling
+.jcrop-keymgr
+  @include visually-hidden
+
+//lineup dashboard styling
+#base_list
+  @include span-columns(5)
+
+#target_list,
+.lineup_form
+  @include span-columns(6)
+
+.black_btn
+  color: $white
+  background: $grayBtn
+  border-radius: 5px
+  font-size: 1.2em
+  padding: .5em
+  border: none
+  &:hover
+    background: $black

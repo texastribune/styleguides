@@ -10,3 +10,14 @@ baseurl: "/styleguides"
 # Build settings
 markdown: kramdown
 permalink: pretty
+exclude:
+  - bower_components
+  - bower.json
+  - Makefile
+  - README.md
+# Configure Jekyll sass's load path
+sass:
+    sass_dir: _sass
+    load_paths:
+      - bower_components/bourbon/dist
+      - bower_components/neat/app/assets/stylesheets

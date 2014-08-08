@@ -1,0 +1,89 @@
+.page-wrap
+  +transition(-webkit-filter, 0.4s ease)
+  .modal-open &
+    // Blur and de-color
+    -webkit-filter: blur(5px) grayscale(50%)
+
+
+.modal
+  +transition(all, 0.4s ease)
+
+  padding: 1em
+  border: 3px solid rgba(10,10,10, 0.3)
+  border-radius: 5px
+  position: fixed
+  background: $white
+  width: 50%
+  top: 50%
+  left: 50%
+  margin: -25% 0 0 -25%
+
+  // closed state
+  +transform(scale(1.5))
+  opacity: 0
+  pointer-events: none
+  .modal-open &
+    +transform(scale(1))
+    opacity: 1
+    z-index: 550000
+    pointer-events: auto
+
+  .close
+    color: $midGray
+    cursor: pointer
+    float: right
+    &:hover
+      color: $darkGray
+  h3
+    font-size: 1.5em
+    margin: .25em 0
+  .fa
+    font-size: 1.2em
+    vertical-align: bottom
+  // body link
+  a
+    color: #74a600
+    &:hover
+      text-decoration: underline
+      color: $darkGreen
+
+
+.modal-paid-placement
+  box-shadow: inset 0px -20px $paidPlacement
+  padding-bottom: 1.5em
+  h3 .fa
+    color: $paidPlacement
+
+.login_modal
+  background: $lightestGray
+  padding: 0.25em
+  h3
+    text-align: center
+  .login-btn, small
+    display: block
+  .login-btn
+    border-radius: 0.25em
+    font-weight: 700
+    margin: 0 1em 1em
+    padding: 1em
+    text-align: center
+    &:hover
+      color: $black
+      text-decoration: none
+  .twitter, .facebook, .google
+    color: $white
+  .twitter
+    background: #00b6f1
+  .facebook
+    background: #3b5998
+  .tt
+    background: #ffc200
+    color: #282828
+  .google
+    background: #4385f5
+  small
+    background: $white
+    font-size: 1em
+    font-weight: 600
+    padding: 1em
+    margin: 0 1em

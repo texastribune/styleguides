@@ -9,6 +9,10 @@ running:
 
     gem install jekyll
 
+Install requirements with:
+
+    bower install
+
 To start the local jekyll build/serve/watch process, run:
 
     make serve

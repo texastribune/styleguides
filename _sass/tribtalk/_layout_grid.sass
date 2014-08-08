@@ -1,0 +1,23 @@
+.wrapper
+  @include outer-container
+  max-width: 50em
+.site-header
+  margin-bottom: 1em
+  .wrapper
+    padding: $pad
+.landing
+  @include media($desktop)
+    .hero
+      @include span-columns(12)
+      @include omega()
+      padding: $pad
+    .secondary_content
+      @include span-columns(12)
+      padding: $pad
+      .article-summary
+        @include span-columns(4)
+        @include omega(3n)
+.site-footer
+  .wrapper
+    div
+      @include span-columns(4)

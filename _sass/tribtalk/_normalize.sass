@@ -1,0 +1,61 @@
+//This resets the base css assumptions and includes HTML5 fallbacks
+
+
+//Set default font to sans-serif
+html
+  font-family: sans-serif
+
+
+body
+  margin: 0
+
+//default for mobile-first
+img
+  width: 100%
+
+//HTML5 Display definitions
+
+// Correct `block` display not defined in IE 8/9.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+
+// Correct `inline-block` display not defined in IE 8/9.
+// Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+audio,
+canvas,
+progress,
+video,
+canvas,
+progress,
+video
+  display: inline-block
+  vertical-align: baseline
+
+
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+audio:not([controls])
+  display: none
+  height: 0
+
+
+//Links
+// Remove the gray background color from active links in IE 10.
+a
+  background: transparent
+  text-decoration: none
+
+a:active,
+a:hover
+  outline: 0
