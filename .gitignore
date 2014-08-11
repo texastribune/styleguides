@@ -1,4 +1,5 @@
 _site
+.sass-cache/*
 
 # Randomly generated files
 .DS_Store
