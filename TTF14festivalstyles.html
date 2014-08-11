@@ -2,9 +2,13 @@
 layout: default
 title: TTF14 Styles
 ---
+<link rel="stylesheet" href="{{ site.baseurl }}/css/festival.css" >
+    </head>
+    <body>
+
 <div class="container">
     <div class="masthead sixteen columns">
-        <img class="logo" src="/styleguides/images/TribTalk-logo.png" title="TribTalk">
+        <img class="logo" src="/styleguides/images/TTF14-web-fest-logo.png" title="The Texas Tribune Festival 2014">
         <h1 class="sg-header">Stylesheet</h1>
         <p>This is the style guide for the Texas Tribune Festival 2014 style guide.</p>
     </div>
@@ -27,3 +31,23 @@ title: TTF14 Styles
             </ul>
         </div>
     </div>
+    <div class="twelve columns omega">
+        <div>
+            <a name="color-section"></a>
+            <h2>Color</h2>
+            <p>Each festival track is assigned unique background and border colors each year. In the settings Sass file, there are two variables for each track, one for background color and one for border color. This is for ease of switching out track colors, as well as using these colors in new places. Track colors are listed below in alphabetical order by variable.</p>
+            <div class="swatch four columns column">
+                <div class="colorfield" style="background: #F7922C;"></div>
+                <span class="label">$criminal_justice_border<br/>#F7922C</span>
+            </div>
+            <div class="swatch four columns column">
+                <div class="colorfield" style="background: rgba(247, 146, 44, 0.5);"></div>
+                <span class="label">$criminal_justice_bg<br/>rgba(247, 146, 44, 0.5)</span>
+            </div>
+            <div class="swatch four columns column">
+                <div class="colorfield" style="background: rgba(247, 146, 44, 0.5);"></div>
+                <span class="label">$criminal_justice_bg<br/>rgba(247, 146, 44, 0.5)</span>
+            </div>
+        </div>
+    </div><!-- twelve columns omega -->
+</div><!-- container -->
