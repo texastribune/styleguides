@@ -1,0 +1,32 @@
+// TODO move to helpers
+
+$mobile-portrait: "max-width: 320px" !default
+$mobile: "max-width: 520px" !default
+$tablet: "min-width: 520px" !default
+$medium: "max-width: 799px" !default
+$classic: "min-width: 960px" !default
+
+@mixin breakpoint($point)
+  @if $point == mobile-portrait
+    @media ($mobile-portrait)
+      @content
+
+  @else if $point == mobile
+    @media ($mobile)
+      @content
+
+  @else if $point == tablet
+    @media ($tablet)
+      @content
+
+  @else if $point == medium
+    @media ($medium)
+      @content
+
+  @else if $point == classic
+    @media ($classic)
+      @content
+
+  @else
+    @media ($point)
+      @content

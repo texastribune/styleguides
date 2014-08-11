@@ -1,0 +1,172 @@
+@import "compass/css3/transform"
+
+//helper classes for responsive
+.hide-for-mobile
+  +breakpoint(mobile)
+    display: none
+
+.hide-for-medium-down
+  @media screen and (max-width: 799px)
+    display: none
+
+.show-for-medium-down
+  display: none
+  @media screen and (max-width: 799px)
+    display: block
+
+.mobile-only
+  @media screen and (min-width: 520px)
+    display: none
+
+//IE8 fixes, because you can never have enough
+.size_medium, .size_mobile
+  #header-container .flex_container
+    height: auto
+  .module
+    padding-bottom: 0.2em
+    max-width: 95%
+    margin: auto
+  #footer-container footer
+    bottom: 0
+    background-color: $navy
+    padding: 0 0 7px 0
+    width: 100%
+    .cell
+      padding-right: 0 !important
+    .footer-links
+      padding-top: .25em
+    .footer-logo
+      max-width: 150px
+    .social
+      width: 25%
+      float: left
+      margin: 0
+      text-align: center
+    .sponsors-list hr
+      display: none
+  .cell.w-8.main_column
+    padding: 1em 1em 0 1em !important
+  .sponsor_box
+    border-bottom: 1px solid #ccc
+
+.size_mobile
+  .site-nav
+    background-color: $head_foot_bg
+    border: 0
+    margin: 50px 0 0 0
+    padding: 0.4em
+    +border-left-radius(0px)
+    li
+      width: 50%
+      font-size: 1.2em
+      a
+        background: #fff
+        margin: .5em
+        padding: .75em
+        text-align: center
+        font-size: .9em
+        +border-radius(4px)
+    @media screen and (max-width: 535px)
+      margin: 0
+    @media screen and (max-width: 520px)
+      margin: auto
+      margin-top: 10px
+  .flex-control-nav
+    display: none
+  .mobile-link
+    display: block
+    text-align: center
+    img
+      width: 100%
+      padding: .5em
+  .content.cell.w-8.main_column
+    padding-right: 0 !important
+  .time-at
+    text-align: left
+  .day-menu li
+    margin-bottom: .5em
+    float: none
+    margin-right: 0
+  #right_rail
+    margin-top: 0em
+    padding-bottom: 1em
+  #signup
+    margin: auto
+    max-width: 90%
+    margin-top: 1em
+
+//hide the menu if offcanvas.hs can't function
+// .js
+//   #off_canvas
+//     display: none
+//   .tracks
+//     display: block
+// the offcanvas menu sits under the content
+.js-ready #off_canvas
+  display: block
+  height: 100%
+  position: fixed
+  right: 0
+  text-align: left
+  top: 0
+  width: 250px
+  z-index: -1
+
+// when the content is toggled, the class is applied
+// this is a non-fancy movement
+.js-nav
+  #content-wrap
+    border-right: 5px solid $navy
+    position: absolute
+    right: 250px
+
+  .size_mobile
+    #header-container #logo, #logo-mobile, #footer-container footer
+      position: absolute
+
+.csstransforms3d.csstransitions.js-ready #content-wrap
+  +translate3d(0, 0, 0)
+  +single-transition(transform, 300ms ease)
+  +backface-visibility(hidden)
+  right: 0 !important
+
+.csstransforms3d.csstransitions.js-nav #content-wrap
+  +translate3d(-250px, 0, 0)
+
+
+//menu styling
+#off_canvas
+  background-color: #c4c7d1
+  border-left: 5px solid #a9abb1
+  padding: .5em 0 0 1em
+  h3
+    font-weight: 300
+    letter-spacing: 0.05em
+    font-size: 1.5em
+    @media screen and (max-width: 520px)
+      font-size: 1.2em
+      line-height: 1em
+  li
+    margin: 1em 1em 1em 0
+    @media screen and (max-width: 520px)
+      margin: 0.5em 0.5em 0.8em 0
+  a
+    background-color: #f5f5f5
+    color: $navy
+    font-weight: 600
+    letter-spacing: 0.1em
+    padding: .25em
+    text-transform: uppercase
+    font-family: "proxima-nova", sans-serif
+    &:hover
+      background-color: $festive_blue
+      color: $navy
+      text-decoration: none
+    @media screen and (max-width: 520px)
+      padding: 0.2em
+      line-height: 0.8em
+  #back-toggle
+    background: $light_navy
+    color: #f5f5f5
+    .icon-remove-sign
+      padding-left: .5em

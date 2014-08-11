@@ -1,0 +1,69 @@
+@import "compass/utilities/general/clearfix"
+
+$cell-gutter: 20px !default
+$n-cells: 12 !default
+$transition-width: 799px !default
+
+@mixin create-grid
+  .grid
+    +clearfix
+    width: 100%
+
+  .cell
+    +create-cells
+
+  .no-gutter > .cell
+    padding-right: 0
+
+
+// Setup a cell to be used inside the grid.  Each cell should have
+// the `cell` class in addition to a `w-N` class, where N equals
+// the numerator in a fraction such as `N / $n-cells`.
+@mixin create-cells
+  float: left
+  padding-right: $cell-gutter
+
+  // Make sure that the last `.cell` doesn't include any padding. This *is not*
+  // IE8 compatibile, but we (*cough*) chose to degrade the IE8 experience
+  // instead of coming up with a solution that worked everywhere.
+  &:last-of-type
+    padding-right: 0
+
+  @for $i from 1 through $n-cells
+    &.w-#{$i}
+      +create-cell-w($i)
+
+  // don't support offset-12
+  @for $i from 1 through $n-cells - 1
+    &.o-#{$i}
+      +create-cell-offset($i)
+
+@mixin create-cell-w($cells)
+  // Use relative cells by default
+  width: 100% / $n-cells * $cells
+  // Don't use cells on a mobile, instead treat them as one big cell of 100%
+  // cells.
+  @media screen and (max-width: $transition-width)
+    width: 100%
+    padding-right: 0
+
+    // Except when not responsive
+    .no-responsive > &
+      width: 100% / $n-cells * $cells
+      padding-right: $cell-gutter
+
+    .no-gutter > &
+      // override .no-responsive > .cell
+      padding-right: 0
+
+
+@mixin create-cell-offset($cells)
+  margin-left: 100% / $n-cells * $cells
+  @media screen and (max-width: $transition-width)
+    margin-left: 0
+
+    // Except when in "always" mode
+    .no-responsive > &
+      margin-left: 100% / $n-cells * $cells
+
++create-grid()

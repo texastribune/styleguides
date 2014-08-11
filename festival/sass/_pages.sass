@@ -1,0 +1,508 @@
+//Subscription box
+ul.actions,
+article .content ul.actions
+  +sansserif
+  font-size: 1.5em
+  font-weight: bold
+  // Other than margin-right below, these styles were added to override
+  // article .content ul styles.
+  line-height: 1
+  list-style-type: none
+  margin: 0 0 0 0
+  overflow: hidden
+  padding: 0
+
+// .simpler version that doesn't use floats and can only support one child
+ul.actions.simple
+  text-align: right
+  > li
+    float: none
+
+//Sponsor page
+.sponsors-list
+  hr
+    border: 1px solid #ccc
+    @media screen and (max-width: 800px)
+      display: none
+  .sponsor_box
+    padding-right: 1em !important //so last-of-type also has it
+    padding-left: 1em //to balance out the cell padding
+    @media screen and (max-width: 800px)
+      border-bottom: 1px solid #ccc
+    p
+      font-weight: 400
+      font-size: 1em
+      font-family: "proxima-nova", serif
+  img
+    display: block
+    margin: 0 auto
+    max-width: 100%
+  ul.handle_list
+    list-style: none
+    margin-left: 0
+    padding-left: 0
+    padding-bottom: 4em
+    li
+      font-size: .9em
+      font-weight: bold
+      line-height: 1.25
+
+.page-sponsors
+  #right_rail
+    display: none
+  @media screen and (max-width: 950px)
+    .main_column
+      p
+        padding: 0 1.2em 0 0.5em
+      h1
+        padding-left: 0.1em
+    .sponsors-list
+      h2
+        padding: 0.5em 0 0 0.5em
+      ul.handle_list
+        padding-bottom: 0.4em
+
+//Multiple page styles
+.page-info, .page-sponsors
+  .main_column
+    h2
+      font-size: 1.4em
+
+.page-info, .page-sponsors, .page-attend, .page-program, .page-speakers
+  #header-container
+    background-position-x: 2.7em
+    background-position-y: -13.7em
+    background-size: 95%
+    @media screen and (max-width: 960px)
+    background-position-y: -3.5em
+
+//Updates page/Homepage
+.page-home
+  .main_column
+    hr
+      border-top: 2px solid $festive_blue
+
+article
+  overflow: hidden
+  margin-bottom: 10px
+  padding-top: 1.1em
+  padding-bottom: 1.2em
+  &.update
+    border-bottom: 2px solid $festive_blue
+    img
+      float: left
+      margin: 1em 1em 0 0
+    .post_date
+      +font_styles(rgb(155, 157, 164), 300, 1em, 1.3em)
+      font-family: "rooney-sans", sans-serif
+      letter-spacing: 1px
+      padding-top: 0.4em
+    p
+      font-weight: 400
+      font-size: 1em
+      font-family: "proxima-nova", serif
+    ul
+      li
+        font-family: "proxima-nova", serif
+        +font_styles($navy, 400, 1em, 1.35em)
+        letter-spacing: 0
+    ul.share_icons
+      list-style-type: none
+      padding-left: 0
+      font-size: 1.1em
+      margin: 0
+      li
+        display: inline
+        margin-right: 1em
+        a
+          i
+            color: $trib_teal
+          &:hover
+            text-decoration: none
+            i
+              color: #111
+    &:last-child
+      border-bottom: 0 none
+
+//Festival footer ad
+//If you don't constrain the iframe it expands the width of the page on tablet and creates a horizontal scrollbar
+.festival
+  .footer_ad
+    iframe
+      max-width: 100%
+
+.festival_wire
+  background: $dark_navy
+  border-top: 5px solid $festive_blue
+  margin-bottom: 1em  // TODO generalize this for all widgets/modules/asides
+  header
+    text-align: center
+    padding: 0
+    margin: 0
+    h1
+      color: #fff
+      font-weight: 300
+      font-size: 1.5em
+      margin: 0
+      padding: 0 0 0.2em 0.5em
+      font-family: "omnes-pro", serif
+      text-shadow: none
+      text-transform: uppercase
+      letter-spacing: 2px
+      margin-top: 4px
+  .festival_wire_content
+    font-family: 'rooney-sans', sans-serif
+    background: #fff
+    color: #111
+    font-size: 0.9em
+    max-height: 300px
+    overflow: auto
+    border-left: 5px solid $dark_navy
+    border-right: 5px solid $dark_navy
+    ul
+      list-style: none
+      padding-left: 0
+      margin: 0
+      li
+        padding: .5em
+        text-transform: capitalize
+        font-size: 1em
+        border-bottom: 1px solid #c5c8d2
+        &+li
+          border-bottom: 0
+        a
+          color: $dark_navy
+        div
+          color: #777777
+          font-size: .8em
+          font-weight: bold
+  footer
+    min-height: 1em
+    margin-top: 0.5em
+    padding-bottom: 0.5em
+    position: relative
+    text-align: right
+    &:after
+      display: block
+      content: ""
+      clear: both
+    a.festival_wire_actions
+      color: $trib_yellow
+      margin-right: .5em
+    .ad
+      float: left
+      + a.festival_wire_actions
+        font-family: 'rooney-sans', sans-serif
+        bottom: .25em
+        margin: 0
+        position: absolute
+        right: .5em
+      a.festival_wire_actions
+        margin-top: 0.5em
+
+//Program page
+.time-slot
+  border-bottom: 2px solid $festive_blue
+  margin-bottom: 1em
+  padding-bottom: .5em
+  h2
+    +font_styles($navy, 400, 1.25em, 1.3em)
+    font-family: "rooney-sans", sans-serif
+    letter-spacing: 1px
+    text-align: left
+    padding-bottom: 5px
+.program-description
+  background-color: rgba(0, 165, 206, 0.15)
+  border-left: 10px solid $festive_blue
+  margin-bottom: .5em
+  padding: .9em
+  &.keynote
+    +track_colors($keynote_border, $keynote_bg)
+  &.criminal-justice
+    +track_colors($criminal_justice_border, $criminal_justice_bg)
+  &.energy
+    +track_colors($energy_border, $energy_bg)
+  &.environment
+    +track_colors($environment_border, $environment_bg)
+  &.higher-education
+    +track_colors($higher_ed_border, $higher_ed_bg)
+  &.health-care
+    +track_colors($health_care_border, $health_care_bg)
+  &.immigration
+    +track_colors($immigration_border, $immigration_bg)
+  &.walking-tours
+    +track_colors($open_gov_border, $open_gov_bg)
+  &.public-education
+    +track_colors($public_ed_border, $public_ed_bg)
+  &.special-events
+    +track_colors($special_events_border, $special_events_bg)
+  &.transportation
+    +track_colors($transportation_border, $transportation_bg)
+  p, h2
+    margin-bottom: .5em
+  p
+    font-weight: 400
+    font-family: 'proxima-nova', serif
+    text-align: left
+    line-height: 1.2em
+  h2
+    clear: both
+    color: $dark_navy
+    font-weight: 500
+    font-size: 1.45em
+    font-family: 'rooney-sans', sans-serif
+    text-align: left
+    text-transform: none
+    letter-spacing: 0
+  .track
+    float: left
+    a
+      +font_styles(rgb(255, 255, 255), 800, 1.65em, 1.2em)
+      text-transform: uppercase
+      font-family: 'proxima-nova', serif
+      letter-spacing: 1px
+      &:hover
+        color: #fff
+  .venue
+    float: right
+    color: $dark_navy
+    font-weight: 400
+    font-size: 1em
+    font-family: "proxima-nova", serif
+    text-align: left
+    margin-bottom: 0
+    padding-top: 8px
+    @media screen and (max-width: 520px)
+      clear: both
+      padding-top: 5px
+      float: left
+  ul
+    +font_styles($dark_navy, 400, 1em, 1.4em)
+    font-family: 'rooney-web', serif
+    text-align: left
+    li
+      float: left
+      margin-right: .5em
+      a
+        font-family: 'proxima-nova', serif
+        color: $link_color
+        &:hover
+          color: $link_color
+
+.day-menu
+  padding: 0 0 15px 0
+
+.day-btn a
+  @include border-left-radius(4px)
+  display: block
+  float: left
+  padding: .5em 1em
+  margin-right: 1em
+  @include boldish
+  color: white
+  background: $trib_teal
+  text-transform: uppercase
+  &:hover
+    background: $festive_blue
+    color: $dark_navy
+    text-decoration: none
+    @include box-shadow(none)
+  &:visited
+    color: white
+  &.print-button
+    float: right
+  @media screen and (max-width: 520px)
+    float: none
+    margin-bottom: .5em
+    margin-right: 0
+
+// Track detail page
+.track-detail
+  .speaker
+    .twitter
+      padding-top: 0
+      a
+        line-height: 1.2em
+    .title
+      padding-top: 0
+  .session_description
+    h1
+      margin-bottom: .5em
+    h3
+      +font_styles($navy, 400, 1.25em, 1.3em)
+      font-family: "rooney-sans", sans-serif
+      letter-spacing: 1px
+      text-align: left
+      float: left
+      padding-top: 1em
+      text-transform: uppercase
+    p
+      margin: 1em 0 1em 0
+    &:nth-child(2)
+      &.keynote
+        border-top: 1px solid $keynote_border
+    &:nth-child(2)
+      &.criminal-justice
+        border-top: 1px solid $criminal_justice_border
+    &:nth-child(2)
+      &.energy
+        border-top: 1px solid $energy_border
+    &:nth-child(2)
+      &.environment
+        border-top: 1px solid $environment_border
+    &:nth-child(2)
+      &.higher-education
+        border-top: 1px solid $higher_ed_border
+    &:nth-child(2)
+      &.health-care
+        border-top: 1px solid $health_care_border
+    &:nth-child(2)
+      &.immigration
+        border-top: 1px solid $immigration_border
+    &:nth-child(2)
+      &.open-government
+        border-top: 1px solid $open_gov_border
+    &:nth-child(2)
+      &.public-education
+        border-top: 1px solid $public_ed_border
+    &:nth-child(2)
+      &.special-events
+        border-top: 1px solid $special_events_border
+    &:nth-child(2)
+      &.transportation
+        border-top: 1px solid $transportation_border
+    &.keynote
+      border-bottom: 1px solid $keynote_border
+    &.criminal-justice
+      border-bottom: 1px solid $criminal_justice_border
+    &.energy
+      border-bottom: 1px solid $energy_border
+    &.environment
+      border-bottom: 1px solid $environment_border
+    &.higher-education
+      border-bottom: 1px solid $higher_ed_border
+    &.health-care
+      border-bottom: 1px solid $health_care_border
+    &.immigration
+      border-bottom: 1px solid $immigration_border
+    &.walking-tours
+      border-bottom: 1px solid $open_gov_border
+    &.public-education
+      border-bottom: 1px solid $public_ed_border
+    &.special-events
+      border-bottom: 1px solid $special_events_border
+    &.transportation
+      border-bottom: 1px solid $transportation_border
+  h2
+    font-weight: 800
+    margin-top: 1em
+    &.session_header
+      clear: both
+      color: $dark_navy
+      font-weight: 500
+      font-size: 1.45em
+      font-family: 'rooney-sans', sans-serif
+      text-align: left
+      text-transform: none
+      letter-spacing: 0
+      margin: 0
+  .track_header
+    .day-btn
+      float: right
+    h1, h3
+      margin-bottom: 0
+      &.keynote
+        color: $keynote_border
+      &.criminal-justice
+        color: $criminal_justice_border
+      &.energy
+        color: $energy_border
+      &.environment
+        color: $environment_border
+      &.higher-education
+        color: $higher_ed_border
+      &.health-care
+        color: $health_care_border
+      &.immigration
+        color: $immigration_border
+      &.walking-tours
+        color: $open_gov_border
+      &.public-education
+        color: $public_ed_border
+      &.special-events
+        color: $special_events_border
+      &.transportation
+        color: $transportation_border
+    h3
+      &.venue
+        color: $dark_navy
+        font-weight: 400
+        font-size: 1.2em
+        font-family: "proxima-nova", serif
+        text-align: left
+        padding: 0.6em 0 1em 0
+        float: left
+      &.hashtag
+        font-weight: 200
+        font-size: 1.1em
+        letter-spacing: 0.07em
+        padding-top: 0.2em
+        &:hover
+          text-decoration: underline
+
+// Speaker, as seen in pages: .track-detail, .page-speakers
+.speaker
+  line-height: 1.15  // reset :(
+  margin-bottom: 1em
+  .headshot
+    float: left
+    margin-bottom: 1.3em
+    margin-right: .5em
+    width: 33%
+    > img
+      width: 100%
+    @media screen and (max-width: 799px)
+    max-width: 100px
+    > img
+      max-width: 100px
+  h2
+    +font_styles($dark_navy, 800, 1.2em, 1em)
+    text-transform: none
+    text-align: left
+    font-family: 'proxima-nova', serif
+    letter-spacing: 1px
+  .twitter
+    +font_styles(rgb(0, 137, 144), 400, 0.9em, 1em)
+    font-family: 'proxima-nova', serif
+    text-align: left
+    padding-top: 0.2em
+    line-height: 1em
+  .title
+    +font_styles($navy, 400, .95em, 1.2em)
+    font-family: 'rooney-sans', sans-serif
+    text-align: left
+    padding-top: 0.3em
+    line-height: 1.2em
+  .bio
+    clear: both
+    p
+      margin-bottom: 0
+      text-align: left
+  .panel-link
+    +font_styles($dark_navy, 500, 1em, 1.1em)
+    float: left
+    font-family: 'rooney-sans', sans-serif
+    text-align: left
+    padding-top: 0.2em
+
+//style the track toggle when we're not too proud to beg
+#track-toggle
+  display: none
+.size_medium.size_tablet
+  #track-toggle
+    display: block
+.track-footer-list
+  li
+    display: inline
+    a
+      font-family: 'proxima-nova', serif

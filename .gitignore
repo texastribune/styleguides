@@ -1,4 +1,6 @@
+.sass-cache/
 _site
+node_modules/
 
 # Randomly generated files
 .DS_Store

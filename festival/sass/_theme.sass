@@ -1,0 +1,395 @@
+// Primary styles authored by bhasson
+
+#logo
+  // header#site_header > h1#logo
+  display: inline-block
+  // allows <time> to sit on same line
+  float: left
+  margin-bottom: 24px
+  max-width: 468px
+  padding-top: 4px
+  img
+    margin-bottom: -6px
+    width: 80%
+    // move the baseline back up because the logo has a descender
+  @media screen and (max-width: 960px)
+    max-width: 280px
+    padding-left: 15px
+  @media screen and (max-width: 799px)
+    display: none
+
+#logo-mobile
+  display: none
+  @media screen and (max-width: 799px)
+    float: none
+    display: block
+    margin-bottom: 0.5em
+    img
+      width: 70%
+      @media screen and (max-width: 520px)
+        width: 95%
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td
+  margin: 0
+  padding: 0
+
+*
+  +box-sizing(border-box)
+
+.clear
+  clear: both
+
+.clearfix
+  +clearfix
+
+li, dl
+  font-family: "omnes-pro", serif
+  line-height: 1.15em
+  letter-spacing: 0.03em
+
+p
+  +font_styles($navy, 300, 1em, 1.35em)
+  font-family: "rooney-web", serif
+  margin-bottom: 1em
+
+ul
+  font-family: "omnes-pro", serif
+
+a
+  color: $trib_teal
+  text-decoration: none
+  font-size: 1em
+  line-height: 1em
+  &:hover
+    text-decoration: underline
+    color: $trib_teal
+
+.main-container
+  margin: 0 auto
+
+#content-wrap
+  background: #fff
+
+#bottom-bg
+  position: absolute
+  bottom: 114px
+  left: 47%
+  z-index: -1
+  img
+    width: 70%
+
+// When text is selected
+::-moz-selection
+  background: $gray
+  color: #fff
+  text-shadow: none
+::selection
+  background: $gray
+  color: #fff
+  text-shadow: none
+
+// TYPOGRAPHY
+
+h1, h2, h3
+  text-align: left
+
+h1
+  +font_styles($dark_navy, 500, 2.25em, 1.2em)
+  font-family: "rooney-sans", sans-serif
+  margin-bottom: .5em
+  text-align: left
+
+h2
+  +font_styles($light_navy, 800, 1.65em, 1.2em)
+  letter-spacing: 1px
+  font-family: "proxima-nova", serif
+  text-transform: uppercase
+
+h3
+  +font_styles($dark_navy, 500, 1.45em, 1.2em)
+  clear: both
+  font-family: "rooney-sans", sans-serif
+
+.main_column
+  padding-top: 1em
+  @media screen and (max-width: 960px)
+    padding: 1em 1em 0 1em
+  img
+    &.float-right
+      float: right
+      margin-left: .5em
+    &.float-left
+      float: left
+      margin-right: .5em
+
+.hero
+  clear: both
+  color: #eee
+
+.wrapper
+  margin: 0 auto
+  width: $page_width
+  clear: both
+  //otherwise some two-column template footers don't stay at bottom
+
+.wrapper-r
+  margin: 0 auto
+  width: 100%
+  max-width: 960px
+  clear: both
+  //otherwise some two-column template footers don't stay at bottom
+  @media screen and (max-width: 520px)
+    padding: 0
+
+// .clearfix
+//   &.wrapper-r
+
+.flexslider
+  .slides
+    overflow: hidden
+    > li  // class should be .ttflex-slide, but isn't
+      margin: 0
+    > li+li
+      display: none
+  // override ttflexslider settings
+  .flex-control-nav
+    bottom: -6px !important
+    text-align: center !important
+  .flex-control-paging
+    li
+      a
+        border: 1px solid #408e8a
+        background-color: #408e8a
+        &.flex-active
+          border: 1px solid $festive_blue
+          background-color: $festive_blue
+
+#header-container
+  background-color: $head_foot_bg
+  background-image: url('../images/TTF14-web-top-half-pattern.svg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 100%
+  background-position-x: -1em
+  background-position-y: -3.5em
+  min-height: 189px // make sure it's at least as high as the logo
+  padding: 15px 0 0 0
+  .flex_container
+    // height: 298px  // prevent page flashing
+    padding: 0
+    @media screen and (max-width: 800px)
+      height: auto
+  .hero, .hero-inner, .flex_container
+    background-color: transparent
+  @media screen and (max-width: 799px)
+    background-image: none
+    min-height: 240px
+    .wrapper-r
+      text-align: center
+  @media screen and (max-width: 715px)
+    min-height: 300px
+  @media screen and (max-width: 680px)
+    min-height: 260px
+  @media screen and (max-width: 520px)
+    min-height: 290px
+  @media screen and (max-width: 430px)
+    min-height: 260px
+
+.cell.w-8.main_column
+  @media screen and (max-width: 768px)
+    padding: 1em !important
+
+a.social
+  &:first-child
+    padding-top: 4px
+  > i
+    +single-transition(color, 0.2s)
+  &:hover
+    border-bottom: 0 !important  // bleh I don't care
+    > .icon-facebook-sign
+      color: $festive_blue
+    > .icon-twitter-sign
+      color: $festive_blue
+    > .icon-instagram
+      color: $festive_blue
+
+#right_rail
+  margin-top: 1em
+
+//Signup input styling
+.input_neue
+  +neue
+  border: 1px solid #888888
+  &:hover
+    color: black
+    border-color: black
+  &:active
+    outline: 0 none
+
+#signup
+  @media screen and (max-width: 799px)
+    max-width: 67%
+    display: block
+    margin: 0 auto
+    margin-bottom: 2em
+    margin-top: 1em
+  label
+    color: $trib_teal
+    display: block
+    font-size: 2em
+    font-weight: bold
+    margin-bottom: 0.25em
+    text-transform: uppercase
+  input[type=email]
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    display: block
+    font-size: 1em
+    margin-bottom: 1em
+    width: 100%
+  input[type=submit]
+    font-family: 'proxima-nova', sans-serif
+    font-weight: 800
+    text-transform: uppercase
+
+#signup-top
+  padding: 10px 14px 0px 14px
+  height: 110px
+  background-color: $festive_blue
+  h2
+    font-family: 'omnes-pro', serif
+    @include font_styles($navy, 300, 1em, 1.2em)
+    letter-spacing: 2px
+    text-transform: uppercase
+    margin: 0
+
+.btn
+  @include border-top-radius(0px)
+  @include border-bottom-radius(5px)
+  @include sansserif
+  background: $navy
+  border: 0 none     // override user-agent border
+  color: #fff
+  font-size: 0.8em
+  font-weight: 600
+  letter-spacing: 0.1em
+  margin: 0 1px 1px 0
+  text-align: center
+  text-transform: uppercase
+  width: 100%
+  height: 1.8em
+  &:active
+    outline: 0 none
+  &:hover
+    color: #fff
+    text-decoration: none
+
+// footer
+footer
+  clear: both
+
+footer .social
+  color: white
+  font-size: 30px
+  margin: 0 4px
+  .ico-tt-logo
+    color: $trib_yellow
+  &:hover
+    text-decoration: none
+  @media screen and (max-width: 800px)
+    width: 25%
+    float: left
+    margin: 0
+    text-align: center
+
+// random blocks that sit in a rail, aka sidebar_block
+.module
+  margin-bottom: 1em
+  max-width: 300px
+  @media screen and (max-width: 799px)
+    margin-bottom: 0
+    max-width: 100%
+
+  .adunit
+    // adunits may be narrower than the column, so make sure they're centered
+    text-align: center
+
+.mobile-only
+  .adunit
+    text-align: center
+// .module, big image that links someplace
+.big-image-link
+  img
+    display: block  // prevent errant whitespace
+    margin: 0 auto
+    max-width: 100%
+  &.show-for-medium-down
+    padding-top: 0.5em
+    img
+      @media screen and (max-width: 799px)
+        max-width: 70%
+      @media screen and (max-width: 520px)
+        max-width: 95%
+.footer_ad
+  padding-bottom: 1em
+  &.wrapper-r
+    @media screen and (max-width: 799px)
+      text-align: center
+.mobile-link
+  @media screen and (max-width: 520px)
+    display: block
+    text-align: center
+    img
+      width: 100%
+      padding: .5em
+
+#footer-container
+  background: $head_foot_bg
+  color: white
+  position: relative
+  footer
+    padding: 1.8em 0 1.8em 0
+    font-family: "rooney-sans", sans-serif
+    font-style: normal
+    font-weight: 500
+    line-height: 1.5em
+    letter-spacing: 0.095em
+    dl
+      margin: 0px
+      dt
+        float: left
+        margin-right: 1em
+        text-transform: uppercase
+      dd
+        &:nth-child(2)
+          padding-bottom: 0.2em
+        margin: 0
+        font-family: "rooney-sans", sans-serif
+    @media screen and (max-width: 520px)
+      bottom: 0
+      background-color: #111
+      padding: 0 0 7px 0
+      width: 100%
+    .footer-logo
+      max-width: 150px
+    .back-to-top
+      background-color: $trib_yellow
+      padding: .5em 0
+      h3
+        text-align: center
+        font-family: 'omnes-pro', serif
+        text-transform: uppercase
+        font-weight: 500
+        letter-spacing: 2px
+    .footer-links
+      padding-top: 1.5em
+
+a.plain
+  color: inherit
+  &:hover
+    text-decoration: none
+
+.hidden
+  display: none !important
+  visibility: hidden

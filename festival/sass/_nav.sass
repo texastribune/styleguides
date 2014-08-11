@@ -1,0 +1,135 @@
+.nav
+  clear: right
+  float: right
+  #footer-container &
+    float: left
+  li
+    float: left
+    padding: .15em
+  &.pages
+    margin-bottom: 1em
+    font-size: 0.9em
+    font-weight: 500  // omnes-pro looks bad above 500
+    @media screen and (max-width: 936px)
+      padding-left: 15px
+      margin-bottom: 0.5em
+    @media screen and (max-width: 799px)
+      height: 35px
+      max-width: 70%
+      margin: 0 auto
+      float: none
+      clear: both
+      margin-top: 1em
+      a
+        padding: 0em
+      .social
+        padding-right: 0.5em
+    @media screen and (max-width: 681px)
+      display: none
+    .social
+      padding-right: 1.5em
+      @media screen and (max-width: 799px)
+        padding-right: 0.5em
+      a
+        // ugh too much indention
+        font-size: 1.5em
+        padding: 0 0.2em
+    li
+      font-family: 'rooney-sans', sans-serif
+      & + li
+        border-left: 2px solid $trib_yellow
+      &.last
+        padding-right: 0
+        a
+          padding-right: 0.4em
+
+    a
+      color: #eee  // override user-style sheets
+      padding: 0 1.3em
+      &.iconmoon
+        padding: 0
+      &:hover
+        text-decoration: underline
+      &.social
+        &:hover
+          text-decoration: none
+
+  h3
+    color: $trib_yellow
+    font-weight: 200
+    font-size: 1.1em
+    padding: 2.4em 0.4em 0.5em 0
+    letter-spacing: 0.07em
+    @media screen and (max-width: 936px)
+      padding: 2.4em 1.4em 0.5em 1.4em
+    &:hover
+      text-decoration: underline
+
+  &.site-nav
+    background: white
+    color: #fff
+    margin: 0.4em
+    +border-left-radius(5px)
+    @media screen and (max-width: 936px)
+      margin-right: 1.4em
+    @media screen and (max-width: 799px) and (min-width: 520px)
+      float: none
+      max-width: 70%
+      clear: both
+      margin: 0 auto
+      margin-bottom: 1em
+      ul
+        margin: 0 auto
+        height: 40px
+        li
+          width: 25%
+    @media screen and (max-width: 715px) and (min-width: 520px)
+      max-width: 90%
+      ul
+        li
+          width: 50%
+    @media screen and (max-width: 715px)
+      background-color: $head_foot_bg
+      ul
+        li
+          a
+            +border-radius(4px)
+            background: #fff
+            margin: .5em
+            padding: .75em 1em
+            text-align: center
+    a
+      color: $navy
+      display: block
+      font-family: "proxima-nova", sans-serif
+      font-weight: 600
+      padding: 0.6em 1.3em
+      text-transform: uppercase
+      &.active
+        background: $festive_blue
+      &:hover
+        background: #9ed8d4
+        color: #111
+        text-decoration: none
+    a#nav-left-button
+      &:hover
+        +border-left-radius(5px)
+  &.tracks
+    clear: both
+    // fix extra vertical whitespace with line-height
+    +font_styles(white, 600, 0.8em, 1)
+    float: none
+    text-transform: uppercase
+    ul
+      width: 100%  // align right edge
+    li + li
+      // no A tag so style the LI directly
+      padding-left: 1em
+
+// add this class to horizontal menus to make menu items fill the available width
+.box_span
+  +display-box
+  > *
+    +box-flex(1)
+    position: relative
+    // webkit hack, otherwise acts like visibility: hidden;
