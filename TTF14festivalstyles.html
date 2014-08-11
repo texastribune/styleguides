@@ -198,15 +198,55 @@ title: TTF14 Styles
             <h3>Homepage</h3>
                 <p>Paragraphs on the homepage that are included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
                 <div class="example-code">
-              <pre>
-                <code>
-                  &lt;article class="update"&gt;
-                    &lt;p&gt;
-                    &lt;/p&gt;
-                  &lt;/article&gt;
-                </code>
-              </pre>
-            </div>
+                    <pre>
+                        <code>
+                            &lt;article class="update"&gt;
+                                &lt;p&gt;
+                                    ...
+                                &lt;/p&gt;
+                            &lt;/article&gt;
+                        </code>
+                    </pre>
+                </div>
+            <h3>Schedule Page</h3>
+                <p>Paragraphs are used on the schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;div class="program-description"&gt;
+                                &lt;p&gt;
+                                    ...
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p>Paragraphs are also used on the schedule page for track headers. These styles are designated with class <span class="inline-class">.track</span>, which floats the track name left.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;div class="program-description"&gt;
+                                &lt;p class="track"&gt;
+                                    Track Name
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p>Venue names are styled with paragraphs with class <span class="inline-class">.venue.</span> This class floats the venue name to the left, and gives it font family of 'proxima-nova', color $dark_navy, font weight of 400, and font size of 1em.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;div class="program-description"&gt;
+                                &lt;p class="venue"&gt;
+                                    Track Venue
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            <h3>Speakers Page</h3>
+                <p>The speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the Sessions and session names for each speaker.</p>
         </div>
     </div><!-- twelve columns omega -->
 </div><!-- container -->
