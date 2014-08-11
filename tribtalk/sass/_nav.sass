@@ -1,0 +1,119 @@
+.nav-toggle-icon
+  float: left
+  font-size: 1.7em
+  margin: 0 0.5em
+  margin-left: -50px //wait and see if this gets moved
+  margin-top: 5px //ditto
+
+// if no js is detected, display a regular menu at top
+.tribtalk-menu
+  background-color: $darkGray
+  a
+    color: $white
+    font-weight: 600
+    padding: .5em 1em
+    &:hover
+      color: $black
+      background-color: $brightGreen
+  ul
+    list-style: none
+    li
+      display: inline
+
+.page-wrap
+  background: $white
+
+.main-nav
+  +visually-hidden
+
+//if js is detected, hide the base menu and
+//use absolute positioning to move the content
+//so the off-canvas menu shows
+.js-ready
+  #off_canvas
+    display: block
+    height: 100%
+    position: fixed
+    left: 0
+    text-align: left
+    top: 0
+    width: 250px
+    z-index: -1
+    ul
+      margin-top: 95px
+      padding-left: 0
+      li
+        display: block
+        margin: 0
+        padding: 0
+        border-bottom: 1px solid $linkVisited
+        border-bottom: 1px solid $brightGreen
+        a
+          display: block
+          padding: 1em 1em 1em 3em
+.js-nav
+  #off_canvas
+    z-index: 0
+
+.js-nav
+  #content-wrap
+    position: absolute
+    left: 250px
+
+//if css transforms are detected, use them
+//to move the menu with pretty transitions
+.csstransforms3d.csstransitions.js-ready
+  article
+    background: $white //to avoid awkward overlap
+    &.category-paid-placement
+      background: $superLightGray //so the gray remains
+  #content-wrap
+    @include transform(translate3d(0, 0, 0))
+    backface-visibility: hidden
+    left: 0 !important
+    @include transition-property (transform)
+    @include transition-duration(0.3s)
+    @include transition-timing-function(ease)
+    @include transition-delay(0s)
+
+.csstransforms3d.csstransitions.js-nav
+  #content-wrap
+    @include transform(translate3d(250px, 0, 0))
+    margin-right: 0
+
+
+// modified from here: http://codepen.io/912lab/pen/LsplC
+.nav-search
+
+  label
+    vertical-align: top
+    display: inline-block
+
+  input
+    outline: none
+
+  input[type=search]
+    background-color: transparent  // compensate for 1px wide box so it's invisible
+    border: 0
+    border-radius: 3px
+    cursor: pointer
+    font-family: inherit
+    font-size: 0.75em
+    margin-left: -1px  // compensate for 1px width so box is 0 pixels wide
+    transition: all .5s
+    -webkit-transition: all .5s  // DELETEME autoprefixer can handle this
+    width: 1px  // fix webkit craps out with 0px wide inputs
+    padding: 2px 0
+
+    &:focus
+      background-color: $white
+      color: $black
+      cursor: auto
+      margin-left: .25em
+      padding: 2px
+      width: 130px
+
+    // DELETEME this belongs in a normalize.sass there's some stuff for webkit-
+    // search-cancel-button and webkit-search-decoration too but I don't think
+    // we want it.
+    -webkit-appearance: textfield

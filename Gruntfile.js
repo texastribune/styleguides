@@ -1,7 +1,3 @@
-SASS_OPTIONS = {
-    compass: true
-};
-
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -14,6 +10,14 @@ module.exports = function(grunt) {
                 },
                 options: {
                     compass: true,
+                    bundleExec: true
+                }
+            },
+            tribtalk: {
+                files: {
+                    '_site/css/tribtalk.css': 'tribtalk/sass/app.sass'
+                },
+                options: {
                     bundleExec: true
                 }
             }
