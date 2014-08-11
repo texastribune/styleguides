@@ -24,17 +24,25 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            compass: {
-                files: ['sass/*.{scss, sass}'],
-                tasks: ['compass:dev']
+            options: {
+                livereload: true
+            },
+            festival: {
+                files: 'festival/sass/*.s?ss',
+                tasks: ['sass:festival']
+            },
+            tribtalk: {
+                files: 'tribtalk/sass/*.s?ss',
+                tasks: ['sass:tribtalk']
             }
         },
-    }),
+    });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['watch', 'sass']);
+    grunt.registerTask('dev', ['sass', 'watch']);
+    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('default', ['build']);
 };
