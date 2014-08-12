@@ -1,7 +1,6 @@
 .sass-cache/
 _site
 node_modules/
-css/base.css
 css/festival.css
 css/tribtalk.css
 

@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                 },
                 options: {
                     compass: true,
-                    bundleExec: true
+                    bundleExec: true,
+                    style: 'compressed'
                 }
             },
             tribtalk: {
@@ -18,21 +19,12 @@ module.exports = function(grunt) {
                     'css/tribtalk.min.css': 'tribtalk/sass/app.sass'
                 },
                 options: {
-                    bundleExec: true
+                    compass: true,
+                    bundleExec: true,
+                    style: 'compressed'
                 }
             }
         },
-
-        cssmin: {
-            minify: {
-                expand: true,
-                cwd: 'css/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'css/',
-                ext: '.min.css'
-            }
-        },
-
         watch: {
             options: {
                 livereload: true
@@ -51,9 +43,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('dev', ['sass', 'cssmin', 'watch']);
-    grunt.registerTask('build', ['sass', 'cssmin']);
+    grunt.registerTask('dev', ['sass', 'watch']);
+    grunt.registerTask('build', ['sass']);
     grunt.registerTask('default', ['build']);
 };
