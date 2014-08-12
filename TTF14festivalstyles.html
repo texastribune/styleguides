@@ -287,11 +287,49 @@ title: TTF14 Styles
                         </code>
                     </pre>
                 </div>
+                <p>Day buttons on the Schedule page are links. These are styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, text-decoration none.</p>
+                 <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;li class=day-btn&gt;
+                                &lt;a&gt;
+                                    Day
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        </code>
+                    </pre>
+                </div>
+            <h3>Site Nav</h3>
+                <p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration of none.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;nav class="nav site-nav"&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;
+                                        &lt;a&gt;
+                                        &lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/nav&gt;
+                        </code>
+                    </pre>
+                </div>
         </div>
         <div>
             <h2>Social Media</h2>
             <a name="social-section"></a>
-                <p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue.</p>
+                <p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue. The icons are placed inside links with class of <span class="inline-class">.social</span> and given a class with their appropriate Font Awesome name.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;a class="social"&gt;
+                                &lt;i class="icon-iconname"&gt;
+                                &lt;/i&gt;
+                            &lt;/a&gt;
+                        </code>
+                    </pre>
+                </div>
             <h3>Twitter Hashtags</h3>
                 <p>The Twitter hashtags for the festival and for each track are included with links that open new tabs to the appropriate Twitter hashtag search page using target="_blank". The festival hashtag of #tribunefest is a link included as an h3 in the site header. The hover state is an underline of the same color.</p>
                 <div class="example-code">
