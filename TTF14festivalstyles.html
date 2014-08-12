@@ -35,23 +35,23 @@ title: TTF14 Styles
         <div>
             <a name="sass-section"></a>
             <h2>Sass</h2>
-                <p>All of TTF14's CSS is written in Sass initially, and partials are included in an app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. There's a mixins import for mixins used throughout. There's also an HTML5 boilerplate import.</p>
+                <p>All of TTF14's CSS is written in Sass, and partials are imported in a manifest app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, and header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. A mixins import includes mixins used throughout. There's also an HTML5 boilerplate import.</p>
         </div>
         <div>
             <a name="javascript-section"></a>
             <h2>JavaScript</h2>
-                <p>JavaScript scripts that need to be loaded include Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
+                <p>JavaScript that needs to be loaded includes Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
         </div>
         <div>
             <a name="branding-section"></a>
             <h2>Branding</h2>
-                <p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to give the eye a visual cue to the information belonging to each track.</p>
+                <p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to provide a visual cue of the track to which content belongs.</p>
         </div>
         <div>
             <a name="typography-section"></a>
             <h2>Typography</h2>
             <h3>Fonts</h3>
-                <p>Fonts used in the TTF14 site include proxima-nova, rooney-sans, and rooney-web. These fonts are included with Typekit. There's a font_styles mixin that can be used to set font color, weight, size, and line height, respectively.</p>
+                <p>Fonts used in the TTF14 site are proxima-nova, rooney-sans, and rooney-web. These fonts are included with Typekit. There's a font_styles mixin that can be used to set font color, weight, size, and line height, respectively.</p>
             <h3>Headers</h3>
             <h1>This is the default h1 style.</h1>
                 <p>H1 headers are used mainly for page titles. The default h1 style is color $dark_navy, font weight of 500, font size of 2.25em, line height of 1.2em, 'rooney-sans' font family, a bottom margin of 0.5em, and text aligned left.</p>
@@ -89,7 +89,7 @@ title: TTF14 Styles
                     <div class="colorfield" style="background: #56c2bc;"></div>
                     <span class="label">$festive_blue<br/>#56c2bc</span>
                 </div>
-                <p style="clear: both">Each festival track is given unique background and border colors each year. In the settings Sass file, there are two variables for each track, one for background color and one for border color. This is for ease of switching out track colors, as well as using these colors in multiple places. The track_colors mixin is used to set border and background colors. TTF14 track colors are listed below in alphabetical order by variable.</p>
+                <p style="clear: both">Each festival track is given unique background and border colors each year. In the settings partial, there are two variables for each track, one for background color and one for border color. This is for ease of switching out track colors, as well as using these colors in multiple places. The track_colors mixin is used to set border and background colors. TTF14 track colors are listed below in alphabetical order by variable.</p>
                 <div class="swatch five columns column">
                     <div class="colorfield" style="background: #F7922C;"></div>
                     <span class="label">$criminal_justice_border<br/>#F7922C</span>
@@ -187,32 +187,32 @@ title: TTF14 Styles
             <h3>Grid</h3>
                 <p>The tt_layouts grid is imported and used to apply a grid to the TTF14 site.</p>
             <h3>Media Queries</h3>
-                <p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide for medium (tablet) and mobile sizes.</p>
+                <p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide content for medium (tablet) and mobile sizes.</p>
         </div>
         <div>
             <h2>Navigation</h2>
             <a name="navigation-section"></a>
-                <p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, FB and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site to ensure ease of navigation. The logo in the footer links to the homepage.</p>
+                <p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, Facebook, and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site for ease of navigation. The logo in the footer links to the homepage.</p>
             <h3>Mobile and Tablet Navigation</h3>
                 <p>At the bottom of the mobile site, Back To Top links to the top of the page. Back To Top has a class of <span class="inline-class">.back-to-top</span>.</p>
-                <p>Tablet includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile sizes at the top of the page below the header.</p>
+                <p>Tablet navigation includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile directly below the header.</p>
         </div>
         <div>
             <h2>Images</h2>
             <a name="images-section"></a>
             <h3>Speakers</h3>
-                <p>Each speaker has a headshot image displayed for them on the Speakers page. If a speaker doesn't yet have an image, a generic speaker avatar image should be used. Images for speakers are entered in Sched.</p>
-            <h3>Background</h3>
-                <p>The TTF14 site includes a background image in the header, and it also includes a matching image above the footer. The image above the footer is included as an image.</p>
+                <p>Each speaker has a headshot image on the Speakers page. If a speaker doesn't yet have an image, a generic speaker avatar image should be used. Images for speakers are entered in Sched.</p>
+            <h3>Patterns</h3>
+                <p>The TTF14 site includes a background pattern image in the header, and it also includes a matching pattern image above the footer. The image above the footer is included with an <span class="inline-class">img</span> tag.</p>
             <h3>Logos</h3>
-                <p>The TTF14 site uses different images for the desktop and mobile logos included in the header and footer.</p>
+                <p>Distinct images are included in the header and footer for web and mobile logos.</p>
                 <p>Web logo for header</p>
                 <img src="{{ site.baseurl }}/images/TTF14-web-fest-logo.png">
                 <p>Web logo for footer</p>
                 <img src="{{ site.baseurl }}/images/TTF14-web-logo-footer.png">
                 <p>Mobile logo for header</p>
                 <img src="{{ site.baseurl }}/images/TTF14-mobile-fest-logo.png">
-                <p>Image above footer</p>
+                <p>Pattern above footer</p>
                 <img src="{{ site.baseurl }}/images/TTF14-web-bottom-pattern.png">
             <h3>Navigation Images</h3>
                 <p>There are three images included in the right rail used for navigation, and these link to the Register page, Speakers page, and display the Tracks menu. There is a web and a mobile version of each. These images are switched out at tablet at max-width: 799px.</p>
@@ -232,9 +232,9 @@ title: TTF14 Styles
         <div>
             <h2>Paragraphs</h2>
                 <a name="paragraphs-section"></a>
-                <p>Paragraphs with just the p tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line-height of 1.35em.</p>
+                <p>Paragraphs with just the <span class="inline-class">p</span> tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line height of 1.35em.</p>
             <h3>Homepage</h3>
-                <p>Paragraphs on the homepage that are included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
+                <p>Paragraphs on the homepage included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -247,7 +247,7 @@ title: TTF14 Styles
                     </pre>
                 </div>
             <h3>Schedule Page</h3>
-                <p>Paragraphs are used on the schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
+                <p>Paragraphs are used on the Schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -271,7 +271,7 @@ title: TTF14 Styles
                         </code>
                     </pre>
                 </div>
-                <p>Venue names are styled with paragraphs with class <span class="inline-class">.venue.</span> This class floats the venue name to the left, and gives it font family of 'proxima-nova', color $dark_navy, font weight of 400, and font size of 1em.</p>
+                <p>Venue names are styled with paragraphs with class <span class="inline-class">.venue</span>. This class floats the venue name to the left and gives it 'proxima-nova' font family, color $dark_navy, font weight of 400, and font size of 1em.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -284,7 +284,7 @@ title: TTF14 Styles
                     </pre>
                 </div>
             <h3>Speakers Page</h3>
-                <p>The speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the Sessions and session names for each speaker, which gives the styles of 'rooney-sans' font family, font weight of 500, color $dark_navy, font size of 1em, line height of 1.1em and float left.</p>
+                <p>The Speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the sessions and session names for each speaker. This class applies the styles of 'rooney-sans' font family, font weight of 500, color $dark_navy, font size of 1em, line height of 1.1em, and float left.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -300,9 +300,9 @@ title: TTF14 Styles
         <div>
             <h2>Lists</h2>
             <a name="lists-section"></a>
-                <p>List elements are used in the site nav for links, on the sponsors page for sponsor Twitter handles, on the homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
+                <p>List elements are used in the site nav for links, on the Sponsors page for sponsor Twitter handles, on the Homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
             <h3>Sponsors page</h3>
-                <p>The Sponsors page uses list elements within a ul with class <span class="inline-class">.handle_list</span> to style sponsor Twitter handles.</p>
+                <p>The Sponsors page uses list elements within a <span class="inline-class">ul</span> with class <span class="inline-class">.handle_list</span> to style sponsor Twitter handles.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -318,10 +318,10 @@ title: TTF14 Styles
         <div>
             <h2>Links</h2>
             <a name="links-section"></a>
-                <p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and also color #008990.</p>
-                <a>This is a link</a>
+                <p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and color #008990.</p>
+                <a>Default link styling</a>
             <h3>Schedule Page</h3>
-                <p>On the Schedule page, the track names are links. The links are inside paragraphs with class <span class="inline-class">.track</span>. These links have a style of 'proxima-nova' font family, color white, font weight of 800, font size of 1.65em, letter spacing of 1px, and line height of 1.2em. These links have text transform of uppercase. On hover, the color remains white.</p>
+                <p>On the Schedule page, track names are links. The links are inside paragraphs with class <span class="inline-class">.track</span>. These links have a style of 'proxima-nova' font family, color white, font weight of 800, font size of 1.65em, letter spacing of 1px, and line height of 1.2em. These links have text transform of uppercase. On hover, the color remains white.</p>
                 <div class="example-code">
                     <pre>
                         <code>
@@ -333,7 +333,7 @@ title: TTF14 Styles
                         </code>
                     </pre>
                 </div>
-                <p>Day buttons on the Schedule page are links. These are styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, text-decoration none.</p>
+                <p>Day buttons on the Schedule page are links styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, and text decoration none.</p>
                  <div class="example-code">
                     <pre>
                         <code>
@@ -346,7 +346,7 @@ title: TTF14 Styles
                     </pre>
                 </div>
             <h3>Site Nav</h3>
-                <p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration of none.</p>
+                <p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration none.</p>
                 <div class="example-code">
                     <pre>
                         <code>
