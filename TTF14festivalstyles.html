@@ -290,9 +290,34 @@ title: TTF14 Styles
         <div>
             <h2>Social Media</h2>
             <a name="social-section"></a>
-                <p>Social media icons are included in the header and footer of the page.</p>
+                <p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue.</p>
             <h3>Twitter Hashtags</h3>
-                <p>The Twitter hashtags for the festival and for each track are included with links to the search page for the hashtag on Twitter. The festival hashtag of #tribunefest is a link included in the site header.</p>
+                <p>The Twitter hashtags for the festival and for each track are included with links that open new tabs to the appropriate Twitter hashtag search page using target="_blank". The festival hashtag of #tribunefest is a link included as an h3 in the site header. The hover state is an underline of the same color.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;div class=nav&gt;
+                                &lt;h3&gt;
+                                    #tribunefest
+                                &lt;/h3&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p>Each track's hashtag is included on track detail pages. On the track detail page, an h3 with a class of <span class="inline-class">.hashtag</span> is used to style the hashtag. The hover state is an underline of the same color.</p>
+                <div class="example-code">
+                    <pre>
+                        <code>
+                            &lt;body class=track-detail&gt;
+                                &lt;header class="track_header"&gt;
+                                    &lt;h3 class="hashtag"&gt;
+                                        #TTF14-track-name
+                                    &lt;/h3&gt;
+                                &lt;/header&gt;
+                            &lt;/body&gt;
+                        </code>
+                    </pre>
+                </div>
         </div>
         <div>
             <h2>Sched</h2>
