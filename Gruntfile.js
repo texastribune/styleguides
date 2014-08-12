@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         sass: {
             festival: {
                 files: {
-                    '_site/css/festival.css': 'festival/sass/app.scss'
+                    'css/festival.min.css': 'festival/sass/app.scss'
                 },
                 options: {
                     compass: true,
@@ -15,11 +15,21 @@ module.exports = function(grunt) {
             },
             tribtalk: {
                 files: {
-                    '_site/css/tribtalk.css': 'tribtalk/sass/app.sass'
+                    'css/tribtalk.min.css': 'tribtalk/sass/app.sass'
                 },
                 options: {
                     bundleExec: true
                 }
+            }
+        },
+
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: 'css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'css/',
+                ext: '.min.css'
             }
         },
 
@@ -41,8 +51,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('dev', ['sass', 'watch']);
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('dev', ['sass', 'cssmin', 'watch']);
+    grunt.registerTask('build', ['sass', 'cssmin']);
     grunt.registerTask('default', ['build']);
 };
