@@ -10,4 +10,4 @@ baseurl: "/styleguides"
 # Build settings
 markdown: kramdown
 permalink: pretty
-exclude: ['Makefile', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json']
+exclude: ['Makefile', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json', 'node_modules/']
