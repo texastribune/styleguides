@@ -291,7 +291,7 @@ body {
   border-bottom: 4px solid #8ac200;
   text-align: center;
   font-size: 1.2em;
-  margin-bottom: 1.5em;
+  margin: 1.5em 0 1.5em 0;
 }
 
 .logo {
@@ -654,7 +654,7 @@ h1, h2, h3, h4, h5, h6 {
         .container .column,
         .container .columns                         { margin-left: 10px; margin-right: 10px;  }
         .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
-        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; padding-left: 1em; }
         .alpha.omega                                { margin-left: 0; margin-right: 0; }
 
         .container .one.column,
@@ -848,6 +848,9 @@ code {
   margin-bottom: 10px;
 }
 
+.festival-page img {
+  width: 50%;
+}
 
 
 
