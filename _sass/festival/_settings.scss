@@ -1,0 +1,58 @@
+// TODO transition to em units
+$headingGutter: 30px + 10px;  // large gutter between sections
+$verticalGutter: 20px;  // vertical gutter between blocks
+
+// LAYOUT
+$page_width: 960px;
+
+// GENERAL COLORS
+$head_foot_bg: #202b3b;
+$link_color: #04757a;
+$trib_teal: #008990;
+$trib_yellow: #ffcc20;
+$festive_blue: #56c2bc;
+$light_navy: #3c4961;
+$navy: #202b3b;
+$dark_navy: #091724;
+$gray: #111;
+
+// FESTIVAL TRACK COLORS
+$keynote_border: #FFC000;
+$keynote_bg: rgba(255, 192, 0, 0.65);
+$criminal_justice_border: #F7922C;
+$criminal_justice_bg: rgba(247, 146, 44, 0.5);
+$energy_border: #8FC964;
+$energy_bg: rgba(143, 201, 100, 0.5);
+$environment_border: #229665;
+$environment_bg: rgba(34, 150, 101, 0.5);
+$higher_ed_border: #8164A9;
+$higher_ed_bg: rgba(129, 100, 169, 0.5);
+$health_care_border: #81C9EF;
+$health_care_bg: rgba(129, 201, 239, 0.65);
+$immigration_border: #E8513A;
+$immigration_bg: rgba(232, 81, 58, 0.5);
+$open_gov_border: #4F96D1;
+$open_gov_bg: rgba(67, 133, 188, 0.45);
+$public_ed_border: #BD507F;
+$public_ed_bg: rgba(189, 80, 127, 0.5);
+$special_events_border: #56C2BC;
+$special_events_bg: rgba(86, 194, 188, 0.5);
+$transportation_border: #CDCB9D;
+$transportation_bg: rgba(205, 203, 157, 0.65);
+
+
+// Print styles
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

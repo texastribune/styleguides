@@ -1,0 +1,133 @@
+$comment-gutter: 0.5em
+
+
+.comments
+  h2
+    font-weight: 700
+    letter-spacing: 1px
+    color: $darkGray
+  .show_comments
+    color: black
+    display: none
+    font-family: $sansserif
+
+
+// comment start off closed initially
+.comments.state-collapsed
+  h2
+    &:hover
+      cursor: pointer
+  .show_comments
+    display: block
+    text-align: left
+    font-size: .8em
+    &:hover
+      color: $brightGreen
+  .comment-form-container
+    display: none
+
+
+.comment-form
+  p
+    margin: 0 0 0.5em
+
+  textarea
+    display: block
+    font-family: $sansserif
+    font-size: 1.1em
+    width: 100%
+    border-radius: 7px
+    border: 2px solid $midLightGray
+    color: $midLightGray
+    font-weight: 400
+    padding: .8em
+
+  input[type="submit"]
+    border: 0
+    background-color: $baseGreen
+    font-size: 1em
+    font-weight: 700
+    border-radius: 5px
+    padding: .4em 1em
+    color: $white
+    &:hover
+      background-color: $brightGreen
+
+.comment-thread
+  margin-bottom: $comment-gutter
+  padding: 0.1em 0
+
+  // TODO
+  button.active
+    color: gray
+
+.comment-comment
+  +clearfix
+  border-radius: 5px
+  border: 2px solid $lightGray
+  margin-bottom: 1em
+  padding: 0 1em
+  &.pending
+    background: cornsilk !important  // probably ok to use important bc this is just an intermediate state
+    color: gray
+  .comment-replies &
+    border-color: $superLightGray
+    margin-left: 2em
+  // after `.comment-replies` so we can override border-color
+  &.active
+    border-color: $brightGreen
+    color: $black
+  @include media($desktop)
+    // make active comments bigger to emphasize them
+    &.active
+      font-size: 1.5em
+    .comment-replies &.active
+      margin-left: (2em / 1.5)
+  p
+    font-size: 1.1em
+    &.blurb
+      font-weight: 400
+      color: $midLightGray
+      time
+        font-weight: 600
+        color: $black
+      a
+        font-weight: 600
+        color: $black
+        &:hover
+          color: $brightGreen
+
+.comment-meta
+  color: $darkGray
+  width: 100%
+  margin-bottom: $comment-gutter
+  a
+    color: $darkGray
+  span
+    color: $darkGray
+    font-weight: 600
+  button
+    background: $white
+    border: 0
+    color: $darkGray
+    font-size: 1em
+    outline: 0
+    &:hover i
+      color: $brightGreen
+    &.action-flag
+      &:hover i
+        color: $brightRed
+      &.active
+        color: $demographicOrange
+    &.action-respect.active i
+      color: $linkVisited
+  .social
+    float: right
+    margin: 0 .5em
+    &:hover
+      color: $black
+
+
+.comment-detail
+  .article-summary
+    margin-bottom: $comment-gutter

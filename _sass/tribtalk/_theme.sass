@@ -1,0 +1,302 @@
+//Color
+
+.site-header,
+.site-footer
+  background-color: $baseColor
+  color: $textColor
+  h1
+    margin: 0
+  a
+    color: $textColor
+//Typography
+html
+  font-family: $sansserif
+
+h1
+  text-transform: uppercase
+
+h2
+  font-family: $sansserif
+  font-weight: 600
+  a
+    color: $contentColor
+    &:hover
+      color: $midGray
+
+.site-header
+  height: 75px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 5
+  h1
+    display: inline-block
+    img
+      max-width: 137px
+      max-height: 30px //for noncompliant browsers
+      display: inline-block
+      margin-bottom: -5px
+    span
+      color: $brightGreen
+      font-weight: normal
+      margin: 0 .3em
+    small
+      font-weight: normal
+      text-transform: uppercase
+      font-size: .45em
+      letter-spacing: 2px
+      color: $lightestGray
+      vertical-align: middle
+  .social-link
+    float: right
+    font-size: 1.7em
+    margin: 0 .5em
+    &.fa-twitter
+      font-size: 1.1em
+    .fa
+      &:hover
+        color: $brightGreen
+  .subheader
+    background-color: $brightGreen
+    color: $black
+    font-weight: 500
+    a
+      color: $black
+      &:hover
+        text-decoration: underline
+    .wrapper
+      padding: .2em 0 .25em .5em
+
+// XXX this is the approx height of the fixed header after typekit is
+// loaded, not 75px
+$headerHeight: 88px
+.main
+  padding-top: $headerHeight + 5px
+
+//flexslider customization
+//overriding previous css so many important!s
+//#TODO: give it its own class, css file and visual assets
+.flex-control-nav
+  bottom: 5px !important //overriding defaults
+  right: 10px !important
+  text-align: right !important //overriding defaults
+
+.flex-direction-nav
+  a
+    opacity: 0.7 !important
+  .flex-next
+    top: 40% !important
+    right: 50px !important
+    width: 50px !important
+    background-position: -30% 0 !important
+    @include media($mobile)
+      top: 25% !important
+  .flex-prev
+    left: 50px !important
+    top: 40% !important
+    width: 50px !important
+    background-position: 130% 0 !important
+    @include media($mobile)
+      top: 25% !important
+
+.flexslider:hover
+  .flex-direction-nav
+    a
+      opacity: 1.0 !important
+    .flex-next
+      right: 50px !important
+    .flex-prev
+      left: 50px !important
+
+//make the dots use our accent color
+.flex-control-paging
+  overflow: hidden
+  li
+    a
+      text-indent: 9999px !important
+      &.flex-active
+        border-color: $brightGreen !important //overriding defaults
+        background-color: $brightGreen !important //overriding defaults
+  @include media($mobile)
+    text-align: center !important
+    top: 10px
+
+.byline
+  color: $contrastColor
+
+.comment_count
+  font-family: 'Trebuchet MS', sans-serif
+  font-size: 1em
+  background-color: #111
+  min-width: 25px /* or else single nos. look weird */
+  text-align: center
+  border-radius: 5px
+  position: relative
+  font-weight: bold
+  &:before
+    content: ""
+    position: absolute
+    z-index: 1
+    bottom: -3px
+    right: 72%
+    height: 9px
+    border-right: 7px solid #111
+    /* css3 */
+    /* Bourbon.io does not include border-bottom-right mixin*/
+    /* and deprecates the border-radius as a mixin anyway: https://github.com/thoughtbot/bourbon/pull/95*/
+    -webkit-border-bottom-right-radius: 40px 50px
+    -moz-border-radius-bottomright: 40px 50px
+    border-bottom-right-radius: 40px 50px
+    /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+    @include transform(translateX(-10px))
+    @include transform(translateY(0px))
+  a
+    color: $white
+
+.more-link
+  color: $black
+  clear: both
+  float: left
+  font-weight: 400
+  font-size: 1em
+  &:hover
+    i
+      color: $brightGreen
+
+.site-footer
+  margin-top: 1.5em
+  padding: 1em 0 2em 0
+  a
+    color: $lighterGray
+    &:hover
+      color: $brightGreen
+  h2
+    font-weight: 600
+    text-transform: uppercase
+    font-size: 1em
+    letter-spacing: 1px
+    small
+      text-transform: none
+      font-size: 1em
+  .foo
+    font-size: .9em
+  .tt_logo
+    max-width: 145px
+  ul
+    font-size: 1em
+    list-style: none
+    margin-left: 0
+    padding-left: 0
+    li
+      margin-bottom: .5em
+    .fa
+      font-size: 1.5em
+      margin-right: .5em
+    &.share-list
+      li
+        margin-bottom: .5em
+        i
+          color: $white
+
+.article_detail
+  article
+    .content
+      a
+        color: $darkGreen
+        &:hover
+          color: $brightGreen
+    li
+      @include article-body-text
+
+.category-demographics
+  article, .article_body, .comments
+    border-color: $demographicOrange
+  .category
+    background: $demographicOrange
+.category-economy
+  article, .article_body, .comments
+    border-color: $economy
+  .category
+    background: $economy
+.category-energy
+  article, .article_body, .comments
+    border-color: $energy
+  .category
+    background: $energy
+.category-environment
+  article, .article_body, .comments
+    border-color: $environment
+  .category
+    background: $environment
+.category-government
+  article, .article_body, .comments
+    border-color: $government
+  .category
+    background: $government
+.category-health
+  article, .article_body, .comments
+    border-color: $health
+  .category
+    background: $health
+.category-higher-education
+  article, .article_body, .comments
+    border-color: $higherEd
+  .category
+    background: $higherEd
+.category-immigration
+  article, .article_body, .comments
+    border-color: $immigration
+  .category
+    background: $immigration
+.category-law-and-order
+  article, .article_body, .comments
+    border-color: $lawAndOrder
+  .category
+    background: $lawAndOrder
+.category-news-from-home
+  article, .article_body, .comments
+    border-color: $brightGreen
+  .category
+    background: $brightGreen
+.category-politics
+  article, .article_body, .comments
+    border-color: $politics
+  .category
+    background: $politics
+.category-public-education
+  article, .article_body, .comments
+    border-color: $publicEd
+  .category
+    background: $publicEd
+.category-transportation
+  article, .article_body, .comments
+    border-color: $transportation
+  .category
+    background: $transportation
+.category-paid-placement
+  article, .article_body, .comments
+    border-color: $paidPlacement
+  .category
+    background: $paidPlacement
+    color: $white
+
+
+// category label
+.category
+  background-color: gray /* will change to cat variable*/
+  letter-spacing: 1px
+  font-weight: 600
+  display: inline
+  padding: .3em .6em
+  font-size: .86em
+  text-transform: uppercase
+
+.article_detail
+  article,
+  .comments
+    border-top-width: 4px
+    border-top-style: solid
+  .comments
+    border-bottom-width: 4px
+    border-bottom-style: solid

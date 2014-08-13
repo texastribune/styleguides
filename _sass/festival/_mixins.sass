@@ -1,0 +1,33 @@
+// An input that matches .btn_neue
+=neue
+  +sansserif
+  +single-box-shadow(#a0a0a0, 1px, 1px, 1px)
+  margin: 0 1px 1px 0
+  // fix margin isn't consistent across browsers
+  padding: 0.5em 0.9em
+  &:hover
+    color: black
+  &:active
+    outline: 0 none
+
+//From tt_layouts/_helpers
+=sansserif
+  font-family: Helvetica, Arial, sans-serif
+
+=boldish
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: normal
+  font-family: "proxima-nova", sans-serif
+
+//For track colors
+=track_colors($border, $bg)
+  border-color: $border
+  background-color: $bg
+
+//Repeated typography styling
+=font_styles($color, $weight, $size, $height)
+  color: $color
+  font-weight: $weight
+  font-size: $size
+  line-height: $height

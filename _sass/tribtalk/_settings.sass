@@ -1,0 +1,92 @@
+//Tribtalk settings and variables
+
+//grayscale
+$black: #000000
+$darkestGray: #131313
+$darkGray: #282828
+$midDarkGray: #444444
+$midGray: #666
+$midLightGray: #888
+$lightGray: #aaaaaa
+$lighterGray: #cccccc
+$superLightGray: #ddd
+$lightestGray: #f5f5f5
+$white: #ffffff
+
+//theme colors
+$baseColor: $darkestGray
+$textColor: $white//for headers etc.
+$contentColor: $darkestGray //for article type
+$contrastColor: $midGray //contrast for article content
+
+$baseGreen: #9db75c
+$brightGreen: #8ac200
+$darkGreen: #4d6b00
+
+$brightRed: #FF3300
+
+//category colors
+$paidPlacement: #1a354e
+$demographicOrange: #ff7957
+$environment: #44bd6b
+$energy: #9ae6b3
+$health: #7fcfdf
+$government: #469dde
+$higherEd: #8164a9
+$publicEd: #c8a2c8
+$immigration: #c05878
+$transportation: #b29674
+$lawAndOrder: #ffad33
+$politics: #ffdd20
+$economy: #dbdba8
+
+//Links
+$linkActive: #74a600
+$linkHover: $darkGreen
+$linkVisited: #9db75c
+
+//Button interactions
+$grayBtn: $midLightGray
+$grayBtnHover: $black
+$grayBtnActive: $darkestGray
+
+$greenBtn: $baseGreen
+$greenBtnHover: $brightGreen
+$greenBtnActive: $darkGreen
+
+
+//type
+$logofont: Arial,Helvetica
+$serif: "freight-display-pro", serif
+$sansserif: "freight-sans-pro", Helvetica
+
+//padding
+$pad: .5em
+
+//text
+@mixin article-body-text
+  font-size: 1.1em
+  line-height: 1.4
+  color: $darkGray
+  margin-bottom: 0.75em
+  margin-top: 0  // override browser, TODO move to `normalize`
+
+//Desktop media query for mobile-first structure
+//the '12' variable means 12 columns in grid
+//see Neat grid for more info
+$desktop: new-breakpoint(min-width 800px 12)
+$mobile: new-breakpoint(max-width 768px 12)
+//HTML5 .visuallyhidden, to be used instead of
+//display: none
+@mixin visually-hidden
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+.hidden
+  @include visually-hidden

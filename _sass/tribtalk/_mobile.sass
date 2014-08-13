@@ -1,0 +1,53 @@
+@include media($mobile)
+  .site-header
+    .social-link,
+    small,
+    span
+      @include visually-hidden
+    .nav-toggle-icon
+      float: right
+  .main-container
+    padding: 0 1em
+  .site-footer
+    .logo-etc
+      @include span-columns(12)
+      padding: 1em
+    h2,
+    .info,
+    .share
+      @include visually-hidden
+  .landing
+    .comment_count
+      right: 0.25em
+      top: 0.25em
+    .hero
+      .category
+        display: block
+        width: 100%
+  .article_detail
+    .main
+      article
+        h2
+          font-size: 2em
+      .social_bar
+        display: none //hide b/c there's another one at the bottom
+      .social_links li
+        margin: 0 0.75em
+      .author_card
+        .image_wrapper
+          .author_avatar
+            @include visually-hidden
+  .author-detail
+    .media
+      display: none //FIXME when we can use columns
+  .author-summary
+    .media
+      display: none //FIXME when we can use columns
+  .author-list
+    .author-summary
+      @include span-columns(12)
+      @include omega()
+  .modal
+    width: 80% !important
+    top: 30% !important
+    left: 35% !important
