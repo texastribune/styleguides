@@ -1,8 +1,8 @@
 styleguides
 ===========
 
-This will be a [GitHub page](http://texastribune.github.io/styleguides/) for
-Texas Tribune style guides.
+This [GitHub page](http://texastribune.github.io/styleguides/) hosts the
+Texas Tribune style guides, living documents of its sites and platforms.
 
 To add to the style guide, clone down the project repo. Install Jekyll by
 running:
