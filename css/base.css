@@ -834,6 +834,12 @@ pre {
   white-space: pre-wrap;
 }
 
+/* Ensure will override individual project's styles */
+/* for consistency of example code across */
+code {
+  font-family: serif !important;
+}
+
 #main-page-header {
   font-weight: 800;
   font-size: 2em;

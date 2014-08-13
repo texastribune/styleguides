@@ -2,412 +2,414 @@
 layout: default
 title: TTF14 Styles
 ---
-<link rel="stylesheet" href="{{ site.baseurl }}/css/festival.css" >
-    </head>
-    <body>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/festival.css" >
+	<script type="text/javascript" src="//use.typekit.net/scu7hio.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+<body>
 
 <div class="container">
-    <div class="masthead sixteen columns">
-        <img class="logo" src="{{ site.baseurl }}/images/TTF14-web-top-half-pattern.svg" title="The Texas Tribune Festival 2014">
-        <h1 class="sg-header">Texas Tribune Festival 2014 Stylesheet</h1>
-        <p>This is the style guide for the Texas Tribune Festival 2014 style guide.</p>
-    </div>
-    <div class="four columns">
-        <div id='side-nav'>
-            <ul>
-                <li><a href="#sass-section">Sass/CSS</a></li>
-                <li><a href="#javascript-section">JavaScript</a></li>
-                <li><a href="#branding-section">Branding</a></li>
-                <li><a href="#typography-section">Typography</a></li>
-                <li><a href="#color-section">Color</a></li>
-                <li><a href="#responsive-section">Responsive</a></li>
-                <li><a href="#navigation-section">Navigation</a></li>
-                <li><a href="#images-section">Images</a></li>
-                <li><a href="#paragraphs-section">Paragraphs</a></li>
-                <li><a href="#lists-section">Lists</a></li>
-                <li><a href="#links-section">Links</a></li>
-                <li><a href="#social-section">Social Media</a></li>
-                <li><a href="#sched-section">Sched</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="twelve columns omega">
-        <div>
-            <a name="sass-section"></a>
-            <h2>Sass</h2>
-                <p>All of TTF14's CSS is written in Sass, and partials are imported in a manifest app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, and header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. A mixins import includes mixins used throughout. There's also an HTML5 boilerplate import.</p>
-        </div>
-        <div>
-            <a name="javascript-section"></a>
-            <h2>JavaScript</h2>
-                <p>JavaScript that needs to be loaded includes Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
-        </div>
-        <div>
-            <a name="branding-section"></a>
-            <h2>Branding</h2>
-                <p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to provide a visual cue of the track to which content belongs.</p>
-        </div>
-        <div>
-            <a name="typography-section"></a>
-            <h2>Typography</h2>
-            <h3>Fonts</h3>
-                <p>Fonts used in the TTF14 site are proxima-nova, rooney-sans, and rooney-web. These fonts are included with Typekit. There's a font_styles mixin that can be used to set font color, weight, size, and line height, respectively.</p>
-            <h3>Headers</h3>
-            <h1>This is the default h1 style.</h1>
-                <p>H1 headers are used mainly for page titles. The default h1 style is color $dark_navy, font weight of 500, font size of 2.25em, line height of 1.2em, 'rooney-sans' font family, a bottom margin of 0.5em, and text aligned left.</p>
-            <h2>This is the default h2 style.</h2>
-                <p>H2 headers are used for session names on the Schedule page and track detail page, speaker names on the track detail and Speakers pages, Sign Up: label in festival subscription, time slot on Schedule page, and Sponsors page headers. The default h2 style is color $light_navy, font weight of 800, font size of 1.65em, line height of 1.2em, letter spacing of 1px, 'proxima-nova' font family, and text transform to uppercase.</p>
-            <h3>This is the default h3 style.</h3>
-                <p>H3 headers are used for 'Back To Top' navigation on mobile, hashtags, session times on Schedule page, and venues on track detail pages. The default h3 style is color $dark_navy, font weight of 500, font size of 1.45em, line height of 1.2em, and 'rooney-sans' font family.</p>
-        </div>
-        <div>
-            <a name="color-section"></a>
-            <h2>Color</h2>
-            <h3>General Colors</h3>
-                <p>Some general color variables are used around the TTF14 site.</p>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #091724;"></div>
-                    <span class="label">$dark_navy<br/>#091724</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #202b3b;"></div>
-                    <span class="label">$navy<br/>#202b3b</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #3c4961;"></div>
-                    <span class="label">$light_navy<br/>#3c4961</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #ffcc20;"></div>
-                    <span class="label">$trib_yellow<br/>#ffcc20</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #008990;"></div>
-                    <span class="label">$trib_teal<br/>#008990</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #56c2bc;"></div>
-                    <span class="label">$festive_blue<br/>#56c2bc</span>
-                </div>
-                <p style="clear: both">Each festival track is given unique background and border colors each year. In the settings partial, there are two variables for each track, one for background color and one for border color. This is for ease of switching out track colors, as well as using these colors in multiple places. The track_colors mixin is used to set border and background colors. TTF14 track colors are listed below in alphabetical order by variable.</p>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #F7922C;"></div>
-                    <span class="label">$criminal_justice_border<br/>#F7922C</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(247, 146, 44, 0.5);"></div>
-                    <span class="label">$criminal_justice_bg<br/>rgba(247, 146, 44, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #8FC964;"></div>
-                    <span class="label">$energy_border<br/>#8FC964</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(143, 201, 100, 0.5);"></div>
-                    <span class="label">$energy_bg<br/>rgba(143, 201, 100, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #229665;"></div>
-                    <span class="label">$environment_border<br/>#229665</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(34, 150, 101, 0.5);"></div>
-                    <span class="label">$environment_bg<br/>rgba(34, 150, 101, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #8164A9;"></div>
-                    <span class="label">$higher_ed_border<br/>#8164A9</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(129, 100, 169, 0.5);"></div>
-                    <span class="label">$higher_ed_bg<br/>rgba(129, 100, 169, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #81C9EF;"></div>
-                    <span class="label">$health_care_border<br/>#81C9EF</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(129, 201, 239, 0.65);"></div>
-                    <span class="label">$health_care_bg<br/>rgba(129, 201, 239, 0.65)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #E8513A;"></div>
-                    <span class="label">$immigration_border<br/>#E8513A</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(232, 81, 58, 0.5);"></div>
-                    <span class="label">$immigration_bg<br/>rgba(232, 81, 58, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #FFC000;"></div>
-                    <span class="label">$keynote_border<br/>#FFC000</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(255, 192, 0, 0.65);"></div>
-                    <span class="label">$keynote_bg<br/>rgba(255, 192, 0, 0.65)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #4F96D1;"></div>
-                    <span class="label">$open_gov_border<br/>#4F96D1</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(67, 133, 188, 0.45);"></div>
-                    <span class="label">$open_gov_bg<br/>rgba(67, 133, 188, 0.45)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #BD507F;"></div>
-                    <span class="label">$public_ed_border<br/>#BD507F</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(189, 80, 127, 0.5);"></div>
-                    <span class="label">$public_ed_bg<br/>rgba(189, 80, 127, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #56C2BC;"></div>
-                    <span class="label">$special_events_border<br/>#56C2BC</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(86, 194, 188, 0.5);"></div>
-                    <span class="label">$special_events_bg<br/>rgba(86, 194, 188, 0.5)</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: #CDCB9D;"></div>
-                    <span class="label">$transportation_border<br/>#CDCB9D</span>
-                </div>
-                <div class="swatch five columns column">
-                    <div class="colorfield" style="background: rgba(205, 203, 157, 0.65);"></div>
-                    <span class="label">$transportation_bg<br/>rgba(205, 203, 157, 0.65)</span>
-                </div>
-        </div>
-        <div>
-            <h2>Responsive</h2>
-            <a name="responsive-section"></a>
-            <h3>Responsive Contexts</h3>
-                <p>Responsive body classes are assigned to pages as the window size changes with responsive-contexts-dev.js. These classes are used in the mobilemenu partial to apply responsive styles.</p>
-            <h3>Grid</h3>
-                <p>The tt_layouts grid is imported and used to apply a grid to the TTF14 site.</p>
-            <h3>Media Queries</h3>
-                <p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide content for medium (tablet) and mobile sizes.</p>
-        </div>
-        <div>
-            <h2>Navigation</h2>
-            <a name="navigation-section"></a>
-                <p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, Facebook, and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site for ease of navigation. The logo in the footer links to the homepage.</p>
-            <h3>Mobile and Tablet Navigation</h3>
-                <p>At the bottom of the mobile site, Back To Top links to the top of the page. Back To Top has a class of <span class="inline-class">.back-to-top</span>.</p>
-                <p>Tablet navigation includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile directly below the header.</p>
-        </div>
-        <div>
-            <h2>Images</h2>
-            <a name="images-section"></a>
-            <h3>Speakers</h3>
-                <p>Each speaker has a headshot image on the Speakers page. If a speaker doesn't yet have an image, a generic speaker avatar image should be used. Images for speakers are entered in Sched.</p>
-            <h3>Patterns</h3>
-                <p>The TTF14 site includes a background pattern image in the header, and it also includes a matching pattern image above the footer. The image above the footer is included with an <span class="inline-class">img</span> tag.</p>
-            <h3>Logos</h3>
-                <p>Distinct images are included in the header and footer for web and mobile logos.</p>
-                <p>Web logo for header</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-fest-logo.png">
-                <p>Web logo for footer</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-logo-footer.png">
-                <p>Mobile logo for header</p>
-                <img src="{{ site.baseurl }}/images/TTF14-mobile-fest-logo.png">
-                <p>Pattern above footer</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-bottom-pattern.png">
-            <h3>Navigation Images</h3>
-                <p>There are three images included in the right rail used for navigation, and these link to the Register page, Speakers page, and display the Tracks menu. There is a web and a mobile version of each. These images are switched out at tablet at max-width: 799px.</p>
-                <p>Register web button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-register-btn.png">
-                <p>Speakers web button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-speakers-btn.png">
-                <p>Tracks web button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-web-tracks-btn.png">
-                <p>Register tablet & mobile button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-mobile-register-btn.png">
-                <p>Speakers tablet & mobile button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-mobile-speakers-btn.png">
-                <p>Tracks tablet & mobile button</p>
-                <img src="{{ site.baseurl }}/images/TTF14-mobile-tracks-btn.png">
-        </div>
-        <div>
-            <h2>Paragraphs</h2>
-                <a name="paragraphs-section"></a>
-                <p>Paragraphs with just the <span class="inline-class">p</span> tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line height of 1.35em.</p>
-            <h3>Homepage</h3>
-                <p>Paragraphs on the homepage included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;article class="update"&gt;
-                                &lt;p&gt;
-                                    ...
-                                &lt;/p&gt;
-                            &lt;/article&gt;
-                        </code>
-                    </pre>
-                </div>
-            <h3>Schedule Page</h3>
-                <p>Paragraphs are used on the Schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;div class="program-description"&gt;
-                                &lt;p&gt;
-                                    ...
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
-                </div>
-                <p>Paragraphs are also used on the schedule page for track headers. These styles are designated with class <span class="inline-class">.track</span>, which floats the track name left.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;div class="program-description"&gt;
-                                &lt;p class="track"&gt;
-                                    Track Name
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
-                </div>
-                <p>Venue names are styled with paragraphs with class <span class="inline-class">.venue</span>. This class floats the venue name to the left and gives it 'proxima-nova' font family, color $dark_navy, font weight of 400, and font size of 1em.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;div class="program-description"&gt;
-                                &lt;p class="venue"&gt;
-                                    Track Venue
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
-                </div>
-            <h3>Speakers Page</h3>
-                <p>The Speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the sessions and session names for each speaker. This class applies the styles of 'rooney-sans' font family, font weight of 500, color $dark_navy, font size of 1em, line height of 1.1em, and float left.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;div class="speaker"&gt;
-                                &lt;p class="panel-link"&gt;
-                                    Sessions: Session Name, Session Name...
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
-                </div>
-        </div>
-        <div>
-            <h2>Lists</h2>
-            <a name="lists-section"></a>
-                <p>List elements are used in the site nav for links, on the Sponsors page for sponsor Twitter handles, on the Homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
-            <h3>Sponsors page</h3>
-                <p>The Sponsors page uses list elements within a <span class="inline-class">ul</span> with class <span class="inline-class">.handle_list</span> to style sponsor Twitter handles.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;ul class=.handle_list&gt;
-                                &lt;li&gt;
-                                    Twitter handle
-                                &lt;/li&gt;
-                            &lt;/ul&gt;
-                        </code>
-                    </pre>
-                </div>
-        </div>
-        <div>
-            <h2>Links</h2>
-            <a name="links-section"></a>
-                <p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and color #008990.</p>
-                <a>Default link styling</a>
-            <h3>Schedule Page</h3>
-                <p>On the Schedule page, track names are links. The links are inside paragraphs with class <span class="inline-class">.track</span>. These links have a style of 'proxima-nova' font family, color white, font weight of 800, font size of 1.65em, letter spacing of 1px, and line height of 1.2em. These links have text transform of uppercase. On hover, the color remains white.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;p class=track&gt;
-                                &lt;a&gt;
-                                    Track Name Link
-                                &lt;/a&gt;
-                            &lt;/p&gt;
-                        </code>
-                    </pre>
-                </div>
-                <p>Day buttons on the Schedule page are links styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, and text decoration none.</p>
-                 <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;li class=day-btn&gt;
-                                &lt;a&gt;
-                                    Day
-                                &lt;/a&gt;
-                            &lt;/li&gt;
-                        </code>
-                    </pre>
-                </div>
-            <h3>Site Nav</h3>
-                <p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration none.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;nav class="nav site-nav"&gt;
-                                &lt;ul&gt;
-                                    &lt;li&gt;
-                                        &lt;a&gt;
-                                        &lt;/a&gt;
-                                    &lt;/li&gt;
-                                &lt;/ul&gt;
-                            &lt;/nav&gt;
-                        </code>
-                    </pre>
-                </div>
-        </div>
-        <div>
-            <h2>Social Media</h2>
-            <a name="social-section"></a>
-                <p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue. The icons are placed inside links with class of <span class="inline-class">.social</span> and given a class with their appropriate Font Awesome name.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;a class="social"&gt;
-                                &lt;i class="icon-iconname"&gt;
-                                &lt;/i&gt;
-                            &lt;/a&gt;
-                        </code>
-                    </pre>
-                </div>
-            <h3>Twitter Hashtags</h3>
-                <p>The Twitter hashtags for the festival and for each track are included with links that open new tabs to the appropriate Twitter hashtag search page using target="_blank". The festival hashtag of #tribunefest is a link included as an h3 in the site header. The hover state is an underline of the same color. The #tribunefest link is not displayed on mobile.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;div class=nav&gt;
-                                &lt;h3&gt;
-                                    #tribunefest
-                                &lt;/h3&gt;
-                            &lt;/div&gt;
-                        </code>
-                    </pre>
-                </div>
-                <p>Each track's hashtag is included on track detail pages. On the track detail page, an h3 with a class of <span class="inline-class">.hashtag</span> is used to style the hashtag. The hover state is an underline of the same color.</p>
-                <div class="example-code">
-                    <pre>
-                        <code>
-                            &lt;body class=track-detail&gt;
-                                &lt;header class="track_header"&gt;
-                                    &lt;h3 class="hashtag"&gt;
-                                        #TTF14-track-name
-                                    &lt;/h3&gt;
-                                &lt;/header&gt;
-                            &lt;/body&gt;
-                        </code>
-                    </pre>
-                </div>
-        </div>
-        <div>
-            <h2>Sched</h2>
-            <a name="sched-section"></a>
-            <p>The TTF14 site's Django backend is fed info through Sched's API. In Sched, information about sessions, speakers, speakers' images, and more is entered.</p>
-        </div>
-    </div><!-- twelve columns omega -->
+	<div class="masthead sixteen columns">
+		<img class="logo" src="{{ site.baseurl }}/images/TTF14-web-top-half-pattern.svg" title="The Texas Tribune Festival 2014">
+		<h1 class="sg-header">Texas Tribune Festival 2014 Stylesheet</h1>
+		<p>This is the style guide for the Texas Tribune Festival 2014 style guide.</p>
+	</div>
+	<div class="four columns">
+		<div id='side-nav'>
+			<ul>
+				<li><a href="#sass-section">Sass/CSS</a></li>
+				<li><a href="#javascript-section">JavaScript</a></li>
+				<li><a href="#branding-section">Branding</a></li>
+				<li><a href="#typography-section">Typography</a></li>
+				<li><a href="#color-section">Color</a></li>
+				<li><a href="#responsive-section">Responsive</a></li>
+				<li><a href="#navigation-section">Navigation</a></li>
+				<li><a href="#images-section">Images</a></li>
+				<li><a href="#paragraphs-section">Paragraphs</a></li>
+				<li><a href="#lists-section">Lists</a></li>
+				<li><a href="#links-section">Links</a></li>
+				<li><a href="#social-section">Social Media</a></li>
+				<li><a href="#sched-section">Sched</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="twelve columns omega">
+		<div>
+			<a name="sass-section"></a>
+			<h2>Sass</h2>
+				<p>All of TTF14's CSS is written in Sass, and partials are imported in a manifest app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, and header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. A mixins import includes mixins used throughout. There's also an HTML5 boilerplate import.</p>
+		</div>
+		<div>
+			<a name="javascript-section"></a>
+			<h2>JavaScript</h2>
+				<p>JavaScript that needs to be loaded includes Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
+		</div>
+		<div>
+			<a name="branding-section"></a>
+			<h2>Branding</h2>
+				<p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to provide a visual cue of the track to which content belongs.</p>
+		</div>
+		<div>
+			<a name="typography-section"></a>
+			<h2>Typography</h2>
+			<h3>Fonts</h3>
+				<p>Fonts used in the TTF14 site are proxima-nova, rooney-sans, and rooney-web. These fonts are included with Typekit. There's a font_styles mixin that can be used to set font color, weight, size, and line height, respectively.</p>
+			<h3>Headers</h3>
+			<h1>This is the default h1 style.</h1>
+				<p>H1 headers are used mainly for page titles. The default h1 style is color $dark_navy, font weight of 500, font size of 2.25em, line height of 1.2em, 'rooney-sans' font family, a bottom margin of 0.5em, and text aligned left.</p>
+			<h2>This is the default h2 style.</h2>
+				<p>H2 headers are used for session names on the Schedule page and track detail page, speaker names on the track detail and Speakers pages, Sign Up: label in festival subscription, time slot on Schedule page, and Sponsors page headers. The default h2 style is color $light_navy, font weight of 800, font size of 1.65em, line height of 1.2em, letter spacing of 1px, 'proxima-nova' font family, and text transform to uppercase.</p>
+			<h3>This is the default h3 style.</h3>
+				<p>H3 headers are used for 'Back To Top' navigation on mobile, hashtags, session times on Schedule page, and venues on track detail pages. The default h3 style is color $dark_navy, font weight of 500, font size of 1.45em, line height of 1.2em, and 'rooney-sans' font family.</p>
+		</div>
+		<div>
+			<a name="color-section"></a>
+			<h2>Color</h2>
+			<h3>General Colors</h3>
+				<p>Some general color variables are used around the TTF14 site.</p>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #091724;"></div>
+					<span class="label">$dark_navy<br/>#091724</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #202b3b;"></div>
+					<span class="label">$navy<br/>#202b3b</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #3c4961;"></div>
+					<span class="label">$light_navy<br/>#3c4961</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #ffcc20;"></div>
+					<span class="label">$trib_yellow<br/>#ffcc20</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #008990;"></div>
+					<span class="label">$trib_teal<br/>#008990</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #56c2bc;"></div>
+					<span class="label">$festive_blue<br/>#56c2bc</span>
+				</div>
+				<p style="clear: both">Each festival track is given unique background and border colors each year. In the settings partial, there are two variables for each track, one for background color and one for border color. This is for ease of switching out track colors, as well as using these colors in multiple places. The track_colors mixin is used to set border and background colors. TTF14 track colors are listed below in alphabetical order by variable.</p>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #F7922C;"></div>
+					<span class="label">$criminal_justice_border<br/>#F7922C</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(247, 146, 44, 0.5);"></div>
+					<span class="label">$criminal_justice_bg<br/>rgba(247, 146, 44, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #8FC964;"></div>
+					<span class="label">$energy_border<br/>#8FC964</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(143, 201, 100, 0.5);"></div>
+					<span class="label">$energy_bg<br/>rgba(143, 201, 100, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #229665;"></div>
+					<span class="label">$environment_border<br/>#229665</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(34, 150, 101, 0.5);"></div>
+					<span class="label">$environment_bg<br/>rgba(34, 150, 101, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #8164A9;"></div>
+					<span class="label">$higher_ed_border<br/>#8164A9</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(129, 100, 169, 0.5);"></div>
+					<span class="label">$higher_ed_bg<br/>rgba(129, 100, 169, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #81C9EF;"></div>
+					<span class="label">$health_care_border<br/>#81C9EF</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(129, 201, 239, 0.65);"></div>
+					<span class="label">$health_care_bg<br/>rgba(129, 201, 239, 0.65)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #E8513A;"></div>
+					<span class="label">$immigration_border<br/>#E8513A</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(232, 81, 58, 0.5);"></div>
+					<span class="label">$immigration_bg<br/>rgba(232, 81, 58, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #FFC000;"></div>
+					<span class="label">$keynote_border<br/>#FFC000</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(255, 192, 0, 0.65);"></div>
+					<span class="label">$keynote_bg<br/>rgba(255, 192, 0, 0.65)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #4F96D1;"></div>
+					<span class="label">$open_gov_border<br/>#4F96D1</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(67, 133, 188, 0.45);"></div>
+					<span class="label">$open_gov_bg<br/>rgba(67, 133, 188, 0.45)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #BD507F;"></div>
+					<span class="label">$public_ed_border<br/>#BD507F</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(189, 80, 127, 0.5);"></div>
+					<span class="label">$public_ed_bg<br/>rgba(189, 80, 127, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #56C2BC;"></div>
+					<span class="label">$special_events_border<br/>#56C2BC</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(86, 194, 188, 0.5);"></div>
+					<span class="label">$special_events_bg<br/>rgba(86, 194, 188, 0.5)</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: #CDCB9D;"></div>
+					<span class="label">$transportation_border<br/>#CDCB9D</span>
+				</div>
+				<div class="swatch five columns column">
+					<div class="colorfield" style="background: rgba(205, 203, 157, 0.65);"></div>
+					<span class="label">$transportation_bg<br/>rgba(205, 203, 157, 0.65)</span>
+				</div>
+		</div>
+		<div>
+			<h2>Responsive</h2>
+			<a name="responsive-section"></a>
+			<h3>Responsive Contexts</h3>
+				<p>Responsive body classes are assigned to pages as the window size changes with responsive-contexts-dev.js. These classes are used in the mobilemenu partial to apply responsive styles.</p>
+			<h3>Grid</h3>
+				<p>The tt_layouts grid is imported and used to apply a grid to the TTF14 site.</p>
+			<h3>Media Queries</h3>
+				<p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide content for medium (tablet) and mobile sizes.</p>
+		</div>
+		<div>
+			<h2>Navigation</h2>
+			<a name="navigation-section"></a>
+				<p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, Facebook, and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site for ease of navigation. The logo in the footer links to the homepage.</p>
+			<h3>Mobile and Tablet Navigation</h3>
+				<p>At the bottom of the mobile site, Back To Top links to the top of the page. Back To Top has a class of <span class="inline-class">.back-to-top</span>.</p>
+				<p>Tablet navigation includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile directly below the header.</p>
+		</div>
+		<div>
+			<h2>Images</h2>
+			<a name="images-section"></a>
+			<h3>Speakers</h3>
+				<p>Each speaker has a headshot image on the Speakers page. If a speaker doesn't yet have an image, a generic speaker avatar image should be used. Images for speakers are entered in Sched.</p>
+			<h3>Patterns</h3>
+				<p>The TTF14 site includes a background pattern image in the header, and it also includes a matching pattern image above the footer. The image above the footer is included with an <span class="inline-class">img</span> tag.</p>
+			<h3>Logos</h3>
+				<p>Distinct images are included in the header and footer for web and mobile logos.</p>
+				<p>Web logo for header</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-fest-logo.png">
+				<p>Web logo for footer</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-logo-footer.png">
+				<p>Mobile logo for header</p>
+				<img src="{{ site.baseurl }}/images/TTF14-mobile-fest-logo.png">
+				<p>Pattern above footer</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-bottom-pattern.png">
+			<h3>Navigation Images</h3>
+				<p>There are three images included in the right rail used for navigation, and these link to the Register page, Speakers page, and display the Tracks menu. There is a web and a mobile version of each. These images are switched out at tablet at max-width: 799px.</p>
+				<p>Register web button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-register-btn.png">
+				<p>Speakers web button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-speakers-btn.png">
+				<p>Tracks web button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-web-tracks-btn.png">
+				<p>Register tablet & mobile button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-mobile-register-btn.png">
+				<p>Speakers tablet & mobile button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-mobile-speakers-btn.png">
+				<p>Tracks tablet & mobile button</p>
+				<img src="{{ site.baseurl }}/images/TTF14-mobile-tracks-btn.png">
+		</div>
+		<div>
+			<h2>Paragraphs</h2>
+				<a name="paragraphs-section"></a>
+				<p>Paragraphs with just the <span class="inline-class">p</span> tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line height of 1.35em.</p>
+			<h3>Homepage</h3>
+				<p>Paragraphs on the homepage included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;article class="update"&gt;
+								&lt;p&gt;
+									...
+								&lt;/p&gt;
+							&lt;/article&gt;
+						</code>
+					</pre>
+				</div>
+			<h3>Schedule Page</h3>
+				<p>Paragraphs are used on the Schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;div class="program-description"&gt;
+								&lt;p&gt;
+									...
+								&lt;/p&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+				<p>Paragraphs are also used on the schedule page for track headers. These styles are designated with class <span class="inline-class">.track</span>, which floats the track name left.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;div class="program-description"&gt;
+								&lt;p class="track"&gt;
+									Track Name
+								&lt;/p&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+				<p>Venue names are styled with paragraphs with class <span class="inline-class">.venue</span>. This class floats the venue name to the left and gives it 'proxima-nova' font family, color $dark_navy, font weight of 400, and font size of 1em.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;div class="program-description"&gt;
+								&lt;p class="venue"&gt;
+									Track Venue
+								&lt;/p&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+			<h3>Speakers Page</h3>
+				<p>The Speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the sessions and session names for each speaker. This class applies the styles of 'rooney-sans' font family, font weight of 500, color $dark_navy, font size of 1em, line height of 1.1em, and float left.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;div class="speaker"&gt;
+								&lt;p class="panel-link"&gt;
+									Sessions: Session Name, Session Name...
+								&lt;/p&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+		</div>
+		<div>
+			<h2>Lists</h2>
+			<a name="lists-section"></a>
+				<p>List elements are used in the site nav for links, on the Sponsors page for sponsor Twitter handles, on the Homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
+			<h3>Sponsors page</h3>
+				<p>The Sponsors page uses list elements within a <span class="inline-class">ul</span> with class <span class="inline-class">.handle_list</span> to style sponsor Twitter handles.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;ul class=.handle_list&gt;
+								&lt;li&gt;
+									Twitter handle
+								&lt;/li&gt;
+							&lt;/ul&gt;
+						</code>
+					</pre>
+				</div>
+		</div>
+		<div>
+			<h2>Links</h2>
+			<a name="links-section"></a>
+				<p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and color #008990.</p>
+				<a>Default link styling</a>
+			<h3>Schedule Page</h3>
+				<p>On the Schedule page, track names are links. The links are inside paragraphs with class <span class="inline-class">.track</span>. These links have a style of 'proxima-nova' font family, color white, font weight of 800, font size of 1.65em, letter spacing of 1px, and line height of 1.2em. These links have text transform of uppercase. On hover, the color remains white.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;p class=track&gt;
+								&lt;a&gt;
+									Track Name Link
+								&lt;/a&gt;
+							&lt;/p&gt;
+						</code>
+					</pre>
+				</div>
+				<p>Day buttons on the Schedule page are links styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, and text decoration none.</p>
+				 <div class="example-code">
+					<pre>
+						<code>
+							&lt;li class=day-btn&gt;
+								&lt;a&gt;
+									Day
+								&lt;/a&gt;
+							&lt;/li&gt;
+						</code>
+					</pre>
+				</div>
+			<h3>Site Nav</h3>
+				<p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration none.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;nav class="nav site-nav"&gt;
+								&lt;ul&gt;
+									&lt;li&gt;
+										&lt;a&gt;
+										&lt;/a&gt;
+									&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/nav&gt;
+						</code>
+					</pre>
+				</div>
+		</div>
+		<div>
+			<h2>Social Media</h2>
+			<a name="social-section"></a>
+				<p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue. The icons are placed inside links with class of <span class="inline-class">.social</span> and given a class with their appropriate Font Awesome name.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;a class="social"&gt;
+								&lt;i class="icon-iconname"&gt;
+								&lt;/i&gt;
+							&lt;/a&gt;
+						</code>
+					</pre>
+				</div>
+			<h3>Twitter Hashtags</h3>
+				<p>The Twitter hashtags for the festival and for each track are included with links that open new tabs to the appropriate Twitter hashtag search page using target="_blank". The festival hashtag of #tribunefest is a link included as an h3 in the site header. The hover state is an underline of the same color. The #tribunefest link is not displayed on mobile.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;div class=nav&gt;
+								&lt;h3&gt;
+									#tribunefest
+								&lt;/h3&gt;
+							&lt;/div&gt;
+						</code>
+					</pre>
+				</div>
+				<p>Each track's hashtag is included on track detail pages. On the track detail page, an h3 with a class of <span class="inline-class">.hashtag</span> is used to style the hashtag. The hover state is an underline of the same color.</p>
+				<div class="example-code">
+					<pre>
+						<code>
+							&lt;body class=track-detail&gt;
+								&lt;header class="track_header"&gt;
+									&lt;h3 class="hashtag"&gt;
+										#TTF14-track-name
+									&lt;/h3&gt;
+								&lt;/header&gt;
+							&lt;/body&gt;
+						</code>
+					</pre>
+				</div>
+		</div>
+		<div>
+			<h2>Sched</h2>
+			<a name="sched-section"></a>
+			<p>The TTF14 site's Django backend is fed info through Sched's API. In Sched, information about sessions, speakers, speakers' images, and more is entered.</p>
+		</div>
+	</div><!-- twelve columns omega -->
 </div><!-- container -->
