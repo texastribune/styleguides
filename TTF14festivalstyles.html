@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Texas Tribune Festival 2014 Styles
+title: Texas Tribune Festival 2014
 ---
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/festival.css" >
 	<script type="text/javascript" src="//use.typekit.net/scu7hio.js"></script>
@@ -10,7 +10,7 @@ title: Texas Tribune Festival 2014 Styles
 
 <div class="festival-page container">
 	<div class="masthead sixteen columns">
-		<h1>Texas Tribune Festival 2014 Stylesheet</h1>
+		<h1>Texas Tribune Festival 2014</h1>
 		<p>This is the style guide for the Texas Tribune Festival 2014.</p>
 	</div>
 	<div class="four columns">
@@ -35,22 +35,22 @@ title: Texas Tribune Festival 2014 Styles
 	<div class="twelve columns omega">
 		<div class="festival-section">
 			<a name="sass-section"></a>
-			<h2>Sass</h2>
+			<h2 class="section-head">Sass</h2>
 				<p>All of TTF14's CSS is written in Sass, and partials are imported in a manifest app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, and header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. A mixins import includes mixins used throughout. There's also an HTML5 boilerplate import.</p>
 		</div>
 		<div class="festival-section">
 			<a name="javascript-section"></a>
-			<h2>JavaScript</h2>
+			<h2 class="section-head">JavaScript</h2>
 				<p>JavaScript that needs to be loaded includes Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
 		</div>
 		<div class="festival-section">
 			<a name="branding-section"></a>
-			<h2>Branding</h2>
+			<h2 class="section-head">Branding</h2>
 				<p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to provide a visual cue of the track to which content belongs.</p>
 		</div>
 		<div class="festival-section">
 			<a name="typography-section"></a>
-			<h2>Typography</h2>
+			<h2 class="section-head">Typography</h2>
 			<h3>Fonts</h3>
 				<p>Fonts used in the TTF14 site are proxima-nova, rooney-sans, and rooney-web. These fonts are included with Typekit. There's a font_styles mixin that can be used to set font color, weight, size, and line height, respectively.</p>
 			<h3>Headers</h3>
@@ -63,7 +63,7 @@ title: Texas Tribune Festival 2014 Styles
 		</div>
 		<div class="festival-section">
 			<a name="color-section"></a>
-			<h2>Color</h2>
+			<h2 class="section-head">Color</h2>
 			<h3>General Colors</h3>
 				<p>Some general color variables are used around the TTF14 site.</p>
 				<div class="swatch five columns column">
@@ -181,7 +181,7 @@ title: Texas Tribune Festival 2014 Styles
 				</div>
 		</div>
 		<div class="festival-section">
-			<h2>Responsive</h2>
+			<h2 class="section-head">Responsive</h2>
 			<a name="responsive-section"></a>
 			<h3>Responsive Contexts</h3>
 				<p>Responsive body classes are assigned to pages as the window size changes with responsive-contexts-dev.js. These classes are used in the mobilemenu partial to apply responsive styles.</p>
@@ -191,7 +191,7 @@ title: Texas Tribune Festival 2014 Styles
 				<p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide content for medium (tablet) and mobile sizes.</p>
 		</div>
 		<div class="festival-section">
-			<h2>Navigation</h2>
+			<h2 class="section-head">Navigation</h2>
 			<a name="navigation-section"></a>
 				<p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, Facebook, and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site for ease of navigation. The logo in the footer links to the homepage.</p>
 			<h3>Mobile and Tablet Navigation</h3>
@@ -199,7 +199,7 @@ title: Texas Tribune Festival 2014 Styles
 				<p>Tablet navigation includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile directly below the header.</p>
 		</div>
 		<div class="festival-section">
-			<h2>Images</h2>
+			<h2 class="section-head">Images</h2>
 			<a name="images-section"></a>
 			<h3>Speakers</h3>
 				<p>Each speaker has a headshot image on the Speakers page. If a speaker doesn't yet have an image, a generic speaker avatar image should be used. Images for speakers are entered in Sched.</p>
@@ -233,7 +233,7 @@ title: Texas Tribune Festival 2014 Styles
 				<img src="{{ site.baseurl }}/images/TTF14-mobile-tracks-btn.png">
 		</div>
 		<div class="festival-section">
-			<h2>Paragraphs</h2>
+			<h2 class="section-head">Paragraphs</h2>
 				<a name="paragraphs-section"></a>
 				<p>Paragraphs with just the <span class="inline-class">p</span> tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line height of 1.35em.</p>
 			<h3>Homepage</h3>
@@ -306,7 +306,7 @@ title: Texas Tribune Festival 2014 Styles
 				</div>
 		</div>
 		<div class="festival-section">
-			<h2>Lists</h2>
+			<h2 class="section-head">Lists</h2>
 			<a name="lists-section"></a>
 				<p>List elements are used in the site nav for links, on the Sponsors page for sponsor Twitter handles, on the Homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
 			<h3>Sponsors page</h3>
@@ -325,7 +325,7 @@ title: Texas Tribune Festival 2014 Styles
 				</div>
 		</div>
 		<div class="festival-section">
-			<h2>Links</h2>
+			<h2 class="section-head">Links</h2>
 			<a name="links-section"></a>
 				<p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and color #008990.</p>
 				<a>Default link styling</a>
@@ -375,7 +375,7 @@ title: Texas Tribune Festival 2014 Styles
 				</div>
 		</div>
 		<div class="festival-section">
-			<h2>Social Media</h2>
+			<h2 class="section-head">Social Media</h2>
 			<a name="social-section"></a>
 				<p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue. The icons are placed inside links with class of <span class="inline-class">.social</span> and given a class with their appropriate Font Awesome name.</p>
 				<div class="example-code">
@@ -420,12 +420,13 @@ title: Texas Tribune Festival 2014 Styles
 				</div>
 		</div>
 		<div class="festival-section">
-			<h2>Sched</h2>
+			<h2 class="section-head">Sched</h2>
 			<a name="sched-section"></a>
 			<p>The TTF14 site's Django backend is fed info through Sched's API. In Sched, information about sessions, speakers, speakers' images, and more is entered.</p>
 		</div>
 	</div><!-- twelve columns omega -->
 </div><!-- container -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
 
