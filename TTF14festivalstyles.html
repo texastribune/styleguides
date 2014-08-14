@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TTF14 Styles
+title: Texas Tribune Festival 2014 Styles
 ---
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/festival.css" >
 	<script type="text/javascript" src="//use.typekit.net/scu7hio.js"></script>
@@ -33,22 +33,22 @@ title: TTF14 Styles
 		</div>
 	</div>
 	<div class="twelve columns omega">
-		<div>
+		<div class="festival-section">
 			<a name="sass-section"></a>
 			<h2>Sass</h2>
 				<p>All of TTF14's CSS is written in Sass, and partials are imported in a manifest app.scss file. TTF14 uses four Compass imports: opacity, CSS3, transform, and border-radius. It uses responsive, fonts, grid, and tables from tt-layouts. The settings partial sets up color and layout variables. The theme import includes logo styles, general styles such as paragraphs and links, typography, wrappers and containers, and header and footer styles. The pages import includes styles specific to individual pages. The nav import includes menu styles. The mobile menu import includes mobile-specific styles and the off-canvas track menu. A mixins import includes mixins used throughout. There's also an HTML5 boilerplate import.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<a name="javascript-section"></a>
 			<h2>JavaScript</h2>
 				<p>JavaScript that needs to be loaded includes Modernizr, jQuery, Flexslider, Fastclick, and Offcanvas. Offcanvas is used for the tracks menu.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<a name="branding-section"></a>
 			<h2>Branding</h2>
 				<p>The TTF14 site has web- and mobile-specific logos in both the header and the footer. In addition, the background image included in the header and image fixed above the footer are matched to other materials for TTF14 to ensure consistency across. General Texas Tribune colors such as $trib_yellow are used in the TTF14 site for consistency. The unique track colors are also consistent across all appearances of tracks in TTF14 materials to provide a visual cue of the track to which content belongs.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<a name="typography-section"></a>
 			<h2>Typography</h2>
 			<h3>Fonts</h3>
@@ -61,7 +61,7 @@ title: TTF14 Styles
 			<h3>This is the default h3 style.</h3>
 				<p>H3 headers are used for 'Back To Top' navigation on mobile, hashtags, session times on Schedule page, and venues on track detail pages. The default h3 style is color $dark_navy, font weight of 500, font size of 1.45em, line height of 1.2em, and 'rooney-sans' font family.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<a name="color-section"></a>
 			<h2>Color</h2>
 			<h3>General Colors</h3>
@@ -180,7 +180,7 @@ title: TTF14 Styles
 					<span class="label">$transportation_bg<br/>rgba(205, 203, 157, 0.65)</span>
 				</div>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Responsive</h2>
 			<a name="responsive-section"></a>
 			<h3>Responsive Contexts</h3>
@@ -190,7 +190,7 @@ title: TTF14 Styles
 			<h3>Media Queries</h3>
 				<p>The TTF14 site utilizes media queries to ensure that it looks good when viewed at any size. The main media queries used are those for tablet (max-width: 799px) and for mobile (max-width: 520px). Queries are particularly used to ensure that the min height for the header is at least high enough to include the site navs. The mobilemenu import also includes the helper classes .hide-for-mobile, .hide-for-medium-down, .show-for-medium-down, and .mobile-only to display or hide content for medium (tablet) and mobile sizes.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Navigation</h2>
 			<a name="navigation-section"></a>
 				<p>Navigation is mainly through the site nav and the pages nav, both included in the header at the top of each page with links to different pages and to social media sites like Twitter, Facebook, and Instagram. Register, Schedule, and Tracks images are included in the right rail and link to pages around the site for ease of navigation. The logo in the footer links to the homepage.</p>
@@ -198,7 +198,7 @@ title: TTF14 Styles
 				<p>At the bottom of the mobile site, Back To Top links to the top of the page. Back To Top has a class of <span class="inline-class">.back-to-top</span>.</p>
 				<p>Tablet navigation includes the site-nav, but mobile does not. Mobile does include the pages nav menu, with each li adjusted to 50% width. Register, Schedule, and Tracks images, respectively, are also included on tablet and mobile directly below the header.</p>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Images</h2>
 			<a name="images-section"></a>
 			<h3>Speakers</h3>
@@ -232,13 +232,14 @@ title: TTF14 Styles
 				<p>Tracks tablet & mobile button</p>
 				<img src="{{ site.baseurl }}/images/TTF14-mobile-tracks-btn.png">
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Paragraphs</h2>
 				<a name="paragraphs-section"></a>
 				<p>Paragraphs with just the <span class="inline-class">p</span> tag are styled with 'rooney-web' font family, color $navy, font weight of 300, font size of 1em, and line height of 1.35em.</p>
 			<h3>Homepage</h3>
 				<p>Paragraphs on the homepage included as part of the 'Updates' section are styled with 'proxima-nova' font family, font weight of 400, and font size of 1em.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;article class="update"&gt;
@@ -252,6 +253,7 @@ title: TTF14 Styles
 			<h3>Schedule Page</h3>
 				<p>Paragraphs are used on the Schedule page for session descriptions. These paragraphs are styled with 'proxima-nova' font family, font weight of 400, and line height of 1.2em.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;div class="program-description"&gt;
@@ -264,6 +266,7 @@ title: TTF14 Styles
 				</div>
 				<p>Paragraphs are also used on the schedule page for track headers. These styles are designated with class <span class="inline-class">.track</span>, which floats the track name left.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;div class="program-description"&gt;
@@ -276,6 +279,7 @@ title: TTF14 Styles
 				</div>
 				<p>Venue names are styled with paragraphs with class <span class="inline-class">.venue</span>. This class floats the venue name to the left and gives it 'proxima-nova' font family, color $dark_navy, font weight of 400, and font size of 1em.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;div class="program-description"&gt;
@@ -289,6 +293,7 @@ title: TTF14 Styles
 			<h3>Speakers Page</h3>
 				<p>The Speakers page uses paragraphs with a class of <span class="inline-class">.panel-link</span> to style the sessions and session names for each speaker. This class applies the styles of 'rooney-sans' font family, font weight of 500, color $dark_navy, font size of 1em, line height of 1.1em, and float left.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;div class="speaker"&gt;
@@ -300,13 +305,14 @@ title: TTF14 Styles
 					</pre>
 				</div>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Lists</h2>
 			<a name="lists-section"></a>
 				<p>List elements are used in the site nav for links, on the Sponsors page for sponsor Twitter handles, on the Homepage for list elements in Updates, in the festival wire for Updates, and on the Schedule page for session speakers.</p>
 			<h3>Sponsors page</h3>
 				<p>The Sponsors page uses list elements within a <span class="inline-class">ul</span> with class <span class="inline-class">.handle_list</span> to style sponsor Twitter handles.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;ul class=.handle_list&gt;
@@ -318,7 +324,7 @@ title: TTF14 Styles
 					</pre>
 				</div>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Links</h2>
 			<a name="links-section"></a>
 				<p>Links are generally styled with color #008990. They have a text decoration of none, a font size of 1em, a line height of 1em, and a hover state of text decoration underline and color #008990.</p>
@@ -326,6 +332,7 @@ title: TTF14 Styles
 			<h3>Schedule Page</h3>
 				<p>On the Schedule page, track names are links. The links are inside paragraphs with class <span class="inline-class">.track</span>. These links have a style of 'proxima-nova' font family, color white, font weight of 800, font size of 1.65em, letter spacing of 1px, and line height of 1.2em. These links have text transform of uppercase. On hover, the color remains white.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;p class=track&gt;
@@ -338,6 +345,7 @@ title: TTF14 Styles
 				</div>
 				<p>Day buttons on the Schedule page are links styled with an anchor link inside an li of class <span class="inline-class">.day-btn</span>. These links have a hover state of background $festive_blue, color $dark_navy, and text decoration none.</p>
 				 <div class="example-code">
+				 	<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;li class=day-btn&gt;
@@ -351,6 +359,7 @@ title: TTF14 Styles
 			<h3>Site Nav</h3>
 				<p>Links are used in the site nav for navigation to different pages. Style for these links is color $navy, display block, 'proxima-nova' font family, font weight of 600, and text transform to uppercase. The active state is a background of $festive_blue. The hover state is a background color of #9ed8d4, color $navy, and text decoration none.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;nav class="nav site-nav"&gt;
@@ -365,11 +374,12 @@ title: TTF14 Styles
 					</pre>
 				</div>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Social Media</h2>
 			<a name="social-section"></a>
 				<p>Twitter, Facebook, and Instagram social media icons are included in the header and footer of the page. These are Font Awesome icons. The hover state for the icons is $festive_blue. The icons are placed inside links with class of <span class="inline-class">.social</span> and given a class with their appropriate Font Awesome name.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;a class="social"&gt;
@@ -382,6 +392,7 @@ title: TTF14 Styles
 			<h3>Twitter Hashtags</h3>
 				<p>The Twitter hashtags for the festival and for each track are included with links that open new tabs to the appropriate Twitter hashtag search page using target="_blank". The festival hashtag of #tribunefest is a link included as an h3 in the site header. The hover state is an underline of the same color. The #tribunefest link is not displayed on mobile.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;div class=nav&gt;
@@ -394,6 +405,7 @@ title: TTF14 Styles
 				</div>
 				<p>Each track's hashtag is included on track detail pages. On the track detail page, an h3 with a class of <span class="inline-class">.hashtag</span> is used to style the hashtag. The hover state is an underline of the same color.</p>
 				<div class="example-code">
+					<btn class="show-hide">Show/Hide Example Code</btn>
 					<pre>
 						<code>
 							&lt;body class=track-detail&gt;
@@ -407,10 +419,25 @@ title: TTF14 Styles
 					</pre>
 				</div>
 		</div>
-		<div>
+		<div class="festival-section">
 			<h2>Sched</h2>
 			<a name="sched-section"></a>
 			<p>The TTF14 site's Django backend is fed info through Sched's API. In Sched, information about sessions, speakers, speakers' images, and more is entered.</p>
 		</div>
 	</div><!-- twelve columns omega -->
 </div><!-- container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+
+	//Toggles to show/hide example code on button click
+	$(document).ready(function() {
+		$('pre').hide();
+
+		$('.show-hide').on('click', function(event) {
+			$(event.target).closest('.example-code').find('pre').toggle();
+		});
+	});
+</script>
+
+
+

@@ -288,7 +288,6 @@ body {
 
 .masthead {
   background: #fff;
-  border-bottom: 4px solid #8ac200;
   text-align: center;
   font-size: 1.2em;
   margin: 1.5em 0 1.5em 0;
@@ -824,7 +823,6 @@ h1, h2, h3, h4, h5, h6 {
 /* For code examples */
 .example-code {
   margin-bottom: 1em;
-  background-color: #fafafa;
 }
 
 pre {
@@ -848,8 +846,27 @@ code {
   margin-bottom: 10px;
 }
 
+/* TribTalk styles specific to stylesheet */
+.tribtalk-page .masthead {
+  border-bottom: 4px solid #8ac200;
+}
+
+/* Festival styles specific to stylesheet */
 .festival-page img {
   width: 50%;
+}
+
+.festival-page .masthead {
+  border-bottom: 4px solid #ffcc20;
+}
+
+.festival-page .masthead h1 {
+  text-align: center;
+}
+
+.festival-section {
+  border-bottom: 2px solid #008990;
+  margin: 1em 0 1em 0;
 }
 
 
