@@ -825,6 +825,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
 }
 
+.show-hide {
+  background-color: #fafafa;
+  padding: 0.4em;
+  color: #999999;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  font-size: 1em;
+  font-family: 'rooney-sans', sans-serif;
+}
+
 pre {
   margin-bottom: 0;
   background-color: #fafafa;
@@ -832,7 +842,7 @@ pre {
   white-space: pre-wrap;
 }
 
-/* Ensure will override individual project's styles */
+/* Important to ensure will override individual project's styles */
 /* for consistency of example code across */
 code {
   font-family: serif !important;
