@@ -387,16 +387,6 @@ body {
 #side-nav > ul > li > a {
   padding: 10px 20px;
 }
-#side-nav > ul > li:hover {
-  border-left: 3px solid #8ac200;
-  border-bottom: 1px solid #8ac200;
-}
-#side-nav ul li:hover > a {
-  color: #131313;
-}
-#side-nav > ul > li:hover {
-  background: #8ac200;
-}
 /* Sub Menu */
 #side-nav ul ul a:link,
 #side-nav ul ul a:visited {
@@ -865,6 +855,17 @@ code {
   border-bottom: 4px solid #8ac200;
 }
 
+.tribtalk-page #side-nav > ul > li:hover {
+  border-left: 3px solid #8ac200;
+  border-bottom: 1px solid #8ac200;
+}
+.tribtalk-page #side-nav ul li:hover > a {
+  color: #131313;
+}
+.tribtalk-page #side-nav > ul > li:hover {
+  background: #8ac200;
+}
+
 /* Festival styles specific to stylesheet */
 .festival-page img {
   width: 50%;
@@ -900,6 +901,17 @@ code {
 .festival-section {
   padding: 0.8em 0 1em 0;
   display: inline-block;
+}
+
+.festival-page #side-nav > ul > li:hover {
+  border-left: 3px solid #56c2bc;
+  border-bottom: 1px solid #56c2bc;
+}
+.festival-page #side-nav ul li:hover > a {
+  color: #131313;
+}
+.festival-page #side-nav > ul > li:hover {
+  background: #56c2bc;
 }
 
 
