@@ -1,6 +1,16 @@
 # EditorConfig helps developers define and maintain consistent
 # coding styles between different editors and IDEs
 # editorconfig.org
+#
+# Find and install the plugin for your editor at
+# http://editorconfig.org/#download
+#
+# Add this to your projects with:
+#
+#   wget https://raw.githubusercontent.com/texastribune/styleguides/gh-pages/.editorconfig
+#
+# Any changes to this file should be pushed back into the master in the
+# texastribune/styleguides repo.
 
 root = true
 
