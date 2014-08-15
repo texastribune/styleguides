@@ -838,9 +838,6 @@ pre {
 
 /* Important to ensure will override individual project's styles */
 /* for consistency of example code across */
-code {
-  font-family: serif !important;
-}
 
 #main-page-header {
   font-weight: 800;
@@ -881,6 +878,10 @@ code {
 
 .festival-page p {
   margin: 0.6em 0 0.6em 0;
+}
+
+.festival-page code {
+  font-family: 'rooney-sans', sans-serif !important;
 }
 
 .festival-page h3 {
