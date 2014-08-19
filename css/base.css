@@ -288,10 +288,9 @@ body {
 
 .masthead {
   background: #fff;
-  border-bottom: 4px solid #8ac200;
   text-align: center;
   font-size: 1.2em;
-  margin-bottom: 1.5em;
+  margin: 1.5em 0 1.5em 0;
 }
 
 .logo {
@@ -387,16 +386,6 @@ body {
 }
 #side-nav > ul > li > a {
   padding: 10px 20px;
-}
-#side-nav > ul > li:hover {
-  border-left: 3px solid #8ac200;
-  border-bottom: 1px solid #8ac200;
-}
-#side-nav ul li:hover > a {
-  color: #131313;
-}
-#side-nav > ul > li:hover {
-  background: #8ac200;
 }
 /* Sub Menu */
 #side-nav ul ul a:link,
@@ -507,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .swatch{
   background-color: #f1f1f1;
-  max-width: 180px;
+  /* max-width: 180px; */
   height: auto;
   padding: 10px;
   margin-bottom: 1em;
@@ -654,7 +643,7 @@ h1, h2, h3, h4, h5, h6 {
         .container .column,
         .container .columns                         { margin-left: 10px; margin-right: 10px;  }
         .column.alpha, .columns.alpha               { margin-left: 0; margin-right: 10px; }
-        .column.omega, .columns.omega               { margin-right: 0; margin-left: 10px; }
+        .column.omega, .columns.omega               { margin-right: 0; padding-left: 1em; }
         .alpha.omega                                { margin-left: 0; margin-right: 0; }
 
         .container .one.column,
@@ -824,7 +813,20 @@ h1, h2, h3, h4, h5, h6 {
 /* For code examples */
 .example-code {
   margin-bottom: 1em;
+}
+
+.show-hide {
   background-color: #fafafa;
+  padding: 0.4em;
+  color: #999999;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  font-size: 1em;
+  font-family: 'rooney-sans', sans-serif;
+}
+
+.show-hide:hover {
+  background-color: #e6e6e6;
 }
 
 pre {
@@ -834,6 +836,9 @@ pre {
   white-space: pre-wrap;
 }
 
+/* Important to ensure will override individual project's styles */
+/* for consistency of example code across */
+
 #main-page-header {
   font-weight: 800;
   font-size: 2em;
@@ -842,7 +847,73 @@ pre {
   margin-bottom: 10px;
 }
 
+/* TribTalk styles specific to stylesheet */
+.tribtalk-page .masthead {
+  border-bottom: 4px solid #8ac200;
+}
 
+.tribtalk-page #side-nav > ul > li:hover {
+  border-left: 3px solid #8ac200;
+  border-bottom: 1px solid #8ac200;
+}
+.tribtalk-page #side-nav ul li:hover > a {
+  color: #131313;
+}
+.tribtalk-page #side-nav > ul > li:hover {
+  background: #8ac200;
+}
+
+/* Festival styles specific to stylesheet */
+.festival-page img {
+  width: 50%;
+}
+
+.festival-page .masthead {
+  border-bottom: 4px solid #ffcc20;
+}
+
+.festival-page .masthead h1 {
+  text-align: center;
+}
+
+.festival-page p {
+  margin: 0.6em 0 0.6em 0;
+}
+
+.festival-page code {
+  font-family: 'rooney-sans', sans-serif !important;
+}
+
+.festival-page h3 {
+  padding: 0.2em 0 0.2em 0;
+}
+
+.section-head {
+  border-bottom: 2px solid #008990;
+}
+
+.image-header {
+  font-size: 1.2em;
+  color: #3c4961;
+  padding-top: 0.8em;
+  font-family: 'rooney-sans', sans-serif;
+}
+
+.festival-section {
+  padding: 0.8em 0 1em 0;
+  display: inline-block;
+}
+
+.festival-page #side-nav > ul > li:hover {
+  border-left: 3px solid #56c2bc;
+  border-bottom: 1px solid #56c2bc;
+}
+.festival-page #side-nav ul li:hover > a {
+  color: #131313;
+}
+.festival-page #side-nav > ul > li:hover {
+  background: #56c2bc;
+}
 
 
 
