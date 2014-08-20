@@ -23,6 +23,16 @@ module.exports = function(grunt) {
           bundleExec: true,
           style: 'compressed'
         }
+      },
+      styleguide: {
+        files: {
+          'css/styleguide.min.css': '_sass/styleguide/app.sass'
+        },
+        options: {
+          compass: true,
+          bundleExec: true,
+          style: 'compressed'
+        }
       }
     },
     watch: {
@@ -36,8 +46,12 @@ module.exports = function(grunt) {
       tribtalk: {
         files: '_sass/tribtalk/*.s?ss',
         tasks: ['sass:tribtalk']
+        },
+      styleguide: {
+        files: '_sass/styleguide/*.s?ss',
+        tasks: ['sass:styleguide']
         }
-      },
+      }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
