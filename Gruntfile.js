@@ -30,6 +30,7 @@ module.exports = function(grunt) {
         cmd: 'jekyll build',
         bg: false
       },
+      // `jekyllWatch` is not used, but here for reference
       jekyllWatch : {
         cmd: 'jekyll build --watch',
         bg: true
@@ -59,7 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-bg-shell');
 
-  grunt.registerTask('dev', ['sass', 'watch']);
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('dev', ['sass', 'bgShell:jekyllDev', 'watch']);
+  grunt.registerTask('build', ['sass', 'bgShell:jekyllBuild']);
   grunt.registerTask('default', ['build']);
 };
