@@ -61,12 +61,21 @@ module.exports = function(grunt) {
       tribtalk: {
         files: '_sass/tribtalk/*.s?ss',
         tasks: ['sass:tribtalk']
-        },
+      },
       styleguide: {
         files: '_sass/styleguide/*.s?ss',
         tasks: ['sass:styleguide']
-        }
+      },
+      jekyll: {
+        files: [
+          '*.html',
+          '_includes/*.html',
+          '_layouts/*.html'
+        ],
+        // just get livereload to trigger
+        tasks: []
       }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
