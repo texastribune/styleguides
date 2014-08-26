@@ -12,6 +12,11 @@ body
   font-size: 1.2em
   margin: 1.5em 0 1.5em 0
 
+.homepage
+  #main-page-header
+    font-family: 'proxima-nova', sans-serif
+    border-bottom: 2px solid #ffcc20
+
 #main-page-header
   font-weight: 800
   font-size: 2em
@@ -82,15 +87,24 @@ body
     ul li
       font-weight: normal
 
-// Homepage nav
+// Homepage
 .homepage
   #side-nav
+    max-width: 600px
+    width: 80%
     ul
       li
+        border-bottom: 1px solid #ffcc20
         &:hover
           border-left: 3px solid #ffcc20
           border-bottom: 1px solid #ffcc20
           background: #ffcc20
+
+.homepage
+  p
+    line-height: 1.5em
+    max-width: 850px
+    font-family: 'proxima-nova', sans-serif
 
 // Custom side nav
 #side-nav
