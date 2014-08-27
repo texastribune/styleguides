@@ -1,14 +1,14 @@
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
 
-        //Toggles to show/hide example code on button click
-        $(document).ready(function() {
-            $('pre').hide();
+    //Toggles to show/hide example code on button click
+    $(document).ready(function() {
+      $('pre').hide();
+      $('.show-hide').on('click', function(event) {
+        $(event.target).closest('.example-code').find('pre').toggle();
+      });
+    });
 
-            $('.show-hide').on('click', function(event) {
-                $(event.target).closest('.example-code').find('pre').toggle();
-            });
-        });
-    </script>
+  </script>
 </body>
 </html>
