@@ -33,19 +33,15 @@ Use Grunt to compile the Sass into CSS by running:
 
     grunt build
 
-Use Grunt while developing to compile into CSS and then watch by running:
+Use Grunt while developing to compile Sass into CSS, start a local server on
+port 4000 and then watch by running:
 
     grunt dev
 
-By default, compile Sass into CSS by running:
+By default, compile Sass into CSS and compile the jekyll site by running:
 
     grunt
 
-## Running Jekyll
-
-GitHub pages are powered by Jekyll. To start the local Jekyll build/serve/watch process and preview what the style guides will look like on GitHub pages, run:
-
-    make serve
 
 ## Contributing and deploying
 

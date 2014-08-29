@@ -35,6 +35,21 @@ module.exports = function(grunt) {
         }
       }
     },
+    bgShell: {
+      jekyllBuild : {
+        cmd: 'jekyll build',
+        bg: false
+      },
+      // `jekyllWatch` is not used, but here for reference
+      jekyllWatch : {
+        cmd: 'jekyll build --watch',
+        bg: true
+      },
+      jekyllDev : {
+        cmd: "jekyll serve --baseurl '' --watch",
+        bg: true
+      }
+    },
     watch: {
       options: {
         livereload: true
@@ -46,19 +61,29 @@ module.exports = function(grunt) {
       tribtalk: {
         files: '_sass/tribtalk/*.s?ss',
         tasks: ['sass:tribtalk']
-        },
+      },
       styleguide: {
         files: '_sass/styleguide/*.s?ss',
         tasks: ['sass:styleguide']
-        }
+      },
+      jekyll: {
+        files: [
+          '*.html',
+          '_includes/*.html',
+          '_layouts/*.html'
+        ],
+        // just get livereload to trigger
+        tasks: []
       }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-bg-shell');
 
-  grunt.registerTask('dev', ['sass', 'watch']);
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('dev', ['sass', 'bgShell:jekyllDev', 'watch']);
+  grunt.registerTask('build', ['sass', 'bgShell:jekyllBuild']);
   grunt.registerTask('default', ['build']);
 };
