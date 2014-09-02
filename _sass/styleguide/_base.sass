@@ -12,6 +12,13 @@ body
   font-size: 1.2em
   margin: 1.5em 0 1.5em 0
 
+.navpage
+  #main-page-header
+    font-family: 'proxima-nova', sans-serif
+    border-bottom: 2px solid #3c4961
+    padding-bottom: 0.5em
+    margin-bottom: 20px
+
 #main-page-header
   font-weight: 800
   font-size: 2em
@@ -30,6 +37,11 @@ body
   letter-spacing: 2px
   font-family: "freight-sans-pro", "Helvetica", "Arial", sans-serif
   margin-bottom: 1em
+
+.homepage
+  .logo
+    @media screen and (max-width: 768px)
+      width: 100%
 
 .logo
   width: 50%
@@ -82,15 +94,25 @@ body
     ul li
       font-weight: normal
 
-// Homepage nav
-.homepage
+// Main Nav & Homepage
+.navpage
   #side-nav
+    max-width: 600px
+    width: 80%
+    margin-bottom: 30px
     ul
       li
+        border-bottom: 1px solid #ffcc20
         &:hover
           border-left: 3px solid #ffcc20
           border-bottom: 1px solid #ffcc20
           background: #ffcc20
+
+.homepage
+  p
+    line-height: 1.5em
+    max-width: 850px
+    font-family: 'proxima-nova', sans-serif
 
 // Custom side nav
 #side-nav
@@ -232,7 +254,7 @@ pre
   .two.columns
     width: 100px
   .three.columns
-    width: 160px
+    width: 200px
   .four.columns
     width: 220px
   .five.columns
@@ -317,7 +339,7 @@ pre
     .two.columns
       width: 76px
     .three.columns
-      width: 124px
+      width: 150px
     .four.columns
       width: 172px
     .five.columns
