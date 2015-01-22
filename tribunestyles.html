@@ -96,7 +96,36 @@ title: TexasTribune
         <article>
           <a name="grid-section"></a>
           <h2>Grid</h2>
-          <p></p>
+          <p>The Tribune uses its own twelve-column grid system. Below is an example of the code used to create a twelve-column row.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;div class="grid"&gt;
+                  &lt;div class="cell w-12"&gt;
+                    insert elements here
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+          <p>Below is an example of the code used to create a row composed of two six-column halves.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;div class="grid"&gt;
+                  &lt;div class="cell w-6"&gt;
+                    insert left elements
+                  &lt;/div&gt;
+                  &lt;div class="cell w-6"&gt;
+                    insert right elements
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
+          <p>This grid can be divided up into any number of columns as long as they add up to twelve. On mobile devices, each div with the class of <span class="inline-class">.cell</span> becomes its own row.</p>
         </article>
       </div>
     </div><!-- end row -->
