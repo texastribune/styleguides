@@ -24,9 +24,9 @@ module.exports = function(grunt) {
           style: 'compressed'
         }
       },
-      tribune: {
+      texastribune: {
         files: {
-          'css/tribune.min.css': '_sass/tribune/app.sass'
+          'css/texastribune.min.css': '_sass/texastribune/app.sass'
         },
         options: {
           compass: true,
