@@ -24,6 +24,16 @@ module.exports = function(grunt) {
           style: 'compressed'
         }
       },
+      tribune: {
+        files: {
+          'css/tribune.min.css': '_sass/tribune/app.sass'
+        },
+        options: {
+          compass: true,
+          bundleExec: true,
+          style: 'compressed'
+        }
+      },
       styleguide: {
         files: {
           'css/styleguide.min.css': '_sass/styleguide/app.sass'
