@@ -37,16 +37,16 @@ module.exports = function(grunt) {
     },
     bgShell: {
       jekyllBuild : {
-        cmd: 'jekyll build',
+        cmd: 'bundle exec jekyll build',
         bg: false
       },
       // `jekyllWatch` is not used, but here for reference
       jekyllWatch : {
-        cmd: 'jekyll build --watch',
+        cmd: 'bundle exec jekyll build --watch',
         bg: true
       },
       jekyllDev : {
-        cmd: "jekyll serve --baseurl '' --watch",
+        cmd: "bundle exec jekyll serve --baseurl '' --watch",
         bg: true
       }
     },
