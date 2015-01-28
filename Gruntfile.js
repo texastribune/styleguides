@@ -24,6 +24,16 @@ module.exports = function(grunt) {
           style: 'compressed'
         }
       },
+      texastribune: {
+        files: {
+          'css/texastribune.min.css': '_sass/texastribune/app.sass'
+        },
+        options: {
+          compass: true,
+          bundleExec: true,
+          style: 'compressed'
+        }
+      },
       styleguide: {
         files: {
           'css/styleguide.min.css': '_sass/styleguide/app.sass'
