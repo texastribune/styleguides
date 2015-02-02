@@ -40,7 +40,7 @@ title: TexasTribune
         <article>
           <a name="sass-section"></a>
           <h2>Sass/CSS</h2>
-          <p>Sass styles are written in .sass and in .scss. Grunt is used to compile and minify.</p>
+          <p>The Texas Tribune writes its CSS in Sass, both in .sass and in .scss. <a href="http://gruntjs.com/">Grunt</a> is used to compile and minify the Sass.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -70,8 +70,21 @@ title: TexasTribune
         <article>
           <a name="typography-section"></a>
           <h2>Typography</h2>
+          <h3>Typekit</h3>
+          <p>The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded at the top of base.html to avoid a flash of unstyled content (FOUC) when it comes to fonts.</p>
           <h3 class="sg-header">Stories</h3>
           <p>Stories use Georgia, Times and serif. These fonts can be added with the serif mixin.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+              .example-class
+                +serif
+              </code>
+            </pre>
+          </div>
+          <h3 class="sg-header">Header</h3>
+          <p>H1 Headers use Knockout 49 A, with fallbacks of Knockout 49 B, LeagueGothicRegular, Helvetica Neue, and sans-serif.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -134,7 +147,7 @@ title: TexasTribune
         <article>
           <a name="navigation-section"></a>
           <h2>Navigation</h2>
-          <p></p>
+          <p>There are separate navbars for desktop and mobile. Updates to the desktop nav should also be reflected in the mobile menu. Both the desktop nav and mobile menu use the <span class="inline-class">.dropdown-toggle</span> class. Some JavaScript powers the dropdown nav, as well, and this can be found in megamini.js.</p>
         </article>
       </div>
     </div><!-- end row -->
