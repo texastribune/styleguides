@@ -156,7 +156,7 @@ title: TexasTribune
         <article>
           <a name="images-section"></a>
           <h2>Images</h2>
-          <p></p>
+          <p>Images are hosted on Amazon Web Services.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -165,7 +165,32 @@ title: TexasTribune
         <article>
           <a name="credits-section"></a>
           <h2>Bylines &amp; Credits</h2>
-          <p></p>
+          <h3>Bylines for Stories</h3>
+          <p>Bylines are styled with an unordered list with the classes <span class="inline-class">.meta</span> and <span class="inline-class">.separator</span>. The byline is inside of an li with the class <span class="inline-class">byline</span>. If available, the author's name should link to her or his staff page.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;ul class="meta separator"&gt;
+                  &lt;li class="byline"&gt;
+                    by &lt;a href="/about/staff/first-last/"&gt;First Last&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              </code>
+            </pre>
+          </div>
+          <h3>Credits for Images</h3>
+          <p>Image credits are styled with a <span class="inline-class">cite</span> inside of a div with the class <span class="inline-class">.photo_links</span>. Wording is: photo by: First Last.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;div class="photo_links"&gt;
+                  &lt;cite&gt;photo by First Last&lt;/cite&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
         </article>
       </div>
     </div><!-- end row -->
