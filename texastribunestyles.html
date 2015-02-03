@@ -12,7 +12,7 @@ title: TexasTribune
   <div class="masthead sixteen columns">
     <img class="logo" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.jpg" title="TexasTribune">
     <h1 class="sg-header">Stylesheet</h1>
-    <p>This is the styleguide for <a href="http://www.texastribune.org">texastribune.org</a>. Below are styles that we're currently using that we'll continue to iterate on and use in the redesign of the site planned for 2015.</p>
+    <p>This is the styleguide for <a href="http://www.texastribune.org">texastribune.org</a>. Below are styles that we're currently using that we'll continue to iterate on in preparation for the redesign of the site planned for 2015.</p>
   </div><!-- end masthead -->
   <div class="four columns">
     <div id='side-nav'>
@@ -30,6 +30,7 @@ title: TexasTribune
         <li><a href="#forms-section">Forms</a></li>
         <li><a href="#buttons-section">Buttons</a></li>
         <li><a href="#icons-section">Icons</a></li>
+        <li><a href="#social-section">Social Media Integration</a></li>
       </ul>
     </div>
   </div>
@@ -259,6 +260,29 @@ title: TexasTribune
                 &lt;a class="social" href="#" target="_blank"&gt;
                   &lt;i class="icon-[whatever]"&gt;&lt;/i&gt;
                 &lt;/a&gt;
+              </code>
+            </pre>
+          </div>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
+          <a name="social-section"></a>
+          <h2>Social Media Integration</h2>
+          <h3>Facebook</h3>
+          <p>Facebook comments are pulled in and included in articles' comments sections.</p>
+          <h3>Twitter</h3>
+          <p>Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;a class="twitter-timeline" href="https://twitter.com/[profile]" data-widget-id="[provided by Twitter]" data-screen-name="[profile]"&gt;Tweets&lt;/a&gt;
+              </code>
+              <code>
+                &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
               </code>
             </pre>
           </div>
