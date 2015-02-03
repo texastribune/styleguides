@@ -23,6 +23,7 @@ title: TexasTribune
         <li><a href="#typography-section">Typography</a></li>
         <li><a href="#color-section">Color</a></li>
         <li><a href="#grid-section">Grid</a></li>
+        <li><a href="#responsive-section">Responsiveness</a></li>
         <li><a href="#navigation-section">Navigation</a></li>
         <li><a href="#images-section">Images</a></li>
         <li><a href="#credits-section">Bylines &amp; Credits</a></li>
@@ -145,6 +146,15 @@ title: TexasTribune
     <div class="row article_detail">
       <div class="main">
         <article>
+          <a name="responsive-section"></a>
+          <h2>Responsiveness</h2>
+          <p>The Texas Tribune uses four defined breakpoints -- 960px, 799px, 520px, and 320px. In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of <span class="inline-class">.responsive</span> should be added for responsiveness. This gives elements with the <span class="inline-class">.content-wrapper</span> class a width of 100% and max-width of the page width.</p>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
           <a name="navigation-section"></a>
           <h2>Navigation</h2>
           <p>There are separate navbars for desktop and mobile. Updates to the desktop nav should also be reflected in the mobile menu. Both the desktop nav and mobile menu use the <span class="inline-class">.dropdown-toggle</span> class. Some JavaScript powers the dropdown nav, as well, and this can be found in megamini.js.</p>
@@ -156,6 +166,9 @@ title: TexasTribune
         <article>
           <a name="images-section"></a>
           <h2>Images</h2>
+          <h3>Image Sizes</h3>
+          <p>There are nine non-cropped image sizes, and there are nine cropped sizes. Image sizes are indicated using media_size in html templates.</p>
+          <h3>Image Hosting</h3>
           <p>Images are hosted on Amazon Web Services.</p>
         </article>
       </div>
