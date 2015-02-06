@@ -12,7 +12,7 @@ title: TexasTribune
   <div class="masthead sixteen columns">
     <img class="logo" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.jpg" title="TexasTribune">
     <h1 class="sg-header">Stylesheet</h1>
-    <p>This is the styleguide for <a href="http://www.texastribune.org">texastribune.org</a>. Below are styles that we're currently using that we'll continue to iterate on and use in the redesign of the site planned for 2015.</p>
+    <p>This is the styleguide for <a href="http://www.texastribune.org">texastribune.org</a>. Below are styles that we're currently using that we'll continue to iterate on in preparation for the redesign of the site planned for 2015.</p>
   </div><!-- end masthead -->
   <div class="four columns">
     <div id='side-nav'>
@@ -22,15 +22,17 @@ title: TexasTribune
         <li><a href="#branding-section">Branding</a></li>
         <li><a href="#typography-section">Typography</a></li>
         <li><a href="#color-section">Color</a></li>
+        <li><a href="#layout-section">Layout</a></li>
         <li><a href="#grid-section">Grid</a></li>
+        <li><a href="#responsive-section">Responsiveness</a></li>
         <li><a href="#navigation-section">Navigation</a></li>
         <li><a href="#images-section">Images</a></li>
+        <li><a href="#articles-section">Articles</a></li>
         <li><a href="#credits-section">Bylines &amp; Credits</a></li>
-        <li><a href="#paragraphs-section">Paragraphs</a></li>
-        <li><a href="#lists-section">Lists</a></li>
         <li><a href="#forms-section">Forms</a></li>
         <li><a href="#buttons-section">Buttons</a></li>
         <li><a href="#icons-section">Icons</a></li>
+        <li><a href="#social-section">Social Media Integration</a></li>
       </ul>
     </div>
   </div>
@@ -40,7 +42,7 @@ title: TexasTribune
         <article>
           <a name="sass-section"></a>
           <h2>Sass/CSS</h2>
-          <p>Sass styles are written in .sass and in .scss. Grunt is used to compile and minify.</p>
+          <p>The Texas Tribune writes its CSS in Sass, both in .sass and in .scss. <a href="http://gruntjs.com/">Grunt</a> is used to compile and minify the Sass.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -61,7 +63,15 @@ title: TexasTribune
         <article>
           <a name="branding-section"></a>
           <h2>Branding</h2>
-          <p></p>
+          <h3>Logos</h3>
+          <p>Masthead logo</p>
+          <img src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.png">
+          <p>5th anniversary masthead logo</p>
+          <img src="https://s3.amazonaws.com/static.texastribune.org/media/logos/TT-5thAnniversary-logo.png">
+          <p>Bug</p>
+          <img src="http://static.texastribune.org/favicon/texastribune.org.png">
+          <p>Membership ribbon</p>
+          <img src="http://static.texastribune.org/media/membership/TT-FMD14-JoinUs-btn001.png">
         </article>
       </div>
     </div><!-- end row -->
@@ -70,8 +80,21 @@ title: TexasTribune
         <article>
           <a name="typography-section"></a>
           <h2>Typography</h2>
+          <h3>Typekit</h3>
+          <p>The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded at the top of base.html to avoid a flash of unstyled content (FOUC) when it comes to fonts.</p>
           <h3 class="sg-header">Stories</h3>
           <p>Stories use Georgia, Times and serif. These fonts can be added with the serif mixin.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+              .example-class
+                +serif
+              </code>
+            </pre>
+          </div>
+          <h3 class="sg-header">Header</h3>
+          <p>H1 Headers use Knockout 49 A, with fallbacks of Knockout 49 B, LeagueGothicRegular, Helvetica Neue, and sans-serif.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -88,6 +111,20 @@ title: TexasTribune
             <div class="colorfield" style="background: #008990;"></div>
             <span class="label">Tribune teal<br/>$trib_teal<br/>#008990</span>
           </div>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
+          <a name="layout-section"></a>
+          <h2>Layout</h2>
+          <h3>Header/Roofline</h3>
+          <p>The header is enclosed in the <span class="inline-class">.wrapper-r</span> class. Header ads are contained within a div with a <span class="inline-class">#site_roofline</span> id. User account welcomes are contained within a div with a <span class="inline-class">#greeting</span> id. The navbar, membership ad, logo, and time are contained within a header tag with an id of <span class="inline-class">#site_header</span>.</p>
+          <h3>Main Content</h3>
+          <p>The main site content is contained within a div with an id of <span class="inline-class">#site_content</span>. Within that div, main content is contained in a div with a <span class="inline-class">.main_column</span> class.</p>
+          <h3>Footer</h3>
+          <p>The footer, like the header, is enclosed in a div with the <span class="inline-class">.wrapper-r</span> class. Inside of this div is a <span class="inline-class">footer</span> tag with an id of <span class="inline-class">#footer</span>. The footer element contains a dl with an id of #staff_writers that lists staff writers.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -132,9 +169,18 @@ title: TexasTribune
     <div class="row article_detail">
       <div class="main">
         <article>
+          <a name="responsive-section"></a>
+          <h2>Responsiveness</h2>
+          <p>The Texas Tribune uses four defined breakpoints -- 960px, 799px, 520px, and 320px. In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of <span class="inline-class">.responsive</span> should be added for responsiveness. This gives elements with the <span class="inline-class">.content-wrapper</span> class a width of 100% and max-width of the page width.</p>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
           <a name="navigation-section"></a>
           <h2>Navigation</h2>
-          <p></p>
+          <p>There are separate navbars for desktop and mobile. Updates to the desktop nav should also be reflected in the mobile menu. Both the desktop nav and mobile menu use the <span class="inline-class">.dropdown-toggle</span> class. Some JavaScript powers the dropdown nav, as well, and this can be found in megamini.js.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -143,7 +189,19 @@ title: TexasTribune
         <article>
           <a name="images-section"></a>
           <h2>Images</h2>
-          <p></p>
+          <h3>Image Sizes</h3>
+          <p>There are nine non-cropped image sizes, and there are nine cropped sizes. Image sizes are indicated using media_size in html templates.</p>
+          <h3>Image Hosting</h3>
+          <p>Images are hosted on Amazon Web Services.</p>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
+          <a name="articles-section"></a>
+          <h2>Articles</h2>
+          <p>There are several ways to indicate that an element is part of an article. It can be placed inside the article tag, given the <span class="inline-class">.article</span> class, given the <span class="inline-class">.prose</span> class, or given the <span class="inline-class">.mceContentBody</span> class. Scoping an article within <span class="inline-class">#site_content</span> can also help avoid selecting any additional page elements.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -152,25 +210,32 @@ title: TexasTribune
         <article>
           <a name="credits-section"></a>
           <h2>Bylines &amp; Credits</h2>
-          <p></p>
-        </article>
-      </div>
-    </div><!-- end row -->
-    <div class="row article_detail">
-      <div class="main">
-        <article>
-          <a name="paragraphs-section"></a>
-          <h2>Paragraphs</h2>
-          <p></p>
-        </article>
-      </div>
-    </div><!-- end row -->
-    <div class="row article_detail">
-      <div class="main">
-        <article>
-          <a name="lists-section"></a>
-          <h2>Lists</h2>
-          <p></p>
+          <h3>Bylines for Stories</h3>
+          <p>Bylines are styled with an unordered list with the classes <span class="inline-class">.meta</span> and <span class="inline-class">.separator</span>. The byline is inside of an li with the class <span class="inline-class">byline</span>. If available, the author's name should link to her or his staff page.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;ul class="meta separator"&gt;
+                  &lt;li class="byline"&gt;
+                    by &lt;a href="/about/staff/first-last/"&gt;First Last&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              </code>
+            </pre>
+          </div>
+          <h3>Credits for Images</h3>
+          <p>Image credits are styled with a <span class="inline-class">cite</span> inside of a div with the class <span class="inline-class">.photo_links</span>. Wording is: photo by: First Last.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;div class="photo_links"&gt;
+                  &lt;cite&gt;photo by First Last&lt;/cite&gt;
+                &lt;/div&gt;
+              </code>
+            </pre>
+          </div>
         </article>
       </div>
     </div><!-- end row -->
@@ -179,7 +244,8 @@ title: TexasTribune
         <article>
           <a name="forms-section"></a>
           <h2>Forms</h2>
-          <p></p>
+          <h3>Pretty Forms</h3>
+          <p>Many forms throughout the site are styled with the <span class="inline-class">.pretty</span> class. Within these pretty forms, there are further subclasses of form, including <span class="inline-class">.errorlist</span>, <span class="inline-class">.required_field</span>, <span class="inline-class">.alert</span>, and <span class="inline-class">.help_text</span>.</p>
         </article>
       </div>
     </div><!-- end row -->
@@ -210,7 +276,41 @@ title: TexasTribune
         <article>
           <a name="icons-section"></a>
           <h2>Icons</h2>
-          <p></p>
+          <h3>Social Media</h3>
+          <p>Font Awesome is used for icons throughout the site. Generally, social media links should include "target=_blank" so that they open in a new tab.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;a class="social" href="#" target="_blank"&gt;
+                  &lt;i class="icon-[whatever]"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+              </code>
+            </pre>
+          </div>
+        </article>
+      </div>
+    </div><!-- end row -->
+    <div class="row article_detail">
+      <div class="main">
+        <article>
+          <a name="social-section"></a>
+          <h2>Social Media Integration</h2>
+          <h3>Facebook</h3>
+          <p>Facebook comments are pulled in and included in articles' comments sections.</p>
+          <h3>Twitter</h3>
+          <p>Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more.</p>
+          <div class="example-code">
+            <btn class="show-hide">Example Code</btn>
+            <pre>
+              <code>
+                &lt;a class="twitter-timeline" href="https://twitter.com/[profile]" data-widget-id="[provided by Twitter]" data-screen-name="[profile]"&gt;Tweets&lt;/a&gt;
+              </code>
+              <code>
+                &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+              </code>
+            </pre>
+          </div>
         </article>
       </div>
     </div><!-- end row -->
