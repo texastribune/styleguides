@@ -1,13 +1,9 @@
 ---
 layout: stylepage_md
 title: TexasTribune
+typekit: brb4jmm
+css: texastribune.min.css
 ---
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/texastribune.min.css" >
-    <script type="text/javascript" src="//use.typekit.com/brb4jmm.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  </head>
-<body>
-
 <div class="texastribune-page container">
   <div class="masthead sixteen columns">
     <img class="logo" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.jpg" title="TexasTribune">
