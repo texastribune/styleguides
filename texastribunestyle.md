@@ -1,5 +1,5 @@
 ---
-layout: stylepage_md
+layout: stylepage
 title: TexasTribune
 typekit: brb4jmm
 css: texastribune.min.css
