@@ -21,14 +21,14 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
-      //Toggles to show/hide example code on button click
-      $(document).ready(function() {
-        // TODO
-        // $('pre').hide();
-        // $('.show-hide').on('click', function(event) {
-        //   $(event.target).closest('.example-code').find('pre').toggle();
-        // });
-      });
+      /*globals $ */
+      (function () {
+        // Toggles to show/hide example code on button click
+        var $controls = $('<span class="show-hide" title="click to toggle example code">Example Code</span>').on('click', function(event) {
+          $(event.target).next().toggle();
+        });
+        $controls.insertBefore($('pre').hide());
+      })();
     </script>
   </body>
 </html>
