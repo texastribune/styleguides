@@ -71,7 +71,6 @@ Typography
 ----------
 
 ### Stories
-{: .sg-header}
 
 Stories use Georgia, Times and serif. These fonts can be added with the `serif`
 mixin.
@@ -95,14 +94,15 @@ Color
 Grid
 ----
 
-The site uses its own twelve-column grid system. Below is an example of the code used to create a twelve-column row.
+The site uses its own twelve-column grid system. Below is an example of the
+code used to create a twelve-column row.
 
 ```html
-  <div class="grid">
-    <div class="cell w-12">
-      insert elements here
-    </div>
+<div class="grid">
+  <div class="cell w-12">
+    insert elements here
   </div>
+</div>
 ```
 Below is an example of the code used to create a row composed of two six-column
 halves.
@@ -153,15 +153,15 @@ Buttons
 These buttons are used throughout the site.
 
 ### Info Button
-{: .sg-header}
 
 This button is used to link to more information throughout the site. By
 default, this button is Tribune yellow. On hover, the button lightens by
-10&#37;.
+10%.
 
 <div>
   <a class="btn_info">Button</a>
 </div>
+
 ```html
 <div>
   <a class="btn_info">Button</a>
