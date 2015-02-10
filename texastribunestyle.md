@@ -23,18 +23,18 @@ and use in the redesign of the site planned for 2015.
 <div class="four columns"><!-- side nav -->
   <div id='side-nav'>
 
-* <a href="#sass">Sass/CSS</a>
-* <a href="#javascript">JavaScript</a>
-* <a href="#branding">Branding</a>
-* <a href="#typography">Typography</a>
-* <a href="#color">Color</a>
-* <a href="#grid">Grid</a>
-* <a href="#navigation">Navigation</a>
-* <a href="#images">Images</a>
-* <a href="#bylines--credits">Bylines & Credits</a>
-* <a href="#paragraphs">Paragraphs</a>
-* <a href="#lists">Lists</a>
-* <a href="#forms">Forms</a>
+* [Sass/CSS](#sass)
+* [JavaScript](#javascript)
+* [Branding](#branding)
+* [Typography](#typography)
+* [Color](#color)
+* [Grid](#grid)
+* [Navigation](#navigation)
+* [Images](#images)
+* [Bylines & Credits](#bylines--credits)
+* [Paragraphs](#paragraphs)
+* [Lists](#lists)
+* [Forms](#forms)
 * [Buttons](#buttons)
 * [Icons](#icons)
 
