@@ -45,8 +45,7 @@ and use in the redesign of the site planned for 2015.
 Sass/CSS
 --------
 
-Sass styles are written in .sass and in .scss. Grunt is used to compile and
-minify.
+The Texas Tribune writes its CSS in Sass, both in .sass and in .scss. [Grunt](http://gruntjs.com/) is used to compile and minify the Sass.
 
 
 JavaScript
@@ -64,14 +63,42 @@ JavaScript
 Branding
 --------
 
+### Logos
+
+Masthead logo
+
+![The Texas Tribune](https://s3.amazonaws.com/static.texastribune.org/common/images/logo.png)
+
+5th anniversary masthead logo
+
+![The Texas Tribune 5th Anniversary](https://s3.amazonaws.com/static.texastribune.org/media/logos/TT-5thAnniversary-logo.png)
+
+Bug
+
+![The Texas Tribune](http://static.texastribune.org/favicon/texastribune.org.png)
+
+### CTAs
+
+Membership ribbon
+
+![Join Us](http://static.texastribune.org/media/membership/TT-FMD14-JoinUs-btn001.png)
 
 Typography
 ----------
+
+### Typekit
+
+The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded at the top of base.html to avoid a flash of unstyled content (FOUC) when it comes to fonts.
 
 ### Stories
 
 Stories use Georgia, Times and serif. These fonts can be added with the `serif`
 mixin.
+
+```sass
+.example-class
+  +serif
+```
 
 
 Color
