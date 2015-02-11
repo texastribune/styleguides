@@ -29,8 +29,10 @@ and use in the redesign of the site planned for 2015.
 * [Color](#color)
 * [Layout](#layout)
 * [Grid](#grid)
+* [Responsiveness](#responsiveness)
 * [Navigation](#navigation)
 * [Images](#images)
+* [Articles](#articles)
 * [Bylines & Credits](#bylines--credits)
 * [Paragraphs](#paragraphs)
 * [Lists](#lists)
@@ -169,12 +171,34 @@ to twelve. On mobile devices, each div with the class of `cell` becomes its own
 row.
 
 
+Responsiveness
+----
+
+The Texas Tribune uses four defined breakpoints -- 960px, 799px, 520px, and 320px. In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of `.responsive` should be added for responsiveness. This gives elements with the `.content-wrapper` class a width of 100% and max-width of the page width.
+
+
 Navigation
 ----------
+
+There are separate navbars for desktop and mobile. Updates to the desktop nav should also be reflected in the mobile menu. Both the desktop nav and mobile menu use the `.dropdown-toggle` class. Some JavaScript powers the dropdown nav, as well, and this can be found in megamini.js.
 
 
 Images
 ------
+
+### Image Sizes
+
+There are nine non-cropped image sizes, and there are nine cropped sizes. Image sizes are indicated using media_size in html templates.
+
+### Image Hosting
+
+Images are hosted on Amazon Web Services.
+
+
+Articles
+----
+
+There are several ways to indicate that an element is part of an article. It can be placed inside the article tag, given the `.article` class, given the `.prose` class, or given the `.mceContentBody` class. Scoping an article within `#site_content` can also help avoid selecting any additional page elements.
 
 
 Bylines & Credits
