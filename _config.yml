@@ -9,5 +9,10 @@ baseurl: "/styleguides"
 
 # Build settings
 markdown: kramdown
+kramdown:
+  # use github flavored markdown for consistency with github
+  input: GFM
+  # parse markdown inside block level html tags
+  parse_block_html: true
 permalink: pretty
 exclude: ['Makefile', 'Gemfile', 'Gemfile.lock', 'Gruntfile.js', 'package.json', 'node_modules/']

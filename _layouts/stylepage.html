@@ -1,13 +1,34 @@
-{% include head.html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://static.texastribune.org/favicon/texastribune.org.png" width="16" height="16" alt="" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/styleguide.min.css" >
+    {% if page.css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.css }}">
+    {% endif %}
+    {% if page.typekit %}
+      <script type="text/javascript" src="//use.typekit.com/{{ page.typekit }}.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {% endif %}
+  </head>
 
-  <main>
-
-    <h1>{{ page.title }}</h1>
-
-    {{ content }}
-
-  </main>
-
-  {% include nav.html %}
-
-{% include foot.html %}
+  <body>
+    {% include nav.html %}
+    <div class="container">
+      {{ content }}
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+      /*globals $ */
+      (function () {
+        // Toggles to show/hide example code on button click
+        var $controls = $('<span class="show-hide" title="click to toggle example code">Example Code</span>').on('click', function(event) {
+          $(event.target).next().toggle();
+        });
+        $controls.insertBefore($('pre').hide());
+      })();
+    </script>
+  </body>
+</html>
