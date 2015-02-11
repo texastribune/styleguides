@@ -34,11 +34,10 @@ and use in the redesign of the site planned for 2015.
 * [Images](#images)
 * [Articles](#articles)
 * [Bylines & Credits](#bylines--credits)
-* [Paragraphs](#paragraphs)
-* [Lists](#lists)
 * [Forms](#forms)
 * [Buttons](#buttons)
 * [Icons](#icons)
+* [Social Media Integration](#social-media-integration)
 
 </div></div><!-- end side nav -->
 
@@ -268,6 +267,31 @@ Font Awesome is used for icons throughout the site. Generally, social media link
   <i class="icon-[whatever]"></i>
 </a>
 ```
+
+Social Media Integration
+----
+
+### Facebook
+
+Facebook comments are pulled in and included in articles' comments sections.
+
+### Twitter
+
+Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more.
+
+Html setup:
+
+```html
+<a class="twitter-timeline" href="https://twitter.com/[profile]" data-widget-id="[provided by Twitter]" data-screen-name="[profile]">Tweets</a>
+```
+
+Javascript snippet:
+
+```javascript
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+```
+<!-- DELETEME add this space another way -->
+<div style="height: 100px;"></div>
 
 
 </div><!-- end main -->
