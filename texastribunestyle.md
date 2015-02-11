@@ -27,6 +27,7 @@ and use in the redesign of the site planned for 2015.
 * [Branding](#branding)
 * [Typography](#typography)
 * [Color](#color)
+* [Layout](#layout)
 * [Grid](#grid)
 * [Navigation](#navigation)
 * [Images](#images)
@@ -100,6 +101,10 @@ mixin.
   +serif
 ```
 
+### Headers
+
+H1 Headers use Knockout 49 A, with fallbacks of Knockout 49 B, LeagueGothicRegular, Helvetica Neue, and sans-serif.
+
 
 Color
 -----
@@ -114,6 +119,22 @@ Color
 </div>
 <!-- DELETEME shouldn't need a clear here -->
 <div style="clear: both;"></div>
+
+
+Layout
+----
+
+### Header/Roofline
+
+The header is enclosed in the `.wrapper-r` class. Header ads are contained within a div with a `#site_roofline` id. User account welcomes are contained within a div with a `#greeting` id. The navbar, membership ad, logo, and time are contained within a header tag with an id of `#site_header`.
+
+### Main Content
+
+The main site content is contained within a div with an id of `#site_content`. Within that div, main content is contained in a div with a `.main_column` class.
+
+### Footer
+
+The footer, like the header, is enclosed in a div with the `.wrapper-r` class. Inside of this div is a `footer` tag with an id of `#footer`. The footer element contains a dl with an id of #staff_writers that lists staff writers.
 
 
 Grid
