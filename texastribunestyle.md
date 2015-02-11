@@ -20,8 +20,7 @@ and use in the redesign of the site planned for 2015.
 
 </div><!-- end masthead -->
 
-<div class="four columns"><!-- side nav -->
-  <div id='side-nav'>
+<div class="four columns"><div id='side-nav'><!-- side nav -->
 
 * [Sass/CSS](#sass)
 * [JavaScript](#javascript)
@@ -38,8 +37,7 @@ and use in the redesign of the site planned for 2015.
 * [Buttons](#buttons)
 * [Icons](#icons)
 
-  </div>
-</div><!-- end side nav -->
+</div></div><!-- end side nav -->
 
 <div class="twelve columns omega"><!-- main -->
 
