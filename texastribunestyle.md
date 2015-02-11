@@ -227,16 +227,12 @@ Image credits are styled with a `cite` inside of a div with the class `.photo_li
 ```
 
 
-Paragraphs
-----------
-
-
-Lists
------
-
-
 Forms
 -----
+
+### Pretty Forms
+
+Many forms throughout the site are styled with the `.pretty` class. Within these pretty forms, there are further subclasses of form, including `.errorlist`, `.required_field`, `.alert`, and `.help_text`.
 
 
 Buttons
@@ -262,5 +258,16 @@ default, this button is Tribune yellow. On hover, the button lightens by
 
 Icons
 -----
+
+### Social Media
+
+Font Awesome is used for icons throughout the site. Generally, social media links should include "target=_blank" so that they open in a new tab.
+
+```html
+<a class="social" href="#" target="_blank">
+  <i class="icon-[whatever]"></i>
+</a>
+```
+
 
 </div><!-- end main -->
