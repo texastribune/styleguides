@@ -173,7 +173,19 @@ row.
 Responsiveness
 ----
 
-The Texas Tribune uses four defined breakpoints -- 960px, 799px, 520px, and 320px. In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of `.responsive` should be added for responsiveness. This gives elements with the `.content-wrapper` class a width of 100% and max-width of the page width.
+The Texas Tribune uses two defined breakpoints, a max-width of 799px (medium) and a max-width of 520px (mobile). These are set up in the breakpoint mixin.
+
+Sass for mobile and medium breakpoints:
+
+```sass
+.foo
+  +breakpoint(mobile)
+
+.bar
+  +breakpoint(medium)
+```
+
+In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of `.responsive` should be added for responsiveness. This gives elements with the `.content-wrapper` class a width of 100% and max-width of the page width.
 
 
 Navigation
