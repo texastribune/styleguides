@@ -204,6 +204,28 @@ There are several ways to indicate that an element is part of an article. It can
 Bylines & Credits
 -----------------
 
+### Bylines for Stories
+
+Bylines are styled with an unordered list with the classes `.meta` and `.separator`. The byline is inside of an li with the class `byline`. If available, the author's name should link to her or his staff page.
+
+```html
+<ul class="meta separator">
+  <li class="byline">
+    by <a href="/about/staff/first-last/">First Last</a>
+  </li>
+</ul>
+```
+
+### Credits for Images
+
+Image credits are styled with a `cite` inside of a div with the class `.photo_links`. Wording is: photo by: First Last.
+
+```html
+<div class="photo_links">
+  <cite>photo by First Last</cite>
+</div>
+```
+
 
 Paragraphs
 ----------
