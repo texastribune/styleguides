@@ -36,6 +36,7 @@ and use in the redesign of the site planned for 2015.
 * [Bylines & Credits](#bylines--credits)
 * [Forms](#forms)
 * [Buttons](#buttons)
+* [Widgets](#widgets)
 * [Icons](#icons)
 * [Social Media Integration](#social-media-integration)
 
@@ -266,6 +267,66 @@ default, this button is Tribune yellow. On hover, the button lightens by
   <a class="btn_info">Button</a>
 </div>
 ```
+
+Widgets
+----
+
+Styles for widgets are included in the _widgets.sass partial.
+
+### Featurebox
+
+Featurebox is used for wire widgets around the site, including TribWire and TweetWire, and is often included in the right rail. For featurebox styles, use class `.featurebox`. Within the featurebox, there's a header with class `.featurebox-header`, main content with class `.featurebox-content`, and a footer with class `.featurebox-footer`. The footer often includes an adunit and a link to view more.
+
+```html
+<aside class="featurebox">
+  <header class="featurebox-header">
+    <h1>Header</h1>
+  </header>
+  <div class="featurebox-content">
+  </div>
+  <footer class="featurebox-footer">
+    <div class="ad adunit"></div>
+    <a href="#">View All</a>
+  </footer>
+</aside>
+```
+
+
+### The Most
+
+The Most also uses featurebox styles, with the addition of tabs. The Most has three tabs: Shared, Viewed, and Commented. It's included on the homepage and in the right rail around the site. Add the id `#the_most` and tabs classes to a featurebox for The Most.
+
+```html
+<aside id="the_most" class="featurebox">
+  <header class="featurebox-header">
+    <h1>Header</h1>
+  </header>
+  <div class="featurebox-content tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <div id="most_shared" class="ui-tabs-panel ui-widget-content ui-corner-bottom"></div>
+    <div id="most_viewed" class="ui-tabs-panel ui-widget-content ui-corner-bottom"></div>
+    <div id="most_commented" class="ui-tabs-panel ui-widget-content ui-corner-bottom"></div>
+  </div>
+  <footer class="featurebox-footer">
+    <div class="ad adunit"></div>
+    <a href="#">View All</a>
+  </footer>
+</aside>
+```
+
+
+### Trib newsletter signup
+
+The Trib newsletter signup widget is included at the top of the right rail around the site on pages that inherit from the two-column layout. The widget includes a CTA for people to sign up for The Brief. The class `.trib_newsletter` gives the signup its styles.
+
+```html
+<section class="trib_newsletter">
+  <form>
+    <header><h2>Sign Up for The Brief</h2></header>
+    <p>Our daily news summary</p>
+  </form>
+</section>
+```
+
 
 Icons
 -----
