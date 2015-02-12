@@ -31,7 +31,7 @@ and use in the redesign of the site planned for 2015.
 * [Grid](#grid)
 * [Responsiveness](#responsiveness)
 * [Navigation](#navigation)
-* [Images](#images)
+* [Multimedia](#multimedia)
 * [Articles](#articles)
 * [Bylines & Credits](#bylines--credits)
 * [Forms](#forms)
@@ -196,16 +196,41 @@ Navigation
 There are separate navbars for desktop and mobile. Updates to the desktop nav should also be reflected in the mobile menu. Both the desktop nav and mobile menu use the `.dropdown-toggle` class. Some JavaScript powers the dropdown nav, as well, and this can be found in megamini.js.
 
 
-Images
+Multimedia
 ------
 
-### Image Sizes
+### Images
+
+##### Image Sizes
 
 There are nine non-cropped image sizes, and there are nine cropped sizes. Image sizes are indicated using media_size in html templates.
 
-### Image Hosting
+##### Image Hosting
 
 Images are hosted on Amazon Web Services.
+
+### Videos
+
+Videos can be included from Youtube, Vimeo, and Livestream. [FitVids.js](http://fitvidsjs.com/), a jQuery plugin for fluid width video embeds, is used to ensure that videos maintain their aspect ratio at all screen sizes. To trigger fitvids, the video must be set up with a div with a class of `.video` that contains a div with a class of `.youtube`, `.vimeo`, or `.livestream` to signal that the element is indeed a video.
+
+```html
+<div class="media">
+  <div id="video_container">
+    <div class="video">
+      <div class="youtube/vimeo/livestream">
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+##### Livestream
+
+For livestreams, [Livestream](http://new.livestream.com/) is used.
+
+### Audio
+
+TribCast and other audio files are Amazon-hosted Shockwave Flash files.
 
 
 Articles
