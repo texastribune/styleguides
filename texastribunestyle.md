@@ -286,6 +286,30 @@ Buttons
 
 These buttons are used throughout the site.
 
+### Button Neue
+
+Button neue is used in newsletter signup widgets; account login, register, and signup forms; newsletter archive pages; district brackets; and the event RSVP form.
+
+Button neue can be a few different colors. There's the default with $trib_yellow_bg.
+
+<input class="btn_neue" type="submit" value="Submit">
+
+A class of `.teal` makes it $trib_teal with #fff font color. 
+
+<input class="btn_neue teal" type="submit" value="Submit">
+
+A class of `.gray` makes it #d7d7d7 with #aeaeae font color. 
+
+<input class="btn_neue gray" type="submit" value="Submit">
+
+A class of `.dark` makes it #555555 with #222222 font color.
+
+<input class="btn_neue dark" type="submit" value="Submit">
+
+```html
+<input class="btn_neue" type="submit" value="Submit">
+```
+
 ### Info Button
 
 This button is used to link to more information throughout the site. By
