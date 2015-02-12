@@ -55,13 +55,21 @@ The Texas Tribune writes its CSS in Sass, both in .sass and in .scss. [Grunt](ht
 JavaScript
 ----------
 
-### Analytics
+### Loading
 
-### jQuery Plugins
+The Texas Tribune loads only essential JavaScript in the head. This includes [Typekit](https://typekit.com/) to avoid a flash of unstyled content (FOUC) before fonts load. Also included in the head is Google Analytics setup, ad setup, [jQuery](http://jquery.com/), [jQuery UI](http://jqueryui.com/), and [Modernizr](http://modernizr.com/).
 
-### Third-Party Social Services
+### Compression
 
-### Other Third-Party
+[Django Compressor](http://django-compressor.readthedocs.org/en/latest/) is used to compress JavaScript. 
+
+### Organization
+
+This JavaScript is grouped by core JS, plugins, project JS, JS for ads, and JS snippets for third-party social services.
+
+### Guidelines for Writing
+
+JavaScript for The Texas Tribune should be written in a modular pattern. Immediately invoked function expressions (IIFE) should be used so that variables are locally scoped, and $document.ready should not be used.
 
 
 Branding
