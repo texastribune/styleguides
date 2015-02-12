@@ -37,6 +37,7 @@ and use in the redesign of the site planned for 2015.
 * [Forms](#forms)
 * [Buttons](#buttons)
 * [Widgets](#widgets)
+* [Disclosures](#disclosures)
 * [Icons](#icons)
 * [Social Media Integration](#social-media-integration)
 
@@ -325,6 +326,16 @@ The Trib newsletter signup widget is included at the top of the right rail aroun
     <p>Our daily news summary</p>
   </form>
 </section>
+```
+
+Disclosures
+----
+
+Disclosures are found at the bottom of stories and are styled as paragraphs with a class of `.disclosure`.
+
+```html
+<p class="disclosure">
+</p>
 ```
 
 
