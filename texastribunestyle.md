@@ -103,7 +103,7 @@ Typography
 
 #### Typekit
 
-The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded at the top of base.html to avoid a flash of unstyled content (FOUC) when it comes to fonts.
+The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded in the head to avoid a flash of unstyled content (FOUC) when it comes to fonts.
 
 #### Stories
 
@@ -111,7 +111,7 @@ Stories use Georgia, Times and serif. These fonts can be added with the `serif`
 mixin.
 
 ```sass
-.example-class
+.foo
   +serif
 ```
 
@@ -216,7 +216,7 @@ halves.
 ```
 
 This grid can be divided up into any number of columns as long as they add up
-to twelve. On mobile devices, each div with the class of `cell` becomes its own
+to twelve. On mobile devices, each div with the class of `.cell` becomes its own
 row.
 
 
@@ -249,7 +249,7 @@ In addition, styles based on custom points are used throughout where needed for 
     display: none
 ```
 
-##### Mobile only
+##### Show on mobile
 
 ```sass
 .mobile-only
@@ -283,6 +283,8 @@ There are separate navbars for desktop and mobile. Updates to the desktop nav sh
 
 Multimedia
 ------
+
+Multimedia elements are designated with the class `.media`, which is the container for images, audio, and video.
 
 #### Images
 
@@ -321,7 +323,7 @@ TribCast and other audio files are Amazon-hosted Shockwave Flash files.
 Articles
 ----
 
-There are several ways to indicate that an element is part of an article. It can be placed inside the article tag, given the `.article` class, given the `.prose` class, or given the `.mceContentBody` class. Scoping an article within `#site_content` can also help avoid selecting any additional page elements.
+There are several ways to indicate that an element is part of an article. It can be placed inside the `article` tag, given the `.article` class, given the `.prose` class, or given the `.mceContentBody` class. Scoping an article within `#site_content` can also help avoid selecting any additional page elements.
 
 
 Bylines & Credits
@@ -329,7 +331,7 @@ Bylines & Credits
 
 #### Bylines for Stories
 
-Bylines are styled with an unordered list with the classes `.meta` and `.separator`. The byline is inside of an li with the class `byline`. If available, the author's name should link to her or his staff page.
+Bylines are styled with an unordered list with the classes `.meta` and `.separator`. The byline is inside of an `li` with the class `byline`. If available, the author's name should link to her or his staff page.
 
 ```html
 <ul class="meta separator">
@@ -345,7 +347,7 @@ Image credits are styled with a `cite` inside of a div with the class `.photo_li
 
 ```html
 <div class="photo_links">
-  <cite>photo by First Last</cite>
+  <cite>photo by: First Last</cite>
 </div>
 ```
 
@@ -527,7 +529,7 @@ On mobile, these ads have dimensions of 300 x 100.
 
 #### Right rail
 
-Ads in the right rail appear in pages that inherit the two-column layout, and the dimensions for these ads are 300 x 250. They are included inside a div with class of `.sponsor_image_holder`, which is inside a `section` with classes of `.ad_container` and `.sidebar_block`.
+Ads in the right rail appear in pages that inherit the two-column layout, and the dimensions for these ads are 300 x 250. They are included inside a `div` with class of `.sponsor_image_holder`, which is inside a `section` with classes of `.ad_container` and `.sidebar_block`.
 
 ```html
 <section class="ad_container sidebar_block">
@@ -576,7 +578,7 @@ Facebook comments are pulled in and included in articles' comments sections.
 
 #### Twitter
 
-Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more.
+Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more. When adding a new Twitter widget, include a comment with information about the widget's setup.
 
 Html setup:
 
