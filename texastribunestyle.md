@@ -7,6 +7,7 @@ css: texastribune.min.css
 
 
 <!-- masthead -->
+<div class="texastribune-page">
 <div class="masthead sixteen columns">
   <img class="logo" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.jpg" title="TexasTribune">
 
@@ -38,6 +39,7 @@ and use in the redesign of the site planned for 2015.
 * [Buttons](#buttons)
 * [Widgets](#widgets)
 * [Disclosures](#disclosures)
+* [Ads](#ads)
 * [Icons](#icons)
 * [Social Media Integration](#social-media-integration)
 
@@ -408,6 +410,64 @@ Disclosures are found at the bottom of stories and are styled as paragraphs with
 ```
 
 
+Ads
+----
+
+Ads appear throughout the site at the top of the page, in the right rail, inside stories, and at the bottom of stories in the top of the footer.
+
+### Roofline
+
+Roofline ads appear at the top of most pages throughout the site, and they cycle through four ads. 
+
+On desktop, these ads have dimensions of 728 x 90.
+
+```html
+<div id="site_roofline" style="position:relative;">
+  <div class="hide-for-mobile large_ad_container">
+    Include ad here
+  </div>
+</div>
+```
+
+On mobile, these ads have dimensions of 300 x 100.
+
+```html
+<div id="site_roofline" style="position:relative;">
+  <div class="mobile-only">
+    Include ad here
+  </div>
+</div>
+```
+
+### Right rail
+
+Ads in the right rail appear in pages that inherit the two-column layout, and the dimensions for these ads are 300 x 250. They are included inside a div with class of `.sponsor_image_holder`, which is inside a `section` with classes of `.ad_container` and `.sidebar_block`.
+
+```html
+<section class="ad_container sidebar_block">
+  <div class="sponsor_image_holder">
+    Include ad here
+  </div>
+</section>
+```
+
+### Story ads
+
+Ads inside stories are added with adify, and their dimensions are 468 x 60.
+
+### Footer ads
+
+Ads below stories and at the top of the footer share the 728 x 90 dimensions with the roofline ads. On mobile, these ads have dimensions of 300 x 100.
+
+### Other ads
+
+In wire widgets, ads have dimensions of 200 x 38.
+
+On directory pages, there are also half banner ads with dimensions of 234 x 60.
+
+Skyscraper ads have dimensions of 160 x 600. These appear on the right side of the Events index page, and they also appear on the search results page.
+
+
 Icons
 -----
 
@@ -448,3 +508,4 @@ Javascript snippet:
 
 
 </div><!-- end main -->
+</div>
