@@ -38,6 +38,7 @@ and use in the redesign of the site planned for 2015.
 * [Forms](#forms)
 * [Buttons](#buttons)
 * [Widgets](#widgets)
+* [Feeds](#feeds)
 * [Disclosures](#disclosures)
 * [Ads](#ads)
 * [Icons](#icons)
@@ -57,19 +58,19 @@ The Texas Tribune writes its CSS in Sass, both in .sass and in .scss. [Grunt](ht
 JavaScript
 ----------
 
-### Loading
+#### Loading
 
 The Texas Tribune loads only essential JavaScript in the head. This includes [Typekit](https://typekit.com/) to avoid a flash of unstyled content (FOUC) before fonts load. Also included in the head is Google Analytics setup, ad setup, [jQuery](http://jquery.com/), [jQuery UI](http://jqueryui.com/), and [Modernizr](http://modernizr.com/).
 
-### Compression
+#### Compression
 
 [Django Compressor](http://django-compressor.readthedocs.org/en/latest/) is used to compress JavaScript. 
 
-### Organization
+#### Organization
 
 This JavaScript is grouped by core JS, plugins, project JS, JS for ads, and JS snippets for third-party social services.
 
-### Guidelines for Writing
+#### Guidelines for Writing
 
 JavaScript for The Texas Tribune should be written in a modular pattern. Immediately invoked function expressions (IIFE) should be used so that variables are locally scoped, and $document.ready should not be used.
 
@@ -77,7 +78,7 @@ JavaScript for The Texas Tribune should be written in a modular pattern. Immedia
 Branding
 --------
 
-### Logos
+#### Logos
 
 Masthead logo
 
@@ -91,7 +92,7 @@ Bug
 
 ![The Texas Tribune](http://static.texastribune.org/favicon/texastribune.org.png)
 
-### CTAs
+#### CTAs
 
 Membership ribbon
 
@@ -100,11 +101,11 @@ Membership ribbon
 Typography
 ----------
 
-### Typekit
+#### Typekit
 
 The Texas Tribune has its own font kit through Typekit that supplies the fonts for the site. Typekit is loaded at the top of base.html to avoid a flash of unstyled content (FOUC) when it comes to fonts.
 
-### Stories
+#### Stories
 
 Stories use Georgia, Times and serif. These fonts can be added with the `serif`
 mixin.
@@ -114,7 +115,7 @@ mixin.
   +serif
 ```
 
-### Headers
+#### Headers
 
 H1 Headers use Knockout 49 A, with fallbacks of Knockout 49 B, LeagueGothicRegular, Helvetica Neue, and sans-serif.
 
@@ -137,17 +138,54 @@ Color
 Layout
 ----
 
-### Header/Roofline
+#### Header/Roofline
 
 The header is enclosed in the `.wrapper-r` class. Header ads are contained within a div with a `#site_roofline` id. User account welcomes are contained within a div with a `#greeting` id. The navbar, membership ad, logo, and time are contained within a header tag with an id of `#site_header`.
 
-### Main Content
+```html
+<div class="wrapper-r">
+  <div id="site_roofline">
+    Header ads
+  </div>
+  <div id="greeting">
+    User account welcome
+  </div>
+  <header id="site_header">
+    <nav class="navbar primary"></nav>
+    <div class="ad last"></div>
+    <div class="below_nav"></div>
+  </header>
+</div>
+```
+
+#### Main Content
 
 The main site content is contained within a div with an id of `#site_content`. Within that div, main content is contained in a div with a `.main_column` class.
 
-### Footer
+```html
+<div id="site_content" class="content bare">
+  <div class="grid">
+    <div class="cell w-8 main_column"></div>
+  </div>
+</div>
+```
 
-The footer, like the header, is enclosed in a div with the `.wrapper-r` class. Inside of this div is a `footer` tag with an id of `#footer`. The footer element contains a dl with an id of #staff_writers that lists staff writers.
+#### Footer
+
+The footer, like the header, is enclosed in a div with the `.wrapper-r` class. Inside of this div is a `footer` tag with an id of `#site_footer`. Inside of this `footer` element, there's a div with the id `footer`, and this contains a dl with an id of #staff_writers that lists staff writers, a div with an id of `footer_topics` that lists sections, a dl with id `offsite_outlets` with social media, and a ul with id `footer_nav` linking to pages like About Us and Donate.
+
+```html
+<div class="wrapper-r">
+  <footer id="site_footer">
+    <div id="footer">
+      <dl id="staff_writers"></dl>
+      <div id="footer_topics"></div>
+      <dl id="offsite_outlets"></dl>
+      <ul id="footer_nav"></ul>
+    </div>
+  </footer>
+</div>
+```
 
 
 Grid
@@ -185,6 +223,8 @@ row.
 Responsiveness
 ----
 
+#### Breakpoints
+
 The Texas Tribune uses two defined breakpoints, a max-width of 799px (medium) and a max-width of 520px (mobile). These are set up in the breakpoint mixin.
 
 Sass for mobile and medium breakpoints:
@@ -199,6 +239,41 @@ Sass for mobile and medium breakpoints:
 
 In addition, styles based on custom points are used throughout where needed for a design to look best at all sizes. A body class of `.responsive` should be added for responsiveness. This gives elements with the `.content-wrapper` class a width of 100% and max-width of the page width.
 
+#### Helper Classes
+
+##### Hide on mobile
+
+```sass
+.hide-for-mobile
+  +breakpoint(mobile)
+    display: none
+```
+
+##### Mobile only
+
+```sass
+.mobile-only
+  @media screen and (min-width: 520px)
+    display: none
+```
+
+##### Hide for medium down
+
+```sass
+.hide-for-medium-down
+  @media screen and (max-width: 799px)
+    display: none
+```
+
+##### Show for medium down
+
+```sass
+.show-for-medium-down
+  display: none
+  @media screen and (max-width: 799px)
+    display: block
+```
+
 
 Navigation
 ----------
@@ -209,7 +284,7 @@ There are separate navbars for desktop and mobile. Updates to the desktop nav sh
 Multimedia
 ------
 
-### Images
+#### Images
 
 ##### Image Sizes
 
@@ -219,7 +294,7 @@ There are nine non-cropped image sizes, and there are nine cropped sizes. Image 
 
 Images are hosted on Amazon Web Services.
 
-### Videos
+#### Videos
 
 Videos can be included from Youtube, Vimeo, and Livestream. [FitVids.js](http://fitvidsjs.com/), a jQuery plugin for fluid width video embeds, is used to ensure that videos maintain their aspect ratio at all screen sizes. To trigger fitvids, the video must be set up with a div with a class of `.video` that contains a div with a class of `.youtube`, `.vimeo`, or `.livestream` to signal that the element is indeed a video.
 
@@ -238,7 +313,7 @@ Videos can be included from Youtube, Vimeo, and Livestream. [FitVids.js](http://
 
 For livestreams, [Livestream](http://new.livestream.com/) is used.
 
-### Audio
+#### Audio
 
 TribCast and other audio files are Amazon-hosted Shockwave Flash files.
 
@@ -252,7 +327,7 @@ There are several ways to indicate that an element is part of an article. It can
 Bylines & Credits
 -----------------
 
-### Bylines for Stories
+#### Bylines for Stories
 
 Bylines are styled with an unordered list with the classes `.meta` and `.separator`. The byline is inside of an li with the class `byline`. If available, the author's name should link to her or his staff page.
 
@@ -264,7 +339,7 @@ Bylines are styled with an unordered list with the classes `.meta` and `.separat
 </ul>
 ```
 
-### Credits for Images
+#### Credits for Images
 
 Image credits are styled with a `cite` inside of a div with the class `.photo_links`. Wording is: photo by: First Last.
 
@@ -278,7 +353,7 @@ Image credits are styled with a `cite` inside of a div with the class `.photo_li
 Forms
 -----
 
-### Pretty Forms
+#### Pretty Forms
 
 Many forms throughout the site are styled with the `.pretty` class. Within these pretty forms, there are further subclasses of form, including `.errorlist`, `.required_field`, `.alert`, and `.help_text`.
 
@@ -288,7 +363,7 @@ Buttons
 
 These buttons are used throughout the site.
 
-### Button Neue
+#### Button Neue
 
 Button neue is used in newsletter signup widgets; account login, register, and signup forms; newsletter archive pages; district brackets; and the event RSVP form.
 
@@ -313,7 +388,7 @@ A class of `.dark` makes it #555555 with #222222 font color.
 ```
 
 
-### Yellow Button
+#### Yellow Button
 
 This button is used in comments, account information, and contact info.
 
@@ -324,7 +399,7 @@ This button is used in comments, account information, and contact info.
 ```
 
 
-### Info Button
+#### Info Button
 
 This button is used to link to more information throughout the site. By
 default, this button is Tribune yellow. On hover, the button lightens by
@@ -345,7 +420,7 @@ Widgets
 
 Styles for widgets are included in the _widgets.sass partial.
 
-### Featurebox
+#### Featurebox
 
 Featurebox is used for wire widgets around the site, including TribWire and TweetWire, and is often included in the right rail. For featurebox styles, use class `.featurebox`. Within the featurebox, there's a header with class `.featurebox-header`, main content with class `.featurebox-content`, and a footer with class `.featurebox-footer`. The footer often includes an adunit and a link to view more.
 
@@ -364,7 +439,7 @@ Featurebox is used for wire widgets around the site, including TribWire and Twee
 ```
 
 
-### The Most
+#### The Most
 
 The Most also uses featurebox styles, with the addition of tabs. The Most has three tabs: Shared, Viewed, and Commented. It's included on the homepage and in the right rail around the site. Add the id `#the_most` and tabs classes to a featurebox for The Most.
 
@@ -386,7 +461,7 @@ The Most also uses featurebox styles, with the addition of tabs. The Most has th
 ```
 
 
-### Trib newsletter signup
+#### Trib newsletter signup
 
 The Trib newsletter signup widget is included at the top of the right rail around the site on pages that inherit from the two-column layout. The widget includes a CTA for people to sign up for The Brief. The class `.trib_newsletter` gives the signup its styles.
 
@@ -398,6 +473,17 @@ The Trib newsletter signup widget is included at the top of the right rail aroun
   </form>
 </section>
 ```
+
+
+Feeds
+----
+
+A list of The Texas Tribune feeds can be found [here](http://www.texastribune.org/feeds/).
+
+#### Mailchimp
+
+Feeds power daily and weekly Mailchimp digests for numerous topics, including education, health care, energy &amp; environment, economy, race &amp; immigration, transportation, and law &amp; order.
+
 
 Disclosures
 ----
@@ -415,7 +501,7 @@ Ads
 
 Ads appear throughout the site at the top of the page, in the right rail, inside stories, and at the bottom of stories in the top of the footer.
 
-### Roofline
+#### Roofline
 
 Roofline ads appear at the top of most pages throughout the site, and they cycle through four ads. 
 
@@ -439,7 +525,7 @@ On mobile, these ads have dimensions of 300 x 100.
 </div>
 ```
 
-### Right rail
+#### Right rail
 
 Ads in the right rail appear in pages that inherit the two-column layout, and the dimensions for these ads are 300 x 250. They are included inside a div with class of `.sponsor_image_holder`, which is inside a `section` with classes of `.ad_container` and `.sidebar_block`.
 
@@ -451,15 +537,15 @@ Ads in the right rail appear in pages that inherit the two-column layout, and th
 </section>
 ```
 
-### Story ads
+#### Story ads
 
 Ads inside stories are added with adify, and their dimensions are 468 x 60.
 
-### Footer ads
+#### Footer ads
 
 Ads below stories and at the top of the footer share the 728 x 90 dimensions with the roofline ads. On mobile, these ads have dimensions of 300 x 100.
 
-### Other ads
+#### Other ads
 
 In wire widgets, ads have dimensions of 200 x 38.
 
@@ -471,7 +557,7 @@ Skyscraper ads have dimensions of 160 x 600. These appear on the right side of t
 Icons
 -----
 
-### Social Media
+#### Social Media
 
 Font Awesome is used for icons throughout the site. Generally, social media links should include "target=_blank" so that they open in a new tab.
 
@@ -484,11 +570,11 @@ Font Awesome is used for icons throughout the site. Generally, social media link
 Social Media Integration
 ----
 
-### Facebook
+#### Facebook
 
 Facebook comments are pulled in and included in articles' comments sections.
 
-### Twitter
+#### Twitter
 
 Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more.
 
@@ -504,7 +590,7 @@ Javascript snippet:
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 ```
 <!-- DELETEME add this space another way -->
-<div style="height: 100px;"></div>
+<div style="height: 50px;"></div>
 
 
 </div><!-- end main -->
