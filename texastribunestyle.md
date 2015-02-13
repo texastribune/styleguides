@@ -310,6 +310,18 @@ A class of `.dark` makes it #555555 with #222222 font color.
 <input class="btn_neue" type="submit" value="Submit">
 ```
 
+
+### Yellow Button
+
+This button is used in comments, account information, and contact info.
+
+<input type="submit" value="Submit" class="btn_yellow">
+
+```html
+<input type="submit" value="Submit" class="btn_yellow">
+```
+
+
 ### Info Button
 
 This button is used to link to more information throughout the site. By

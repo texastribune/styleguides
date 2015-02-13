@@ -2,9 +2,13 @@
 @import "compass/css3/box-shadow"
 @import "compass/css3/images"
 
+
+// Variables
 $trib_yellow_bg: #f6b80a
 $trib_teal: #008990
 
+
+// Mixins
 =sansserif
   font-family: Helvetica, Arial, sans-serif
 
@@ -27,6 +31,8 @@ $trib_teal: #008990
   &:active
     outline: 0 none
 
+
+// Info button
 .btn_info
   background-color: #ffcc20
   border: none
@@ -45,6 +51,8 @@ $trib_teal: #008990
     background-color: lighten(#ffcc20, 10%)
     text-decoration: none
 
+
+// Neue button
 .btn_neue
   +neue
   +tt-linear-gradient(lighten($trib_yellow_bg, 5%), darken($trib_yellow_bg, 5%))
@@ -81,3 +89,14 @@ a.btn_neue
   &:hover
     +tt-linear-gradient(#555555, #111111)
     color: #fff
+
+
+// Yellow button
+.btn_yellow
+  +sansserif
+  background-color: #F4C224
+  border: 1px solid #c79f1e
+  margin-top: 0.5em
+  padding: 0.2em 0.5em
+  text-transform: uppercase
+
