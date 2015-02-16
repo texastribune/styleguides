@@ -170,6 +170,12 @@ The main site content is contained within a div with an id of `#site_content`. W
 </div>
 ```
 
+
+#### Right Rail
+
+The right rail is included on all pages that inherit from the two-column layout. Elements included in the right rail are the newsletter subscription widget, 300 x 250 ads, 'New on the Trib' featuring latest articles, and the Most.
+
+
 #### Footer
 
 The footer, like the header, is enclosed in a div with the `.wrapper-r` class. Inside of this div is a `footer` tag with an id of `#site_footer`. Inside of this `footer` element, there's a div with the id `footer`, and this contains a dl with an id of #staff_writers that lists staff writers, a div with an id of `footer_topics` that lists sections, a dl with id `offsite_outlets` with social media, and a ul with id `footer_nav` linking to pages like About Us and Donate.
