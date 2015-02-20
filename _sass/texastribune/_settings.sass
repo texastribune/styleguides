@@ -1,0 +1,27 @@
+// Variables
+$trib_yellow_bg: #f6b80a
+$trib_teal: #008990
+
+
+// Mixins
+=sansserif
+  font-family: Helvetica, Arial, sans-serif
+
+=tt-linear-gradient($start, $end)
+  background-color: $start
+  @include background-image(linear-gradient($start, $end))
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start}', endColorstr='#{$end}')
+
+=neue
+  +border-radius(0.2em)
+  +sansserif
+  +single-box-shadow(#a0a0a0, 1px, 1px, 1px)
+  font-size: 11px
+  // no em units here :(
+  margin: 0 1px 1px 0
+  // fix margin isn't consistent across browsers
+  padding: 0.5em 0.9em
+  &:hover
+    color: black
+  &:active
+    outline: 0 none

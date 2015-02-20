@@ -471,7 +471,21 @@ The Most also uses featurebox styles, with the addition of tabs. The Most has th
 
 #### Trib newsletter signup
 
-The Trib newsletter signup widget is included at the top of the right rail around the site on pages that inherit from the two-column layout. The widget includes a CTA for people to sign up for The Brief. The class `.trib_newsletter` gives the signup its styles.
+The Trib newsletter signup widget is included at the top of the right rail around the site on pages that inherit from the two-column layout. The widget includes a CTA for people to sign up for The Brief. The class `.trib_newsletter` gives the signup its styles. The newsletter signup widget includes a submit button with the `.btn_neue` class.
+
+<section class="trib_newsletter">
+<form>
+<header><h2>Sign Up for The Brief</h2></header>
+<p>Our daily news summary</p>
+<div class="mc-field-group nowrap">
+<input type="email" value="" name="EMAIL" class="input_neue required email"
+       id="mce-EMAIL">
+<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe"
+      class="btn_neue">
+</div>
+</form>
+</section>
+
 
 ```html
 <section class="trib_newsletter">
