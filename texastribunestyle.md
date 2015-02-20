@@ -432,6 +432,21 @@ Styles for widgets are included in the _widgets.sass partial.
 
 Featurebox is used for wire widgets around the site, including TribWire and TweetWire, and is often included in the right rail. For featurebox styles, use class `.featurebox`. Within the featurebox, there's a header with class `.featurebox-header`, main content with class `.featurebox-content`, and a footer with class `.featurebox-footer`. The footer often includes an adunit and a link to view more.
 
+
+<aside class="featurebox">
+<header class="featurebox-header">
+  <h1>Header</h1>
+</header>
+<div class="featurebox-content">
+   <a class="twitter-timeline" href="https://twitter.com/TexasTribune/lists/texas-elected-officials" data-widget-id="545984156623052800" data-chrome="nofooter noheader noborders" data-tweet-limit="1">TweetWire</a>
+</div>
+<footer class="featurebox-footer">
+  <div class="ad adunit"></div>
+  <a href="#">View All</a>
+</footer>
+</aside>
+
+
 ```html
 <aside class="featurebox">
   <header class="featurebox-header">
@@ -617,3 +632,4 @@ Javascript snippet:
 
 </div><!-- end main -->
 </div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

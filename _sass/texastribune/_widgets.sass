@@ -1,9 +1,11 @@
+// Newsletter signup styles
 .trib_newsletter
   +sansserif
   background: #e6e6e6
   padding: 10px 15px
   overflow: hidden
   margin-bottom: 10px
+  max-width: 300px
   h2
     font-size: 0.8667em
     font-weight: bold
@@ -14,3 +16,114 @@
   .input_neue
     width: 207px
   // completely arbitray number
+
+
+  // Featurebox styles
+  //widgets will go here//widgets
+.featurebox
+  +border-radius(0.2em)
+  +sansserif
+  background: #333
+  border-left: 5px solid #333
+  border-right: 5px solid #333
+  color: #fff
+  margin-bottom: 1em  // TODO generalize this for all widgets/modules/asides
+  max-width: 400px
+  header
+    h1
+      font-family: 'Knockout 29 A', 'Knockout 29 B'
+      font-size: 2.2em
+      font-weight: 400
+      text-transform: uppercase
+      margin: 0 0 0 5px
+      padding: 0.25em 0
+      span  // TODO this is an inefficient selector
+        color: $trib_yellow
+        font-family: 'Knockout 49 A', 'Knockout 49 B'
+  .featurebox-content
+    background: #fff
+    color: #999
+    font-size: 0.9em
+    max-height: 300px
+    overflow: auto
+    h2
+      font-size: .95em
+      font-weight: bold
+      letter-spacing: .75px
+      padding-left: .5em
+      text-transform: uppercase
+    ul
+      list-style: none
+      padding-left: 0
+      li
+        padding: .5em
+        // text-transform: capitalize  // XXX
+        a
+          font-weight: bold
+    ul.wire
+      //for wires i.e. feeds links
+      font-family: Georgia, serif
+      overflow: auto
+      p
+        line-height: 1.15
+      .favicon
+        margin: .5em
+        padding: 5px 0
+        float: left
+      .pcolumn
+        padding-left: 34px
+      li
+        border-top: 1px dotted #333333
+        &:first-child
+          border-top: 0
+        p.headline
+          margin-bottom: .25em
+          a
+            color: #222
+            font-size: 0.9333em
+            line-height: 1em
+        p.byline
+          font-size: .9em
+        a
+          font-weight: normal !important
+    .fb_like_box
+      overflow: hidden
+  .featurebox-footer
+    min-height: 1.3em
+    margin-top: 0.5em
+    padding-bottom: .5em
+    position: relative
+    &:after  //because the clearfix mixin uses table and that doesn't work here
+      content: ""
+      display: block
+      clear: both
+    .ad
+      float: left
+      + a
+        //special styling for actions when there is an ad
+        bottom: .5em
+        margin: 0
+        position: absolute
+        right: .5em
+    a
+      // XXX some content pushes down into footer, so we can't use padding
+      // because that white space will not collapse. So create the white space
+      // here instead.
+      margin-top: 0.5em
+      float: right
+      color: #FFF
+      font-weight: bold
+      font-size: .9em
+      span
+        color: $trib_yellow
+  &.yella-box //yellow branded box used for Tweetwire
+    background: $trib_yellow_bg
+    border-color: $trib_yellow_bg
+    h1 span
+      color: #999
+    .featurebox-content
+      color: #999
+    .featurebox-footer a
+      color: #999
+      span
+        color: #999
