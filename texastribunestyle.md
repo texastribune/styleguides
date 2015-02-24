@@ -446,7 +446,7 @@ Featurebox is used for wire widgets around the site, including TribWire and Twee
 </div>
 <footer class="featurebox-footer">
   <div class="ad adunit"></div>
-  <a href="#">View All</a>
+  <a href="#">+ View All</a>
 </footer>
 </aside>
 
@@ -654,7 +654,7 @@ Facebook comments are pulled in and included in articles' comments sections.
 
 #### Twitter
 
-Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more. When adding a new Twitter widget, include a comment with information about the widget's setup.
+Widgets displaying tweets on the site should all use the widget from Twitter. There are a number of customization options that can be made to the widget to fit The Texas Tribune brand and a particular page's needs, including link colors, tweet limits, and more. When adding a new Twitter widget, include a comment with information about the widget's setup. See the [widgets](#widgets) section above for a visual demo of the Twitter widget within a featurebox.
 
 Html setup:
 
