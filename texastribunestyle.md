@@ -545,7 +545,7 @@ Disclosures are found at the bottom of stories and are styled as paragraphs with
 Ads
 ----
 
-Ads appear throughout the site at the top of the page, in the right rail, inside stories, and at the bottom of stories in the top of the footer.
+Ads appear throughout the site at the top of the page, in the right rail, inside stories, and at the bottom of stories in the top of the footer. Ads are configured in Doubleclick for Publishers.
 
 #### Roofline
 
@@ -605,12 +605,44 @@ Icons
 
 #### Social Media
 
-Font Awesome is used for icons throughout the site. Generally, social media links should include "target=_blank" so that they open in a new tab.
+Font Awesome is used for icons throughout the site. Currently, Font Awesome 3.2.1 is used. Generally, social media links should include "target=_blank" so that they open in a new tab. Social links are set up with a `ul` with a class of `.social_links`.
+
+<ul class="social_links">
+<li class="comment">
+  <a href="#"><i class="icon-comments-alt"></i> Comment</a>
+</li>
+<li class="republish">
+  <a href="#"><i class="icon-share"></i> Republish</a>
+</li>
+<li class="email">
+  <a href="#"><i class="icon-envelope"></i> Email</a>
+</li>
+<li class="twitter">
+  <a href="#"><i class="icon-twitter"></i> Tweet</a>
+</li>
+<li class="facebook">
+  <a href="#"><i class="icon-facebook"></i> Recommend</a>
+</li>
+</ul>
 
 ```html
-<a class="social" href="#" target="_blank">
-  <i class="icon-[whatever]"></i>
-</a>
+<ul class="social_links">
+  <li class="comment">
+    <a><i class="icon-comments-alt"></i> Comment</a>
+  </li>
+  <li class="republish">
+    <a><i class="icon-share"></i> Republish</a>
+  </li>
+  <li class="email">
+    <a><i class="icon-envelope"></i> Email</a>
+  </li>
+  <li class="twitter">
+    <a><i class="icon-twitter"></i> Tweet</a>
+  </li>
+  <li class="facebook">
+    <a><i class="icon-facebook"></i> Recommend</a>
+  </li>
+</ul>
 ```
 
 Social Media Integration

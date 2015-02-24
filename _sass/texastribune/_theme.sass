@@ -1,3 +1,5 @@
+@import "compass/utilities/general/clearfix"
+
 // image citations
 .photo_links
   color: #666
@@ -23,3 +25,23 @@
   margin: 1em auto
   min-height: 41px
   padding: 0 0 0 210px
+
+// social icon links
+.social_links  // ul.social_links
+  +clearfix
+  +navbar
+  +social
+  border-color: #ccc
+  border-style: solid
+  border-width: 1px 0
+  list-style-type: none
+  margin: 0.25em 0 0.5em  // XXX arbritary vertical margin
+  text-align: center
+  width: 100%
+  > li + li
+    border-left: 1px solid #ccc
+  > li
+    position: relative  // webkit hack, otherwise acts like visibility: hidden
+  a
+    padding: 0.5em 0.5em 0.4em  // horizontal padding is needed for the fallback
+    text-decoration: none
