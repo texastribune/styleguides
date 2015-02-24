@@ -349,7 +349,11 @@ Bylines are styled with an unordered list with the classes `.meta` and `.separat
 
 #### Credits for Images
 
-Image credits are styled with a `cite` inside of a div with the class `.photo_links`. Wording is: photo by: First Last.
+Image credits are styled with a `cite` inside of a div with the class `.photo_links`. Wording is: photo by: First Last. Images are credited beneath the image, and they float to the right, lining up with the right edge of the image.
+
+<div class="photo_links">
+  <cite>photo by: First Last</cite>
+</div>
 
 ```html
 <div class="photo_links">
