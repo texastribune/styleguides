@@ -529,10 +529,15 @@ Feeds power daily and weekly Mailchimp digests for numerous topics, including ed
 Disclosures
 ----
 
-Disclosures are found at the bottom of stories and are styled as paragraphs with a class of `.disclosure`.
+Disclosures are found at the bottom of stories and are styled as paragraphs with a class of `.disclosure`. The disclosure text can be edited in the "story-disclosure" chunk.
+
+<p class="disclosure">
+  Texas Tribune donors or members may be quoted or mentioned in our stories, or may be the subject of them.
+</p>
 
 ```html
 <p class="disclosure">
+  "story-disclosure" chunk
 </p>
 ```
 
