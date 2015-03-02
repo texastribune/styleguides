@@ -1,0 +1,54 @@
+@import "compass/css3/transition"
+
+// Variables
+$trib_yellow: #ffcc20
+$trib_yellow_bg: #f6b80a
+$trib_teal: #008990
+
+
+// Mixins
+=sansserif
+  font-family: Helvetica, Arial, sans-serif
+
+=tt-linear-gradient($start, $end)
+  background-color: $start
+  @include background-image(linear-gradient($start, $end))
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start}', endColorstr='#{$end}')
+
+=neue
+  +border-radius(0.2em)
+  +sansserif
+  +single-box-shadow(#a0a0a0, 1px, 1px, 1px)
+  font-size: 11px
+  // no em units here :(
+  margin: 0 1px 1px 0
+  // fix margin isn't consistent across browsers
+  padding: 0.5em 0.9em
+  &:hover
+    color: black
+  &:active
+    outline: 0 none
+
+=navbar
+  // navbars should always be sans-serif, the UI font
+  +sansserif
+  // navbars should always clear random floats
+  clear: both
+  // navbar items should always be stacked horizontally
+  li
+    float: left
+  // navbar links should not get underlined
+  a
+    +transition-duration(0.1s)
+    +transition-property(color)
+    display: block
+    &:hover
+      text-decoration: none
+
+=social
+  font-size: 0.8333em
+  a
+    color: #777
+    &:hover
+      color: #222
+      text-decoration: none

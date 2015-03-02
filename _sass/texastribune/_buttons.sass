@@ -1,3 +1,9 @@
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/images"
+
+
+// Info button
 .btn_info
   background-color: #ffcc20
   border: none
@@ -15,3 +21,53 @@
   &:hover
     background-color: lighten(#ffcc20, 10%)
     text-decoration: none
+
+
+// Neue button
+.btn_neue
+  +neue
+  +tt-linear-gradient(lighten($trib_yellow_bg, 5%), darken($trib_yellow_bg, 5%))
+  border: 0 none
+  // override user-agent border
+  color: #222
+  font-weight: bold
+  letter-spacing: 0.1em
+  text-align: center
+  text-transform: uppercase
+  &:hover
+    +tt-linear-gradient(lighten($trib_yellow_bg, 6%), darken($trib_yellow_bg, 8%))
+    text-decoration: none
+    text-shadow: 0 0 1px #888888
+
+a.btn_neue
+  display: inline-block
+
+.btn_neue.teal
+  +tt-linear-gradient(lighten($trib_teal, 5%), darken($trib_teal, 5%))
+  color: #eee
+  &:hover
+    +tt-linear-gradient(lighten($trib_teal, 5%), darken($trib_teal, 10%))
+    color: #fff
+
+.btn_neue.gray, .btn_neue.grey
+  +tt-linear-gradient(#d7d7d7, #aeaeae)
+  &:hover
+    +tt-linear-gradient(#d7d7d7, darken(#aeaeae, 5%))
+
+.btn_neue.dark
+  +tt-linear-gradient(#555555, #222222)
+  color: #eee
+  &:hover
+    +tt-linear-gradient(#555555, #111111)
+    color: #fff
+
+
+// Yellow button
+.btn_yellow
+  +sansserif
+  background-color: #F4C224
+  border: 1px solid #c79f1e
+  margin-top: 0.5em
+  padding: 0.2em 0.5em
+  text-transform: uppercase
+
