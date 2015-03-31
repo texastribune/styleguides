@@ -124,8 +124,8 @@ Color
 -----
 
 <div class="swatch three columns column">
-  <div class="colorfield" style="background: #ffcc20;"></div>
-  <span class="label">Tribune yellow<br/>$trib_yellow<br/>#ffcc20</span>
+  <div class="colorfield" style="background: #ffc200;"></div>
+  <span class="label">Tribune yellow<br/>$trib_yellow<br/>#ffc200</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #008990;"></div>
