@@ -42,6 +42,17 @@ that can be reused in different ways throughout the site. There are no rules
 that always must be followed; however, this set of guidelines should be applicable
 to most situations.
 
+Taking some inspiration from SMACSS and some inspiration from BEM, there are four 
+categories into which class names might fall: base, layout, module, and state.
+
+#### Base
+
+#### Layout
+
+#### Module
+
+#### State
+
 Buttons
 -------
 
