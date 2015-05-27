@@ -35,6 +35,10 @@ CSS is written in Sass in .scss files.
 Naming Conventions
 ------------------
 
+### Variable Names
+
+Variables are used for colors and fonts. They're defined in _settings.scss. If the color or font name is more than one word, start with the more general word first. For example, for Tribune brand colors, name them "$tribune-yellow" and "$tribune-teal" instead of "$yellow-tribune" or "$teal-tribune".
+
 ### Element, Class, and Id Naming
 
 Element, class, and id names should be used with the ultimate goal of creating modular elements
