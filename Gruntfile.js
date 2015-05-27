@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       newtribune: {
         files: {
-          'css/newtribune.min.css': '_sass/newtribune/app.sass'
+          'css/newtribune.min.css': '_sass/newtribune/app.scss'
         },
         options: {
           compass: true,

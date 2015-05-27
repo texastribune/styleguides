@@ -2,6 +2,7 @@
 layout: stylepage
 title: NewTribune
 typekit: brb4jmm
+css: newtribune.min.css
 ---
 
 <!-- masthead -->
@@ -37,7 +38,7 @@ Naming Conventions
 
 ### Variable Names
 
-Variables are used for colors and fonts. They're defined in _settings.scss. If the color or font name is more than one word, start with the more general word first. For example, for Tribune brand colors, name them "$tribune-yellow" and "$tribune-teal" instead of "$yellow-tribune" or "$teal-tribune".
+Variables are used for colors and fonts. They're defined in settings.scss. If the color or font name is more than one word, start with the more general word first. For example, for Tribune brand colors, name them "$tribune-yellow" and "$tribune-teal" instead of "$yellow-tribune" or "$teal-tribune".
 
 ### Element, Class, and Id Naming
 
@@ -46,8 +47,7 @@ that can be reused in different ways throughout the site. There are no rules
 that always must be followed; however, this set of guidelines should be applicable
 to most situations.
 
-Taking some inspiration from SMACSS and some inspiration from BEM, there are four 
-categories into which element, class, and id styles might fall: base, layout, module, and state.
+Taking some inspiration from [SMACSS](https://smacss.com/) and some inspiration from [BEM](https://en.bem.info/), there are four categories into which element, class, and id styles might fall: base, layout, module, and state.
 
 #### Base
 
@@ -68,13 +68,20 @@ State styles are applied to layout and module styles. They include such states a
 Buttons
 -------
 
-### Default Button
+Buttons are module elements. These updated button styles are inspired by styles 
+originally used by news apps projects.
 
-#### Yellow
+#### Yellow (default)
+
+<button class="button">.button</button>
 
 #### Teal
 
+<button class="button-teal">.button-teal</button>
+
 #### Ghost
+
+<button class="button-ghost">.button-ghost</button>
 
 </div><!-- end main -->
 </div>
