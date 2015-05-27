@@ -34,6 +34,16 @@ module.exports = function(grunt) {
           style: 'compressed'
         }
       },
+      newtribune: {
+        files: {
+          'css/newtribune.min.css': '_sass/newtribune/app.sass'
+        },
+        options: {
+          compass: true,
+          bundleExec: true,
+          style: 'compressed'
+        }
+      },
       styleguide: {
         files: {
           'css/styleguide.min.css': '_sass/styleguide/app.sass'
@@ -71,6 +81,14 @@ module.exports = function(grunt) {
       tribtalk: {
         files: '_sass/tribtalk/*.s?ss',
         tasks: ['sass:tribtalk']
+      },
+      texastribune: {
+        files: '_sass/texastribune/*.s?ss',
+        tasks: ['sass:texastribune']
+      },
+      newtribune: {
+        files: '_sass/newtribune/*.s?ss',
+        tasks: ['sass:newtribune']
       },
       styleguide: {
         files: '_sass/styleguide/*.s?ss',
