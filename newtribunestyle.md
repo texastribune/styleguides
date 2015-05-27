@@ -22,6 +22,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 
 * [Sass](#sass)
 * [Naming Conventions](#naming)
+* [Links](#links)
 * [Buttons](#buttons)
 
 </div></div><!-- end side nav -->
@@ -64,6 +65,13 @@ Module styles exist inside the major layout styles.
 #### State
 
 State styles are applied to layout and module styles. They include such states as active, hover, and focus. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for a hovered element should be "is-hovered".
+
+Links
+-----
+
+Links are a base style element. They are $tribune-teal, and they are underlined when their state is hover.
+
+<a href="#">Click me, I go nowhere</a>
 
 Buttons
 -------

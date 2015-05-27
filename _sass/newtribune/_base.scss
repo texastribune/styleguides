@@ -1,0 +1,7 @@
+a {
+  color: $tribune-teal;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
