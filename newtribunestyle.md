@@ -35,23 +35,31 @@ CSS is written in Sass in .scss files.
 Naming Conventions
 ------------------
 
-### Class Names
+### Element, Class, and Id Naming
 
-Class names should be used with the ultimate goal of creating modular elements
+Element, class, and id names should be used with the ultimate goal of creating modular elements
 that can be reused in different ways throughout the site. There are no rules
 that always must be followed; however, this set of guidelines should be applicable
 to most situations.
 
 Taking some inspiration from SMACSS and some inspiration from BEM, there are four 
-categories into which class names might fall: base, layout, module, and state.
+categories into which element, class, and id styles might fall: base, layout, module, and state.
 
 #### Base
 
+Base styles are those applied generally with an element selector, a descendant selector, or a child selector.
+
 #### Layout
+
+Layout styles are for the major elements included on a page, such as the header, main body area, and the footer.
 
 #### Module
 
+Module styles exist inside the major layout styles.
+
 #### State
+
+State styles are applied to layout and module styles. They include such states as active, hover, and focus. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for a hovered element should be "is-hovered".
 
 Buttons
 -------
