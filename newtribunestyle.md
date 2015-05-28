@@ -22,6 +22,8 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 
 * [Sass](#sass)
 * [Naming Conventions](#naming)
+* [Typography](#typography)
+* [Grid](#grid)
 * [Links](#links)
 * [Buttons](#buttons)
 
@@ -64,10 +66,13 @@ Module styles exist inside the major layout styles.
 
 #### State
 
-State styles are applied to layout and module styles. They include such states as active, hover, and focus. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for a hovered element should be "is-hovered".
+State styles are applied to layout and module styles. They include such states as active, expanded, and collapsed. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for an expanded element should be "is-expanded".
 
 Typography
 ----------
+
+Grid
+----
 
 Links
 -----
