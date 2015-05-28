@@ -71,8 +71,20 @@ State styles are applied to layout and module styles. They include such states a
 Typography
 ----------
 
+A base font size and font family, defined in settings, sets a default. 
+
+#### Headers
+
+Each header (h1-h6) is then given base font sizes, weights, and any other styles.
+
+#### Paragraphs
+
+Paragraph elements are given base font sizes and styles.
+
 Grid
 ----
+
+How to approach using a responsive grid framework is still undecided.
 
 Links
 -----
