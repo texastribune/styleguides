@@ -32,7 +32,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 Sass
 ----
 
-CSS is written in Sass in .scss files.  
+CSS is written in Sass. It's preferred that the Sass be .sass files.
 
 Naming Conventions
 ------------------
@@ -65,6 +65,9 @@ Module styles exist inside the major layout styles.
 #### State
 
 State styles are applied to layout and module styles. They include such states as active, hover, and focus. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for a hovered element should be "is-hovered".
+
+Typography
+----------
 
 Links
 -----
