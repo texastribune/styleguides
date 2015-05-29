@@ -21,7 +21,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 <div class="four columns"><div id='side-nav'><!-- side nav -->
 
 * [Sass](#sass)
-* [Naming Conventions](#naming)
+* [Naming Conventions](#naming-conventions)
 * [Typography](#typography)
 * [Grid](#grid)
 * [Links](#links)
