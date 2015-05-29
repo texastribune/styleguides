@@ -26,6 +26,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Grid](#grid)
 * [Links](#links)
 * [Buttons](#buttons)
+* [Ads](#ads)
 
 </div></div><!-- end side nav -->
 
@@ -111,5 +112,11 @@ originally used by news apps projects.
 
 <button class="button-ghost">.button-ghost</button>
 
+Ads
+---
+
+The goal for ads is to develop a system that seamlessly responds across desktop and mobile. One possibility is to standardize ad sizes as much as possible across desktop and mobile. For example, most ads might be 300X250 px.
+
 </div><!-- end main -->
 </div>
+
