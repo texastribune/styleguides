@@ -1,0 +1,60 @@
+// Buttons mixin
+// TODO add clearfix back in
+// TODO add in color/typography variables as defined
+@mixin button($color, $type: null) {
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    letter-spacing: .03rem;
+    margin: 0 0 0.3em;
+    padding: .5em .75em .625em;
+    text-align: center;
+    vertical-align: middle;
+
+    @if $type == ghost {
+        background: transparent;
+        border: 2px solid $color;
+        color: $color;
+        padding: 0.5em 0.75em;
+
+    } @else {
+        background: $color;
+
+        @if $color == $tribune-teal {
+            color: white;
+
+        } @else {
+            color: rgb(40, 40, 40);
+        }
+        border: 0px;
+        padding: .5em .75em .625em;
+    }
+
+    &:active,
+    &:hover {
+        @if $type == ghost {
+            background-color: transparentize($color, 0.95);
+
+        } @else {
+            background-color: transparentize($color, .3);
+        }
+    }
+}
+
+// Default yellow button
+.button {
+    @include button($tribune-yellow);
+}
+
+
+// Default teal button
+.button-teal {
+    @include button($tribune-teal);
+}
+
+// Default ghost button
+.button-ghost {
+    @include button($tribune-teal, ghost);
+}

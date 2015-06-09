@@ -16,8 +16,7 @@ Stylesheet
 {: .sg-header}
 
 This is the styleguide for [texastribune.org](http://www.texastribune.org).
-Below are styles that we're currently using that we'll continue to iterate on
-and use in the redesign of the site planned for 2015.
+In this guide you'll find styles that we're currently using on the site. Check out our New Texas Tribune Styles for what we're moving toward as we enhance our site in 2015.
 
 </div><!-- end masthead -->
 
@@ -34,7 +33,7 @@ and use in the redesign of the site planned for 2015.
 * [Navigation](#navigation)
 * [Multimedia](#multimedia)
 * [Articles](#articles)
-* [Bylines & Credits](#bylines--credits)
+* [Bylines &amp; Credits](#bylines--credits)
 * [Forms](#forms)
 * [Buttons](#buttons)
 * [Widgets](#widgets)
