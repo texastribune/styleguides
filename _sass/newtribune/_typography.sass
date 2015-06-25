@@ -1,0 +1,31 @@
+// Set up root font size
+html
+  font-size: $font-root-mobile
+  @media screen and (min-width: 520px)
+    font-size: $font-root-tablet
+  @media screen and (min-width: 799px)
+    font-size: $font-root
+
+// Header sizes
+h1.font-xxl
+  @include font-size($xxl)
+h2.font-xl
+  @include font-size($xl)
+h3.font-l
+  @include font-size($l)
+  // to override style guide settings
+  font-weight: 600
+  letter-spacing: 0
+  text-transform: none
+h4.font-m
+  @include font-size($m)
+h5.font-s
+  @include font-size($s)
+h6.font-xs
+  @include font-size($xs)
+
+// Paragraph size
+p.font-xs
+  @include font-size($xs)
+
+// TODO: add ie8 fallback?
