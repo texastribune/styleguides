@@ -112,7 +112,7 @@ Each header (h1-h6) is then given font sizes, weights, and any other styles.
 
 Paragraph elements are given base font sizes and styles.
 
-<p class="font-xs">Paragraph example</p>
+<p class="font-xs">This is an example paragraph.</p>
 
 #### Icons
 
