@@ -14,7 +14,7 @@ Stylesheet
 ==========
 {: .sg-header}
 
-This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2015. Some of its goals are to establish naming conventions, to create more modular, reusable styles for the Tribune, and to increase cohesion between the Tribune's styles and our <a href="http://apps.texastribune.org/styles/">News Apps styles</a>.
+This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2015. Some of its goals are to establish naming conventions, to create more modular, reusable styles for the Tribune, and to increase cohesion between the Tribune's styles and our <a href="http://apps.texastribune.org/styles/">News Apps styles</a>. These modular styles should correspond with our content. They should also be designed mobile-first.
 
 </div><!-- end masthead -->
 
@@ -72,15 +72,53 @@ State styles are applied to layout and module styles. They include such states a
 Typography
 ----------
 
-A base font size and font family, defined in settings, sets a default. 
+A root font size, defined in settings, sets the absolute font size. This base font size should be set in px on the root html element. Root font size differs based on the device width, and changes at tablet (799px) and mobile (520px). Root font size determines the absolute size of typography elements while keeping their relative sizing consistent.
+
+```sass
+$font-root: 18px
+$font-root-tablet: 16px
+$font-root-mobile: 14px
+```
+
+There will likely be a base serif and a base sans-serif font. These are yet to be determined.
+
+We then have different sizes that are relative to this root font size. There are two smaller sizes and three larger sizes. These are sized in rems, to make their sizes relative to the root px size. If every font size should be larger, an update can be made to the $font-root settings. If only one font size should be larger, then an update can be made to that specific relative setting.
+
+```sass
+$xxl: 2.4rem
+$xl: 2rem
+$l: 1.8rem
+$m: 1.5rem
+$s: 1.2rem
+$xs: 1rem
+```
+
+The classes for these sizes are ".font-xs", ".font-s", ".font-m", ".font-l", ".font-xl", and ".font-xxl".
+
+This is meant to roughly begin establishing a system to follow; the system and these sizes may be adjusted as we decide on what fonts we are using moving forward. This system was inspired in part by [our news apps typography styles](http://apps.texastribune.org/styles/#typography) to keep cohesion where it makes sense between the two sets of styles.
 
 #### Headers
 
-Each header (h1-h6) is then given base font sizes, weights, and any other styles.
+Each header (h1-h6) is then given font sizes, weights, and any other styles.
+
+<h1 class="font-xxl">h1 header example</h1>
+<h2 class="font-xl">h2 header example</h2>
+<h3 class="font-l">h3 header example</h3>
+<h4 class="font-m">h4 header example</h4>
+<h5 class="font-s">h5 header example</h5>
+<h6 class="font-xs">h6 header example</h6>
 
 #### Paragraphs
 
 Paragraph elements are given base font sizes and styles.
+
+<p class="font-xs">This is an example paragraph.</p>
+
+#### Icons
+
+For icons, we'll likely use Font Awesome, which is what we currently use.
+
+We'll follow the PRO method outlined on [this page](http://fortawesome.github.io/Font-Awesome/get-started/) in the Font Awesome documentation. We'll include the font-awesome directory inside the Sass for the Tribune project. Only icons currently used in the project will be precompiled; comment out any unused icons so they aren't included in the CSS, and then uncomment icons as they're included in the project.
 
 Grid
 ----
