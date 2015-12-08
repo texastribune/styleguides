@@ -14,12 +14,13 @@ Stylesheet
 ==========
 {: .sg-header}
 
-This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2015. Some of its goals are to establish naming conventions, to create more modular, reusable styles for the Tribune, and to increase cohesion between the Tribune's styles and our <a href="http://apps.texastribune.org/styles/">News Apps styles</a>. These modular styles should correspond with our content. They should also be designed mobile-first.
+This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2015. Some of its goals are to establish naming conventions and to create more modular, reusable styles for the Tribune. These modular styles will correspond with our content. They will also be designed mobile-first.
 
 </div><!-- end masthead -->
 
 <div class="four columns"><div id='side-nav'><!-- side nav -->
 
+* [Design Goals](#design-goals)
 * [Sass](#sass)
 * [Naming Conventions](#naming-conventions)
 * [Typography](#typography)
@@ -32,10 +33,20 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 
 <div class="twelve columns omega"><!-- main -->
 
+Design Goals
+----------------
+
+There are design goals each entity should contribute to before being included in the new style guide. Including these here will help us maintain our focus on our design goals as we iterate.
+
+* Increases enjoyment and engagement
+* Creates a good experience for people using it
+* Is part of a positive association with The Texas Tribune
+
 Sass
 ----
 
 CSS is written in Sass. It's preferred that the Sass be .sass files.
+
 
 Naming Conventions
 ------------------
@@ -46,12 +57,11 @@ Variables are used for colors and fonts. They're defined in settings.scss. If th
 
 ### Element, Class, and Id Naming
 
-Element, class, and id names should be used with the ultimate goal of creating modular elements
-that can be reused in different ways throughout the site. There are no rules
+Element, class, and id names should be used with the ultimate goal of creating modular elements that can be reused in different ways throughout the site. There are no rules
 that always must be followed; however, this set of guidelines should be applicable
 to most situations.
 
-Taking some inspiration from [SMACSS](https://smacss.com/) and some inspiration from [BEM](https://en.bem.info/), there are four categories into which element, class, and id styles might fall: base, layout, module, and state.
+Naming will follow the [BEM](https://en.bem.info/method/naming-convention/) methodology. Modular entities can be blocks or elements. They can have modifiers that describe their appearance and behavior.
 
 #### Base
 
