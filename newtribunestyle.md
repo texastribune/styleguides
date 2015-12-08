@@ -23,8 +23,11 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Design Goals](#design-goals)
 * [Sass](#sass)
 * [Naming Conventions](#naming-conventions)
+* [Accessibility](#accessibility)
+* [Performance](#performance)
 * [Typography](#typography)
 * [Grid](#grid)
+* [Images](#images)
 * [Links](#links)
 * [Buttons](#buttons)
 * [Ads](#ads)
@@ -36,7 +39,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 Design Goals
 ----------------
 
-There are design goals each entity should contribute to before being included in the new style guide. Including these here will help us maintain our focus on our design goals as we iterate.
+There are design goals each entity should contribute to before being included in the new style guide. These should be referenced throughout the process to keep our focus on our design goals as we iterate.
 
 * Increases enjoyment and engagement
 * Creates a good experience for people using it
@@ -55,13 +58,13 @@ Naming Conventions
 
 Variables are used for colors and fonts. They're defined in settings.scss. If the color or font name is more than one word, start with the more general word first. For example, for Tribune brand colors, name them "$tribune-yellow" and "$tribune-teal" instead of "$yellow-tribune" or "$teal-tribune".
 
-### Element, Class, and Id Naming
+### Naming Conventions
 
-Element, class, and id names should be used with the ultimate goal of creating modular elements that can be reused in different ways throughout the site. There are no rules
-that always must be followed; however, this set of guidelines should be applicable
-to most situations.
+The naming of classes and ids should be done with the goal of creating modular entities to be reused and remixed throughout the site. There are no rules that always must be followed; however, this set of guidelines should be applicable to most situations. Things to keep in mind are also how easily searchable the classes and ids that you're using are, as well as if there are any potential clashes with current naming systems.
 
 Naming will follow the [BEM](https://en.bem.info/method/naming-convention/) methodology. Modular entities can be blocks or elements. They can have modifiers that describe their appearance and behavior.
+
+We will use the following words to refer to different entities within a page.
 
 #### Base
 
@@ -69,15 +72,26 @@ Base styles are those applied generally with an element selector, a descendant s
 
 #### Layout
 
-Layout styles are for the major elements included on a page, such as the header, main body area, and the footer.
+Layout entities are the major elements included on a page, such as the header, main body area, and the footer.
 
-#### Module
+#### Blocks
 
-Module styles exist inside the major layout styles.
+Blocks exist within the major layout sections.
 
-#### State
+#### Elements
 
-State styles are applied to layout and module styles. They include such states as active, expanded, and collapsed. State classes should be written descriptively. For example, the class for an active element should be "is-active" and the class for an expanded element should be "is-expanded".
+Elements are entities that exist within a particular block, and not outside of that block. There should not be an element that exists within another element.
+
+#### Modifiers
+
+Modifiers are elements that indicate states or themes. These include such states as active, expanded, and collapsed. 
+
+
+Accessibility
+-------------
+
+Performance
+-----------
 
 Typography
 ----------
@@ -118,6 +132,14 @@ Each header (h1-h6) is then given font sizes, weights, and any other styles.
 <h5 class="font-s">h5 header example</h5>
 <h6 class="font-xs">h6 header example</h6>
 
+#### Headlines
+
+Headlines are block entities.
+
+#### Bylines
+
+Bylines are block entities.
+
 #### Paragraphs
 
 Paragraph elements are given base font sizes and styles.
@@ -134,6 +156,13 @@ Grid
 ----
 
 How to approach using a responsive grid framework is still undecided.
+
+Images
+------
+
+#### Lead art
+
+Lead art is a block entity. It uses the image html tag and has a class of .art_lead.
 
 Links
 -----
