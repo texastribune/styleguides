@@ -98,7 +98,7 @@ Accessibility
 
 Use alt text to provide function, and not to provide content.
 
-### Navigation
+#### Navigation
 
 It should be possible to tab through navigation.
 
@@ -151,11 +151,11 @@ Each header (h1-h6) is then given font sizes, weights, and any other styles. Hea
 
 #### Headlines
 
-Headlines are block entities.
+Headlines are block entities. Article headlines will use an h1 header. They will have a class of .story_headline.
 
 #### Bylines
 
-Bylines are block entities.
+Bylines are block entities. They should use the class .story_byline.
 
 #### Paragraphs
 
