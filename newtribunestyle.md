@@ -33,6 +33,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Inputs](#inputs)
 * [Buttons](#buttons)
 * [Ads](#ads)
+* [Related Content](#related-content)
 
 </div></div><!-- end side nav -->
 
@@ -88,8 +89,7 @@ Elements are entities that exist within a particular block, and not outside of t
 
 #### Modifiers
 
-Modifiers are elements that indicate states or themes. These include such states as active, expanded, and collapsed. 
-
+Modifiers are elements that indicate states or themes. These include such states as active, expanded, and collapsed.
 
 Accessibility
 -------------
@@ -155,7 +155,7 @@ Headlines are block entities. Article headlines will use an h1 header. They will
 
 #### Bylines
 
-Bylines are block entities. They should use the class .story_byline.
+Bylines are block entities. They should use the class .story_byline. Bylines should register their authors with schema.org. The times in bylines should use the HTML time tag.
 
 #### Paragraphs
 
@@ -229,4 +229,9 @@ The goal for ads is to develop a system that seamlessly responds across desktop 
 
 </div><!-- end main -->
 </div>
+
+Related Content
+---------------
+
+There will be a few related content blocks.
 
