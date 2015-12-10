@@ -29,6 +29,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Grid](#grid)
 * [Images](#images)
 * [Links](#links)
+* [Inputs](#inputs)
 * [Buttons](#buttons)
 * [Ads](#ads)
 
@@ -60,6 +61,8 @@ Variables are used for colors and fonts. They're defined in settings.scss. If th
 
 ### Naming Conventions
 
+Classes following the BEM naming method should be used in most cases. Ids should only be used in HTML as Javascript hooks.
+
 The naming of classes and ids should be done with the goal of creating modular entities to be reused and remixed throughout the site. There are no rules that always must be followed; however, this set of guidelines should be applicable to most situations. Things to keep in mind are also how easily searchable the classes and ids that you're using are, as well as if there are any potential clashes with current naming systems.
 
 Naming will follow the [BEM](https://en.bem.info/method/naming-convention/) methodology. Modular entities can be blocks or elements. They can have modifiers that describe their appearance and behavior.
@@ -89,6 +92,14 @@ Modifiers are elements that indicate states or themes. These include such states
 
 Accessibility
 -------------
+
+#### Alt text
+
+Use alt text to provide function, and not to provide content.
+
+### Navigation
+
+It should be possible to tab through navigation.
 
 Performance
 -----------
@@ -142,7 +153,7 @@ Bylines are block entities.
 
 #### Paragraphs
 
-Paragraph elements are given base font sizes and styles.
+Paragraph entities are given base font sizes and styles.
 
 <p class="font-xs">This is an example paragraph.</p>
 
@@ -162,14 +173,19 @@ Images
 
 #### Lead art
 
-Lead art is a block entity. It uses the image html tag and has a class of .art_lead.
+Lead art is a block entity. It uses the figure html tag and has a class of .art_lead. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
 
 Links
 -----
 
-Links are a base style element. They are $tribune-teal, and they are underlined when their state is hover.
+Links are a base style element. To be more accessible, links should not be signified only by the use of color. Links should not unexpectedly open a new window.
 
 <a href="#">Click me, I go nowhere</a>
+
+Inputs
+------
+
+#### Newsletter signups
 
 Buttons
 -------
@@ -179,15 +195,21 @@ originally used by news apps projects.
 
 #### Yellow (default)
 
-<button class="button">.button</button>
+The default button uses the class .button_default.
+
+<button class="button">.button_default</button>
 
 #### Teal
 
-<button class="button-teal">.button-teal</button>
+The teal button uses the teal theme modifier and applies it to the default button.
+
+<button class="button-teal">.button_default--teal</button>
 
 #### Ghost
 
-<button class="button-ghost">.button-ghost</button>
+The ghost button can be applied to either the default yellow button or the teal button. The classes for these buttons are .button_default--ghost.
+
+<button class="button-ghost">.button_default--ghost</button>
 
 Ads
 ---
