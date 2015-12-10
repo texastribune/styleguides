@@ -39,6 +39,8 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 
 <div class="twelve columns omega"><!-- main -->
 
+# Style goals, conventions, and budgets
+
 Design Goals
 ----------------
 
@@ -104,6 +106,8 @@ It should be possible to tab through navigation.
 
 Performance
 -----------
+
+# Layout, Base, Blocks, Elements, and Modifiers
 
 Color
 -----
@@ -179,7 +183,7 @@ Images
 
 #### Lead art
 
-Lead art is a block entity. It uses the figure html tag and has a class of .art_lead. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
+Lead art is an element inside of a story block. It uses the figure html tag and has a class of .story_leadart. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
 
 Video
 -----
@@ -227,11 +231,10 @@ Ads
 
 The goal for ads is to develop a system that seamlessly responds across desktop and mobile. One possibility is to standardize ad sizes as much as possible across desktop and mobile. For example, most ads might be 300X250 px.
 
-</div><!-- end main -->
-</div>
-
 Related Content
 ---------------
 
 There will be a few related content blocks.
 
+</div><!-- end main -->
+</div>
