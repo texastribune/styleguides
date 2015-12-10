@@ -25,6 +25,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Naming Conventions](#naming-conventions)
 * [Accessibility](#accessibility)
 * [Performance](#performance)
+* [Color](#color)
 * [Typography](#typography)
 * [Grid](#grid)
 * [Images](#images)
@@ -104,6 +105,11 @@ It should be possible to tab through navigation.
 Performance
 -----------
 
+Color
+-----
+
+Color should not be relied on to indicate something. Color enhances our content.
+
 Typography
 ----------
 
@@ -134,7 +140,7 @@ This is meant to roughly begin establishing a system to follow; the system and t
 
 #### Headers
 
-Each header (h1-h6) is then given font sizes, weights, and any other styles.
+Each header (h1-h6) is then given font sizes, weights, and any other styles. Header tags should be used on each page in the correct order to provide meaning and structure to the page with their use.
 
 <h1 class="font-xxl">h1 header example</h1>
 <h2 class="font-xl">h2 header example</h2>
@@ -174,6 +180,11 @@ Images
 #### Lead art
 
 Lead art is a block entity. It uses the figure html tag and has a class of .art_lead. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
+
+Video
+-----
+
+Videos should have captions.
 
 Links
 -----
