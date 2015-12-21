@@ -2,7 +2,8 @@
 layout: protosandbox
 title: Sandbox
 ---
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<div class="theme-one">
+<h2>Theme One</h2>
 {% for story in site.data.storyexamples %}
   <figure class="story_leadart">
     <img src="{{ story.leadart }}" alt="">
@@ -11,3 +12,4 @@ title: Sandbox
   <p class="story_byline">by {{ story.author }}</p>
   {{ story.body }}
 {% endfor %}
+</div>
