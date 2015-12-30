@@ -2,6 +2,7 @@
 layout: protosandbox
 title: Sandbox
 ---
+
 <div class="theme-one">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ site.baseurl }}/css/fonts/ghandi.css" type="text/css" charset="utf-8" />
@@ -18,4 +19,20 @@ title: Sandbox
     </div>
   </article>
 {% endfor %}
+</div>
+
+<div class="theme-two">
+  <h2>Theme Two</h2>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <figure class="story_leadart">
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+    </article>
+  {% endfor %}
 </div>
