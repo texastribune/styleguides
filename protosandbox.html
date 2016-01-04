@@ -21,6 +21,24 @@ title: Sandbox
 {% endfor %}
 </div>
 
+<div class="theme-two">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <h2>Theme Two</h2>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <figure class="story_leadart">
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
 <div class="theme-four">
   <h2>Theme Four</h2>
   {% for story in site.data.storyexamples %}
@@ -38,8 +56,6 @@ title: Sandbox
 </div>
 
 <div class="theme-five">
-  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <h2>Theme Five</h2>
   {% for story in site.data.storyexamples %}
     <article class="story">
@@ -75,6 +91,22 @@ title: Sandbox
 
 <div class="theme-seven">
   <h2>Theme Seven</h2>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <figure class="story_leadart">
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<div class="theme-eight">
+  <h2>Theme Eight</h2>
   {% for story in site.data.storyexamples %}
     <article class="story">
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
