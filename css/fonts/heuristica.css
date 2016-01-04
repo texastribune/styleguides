@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'heuristica_regular';
+    src: url('Heuristica-Regular.eot');
+    src: url('Heuristica-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Heuristica-Regular.woff') format('woff'),
+         url('Heuristica-Regular.ttf') format('truetype'),
+         url('Heuristica-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'heuristica_bold';
+    src: url('Heuristica-Bold.eot');
+    src: url('Heuristica-Bold.eot?#iefix') format('embedded-opentype'),
+         url('Heuristica-Bold.woff') format('woff'),
+         url('Heuristica-Bold.ttf') format('truetype'),
+         url('Heuristica-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'heuristica_bold_italic';
+    src: url('Heuristica-BoldItalic.eot');
+    src: url('Heuristica-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('Heuristica-BoldItalic.woff') format('woff'),
+         url('Heuristica-BoldItalic.ttf') format('truetype'),
+         url('Heuristica-BoldItalic.svg') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'heuristica_italic';
+    src: url('Heuristica-Italic.eot');
+    src: url('Heuristica-Italic.eot?#iefix') format('embedded-opentype'),
+         url('Heuristica-Italic.woff') format('woff'),
+         url('Heuristica-Italic.ttf') format('truetype'),
+         url('Heuristica-Italic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
