@@ -73,6 +73,22 @@ title: Sandbox
   {% endfor %}
 </div>
 
+<div class="theme-seven">
+  <h2>Theme Seven</h2>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <figure class="story_leadart">
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
 <div class="theme-nine">
   <h2>Theme Nine</h2>
   {% for story in site.data.storyexamples %}
