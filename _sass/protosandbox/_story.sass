@@ -1,35 +1,60 @@
+// TODO: Develop variables' naming conventions
+$yellow_light: #ffda71
+$blue_light: #a5d6e3
+$blue_teal: #138ba3
+
+$link_highlight: $yellow_light
+$link_underline: $blue_light
+$link_text: $blue_teal
+
 .story_leadart
   margin: 0.8em 0 0 0
   img
     width: 100%
+.story_headline
+  margin-top: 0.5em
+  padding: 0 0.6em
+.story_byline
+  margin-top: 0.5em
+  padding: 0 1em
+.story_body
+  margin-top: 0.5em
+  padding: 0.5em 1em
 
 .theme-one
   .story
     a
-      border-bottom: 0.1em solid #95CDDD
-      box-shadow: inset 0 -4px 0 #95CDDD
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
       text-decoration: none
   .story_headline
+    background-color: white
     font-family: 'Open Sans', sans-serif
-    margin-top: 0.5em
-    padding: 0 0.6em
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_headline:before
+    background: $yellow_light
+    content: ""
+    height: 0.5em
+    position: absolute
+    right: 0
+    top: -1em
+    width: 3em
   .story_byline
     font-family: 'Open Sans', sans-serif
-    margin-top: 0.5em
-    padding: 0 1em
     a
       font-weight: 700
   .story_body
-    margin-top: 0.5em
-    padding: 0.5em 1em
     p
       font-family: 'gandhi_serifregular', serif
 
 .theme-two
   .story
     a
-      border-bottom: 0.1em solid #95CDDD
-      box-shadow: inset 0 -4px 0 #95CDDD
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
       text-decoration: none
   .story_headline
     font-family: 'Roboto', sans-serif
@@ -46,8 +71,8 @@
 .theme-three
   .story
     a
-      border-bottom: 0.1em solid #95CDDD
-      box-shadow: inset 0 -4px 0 #95CDDD
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
       text-decoration: none
   .story_headline
     font-family: 'heuristica_bold', serif
@@ -63,7 +88,7 @@
 .theme-four
   .story
     a
-      background-color: #FFD556
+      background-color: $link_highlight
       text-decoration: none
   .story_headline
     font-family: 'gandhi_serifregular', sans-serif
@@ -86,7 +111,7 @@
 .theme-five
   .story
     a
-      background-color: #FFD556
+      background-color: $link_highlight
       text-decoration: none
     .story_headline
       font-family: 'Playfair Display', serif
@@ -103,7 +128,7 @@
 .theme-six
   .story
     a
-      background-color: #FFD556
+      background-color: $link_highlight
       text-decoration: none
   .story_headline
     font-family: 'heuristica_bold', serif
@@ -118,7 +143,7 @@
 .theme-seven
   .story
     a
-      color: #117994
+      color: $link_text
       text-decoration: none
   .story_headline
     font-family: 'Playfair Display', serif
@@ -135,7 +160,7 @@
 .theme-eight
   .story
     a
-      color: #117994
+      color: $link_text
   .story_headline
     font-family: 'heuristica_bold', serif
   .story_byline
@@ -152,7 +177,7 @@
 .theme-nine
   .story
     a
-      color: #117994
+      color: $link_text
       text-decoration: none
   .story_headline
     font-family: 'gandhi_serifregular', sans-serif
