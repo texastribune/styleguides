@@ -25,6 +25,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Naming Conventions](#naming-conventions)
 * [Accessibility](#accessibility)
 * [Performance](#performance)
+* [Schema.org](#schemaorg)
 * [Color](#color)
 * [Typography](#typography)
 * [Grid](#grid)
@@ -109,6 +110,12 @@ Performance
 
 # Layout, Base, Blocks, Elements, and Modifiers
 
+Schema.org
+----------
+
+#### Articles
+Articles should be tagged with Schema.org item properties. These properties should be included after an HTML element's classes. An article should have an itemprop of 'articleBody'. Headlines should be given an itemprop of 'headline'. Lead art should be given the itemprop of 'associatedMedia'. Bylines' authors should have the itemprops of 'author' and 'creator.'  
+
 Color
 -----
 
@@ -155,11 +162,11 @@ Each header (h1-h6) is then given font sizes, weights, and any other styles. Hea
 
 #### Headlines
 
-Headlines are elements that exist inside story blocks. Article headlines will use an h1 header. They will have a class of .story_headline.
+Headlines are elements that exist inside story blocks. Article headlines will use an h1 header. They will have a class of .story_headline. 
 
 #### Bylines
 
-Bylines are elements that exist within story blocks. They should use the class .story_byline. Bylines should register their authors with schema.org. The times in bylines should use the HTML time tag.
+Bylines are elements that exist within story blocks. They should use the class .story_byline. The times in bylines should use the HTML time tag.
 
 #### Paragraphs
 
