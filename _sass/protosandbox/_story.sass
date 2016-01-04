@@ -93,10 +93,24 @@ $link_text: $blue_teal
       box-shadow: inset 0 -4px 0 $link_underline
       text-decoration: none
   .story_headline
+    background-color: white
     font-family: 'heuristica_bold', serif
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_headline:before
+    background: $yellow_light
+    content: ""
+    height: 0.4em
+    position: absolute
+    right: 0
+    top: -1em
+    width: 3em
   .story_byline
     font-family: 'Source Sans Pro', sans-serif
-    font-weight: bold
+    a
+      font-weight: 700
   .story_body
     margin: 0.5em 0 0 0
     padding: 0.5em 1em
