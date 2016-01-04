@@ -80,7 +80,8 @@ title: Sandbox
         <img src="{{ story.leadart }}" alt="">
       </figure>
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <p class="story_byline">by <a href="">{{ story.author }}</a> | {{ story.pub_date }}</p>
+      <p class="story_comments"><a href="">{{ story.num_comments }} Comments</a></p>
       <div class="story_body">
         {{ story.body }}
       </div>

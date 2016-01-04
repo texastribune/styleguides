@@ -18,6 +18,8 @@ $link_text: $blue_teal
 .story_byline
   margin-top: 0.5em
   padding: 0 1em
+.story_comments
+  padding: 0 1em
 .story_body
   margin-top: 0.5em
   padding: 0.5em 1em
@@ -150,9 +152,12 @@ $link_text: $blue_teal
     .story_headline
       font-family: 'Playfair Display', serif
       font-weight: 700
-    .story_byline
+    .story_byline, .story_comments
       font-family: 'Roboto', sans-serif
-      font-weight: 700
+      a
+        font-weight: 700
+    .story_comments
+      margin-top: 0
     .story_body
       margin: 0.5em 0 0 0
       padding: 0.5em 1em
