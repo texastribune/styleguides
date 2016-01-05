@@ -34,6 +34,16 @@ module.exports = function(grunt) {
           style: 'compressed'
         }
       },
+      protosandbox: {
+        files: {
+          'css/protosandbox.min.css': '_sass/protosandbox/app.sass'
+        },
+        options: {
+          compass: true,
+          bundleExec: true,
+          style: 'compressed'
+        }
+      },
       newtribune: {
         files: {
           'css/newtribune.min.css': '_sass/newtribune/app.scss'
@@ -85,6 +95,10 @@ module.exports = function(grunt) {
       texastribune: {
         files: '_sass/texastribune/*.s?ss',
         tasks: ['sass:texastribune']
+      },
+      protosandbox: {
+        files: '_sass/protosandbox/*.s?ss',
+        tasks: ['sass:protosandbox']
       },
       newtribune: {
         files: '_sass/newtribune/*.s?ss',

@@ -1,0 +1,265 @@
+// TODO: Develop variables' naming conventions
+$yellow_light: #ffda71
+$blue_light: #a5d6e3
+$blue_teal: #138ba3
+
+$link_highlight: $yellow_light
+$link_underline: $blue_light
+$link_text: $blue_teal
+
+.story_leadart
+  margin: 0.8em 0 0 0
+  img
+    width: 100%
+.story_headline
+  font-size: 1.8em
+  margin-top: 0.5em
+  padding: 0 0.6em
+.story_byline
+  margin-top: 0.5em
+  padding: 0 1em
+.story_comments
+  padding: 0 1em
+.story_body
+  margin-top: 0.5em
+  padding: 0.5em 1em
+  p
+    margin-top: 0.5em
+
+.theme-one
+  .story
+    a
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
+      text-decoration: none
+  .story_headline
+    background-color: white
+    font-family: 'Open Sans', sans-serif
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_headline:before
+    background: $yellow_light
+    content: ""
+    height: 0.4em
+    position: absolute
+    right: 0
+    top: -1em
+    width: 3em
+  .story_byline
+    font-family: 'Open Sans', sans-serif
+    a
+      font-weight: 700
+  .story_body
+    p
+      font-family: 'gandhi_serifregular', serif
+
+.theme-two
+  .story
+    a
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
+      text-decoration: none
+  .story_headline
+    background-color: white
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_headline:before
+    background: $yellow_light
+    content: ""
+    height: 0.4em
+    position: absolute
+    right: 0
+    top: -1em
+    width: 3em
+  .story_byline
+    font-family: 'Playfair Display'
+    font-style: italic
+    a
+      font-weight: 700
+  .story_body
+    margin-top: 0.5em
+    padding: 0.5em 1em
+    p
+      font-family: 'Playfair Display'
+
+.theme-three
+  .story
+    a
+      border-bottom: 0.1em solid $link_underline
+      box-shadow: inset 0 -4px 0 $link_underline
+      text-decoration: none
+  .story_headline
+    background-color: white
+    font-family: 'heuristica_bold', serif
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_headline:before
+    background: $yellow_light
+    content: ""
+    height: 0.4em
+    position: absolute
+    right: 0
+    top: -1em
+    width: 3em
+  .story_byline
+    font-family: 'Source Sans Pro', sans-serif
+    a
+      font-weight: 700
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'heuristica_regular', serif
+
+.theme-four
+  .story
+    a
+      background-color: $link_highlight
+      text-decoration: none
+  .story_headline
+    font-family: 'gandhi_serifregular', sans-serif
+    font-size: 2em
+    margin: 0.5em 0 0 0
+    padding: 0 0.5em
+  .story_byline, .story_comments
+    font-family: 'Open Sans', sans-serif
+    margin: 0.5em 0 0 0
+    padding: 0 1em
+    a
+      font-weight: 700
+  .story_comments
+    margin-top: 0
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'gandhi_serifregular', serif
+      line-height: 1.2
+
+.theme-five
+  .story
+    a
+      background-color: $link_highlight
+      text-decoration: none
+    .story_headline
+      font-family: 'Playfair Display', serif
+      font-weight: 700
+    .story_byline, .story_comments
+      font-family: 'Roboto', sans-serif
+      a
+        font-weight: 700
+    .story_comments
+      margin-top: 0
+    .story_body
+      margin: 0.5em 0 0 0
+      padding: 0.5em 1em
+      p
+        font-family: 'Playfair Display', serif
+
+.theme-six
+  .story
+    a
+      background-color: $link_highlight
+      text-decoration: none
+  .story_headline
+    font-family: 'heuristica_bold', serif
+  .story_byline, .story_comments
+    font-family: 'Source Sans Pro', sans-serif
+    a
+      font-weight: 700
+  .story_comments
+    margin-top: 0
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'heuristica_regular', serif
+
+.theme-seven
+  .story
+    a
+      color: $link_text
+      text-decoration: none
+  .story_headline
+    font-family: 'Playfair Display', serif
+    font-weight: 700
+  .story_byline
+    font-family: 'Playfair Display', serif
+    font-style: italic
+    a
+      font-weight: 700
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'Playfair Display', serif
+  .story_body--firstletter
+    font-size: 4em
+    font-style: italic
+    font-weight: 900
+    float: left
+    line-height: 0.4
+    margin: 0.25em 0.25em 0.25em 0
+
+.theme-eight
+  .story
+    a
+      color: $link_text
+  .story_headline
+    font-family: 'heuristica_bold', serif
+  .story_byline
+    font-family: 'Source Sans Pro', sans-serif
+    a
+      font-weight: 700
+      text-decoration: none
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'heuristica_regular', serif
+  .story_body--firstletter
+    color: $blue_teal
+    font-family: "Source Sans Pro", sans-serif
+    font-size: 4em
+    font-weight: 700
+    float: left
+    line-height: 0.4
+    margin: 0.25em 0.25em 0.25em 0
+
+.theme-nine
+  .story
+    a
+      color: $link_text
+      text-decoration: none
+  .story_headline
+    font-family: 'gandhi_serifregular', sans-serif
+    font-size: 2em
+    margin: 0.5em 0 0 0
+    padding: 0 0.5em
+  .story_byline
+    font-family: 'Open Sans', sans-serif
+    margin: 0.5em 0 0 0
+    padding: 0 1em
+    a
+      font-weight: 700
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'gandhi_serifregular', serif
+      line-height: 1.2
+  .story_body--firstletter
+    color: #334143
+    font-size: 4em
+    float: left
+    line-height: 0.4
+    margin: 0.25em 0.25em 0.25em 0
+
