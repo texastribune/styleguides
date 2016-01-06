@@ -30,9 +30,12 @@ $link_text: $blue_teal
 .theme-one
   .story
     a
-      border-bottom: 0.1em solid $link_underline
-      box-shadow: inset 0 -4px 0 $link_underline
+      border-bottom: 0.1em solid transparentize($link_underline, 0.35)
+      box-shadow: inset 0 -4px 0 transparentize($link_underline, 0.35)
       text-decoration: none
+      &:hover
+        border-bottom: 0.1em solid $link_underline
+        box-shadow: inset 0 -4px 0 $link_underline
   .story_headline
     background-color: white
     font-family: 'Open Sans', sans-serif
@@ -95,6 +98,8 @@ $link_text: $blue_teal
       border-bottom: 0.1em solid $link_underline
       box-shadow: inset 0 -4px 0 $link_underline
       text-decoration: none
+      &:hover
+        background-color: $link_underline
   .story_headline
     background-color: white
     font-family: 'heuristica_bold', serif
@@ -123,8 +128,10 @@ $link_text: $blue_teal
 .theme-four
   .story
     a
-      background-color: $link_highlight
+      background-color: transparentize($link_highlight, 0.35)
       text-decoration: none
+      &:hover
+        background-color: $link_highlight
   .story_headline
     font-family: 'gandhi_serifregular', sans-serif
     font-size: 2em
@@ -148,8 +155,10 @@ $link_text: $blue_teal
 .theme-five
   .story
     a
-      background-color: $link_highlight
+      background-color: transparentize($link_highlight, 0.35)
       text-decoration: none
+      &:hover
+        background-color: $link_highlight
     .story_headline
       font-family: 'Playfair Display', serif
       font-weight: 700
@@ -168,8 +177,10 @@ $link_text: $blue_teal
 .theme-six
   .story
     a
-      background-color: $link_highlight
+      background-color: transparentize($link_highlight, 0.35)
       text-decoration: none
+      &:hover
+        background-color: $link_highlight
   .story_headline
     font-family: 'heuristica_bold', serif
   .story_byline, .story_comments
@@ -189,6 +200,8 @@ $link_text: $blue_teal
     a
       color: $link_text
       text-decoration: none
+      &:hover
+        text-decoration: underline
   .story_headline
     font-family: 'Playfair Display', serif
     font-weight: 700
@@ -214,6 +227,8 @@ $link_text: $blue_teal
   .story
     a
       color: $link_text
+      &:hover
+        text-decoration: underline
   .story_headline
     font-family: 'heuristica_bold', serif
   .story_byline
@@ -240,6 +255,8 @@ $link_text: $blue_teal
     a
       color: $link_text
       text-decoration: none
+      &:hover
+        text-decoration: underline
   .story_headline
     font-family: 'gandhi_serifregular', sans-serif
     font-size: 2em
