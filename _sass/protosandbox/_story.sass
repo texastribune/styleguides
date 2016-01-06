@@ -9,24 +9,46 @@ $link_highlight: $yellow_light
 $link_underline: $blue_light
 $link_text: $blue_teal
 
+// Typography settings
+$font-root: 18px
+$font-root-tablet: 16px
+$font-root-mobile: 14px
+
+$xxl: 2.4rem
+$xl: 2rem
+$l: 1.8rem
+$m: 1.5rem
+$s: 1.1rem
+$xs: 0.8rem
+
+html
+  font-size: $font-root
+  @media screen and (max-width: 799px)
+    font-size: $font-root-tablet
+  @media screen and (max-width: 520px)
+    font-size: $font-root-mobile
+
+
 .story_leadart
   margin: 0.8em 0 0 0
   img
     width: 100%
 .story_headline
-  font-size: 1.8em
+  font-size: $xxl
   margin-top: 0.5em
-  padding: 0 0.6em
+  padding: 0 1.2em
 .story_byline
+  font-size: $m
   margin-top: 0.5em
   padding: 0 1em
 .story_comments
-  padding: 0 1em
+  padding: 0 2em
 .story_body
   margin-top: 0.5em
-  padding: 0.5em 1em
+  padding: 0.5em 2em
   p
-    margin-top: 0.5em
+    font-size: $m
+    margin-top: 1em
 
 .theme-one
   .story
