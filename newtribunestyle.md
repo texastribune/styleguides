@@ -35,6 +35,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Buttons](#buttons)
 * [Ads](#ads)
 * [Related Content](#related-content)
+* [Experimental](#experimental)
 
 </div></div><!-- end side nav -->
 
@@ -242,6 +243,26 @@ Related Content
 ---------------
 
 There will be a few related content blocks.
+
+Experimental
+------------
+
+This includes classes and information on elements that represent what we're trying out and looking into next.
+
+#### Read more
+.story_readmore
+
+#### Related Content
+.story_related--story--inline
+
+#### Related Media
+.story_related--image--embed
+.story_related--video--embed
+
+#### Story Quotes
+.story_blockquote
+
+#### Story subheaders
 
 </div><!-- end main -->
 </div>
