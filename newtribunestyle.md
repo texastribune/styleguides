@@ -253,40 +253,53 @@ This includes classes and information on elements that represent what we're tryi
 
 This is a block entity that can be reused in many different contexts. The class to use for this is `.readmore`.
 
+```html
 <a href="#" class="readmore"><p>Read More</p></a>
+```
 
 #### Related Content Link
 
 This is an element of the story block, since it's an inline related content element. The class to use for this is `.story_related--link`. If a related link exists outside of a story, then it would just have a class of `.related--link`.
 
+```html
 <ul class="story_relatedlink">
   <li></li>
   <li></li>
   <li></li>
 </ul>
+```
 
 #### Related Media
 
 This related image is an element of the story block. If a related image exists outside of a story, then it would just have a class of `.related--image`, since related content that can be added to other blocks would be its own block.
 .story_relatedimage
 
+```html
 <figure class="story_relatedimage" itemprop="associatedMedia">
   <figcaption></figcaption>
 </figure>
+```
 
 .story_relatedvideo
 
+```html
 <div class="video story_relatedvideo" itemprop="associatedMedia">
   <div class="youtube">
     <iframe>
   </div>
 </div>
+```
 
 #### Story Quotes
 
-These block quotes exist as elements that must be found within a story block.
+These quotes exist as elements that must be found within a story block. They are considered quote elements within story blocks, with a modifier of pull.
 
-.story_blockquote
+.story_quote--pull
+
+```html
+<p class="story_quote--pull"></p>
+```
+
 
 #### Story subheaders
 For subheaders, use a header class for the size of header you want, such as `.header--l`. Subheaders should not be h1 and should be either size l or size m. Headers are their own blocks and are not elements of the story block.
