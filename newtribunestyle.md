@@ -154,12 +154,12 @@ This is meant to roughly begin establishing a system to follow; the system and t
 
 Each header (h1-h6) is then given font sizes, weights, and any other styles. Header tags should be used on each page in the correct order to provide meaning and structure to the page with their use.
 
-<h1 class="font-xxl">h1 header example</h1>
-<h2 class="font-xl">h2 header example</h2>
-<h3 class="font-l">h3 header example</h3>
-<h4 class="font-m">h4 header example</h4>
-<h5 class="font-s">h5 header example</h5>
-<h6 class="font-xs">h6 header example</h6>
+<h1 class="header--xxl">h1 header example</h1>
+<h2 class="header--xl">h2 header example</h2>
+<h3 class="header--l">h3 header example</h3>
+<h4 class="header--m">h4 header example</h4>
+<h5 class="header--s">h5 header example</h5>
+<h6 class="header--xs">h6 header example</h6>
 
 #### Headlines
 
@@ -247,22 +247,49 @@ There will be a few related content blocks.
 Experimental
 ------------
 
-This includes classes and information on elements that represent what we're trying out and looking into next.
+This includes classes and information on elements that represent what we're trying out, looking into next, and currently testing and iterating upon.
 
 #### Read more
-.story_readmore
 
-#### Related Content
-.story_related--story--inline
+This is a block entity that can be reused in many different contexts. The class to use for this is `.readmore`.
+
+<a href="#" class="readmore"><p>Read More</p></a>
+
+#### Related Content Link
+
+This is an element of the story block, since it's an inline related content element. The class to use for this is `.story_related--link`. If a related link exists outside of a story, then it would just have a class of `.related--link`.
+
+<ul class="story_relatedlink">
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 
 #### Related Media
-.story_related--image--embed
-.story_related--video--embed
+
+This related image is an element of the story block. If a related image exists outside of a story, then it would just have a class of `.related--image`, since related content that can be added to other blocks would be its own block.
+.story_relatedimage
+
+<figure class="story_relatedimage" itemprop="associatedMedia">
+  <figcaption></figcaption>
+</figure>
+
+.story_relatedvideo
+
+<div class="video story_relatedvideo" itemprop="associatedMedia">
+  <div class="youtube">
+    <iframe>
+  </div>
+</div>
 
 #### Story Quotes
+
+These block quotes exist as elements that must be found within a story block.
+
 .story_blockquote
 
 #### Story subheaders
+For subheaders, use a header class for the size of header you want, such as `.header--l`. Subheaders should not be h1 and should be either size l or size m. Headers are their own blocks and are not elements of the story block.
 
 </div><!-- end main -->
 </div>
