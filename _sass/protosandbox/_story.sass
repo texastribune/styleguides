@@ -38,6 +38,7 @@ $link_text: $blue_teal
     line-height: 1.5
     margin-top: 1em
 
+// Heuristica and Open Sans
 .theme-one
   .story
     a
@@ -68,8 +69,9 @@ $link_text: $blue_teal
       font-weight: 700
   .story_body
     p
-      font-family: 'gandhi_serifregular', serif
+      font-family: 'heuristica_regular', serif
 
+// Playfair and Open Sans
 .theme-two
   .story
     a
@@ -81,7 +83,7 @@ $link_text: $blue_teal
         box-shadow: inset 0 -4px 0 $blue_dark
   .story_headline
     background-color: white
-    font-family: 'Roboto', sans-serif
+    font-family: 'Open Sans', sans-serif
     font-weight: 700
     margin-top: -1em
     padding: 0.4em 0.6em
@@ -106,6 +108,7 @@ $link_text: $blue_teal
     p
       font-family: 'Playfair Display'
 
+// Heuristica and Source Sans
 .theme-three
   .story
     a
@@ -141,20 +144,16 @@ $link_text: $blue_teal
     p
       font-family: 'heuristica_regular', serif
 
+// Playfair and Source Sans
 .theme-four
   .story
-    a
-      background-color: transparentize($link_highlight, 0.35)
-      text-decoration: none
-      &:hover
-        background-color: $link_highlight
   .story_headline
-    font-family: 'gandhi_serifregular', sans-serif
+    font-family: 'Source Sans', sans-serif
     font-size: 2em
     margin: 0.5em 0 0 0
     padding: 0 0.5em
   .story_byline, .story_comments
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Source Sans', sans-serif
     margin: 0.5em 0 0 0
     padding: 0 1em
     a
@@ -165,38 +164,28 @@ $link_text: $blue_teal
     margin: 0.5em 0 0 0
     padding: 0.5em 1em
     p
-      font-family: 'gandhi_serifregular', serif
+      font-family: 'Playfair Display', serif
       line-height: 1.2
 
 .theme-five
   .story
+  .story_headline
+    font-family: 'Playfair Display', serif
+    font-weight: 700
+  .story_byline, .story_comments
+    font-family: 'Roboto', sans-serif
     a
-      background-color: transparentize($link_highlight, 0.35)
-      text-decoration: none
-      &:hover
-        background-color: $link_highlight
-    .story_headline
-      font-family: 'Playfair Display', serif
       font-weight: 700
-    .story_byline, .story_comments
-      font-family: 'Roboto', sans-serif
-      a
-        font-weight: 700
-    .story_comments
-      margin-top: 0
-    .story_body
-      margin: 0.5em 0 0 0
-      padding: 0.5em 1em
-      p
-        font-family: 'Playfair Display', serif
+  .story_comments
+    margin-top: 0
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'Playfair Display', serif
 
 .theme-six
   .story
-    a
-      background-color: transparentize($link_highlight, 0.35)
-      text-decoration: none
-      &:hover
-        background-color: $link_highlight
   .story_headline
     font-family: 'heuristica_bold', serif
   .story_byline, .story_comments
@@ -231,13 +220,6 @@ $link_text: $blue_teal
     padding: 0.5em 1em
     p
       font-family: 'Playfair Display', serif
-  .story_body--firstletter
-    font-size: 4em
-    font-style: italic
-    font-weight: 900
-    float: left
-    line-height: 0.4
-    margin: 0.25em 0.25em 0.25em 0
 
 .theme-eight
   .story
@@ -257,14 +239,6 @@ $link_text: $blue_teal
     padding: 0.5em 1em
     p
       font-family: 'heuristica_regular', serif
-  .story_body--firstletter
-    color: $blue_teal
-    font-family: "Source Sans Pro", sans-serif
-    font-size: 4em
-    font-weight: 700
-    float: left
-    line-height: 0.4
-    margin: 0.25em 0.25em 0.25em 0
 
 .theme-nine
   .story
@@ -290,10 +264,3 @@ $link_text: $blue_teal
     p
       font-family: 'gandhi_serifregular', serif
       line-height: 1.2
-  .story_body--firstletter
-    color: #334143
-    font-size: 4em
-    float: left
-    line-height: 0.4
-    margin: 0.25em 0.25em 0.25em 0
-
