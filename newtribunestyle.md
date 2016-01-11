@@ -254,7 +254,7 @@ This includes classes and information on elements that represent what we're tryi
 This is a block entity that can be reused in many different contexts. The class to use for this is `.readmore`.
 
 ```html
-<a href="#" class="readmore"><p>Read More</p></a>
+<a href="#" class="readmore">Read More</a>
 ```
 
 #### Related Content Link
