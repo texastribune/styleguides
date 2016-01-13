@@ -93,3 +93,21 @@ title: Sandbox
   </article>
 {% endfor %}
 </div>
+
+<div class="theme-six">
+<a href="#theme-six" id="theme-six"><h2>Theme Six</h2></a>
+{% for story in site.data.storyexamples %}
+  <article class="story">
+    <figure class="story_leadart">
+      <img src="{{ story.leadart }}" alt="">
+    </figure>
+    <div class="story_headline">
+      <h1 itemprop="headline">{{ story.headline }}</h1>
+    </div>
+    <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+    <div class="story_body">
+      {{ story.body }}
+    </div>
+  </article>
+{% endfor %}
+</div>
