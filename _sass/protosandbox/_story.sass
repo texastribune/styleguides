@@ -62,6 +62,8 @@ $link_text: $blue_teal
   .story_byline
     font-family: 'Open Sans', sans-serif
     font-variant: small-caps
+    a
+      font-weight: 700
   .story_body
     p
       font-family: 'heuristica_regular', serif
@@ -157,7 +159,7 @@ $link_text: $blue_teal
     background-color: $black
     border-left: 5px solid $yellow_tribune
     color: white
-    font-family: 'Source Sans', sans-serif
+    font-family: 'Source Sans Pro', sans-serif
     font-size: 2em
     margin-top: 0
     padding: 0 0.5em
@@ -165,7 +167,7 @@ $link_text: $blue_teal
   .story_byline
     background-color: $black
     color: white
-    font-family: 'Source Sans', sans-serif
+    font-family: 'Source Sans Pro', sans-serif
     margin: 0 0 0 0
     padding: 0.5em 1.4em
     a
@@ -207,6 +209,8 @@ $link_text: $blue_teal
     width: 85%
   .story_byline
     font-family: 'Open Sans', sans-serif
+    a
+      font-weight: 700
   .story_body
     p
       font-family: 'heuristica_regular', serif
@@ -239,6 +243,8 @@ $link_text: $blue_teal
   .story_byline
     font-family: 'Open Sans', sans-serif
     font-variant: small-caps
+    a
+      font-weight: 700
   .story_body
     p
       font-family: 'heuristica_regular', serif
@@ -271,6 +277,49 @@ $link_text: $blue_teal
   .story_byline
     font-family: 'Open Sans', sans-serif
     font-variant: small-caps
+    a
+      font-weight: 700
   .story_body
     p
       font-family: 'heuristica_regular', serif
+
+// Same as 4, with Heuristica and Open Sans
+.theme-eight
+  .story_leadart
+    background: $black
+  .story_meta--wrapper
+    background-color: $black
+    padding: 0.5em 0
+    position: relative
+  .story_headline
+    background-color: $black
+    border-left: 5px solid $yellow_tribune
+    color: white
+    font-family: 'heuristica_bold', serif
+    font-size: 2em
+    margin-top: 0
+    padding: 0 0.5em
+    position: relative
+  .story_byline
+    background-color: $black
+    color: white
+    font-family: 'Open Sans', sans-serif
+    margin: 0 0 0 0
+    padding: 0.5em 1.4em
+    a
+      color: white
+      font-weight: 700
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+    p
+      font-family: 'heuristica_regular', serif
+      line-height: 1.2
+    a
+      color: $link_text
+      text-decoration: none
+      &:hover
+        text-decoration: underline
