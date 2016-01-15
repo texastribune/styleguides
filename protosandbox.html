@@ -22,46 +22,7 @@ title: Sandbox
 </div>
 
 <div class="theme-two">
-  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,900italic' rel='stylesheet' type='text/css'>
   <a href="#theme-two" id="theme-two"><h2>Theme Two</h2></a>
-  {% for story in site.data.storyexamples %}
-    <article class="story">
-      <figure class="story_leadart">
-        <img src="{{ story.leadart }}" alt="">
-      </figure>
-      <div class="story_headline--notch">
-        <hr><br>
-        <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      </div>
-      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
-      <div class="story_body">
-        {{ story.body }}
-      </div>
-    </article>
-  {% endfor %}
-</div>
-
-<div class="theme-three">
-  <a href="#theme-three" id="theme-three"><h2>Theme Three</h2></a>
-  {% for story in site.data.storyexamples %}
-    <article class="story">
-      <figure class="story_leadart">
-        <img src="{{ story.leadart }}" alt="">
-      </figure>
-      <div class="story_headline--notch">
-        <hr><br>
-        <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      </div>
-      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
-      <div class="story_body">
-        {{ story.body }}
-      </div>
-    </article>
-  {% endfor %}
-</div>
-
-<div class="theme-four">
-  <a href="#theme-four" id="theme-four"><h2>Theme Four</h2></a>
   {% for story in site.data.storyexamples %}
     <article class="story">
       <figure class="story_leadart">
@@ -78,8 +39,8 @@ title: Sandbox
   {% endfor %}
 </div>
 
-<div class="theme-five">
-<a href="#theme-five" id="theme-five"><h2>Theme Five</h2></a>
+<div class="theme-three">
+<a href="#theme-three" id="theme-three"><h2>Theme Three</h2></a>
 {% for story in site.data.storyexamples %}
   <article class="story">
     <figure class="story_leadart">
@@ -92,22 +53,4 @@ title: Sandbox
     </div>
   </article>
 {% endfor %}
-</div>
-
-<div class="theme-eight">
-  <a href="#theme-eight" id="theme-eight"><h2>Theme Eight</h2></a>
-  {% for story in site.data.storyexamples %}
-    <article class="story">
-      <figure class="story_leadart">
-        <img src="{{ story.leadart }}" alt="">
-      </figure>
-      <div class="story_meta--wrapper">
-        <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      </div>
-      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
-      <div class="story_body">
-        {{ story.body }}
-      </div>
-    </article>
-  {% endfor %}
 </div>

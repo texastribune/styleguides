@@ -19,7 +19,7 @@ $link_text: $blue_teal
 
 // A few starter styles
 .story_leadart
-  margin: 0.8em 0 0 0
+  margin: 0
   img
     width: 100%
 .story_headline
@@ -30,8 +30,6 @@ $link_text: $blue_teal
   font-size: 1.2em
   margin-top: 0.5em
   padding: 0 1.2em
-.story_comments
-  padding: 0 1.2em
 .story_body
   margin-top: 0.5em
   padding: 0.5em 1.5em
@@ -39,6 +37,12 @@ $link_text: $blue_teal
     font-size: 1.2em
     line-height: 1.5
     margin-top: 1em
+
+// Font styles
+
+// Link styles
+
+// Byline styles
 
 // Heuristica and Open Sans
 .theme-one
@@ -69,87 +73,8 @@ $link_text: $blue_teal
     p
       font-family: 'heuristica_regular', serif
 
-// Playfair and Open Sans
-.theme-two
-  .story
-    a
-      border-bottom: 1px solid $link_underline
-      box-shadow: inset 0 -2px 0 $link_underline
-      text-decoration: none
-      &:hover
-        border-bottom: 1px solid $blue_dark
-        box-shadow: inset 0 -2px 0 $blue_dark
-    hr
-      border: 0
-      border-bottom: 6px solid #ffc200
-      height: 6px
-      margin: 0
-      margin-left: 1em
-      padding-top: 0.5em
-      width: 40px
-  .story_headline--notch
-    background-color: white
-    margin-top: -1.5em
-    position: relative
-    width: 85%
-  .story_headline
-    background-color: white
-    font-family: 'Playfair Display', serif
-    font-weight: 700
-    margin: 0
-    padding: 0 0.6em
-    position: relative
-  .story_byline
-    font-family: 'Open Sans', sans-serif
-    a
-      font-weight: 700
-  .story_body
-    margin-top: 0.5em
-    padding: 0.5em 1em
-    p
-      font-family: 'Playfair Display', serif
-
-// Heuristica and Source Sans
-.theme-three
-  .story
-    a
-      color: $link_text
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-    hr
-      border: 0
-      border-bottom: 17px solid #ffc200
-      float: right
-      margin: 0
-      width: 50px
-  .story_headline--notch
-    background-color: white
-    margin-top: -1.5em
-    position: relative
-    width: 85%
-  .story_headline
-    background-color: white
-    font-family: 'heuristica_bold', serif
-    margin: 0
-    padding: 0.5em 0.6em 0 0.6em
-    position: relative
-    width: 85%
-  .story_byline
-    font-family: 'Source Sans Pro', sans-serif
-    padding: 0 0.8em
-    a
-      font-weight: 700
-  .story_body
-    margin: 0.5em 0 0 0
-    padding: 0.5em 1em
-    p
-      font-family: 'heuristica_regular', serif
-    a
-      text-decoration: underline
-
 // Playfair and Source Sans
-.theme-four
+.theme-two
   .story_leadart
     background: $black
   .story_meta--wrapper
@@ -190,7 +115,7 @@ $link_text: $blue_teal
         text-decoration: underline
 
 // Heuristica and Open Sans
-.theme-five
+.theme-three
   .story
     a
       border-bottom: 1px solid $link_underline
@@ -215,44 +140,3 @@ $link_text: $blue_teal
   .story_body
     p
       font-family: 'heuristica_regular', serif
-
-// Same as 4, with Heuristica and Open Sans
-.theme-eight
-  .story_leadart
-    background: $black
-  .story_meta--wrapper
-    background-color: $black
-    padding: 0.5em 0
-    position: relative
-  .story_headline
-    background-color: $black
-    border-left: 5px solid $yellow_tribune
-    color: white
-    font-family: 'heuristica_bold', serif
-    font-size: 2em
-    margin-top: 0
-    padding: 0 0.5em
-    position: relative
-  .story_byline
-    background-color: $black
-    color: white
-    font-family: 'Open Sans', sans-serif
-    margin: 0 0 0 0
-    padding: 0.5em 1.4em
-    a
-      color: white
-      font-weight: 700
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-  .story_body
-    margin: 0.5em 0 0 0
-    padding: 0.5em 1em
-    p
-      font-family: 'heuristica_regular', serif
-      line-height: 1.2
-    a
-      color: $link_text
-      text-decoration: none
-      &:hover
-        text-decoration: underline
