@@ -9,7 +9,7 @@ title: Sandbox
     <li><a id="underlinelinks" href="">Underline links</a>  <a id="linkswcolor" href="">Links w/color</a></li>
     <li><a id="headlineopensans" href="">Open Sans Headline</a>  <a id="headlineplayfair" href="">Playfair Headline</a></li>
     <li><a id="bylinesmallcaps" href="">Small Caps Byline</a>  <a id="bylineregular" href="">Regular Byline</a></li>
-    <li><a id="bodygeorgia" href="">Georgia</a>  <a id="bodyopensans" href="">Open Sans</a>  <a id="bodyplayfair" href="">Playfair</a></li>
+    <li><a id="bodygeorgia" href="">Georgia</a>  <a id="bodyopensans" href="">Open Sans</a>  <a id="bodyplayfair" href="">Playfair</a>  <a id="bodynoticia" href="">Noticia</a></li>
   </ul>
 </div>
 
@@ -122,5 +122,13 @@ title: Sandbox
     $('body').removeClass('bodytext--georgia');
     $('body').removeClass('bodytext--playfair');
     $('body').addClass('bodytext--opensans');
+  });
+
+  $('#bodynoticia').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('bodytext--georgia');
+    $('body').removeClass('bodytext--playfair');
+    $('body').removeClass('bodytext--opensans');
+    $('body').addClass('bodytext--noticia');
   });
 </script>
