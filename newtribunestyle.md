@@ -25,6 +25,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Naming Conventions](#naming-conventions)
 * [Accessibility](#accessibility)
 * [Performance](#performance)
+* [Browser Compatibility](#browser-compatibility)
 * [Schema.org](#schemaorg)
 * [Color](#color)
 * [Typography](#typography)
@@ -110,6 +111,11 @@ Performance
 -----------
 
 # Layout, Base, Blocks, Elements, and Modifiers
+
+Browser Compatibility
+---------------------
+
+All styles should be tested in IE9+, Firefox, Safari, and Chrome. They should be tested at mobile, tablet, and desktop widths.
 
 Schema.org
 ----------
