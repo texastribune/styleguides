@@ -39,14 +39,10 @@ $link_text: $blue_teal
     width: 100%
 .story_headline
   font-size: 1.6em
-  margin-top: 0.5em
   padding: 0 1em
 .story_byline
   font-size: 1.2em
-  margin-top: 0.5em
-  padding: 0 1.2em
 .story_body
-  margin-top: 0.5em
   padding: 0.5em 1.5em
   p
     font-size: 1.2em
@@ -73,6 +69,9 @@ $link_text: $blue_teal
   .story_headline
     background-color: white
     color: $black
+  .story_byline
+    a
+      color: $link_text
 
 // Font styles
 .byline--smallcaps
@@ -127,7 +126,6 @@ $link_text: $blue_teal
   .story
     .story_byline
       a
-        color: $link_text
         font-weight: 700
         text-decoration: none
         &:hover
@@ -147,6 +145,9 @@ $link_text: $blue_teal
     padding: 0.4em 0.6em
     position: relative
     width: 85%
+  .story_byline
+    margin-top: 0.5em
+    padding: 0 1.2em
 
 .theme-two
   .story_meta--wrapper
