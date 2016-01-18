@@ -3,54 +3,74 @@ layout: protosandbox
 title: Sandbox
 ---
 
-<link rel="stylesheet" href="{{ site.baseurl }}/css/fonts/heuristica.css" type="text/css" charset="utf-8" />
-<div class="theme-one">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<a href="#theme-one" id="theme-one"><h2>Theme One</h2></a>
-{% for story in site.data.storyexamples %}
-  <article class="story">
-    <figure class="story_leadart">
-      <img src="{{ story.leadart }}" alt="">
-    </figure>
-    <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-    <p class="story_byline">by <a href="">{{ story.author }}</a></p>
-    <div class="story_body">
-      {{ story.body }}
-    </div>
-  </article>
-{% endfor %}
+<div class="toggles">
+  <ul>
+    <li><a id="lighttheme" href="">Light</a> <a id="darktheme" href="">Dark</a></li>
+    <li><a id="underlinelinks" href="">Underline links</a> <a id="linkswcolor" href="">Links w/color</a></li>
+  </ul>
 </div>
 
-<div class="theme-two">
-  <a href="#theme-two" id="theme-two"><h2>Theme Two</h2></a>
+<div class="themes">
+  <div class="theme-one">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <a href="#theme-one" id="theme-one"><h2>Theme One</h2></a>
   {% for story in site.data.storyexamples %}
     <article class="story">
       <figure class="story_leadart">
         <img src="{{ story.leadart }}" alt="">
       </figure>
-      <div class="story_meta--wrapper">
-        <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      </div>
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
       <p class="story_byline">by <a href="">{{ story.author }}</a></p>
       <div class="story_body">
         {{ story.body }}
       </div>
     </article>
   {% endfor %}
+  </div>
+
+  <div class="theme-two">
+    <a href="#theme-two" id="theme-two"><h2>Theme Two</h2></a>
+    {% for story in site.data.storyexamples %}
+      <article class="story">
+        <figure class="story_leadart">
+          <img src="{{ story.leadart }}" alt="">
+        </figure>
+        <div class="story_meta--wrapper">
+          <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+        </div>
+        <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+        <div class="story_body">
+          {{ story.body }}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 </div>
 
-<div class="theme-three">
-<a href="#theme-three" id="theme-three"><h2>Theme Three</h2></a>
-{% for story in site.data.storyexamples %}
-  <article class="story">
-    <figure class="story_leadart">
-      <img src="{{ story.leadart }}" alt="">
-    </figure>
-    <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-    <p class="story_byline">by <a href="">{{ story.author }}</a></p>
-    <div class="story_body">
-      {{ story.body }}
-    </div>
-  </article>
-{% endfor %}
-</div>
+<script type="text/javascript">
+  // Link style toggles
+  $('#underlinelinks').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('links--withcolor');
+    $('body').addClass('links--underlineonly');
+  });
+
+  $('#linkswcolor').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('links--underlineonly');
+    $('body').addClass('links--withcolor');
+  });
+
+  // Light and dark theme toggles
+  $('#lighttheme').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('theme--dark');
+    $('body').addClass('theme--light');
+  });
+
+  $('#darktheme').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('theme--light');
+    $('body').addClass('theme--dark');
+  });
+</script>

@@ -9,6 +9,21 @@ $black: #222
 $link_underline: $blue_light
 $link_text: $blue_teal
 
+// Toggle styles
+.toggles
+  background-color: white
+  height: 100px
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+  ul
+    list-style: none
+
+.themes
+  position: relative
+  top: 100px
+
 // Font sizes
 .story
   font-size: 18px
@@ -38,14 +53,60 @@ $link_text: $blue_teal
     line-height: 1.5
     margin-top: 1em
 
+// Light and dark themes
+.theme--dark
+  .story_headline
+    background-color: $black
+    color: white
+  .story_leadart
+    background-color: $black
+  .theme-two
+    .story_byline
+      background-color: $black
+      color: white
+      a
+        color: white
+  .story_meta--wrapper
+    background-color: $black
+
+.theme--light
+  .story_headline
+    background-color: white
+    color: $black
+
 // Font styles
+.byline--smallcaps
+  .story_byline
+    font-variant: small-caps
+    text-transform: lowercase
+    a
+      font-weight: 700
+
+.headline--opensans
+  .story_headline, .story_byline
+    font-family: 'Open Sans', sans-serif
+
+.headline--playfair
+  .story_headline, .story_byline
+    font-family: 'Playfair Display', serif
+
+.bodytext--opensans
+  .story_body
+    p
+      font-family: 'Open Sans', sans-serif
+
+.bodytext--playfair
+  .story_body
+    p
+      font-family: 'Playfair Display', serif
+
+.bodytext--georgia
+  .story_body
+    p
+      font-family: Georgia, serif
 
 // Link styles
-
-// Byline styles
-
-// Heuristica and Open Sans
-.theme-one
+.links--underlineonly
   .story
     a
       border-bottom: 1px solid $link_underline
@@ -54,89 +115,45 @@ $link_text: $blue_teal
       &:hover
         border-bottom: 1px solid $blue_dark
         box-shadow: inset 0 -2px 0 $blue_dark
+
+.links--withcolor
+  .story
+    .story_byline
+      a
+        color: $link_text
+        font-weight: 700
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+    .story_body
+      a
+        color: $link_text
+
+
+// Byline styles
+
+// Two layout themes
+.theme-one
   .story_headline
-    background-color: $black
     border-right: 4px solid $yellow_tribune
-    color: white
-    font-family: 'heuristica_bold', serif
     margin-top: -1em
     padding: 0.4em 0.6em
     position: relative
     width: 85%
-  .story_byline
-    font-family: 'Open Sans', sans-serif
-    font-variant: small-caps
-    text-transform: lowercase
-    a
-      font-weight: 700
-  .story_body
-    p
-      font-family: 'heuristica_regular', serif
 
-// Playfair and Source Sans
 .theme-two
-  .story_leadart
-    background: $black
   .story_meta--wrapper
-    background-color: $black
     padding: 0.5em 0
     position: relative
   .story_headline
-    background-color: $black
     border-left: 5px solid $yellow_tribune
-    color: white
-    font-family: 'Source Sans Pro', sans-serif
     font-size: 2em
     margin-top: 0
     padding: 0 0.5em
     position: relative
   .story_byline
-    background-color: $black
-    color: white
-    font-family: 'Source Sans Pro', sans-serif
     margin: 0 0 0 0
     padding: 0.5em 1.4em
-    a
-      color: white
-      font-weight: 700
-      text-decoration: none
-      &:hover
-        text-decoration: underline
   .story_body
     margin: 0.5em 0 0 0
     padding: 0.5em 1em
-    p
-      font-family: 'Playfair Display', serif
-      line-height: 1.2
-    a
-      color: $link_text
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-
-// Heuristica and Open Sans
-.theme-three
-  .story
-    a
-      border-bottom: 1px solid $link_underline
-      box-shadow: inset 0 -2px 0 $link_underline
-      text-decoration: none
-      &:hover
-        border-bottom: 1px solid $blue_dark
-        box-shadow: inset 0 -2px 0 $blue_dark
-  .story_headline
-    background-color: white
-    border-right: 4px solid $yellow_tribune
-    color: black
-    font-family: 'Open Sans', sans-serif
-    margin-top: -1em
-    padding: 0.4em 0.6em
-    position: relative
-    width: 85%
-  .story_byline
-    font-family: 'Open Sans', sans-serif
-    a
-      font-weight: 700
-  .story_body
-    p
-      font-family: 'heuristica_regular', serif
