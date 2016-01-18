@@ -5,10 +5,11 @@ title: Sandbox
 
 <div class="toggles">
   <ul>
-    <li><a id="lighttheme" href="">Light</a> <a id="darktheme" href="">Dark</a></li>
-    <li><a id="underlinelinks" href="">Underline links</a> <a id="linkswcolor" href="">Links w/color</a></li>
-    <li><a id="headlineopensans" href="">Open Sans Headline</a> <a id="headlineplayfair" href="">Playfair Headline</a></li>
-    <li><a id="bylinesmallcaps" href="">Small Caps Byline</a> <a id="bylineregular" href="">Regular Byline</a></li>
+    <li><a id="lighttheme" href="">Light</a>  <a id="darktheme" href="">Dark</a></li>
+    <li><a id="underlinelinks" href="">Underline links</a>  <a id="linkswcolor" href="">Links w/color</a></li>
+    <li><a id="headlineopensans" href="">Open Sans Headline</a>  <a id="headlineplayfair" href="">Playfair Headline</a></li>
+    <li><a id="bylinesmallcaps" href="">Small Caps Byline</a>  <a id="bylineregular" href="">Regular Byline</a></li>
+    <li><a id="bodygeorgia" href="">Georgia</a>  <a id="bodyopensans" href="">Open Sans</a>  <a id="bodyplayfair" href="">Playfair</a></li>
   </ul>
 </div>
 
@@ -99,5 +100,27 @@ title: Sandbox
     e.preventDefault();
     $('body').removeClass('byline--smallcaps');
     $('body').addClass('byline--regular');
+  });
+
+  // Body font toggles
+  $('#bodygeorgia').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('bodytext--playfair');
+    $('body').removeClass('bodytext--opensans');
+    $('body').addClass('bodytext--georgia');
+  });
+
+  $('#bodyplayfair').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('bodytext--opensans');
+    $('body').removeClass('bodytext--georgia');
+    $('body').addClass('bodytext--playfair');
+  });
+
+  $('#bodyopensans').click(function(e) {
+    e.preventDefault();
+    $('body').removeClass('bodytext--georgia');
+    $('body').removeClass('bodytext--playfair');
+    $('body').addClass('bodytext--opensans');
   });
 </script>
