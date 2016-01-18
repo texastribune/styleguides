@@ -12,17 +12,26 @@ $link_text: $blue_teal
 // Toggle styles
 .toggles
   background-color: white
-  height: 110px
+  height: 140px
   position: fixed
   top: 0
   width: 100%
   z-index: 10
   ul
     list-style: none
+    li
+      margin: 0.5em 0
+      a
+        background-color: $black
+        color: white
+        padding: 0 0.5em
+        text-decoration: none
+        &:hover
+          background-color: $blue_teal
 
 .themes
   position: relative
-  top: 110px
+  top: 130px
 
 // Font sizes
 .story
