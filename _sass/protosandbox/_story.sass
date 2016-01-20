@@ -12,7 +12,7 @@ $link_text: $blue_teal
 // Toggle styles
 .toggles
   background-color: white
-  height: 150px
+  height: 130px
   position: fixed
   top: 0
   width: 100%
@@ -49,6 +49,7 @@ $link_text: $blue_teal
     width: 100%
 .story_headline
   font-size: 2em
+  line-height: 1.2
   padding: 0 1em
 .story_byline
   font-size: 1.2em
@@ -84,21 +85,6 @@ $link_text: $blue_teal
       color: $black
 
 // Font styles
-.byline--smallcaps
-  .story_byline
-    font-family: 'Open Sans', sans-serif
-    font-variant: small-caps
-    text-transform: lowercase
-    a
-      font-weight: 700
-
-.byline--regular
-  .story_byline
-    font-family: 'Open Sans', sans-serif
-    font-size: 1.1em
-    a
-      font-weight: 700
-
 .headline--opensans
   .story_headline
     font-family: 'Open Sans', sans-serif
@@ -109,22 +95,22 @@ $link_text: $blue_teal
 
 .bodytext--opensans
   .story_body
-    p
+    p, h2
       font-family: 'Open Sans', sans-serif
 
 .bodytext--playfair
   .story_body
-    p
+    p, h2
       font-family: 'Playfair Display', serif
 
 .bodytext--georgia
   .story_body
-    p
+    p, h2
       font-family: Georgia, serif
 
 .bodytext--noticia
   .story_body
-    p
+    p, h2
       font-family: 'Noticia Text', serif
 
 // Link styles
@@ -164,8 +150,33 @@ $link_text: $blue_teal
   .story_byline
     margin-top: 0.5em
     padding: 0 1.2em
+    font-family: 'Open Sans', sans-serif
+    font-size: 1.1em
+    a
+      font-weight: 700
 
 .theme-two
+  .story_meta--wrapper
+    padding: 0.5em 0
+    position: relative
+  .story_headline
+    font-size: 2em
+    margin-top: 0
+    padding: 0 0.5em
+    position: relative
+  .story_byline
+    margin: 0 0 0 0
+    padding: 0.5em 1.4em
+    font-family: 'Open Sans', sans-serif
+    font-variant: small-caps
+    text-transform: lowercase
+    a
+      font-weight: 700
+  .story_body
+    margin: 0.5em 0 0 0
+    padding: 0.5em 1em
+
+.theme-three
   .story_meta--wrapper
     padding: 0.5em 0
     position: relative
@@ -178,6 +189,26 @@ $link_text: $blue_teal
   .story_byline
     margin: 0 0 0 0
     padding: 0.5em 1.4em
+    font-family: 'Open Sans', sans-serif
+    font-variant: small-caps
+    text-transform: lowercase
+    a
+      font-weight: 700
   .story_body
     margin: 0.5em 0 0 0
     padding: 0.5em 1em
+
+.theme-four
+  .story_headline
+    border-right: 4px solid $yellow_tribune
+    margin-top: -1em
+    padding: 0.4em 0.6em
+    position: relative
+    width: 85%
+  .story_byline
+    margin-top: 0.5em
+    padding: 0 1.2em
+    font-family: 'Open Sans', sans-serif
+    font-size: 1.1em
+    a
+      font-weight: 700

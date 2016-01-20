@@ -8,7 +8,6 @@ title: Sandbox
     <li><a id="lighttheme" href="">Light</a>  <a id="darktheme" href="">Dark</a></li>
     <li><a id="underlinelinks" href="">Underline links</a>  <a id="linkswcolor" href="">Links w/color</a></li>
     <li><a id="headlineopensans" href="">Open Sans Headline</a>  <a id="headlineplayfair" href="">Playfair Headline</a></li>
-    <li><a id="bylinesmallcaps" href="">Small Caps Byline</a>  <a id="bylineregular" href="">Regular Byline</a></li>
     <li><a id="bodygeorgia" href="">Georgia</a>  <a id="bodyopensans" href="">Open Sans</a>  <a id="bodyplayfair" href="">Playfair</a>  <a id="bodynoticia" href="">Noticia</a></li>
   </ul>
 </div>
@@ -46,6 +45,40 @@ title: Sandbox
         </div>
       </article>
     {% endfor %}
+  </div>
+
+  <div class="theme-three">
+    <a href="#theme-three" id="theme-three"><h2>Theme Three</h2></a>
+    {% for story in site.data.storyexamples %}
+      <article class="story">
+        <figure class="story_leadart">
+          <img src="{{ story.leadart }}" alt="">
+        </figure>
+        <div class="story_meta--wrapper">
+          <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+        </div>
+        <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+        <div class="story_body">
+          {{ story.body }}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="theme-four">
+  <a href="#theme-four" id="theme-one"><h2>Theme Four</h2></a>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <figure class="story_leadart">
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+    </article>
+  {% endfor %}
   </div>
 </div>
 
@@ -87,19 +120,6 @@ title: Sandbox
     e.preventDefault();
     $('body').removeClass('headline--opensans');
     $('body').addClass('headline--playfair');
-  });
-
-  // Byline toggles
-  $('#bylinesmallcaps').click(function(e) {
-    e.preventDefault();
-    $('body').removeClass('byline--regular');
-    $('body').addClass('byline--smallcaps');
-  });
-
-  $('#bylineregular').click(function(e) {
-    e.preventDefault();
-    $('body').removeClass('byline--smallcaps');
-    $('body').addClass('byline--regular');
   });
 
   // Body font toggles
