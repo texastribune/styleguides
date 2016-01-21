@@ -22,7 +22,10 @@ title: Sandbox
         <img src="{{ story.leadart }}" alt="">
       </figure>
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-      <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+      <div class="story_info">
+        <p class="story_info--pub"><i class="fa fa-clock-o"></i>{{ story.pub_date }}</p><p class="story_info--comments"><a href=""><i class="fa fa-comments-o"></i>{{ story.num_comments }}</a></p><p class="story_info--print"><a href=""><i class="fa fa-print"></i>Print</a></p>
+      </div>
+      <p class="story_byline">By <a href="">{{ story.author }}</a></p>
       <div class="story_body">
         {{ story.body }}
       </div>

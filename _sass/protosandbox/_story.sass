@@ -128,7 +128,7 @@ $link_text: $blue_teal
 
 // Link styles
 .links--underlineonly
-  .story
+  .story_body
     a
       border-bottom: 1px solid $link_underline
       box-shadow: inset 0 -2px 0 $link_underline
@@ -138,16 +138,9 @@ $link_text: $blue_teal
         box-shadow: inset 0 -2px 0 $blue_dark
 
 .links--withcolor
-  .story
-    .story_byline
-      a
-        font-weight: 700
-        text-decoration: none
-        &:hover
-          text-decoration: underline
-    .story_body
-      a
-        color: $link_text
+  .story_body
+    a
+      color: $link_text
 
 
 // Byline styles
@@ -160,13 +153,35 @@ $link_text: $blue_teal
     padding: 0.4em 0.6em
     position: relative
     width: 85%
+  .story_info
+    font-family: 'Open Sans', sans-serif
+    padding: 0.4em 1em
+    p
+      font-weight: 700
+      display: inline-block
+      text-align: center
+      width: 30%
+      i
+        padding: 0 0.5em
+      a
+        text-decoration: none
+  .story_info--pub, .story_info--print
+    color: #888
+    a
+      color: #888
+  .story_info--comments
+    a
+      color: $blue_teal
   .story_byline
+    color: #888
     margin-top: 0.5em
     padding: 0 1.2em
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Playfair Display', serif
     font-size: 1.1em
     a
+      color: $blue_teal
       font-weight: 700
+      text-decoration: none
   hr
     display: none
   .signup
