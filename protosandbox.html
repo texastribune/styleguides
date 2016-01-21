@@ -19,6 +19,7 @@ title: Sandbox
   {% for story in site.data.storyexamples %}
     <article class="story">
       <figure class="story_leadart">
+        <span>{{ story.photocredit }}</span>
         <img src="{{ story.leadart }}" alt="">
       </figure>
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
@@ -38,6 +39,7 @@ title: Sandbox
     {% for story in site.data.storyexamples %}
       <article class="story">
         <figure class="story_leadart">
+          <span>{{ story.photocredit }}</span>
           <img src="{{ story.leadart }}" alt="">
         </figure>
         <div class="story_meta--wrapper">
@@ -60,6 +62,7 @@ title: Sandbox
       <article class="story">
         <figure class="story_leadart">
           <img src="{{ story.leadart }}" alt="">
+          <span>{{ story.photocredit }}</span>
         </figure>
         <div class="story_meta--wrapper">
           <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
@@ -80,6 +83,7 @@ title: Sandbox
   {% for story in site.data.storyexamples %}
     <article class="story">
       <figure class="story_leadart">
+        <span>{{ story.photocredit }}</span>
         <img src="{{ story.leadart }}" alt="">
       </figure>
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
