@@ -93,8 +93,6 @@ $link_text: $blue_teal
     color: $black
   .story_byline
     color: $black
-    a
-      color: $black
 
 // Font styles
 .headline--opensans
@@ -292,6 +290,27 @@ $link_text: $blue_teal
     margin-top: 0
     padding: 0 0.5em
     position: relative
+  .story_info
+    background-color: #f5f5f5
+    display: inline-block
+    font-weight: 700
+    margin: 0 1em
+    text-align: center
+    p
+      display: inline-block
+      font-family: 'Open Sans', sans-serif
+      font-variant: small-caps
+      display: inline-block
+      padding: 0.5em 2em
+      a
+        text-decoration: none
+    .story_info--pub
+      color: #888
+    .story_info--comments
+      background-color: white
+      border: 2px solid #f5f5f5
+      a
+        color: $blue_teal
   .story_byline
     margin: 0 0 0 0
     padding: 0.5em 1.4em
@@ -299,7 +318,9 @@ $link_text: $blue_teal
     font-variant: small-caps
     text-transform: lowercase
     a
+      color: $blue_teal
       font-weight: 700
+      text-decoration: none
   .story_body
     margin: 0.5em 0 0 0
     padding: 0.5em 1em
