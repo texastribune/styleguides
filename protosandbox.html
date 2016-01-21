@@ -3,6 +3,7 @@ layout: protosandbox
 title: Sandbox
 ---
 
+<a id="showhide" href="">Show/Hide</a>
 <div class="toggles">
   <ul>
     <li><a id="lighttheme" href="">Light</a>  <a id="darktheme" href="">Dark</a></li>
@@ -153,5 +154,10 @@ title: Sandbox
     $('body').removeClass('bodytext--playfair');
     $('body').removeClass('bodytext--opensans');
     $('body').addClass('bodytext--noticia');
+  });
+
+  $('#showhide').click(function(e) {
+    e.preventDefault();
+    $('.toggles').toggle();
   });
 </script>
