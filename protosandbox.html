@@ -44,6 +44,9 @@ title: Sandbox
           <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
         </div>
         <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+        <div class="story_info">
+          <p><span class="story_info--pub">{{ story.pub_date }}</span> | <a class="story_info--comments" href="">{{ story.num_comments }} Comments</a></p>
+        </div>
         <div class="story_body">
           {{ story.body }}
         </div>
