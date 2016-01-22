@@ -59,16 +59,17 @@ title: Sandbox
     <a href="#theme-three" id="theme-three"><h2>Theme Three</h2></a>
     {% for story in site.data.storyexamples %}
       <article class="story">
+        <div class="story_meta--wrapper">
+          <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+        </div>
+        <p class="story_byline">by <a href="">{{ story.author }}</a> <a href=""><i class="fa fa-comments-o"></i> {{ story.num_comments }}</a></p>
         <figure class="story_leadart">
           <img src="{{ story.leadart }}" alt="">
           <span>{{ story.photocredit }}</span>
         </figure>
-        <div class="story_meta--wrapper">
-          <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
-        </div>
-        <p class="story_byline">by <a href="">{{ story.author }}</a></p>
+        <figcaption>{{ story.caption }}</figcaption>
         <div class="story_info">
-          <p class="story_info--pub">{{ story.pub_date }}</p><p class="story_info--comments"><a href="">{{ story.num_comments }} Comments</a></p>
+          <hr><p class="story_info--pub">{{ story.pub_date }}</p>
         </div>
         <div class="story_body">
           {{ story.body }}
@@ -81,11 +82,12 @@ title: Sandbox
   <a href="#theme-four" id="theme-one"><h2>Theme Four</h2></a>
   {% for story in site.data.storyexamples %}
     <article class="story">
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
       <figure class="story_leadart">
         <span>{{ story.photocredit }}</span>
         <img src="{{ story.leadart }}" alt="">
       </figure>
-      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <figcaption>{{ story.caption }}</figcaption>
       <p class="story_info--pub">{{ story.pub_date }}</p>
       <p class="story_byline">By <a href="">{{ story.author }} <span>&#8226;</span> {{ story.num_comments }} Comments</a></p>
       <div class="story_body">
