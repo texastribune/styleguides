@@ -401,15 +401,23 @@ input[type="submit"]
 
 .theme-four
   .story_leadart
+    background-color: $black
+    border-top: $black
     span
-      background-color: transparentize($black, 0.25)
+      background-color: $black
       color: #ddd
       font-family: 'Open Sans', sans-serif
       font-variant: small-caps
+      margin-top: -18px
       padding: 0 0.5em
       position: absolute
       right: 0
       text-transform: lowercase
+  figcaption
+    background-color: $black
+    color: #ddd
+    font-family: 'Open Sans', sans-serif
+    padding: 0.8em
   .story_headline
     border-right: 4px solid $yellow_tribune
     margin-top: -1em
@@ -420,13 +428,15 @@ input[type="submit"]
     font-family: 'Playfair Display', serif
     font-size: 1.2em
     font-style: italic
-    margin: 0 1.2em
+    margin: 0 1.2em 1.5em 1.2em
   .story_byline
     color: #888
     margin-top: 0.5em
     padding: 0 1.2em
     font-family: 'Open Sans', sans-serif
     font-size: 1.1em
+    i
+      color: $blue_teal
     a
       color: $blue_teal
       font-weight: 700
@@ -434,6 +444,8 @@ input[type="submit"]
     span
       color: #888
       padding: 0 0.5em
+  .story_byline--link
+    font-family: 'Playfair Display', serif
   hr
     display: none
   .signup

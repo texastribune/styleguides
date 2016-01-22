@@ -83,13 +83,13 @@ title: Sandbox
   {% for story in site.data.storyexamples %}
     <article class="story">
       <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <p class="story_info--pub">{{ story.pub_date }}</p>
       <figure class="story_leadart">
         <span>{{ story.photocredit }}</span>
         <img src="{{ story.leadart }}" alt="">
       </figure>
       <figcaption>{{ story.caption }}</figcaption>
-      <p class="story_info--pub">{{ story.pub_date }}</p>
-      <p class="story_byline">By <a href="">{{ story.author }} <span>&#8226;</span> {{ story.num_comments }} Comments</a></p>
+      <p class="story_byline">By <a class="story_byline--link" href="">{{ story.author }}</a> <span>|</span> <i class="fa fa-comments-o"></i> <a>{{ story.num_comments }}</a></p>
       <div class="story_body">
         {{ story.body }}
       </div>
