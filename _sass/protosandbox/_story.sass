@@ -67,17 +67,20 @@ $link_text: $blue_teal
 .story_byline
   font-size: 1.2em
 .story_body
-  padding: 0.5em 1.5em
   p
     font-size: 1.2em
     line-height: 1.5
     margin-top: 1em
+    padding: 0.5em 1.5em
+  h2
+    padding: 0.5em 1.5em
 input[type="submit"]
   -webkit-appearance: none
   -webkit-border-radius: 0px
 .story_ad
   margin-top: 1em
   text-align: center
+  width: 100%
   img
     height: 250px
     width: 300px
@@ -198,10 +201,6 @@ input[type="submit"]
       color: $blue_teal
       font-weight: 700
       text-decoration: none
-  .story_ad
-    height: 270px
-    margin: 1em 0 0 0
-    width: 100%
   hr
     display: none
   .signup
@@ -292,11 +291,10 @@ input[type="submit"]
       text-decoration: none
   .story_body
     margin: 0.5em 0 0 0
-    padding: 0.5em 1em
+    p
+      padding: 0.5em 1em
   .story_ad
     height: 270px
-    margin: 1em 0 0 0
-    width: 100%
     img
       border: 10px solid #f5f5f5
   hr
@@ -364,7 +362,7 @@ input[type="submit"]
   .story_info
     display: inline
     font-weight: 700
-    hr
+    hr.pub_date
       border-top: 2px solid #ddd
       float: left
       margin-left: 1em
@@ -388,12 +386,17 @@ input[type="submit"]
       margin-right: 1em
       text-decoration: none
   .story_body
-    margin: 0.5em 0 0 0
-    padding: 0.5em 1em
+    margin: 1em 0 0 0
+    p
+      padding: 0.5em 1em
+    h2
+      padding: 1em 1em 0 1em
   .story_ad
     height: 270px
     margin: 1em 0 0 0
     width: 100%
+  hr.signup
+    display: none
   .signup
     background-color: #f5f5f5
     margin: 0.5em 0 1em 0
@@ -474,8 +477,6 @@ input[type="submit"]
     display: none
   .story_ad
     height: 270px
-    margin: 1em 0 0 0
-    width: 100%
     img
       border-bottom: 2px solid #ddd
       border-top: 2px solid #ddd
@@ -483,7 +484,7 @@ input[type="submit"]
   .signup
     border-top: 2px solid $yellow_pop
     border-bottom: 2px solid $yellow_pop
-    margin: 1em 0
+    margin: 1em 1.5em
     padding: 0.8em
     text-align: center
     h2
