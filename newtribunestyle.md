@@ -30,7 +30,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 * [Schema.org](#schemaorg)
 * [Color](#color)
 * [Typography](#typography)
-* [Grid](#grid)
+* [Responsive](#responsive)
 * [Images](#images)
 * [Links](#links)
 * [Inputs](#inputs)
@@ -149,6 +149,12 @@ Color should not be relied on to indicate something. Color enhances our content.
 Typography
 ----------
 
+#### Fonts
+
+Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [Web Font Loader](https://github.com/typekit/webfontloader).
+
+#### Font Size Sass
+
 A root font size, defined in settings, sets the absolute font size. This base font size should be set in px on the root html element. Root font size differs based on the device width, and changes at tablet (799px) and mobile (520px). Root font size determines the absolute size of typography elements while keeping their relative sizing consistent.
 
 ```sass
@@ -205,8 +211,14 @@ For icons, we'll likely use Font Awesome, which is what we currently use.
 
 We'll follow the PRO method outlined on [this page](http://fortawesome.github.io/Font-Awesome/get-started/) in the Font Awesome documentation. We'll include the font-awesome directory inside the Sass for the Tribune project. Only icons currently used in the project will be precompiled; comment out any unused icons so they aren't included in the CSS, and then uncomment icons as they're included in the project.
 
-Grid
-----
+Responsive
+----------
+
+#### Media Queries
+
+We'll use [Sass MQ](https://github.com/sass-mq/sass-mq) to organize our media queries in a clear, readable manner.
+
+#### Grid
 
 How to approach using a responsive grid framework is still undecided.
 
