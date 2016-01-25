@@ -22,6 +22,7 @@ This is the new styleguide for [texastribune.org](http://www.texastribune.org), 
 
 * [Design Goals](#design-goals)
 * [Sass](#sass)
+* [Javascript](#javascript)
 * [Naming Conventions](#naming-conventions)
 * [Accessibility](#accessibility)
 * [Performance](#performance)
@@ -61,6 +62,19 @@ CSS is written in Sass. It's preferred that the Sass be .sass files.
 #### Nesting
 
 Sass should preferably be nested no more than three levels deep. It should be the exception and there should be a reason that it's being nested beyond three.
+
+Javascript
+----------
+
+#### Third-party scripts
+
+There are a few questions that should be asked and actions that should be taken before adding a new third-party script to the project.
+
+* Know how much time a third-party script takes to load. This can be estimated by adding the script to the desired pages on our staging site and doing a WebPageTest there.
+
+* Determine if the script can be loaded asynchronously. If it's possible, it should be set up to load async.
+
+* Determine if a cache-header for the script can and should be set.
 
 
 Naming Conventions
