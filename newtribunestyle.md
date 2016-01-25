@@ -58,6 +58,10 @@ Sass
 
 CSS is written in Sass. It's preferred that the Sass be .sass files.
 
+#### Nesting
+
+Sass should preferably be nested no more than three levels deep. It should be the exception and there should be a reason that it's being nested beyond three.
+
 
 Naming Conventions
 ------------------
