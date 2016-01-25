@@ -1,0 +1,23 @@
+---
+layout: protosandbox
+title: Theme 1
+---
+
+<div class="theme-one">
+  <a href="#theme-one" id="theme-one"><h2>Theme One</h2></a>
+  {% for story in site.data.storyexamples %}
+    <article class="story">
+      <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+      <figure class="story_leadart">
+        <span>{{ story.photocredit }}</span>
+        <img src="{{ story.leadart }}" alt="">
+      </figure>
+      <figcaption>{{ story.caption }}</figcaption>
+      <p class="story_byline">By <a href="">{{ story.author }}</a> on {{ story.pub_date }} at 6 a.m.</p>
+      <div class="story_body">
+        {{ story.body }}
+      </div>
+      <p class="story_info--comments"><a href=""><i class="fa fa-caret-right"></i> {{ story.num_comments }} Comments</a></p>
+    </article>
+  {% endfor %}
+</div>
