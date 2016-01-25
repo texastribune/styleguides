@@ -161,7 +161,7 @@ input[type="submit"]
     position: relative
     span
       background-color: transparentize($black, 0.25)
-      bottom: 5px
+      bottom: 4px
       color: #ddd
       font-family: 'Open Sans', sans-serif
       font-variant: small-caps
@@ -238,6 +238,20 @@ input[type="submit"]
       color: #424242
       font-weight: 700
       width: 30%
+
+.theme-one
+  &.full-theme
+    .story_headline
+      background-color: $black
+      color: white
+      font-family: 'Open Sans', sans-serif
+    .story_leadart
+      background-color: $black
+    .story_body
+      a
+        color: $link_text
+      h2, p
+        font-family: 'Playfair Display', serif
 
 // theme a dark
 .theme-two
