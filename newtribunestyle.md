@@ -216,6 +216,10 @@ Inputs
 
 #### Newsletter signups
 
+Newsletter signups are considered blocks, as they should be able to be reused on any place around the site. There may be times when newsletter signups are also elements; for example, there may be specific styles that apply to newsletter signups that appear inside of a story block. The class to use for newsletter signups is `.signup`.
+
+If a newsletter signup appears inside of a story block, it will also include the class `.story_signup`.
+
 Buttons
 -------
 
