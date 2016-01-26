@@ -356,6 +356,28 @@ input[type="submit"]
       font-weight: 700
       width: 30%
 
+.theme-two
+  &.full-theme
+    .story_headline
+      background-color: $black
+      color: white
+      font-family: 'Playfair Display', serif
+    .story_byline
+      background-color: $black
+      color: white
+    .story_meta--wrapper
+      background-color: $black
+    .story_body
+      p, h2
+        font-family: Georgia, serif
+      a
+        border-bottom: 1px solid $link_underline
+        box-shadow: inset 0 -2px 0 $link_underline
+        text-decoration: none
+        &:hover
+          border-bottom: 1px solid $blue_dark
+          box-shadow: inset 0 -2px 0 $blue_dark
+
 // theme a light
 .theme-three
   .story_leadart
