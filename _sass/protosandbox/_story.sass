@@ -221,9 +221,9 @@ input[type="submit"]
       font-size: 1.6em
       padding: 0.2em 0
     p
-      font-size: 1.25em
+      font-size: 1em
       margin: 0
-      padding: 0.5em 0
+      padding: 0 0 0.5em 0
     input
       font-size: 1em
       padding: 0.5em
@@ -252,6 +252,8 @@ input[type="submit"]
         color: $link_text
       h2, p
         font-family: 'Playfair Display', serif
+      p.signup_pg
+        font-family: 'Open Sans', sans-serif
 
 // theme a dark
 .theme-two
@@ -270,7 +272,7 @@ input[type="submit"]
       text-transform: lowercase
   figcaption
     background-color: #f5f5f5
-    border-bottom: 1px solid #aaa
+    border-bottom: 1px solid #ddd
     color: #424242
     font-family: 'Open Sans', sans-serif
     font-size: 0.875em
@@ -287,11 +289,12 @@ input[type="submit"]
   .story_info
     color: #aaa
     font-family: 'Playfair Display', serif
-    font-variant: small-caps
+    font-size: 1em
     font-weight: 700
+    letter-spacing: .03em
     margin-top: 0.5em
     text-align: center
-    text-transform: lowercase
+    text-transform: uppercase
   .story_info--pub, .story_info--comments
     font-family: 'Playfair Display', serif
     padding: 0 0.5em
@@ -304,9 +307,9 @@ input[type="submit"]
     margin: 0 0 0 0
     padding: 0.5em 1.4em
     font-family: 'Open Sans', sans-serif
-    font-variant: small-caps
-    letter-spacing: 1px
-    text-transform: lowercase
+    font-size: 1em
+    letter-spacing: .03em
+    text-transform: uppercase
     a
       color: $blue_light
       font-weight: 700
@@ -325,8 +328,8 @@ input[type="submit"]
     display: none
   .signup
     background-color: #f5f5f5
-    border-top: 1px solid #eee
-    border-bottom: 1px solid #eee
+    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
     margin: 1em 0
     padding: 0.8em
     text-align: center
@@ -337,9 +340,9 @@ input[type="submit"]
       font-family: 'Playfair Display', serif
     p
       font-family: 'Open Sans', sans-serif
-      font-size: 1.25em
+      font-size: 1em
       margin: 0
-      padding: 0.5em 0
+      padding: 0 0 0.5em 0
     input
       font-size: 1em
       padding: 0.5em
@@ -377,6 +380,8 @@ input[type="submit"]
         &:hover
           border-bottom: 1px solid $blue_dark
           box-shadow: inset 0 -2px 0 $blue_dark
+      p.signup_pg
+        font-family: 'Open Sans', sans-serif
 
 // theme a light
 .theme-three
@@ -417,24 +422,29 @@ input[type="submit"]
       float: left
       margin-left: 1em
       margin-right: 1em
-      width: 50%
+      width: 60%
     p
       color: #aaa
-      font-family: 'Open Sans', sans-serif
-      font-variant: small-caps
+      font-family: 'Noticia Text', serif
+      font-size: 1em
       float: left
+      letter-spacing: .03em
+      text-transform: uppercase
       width: 30%
   .story_byline
     margin: 0 0 0 0
     padding: 0.5em 1.4em
-    font-family: 'Open Sans', sans-serif
-    font-variant: small-caps
-    text-transform: lowercase
+    font-family: 'Noticia Text', serif
+    font-size: 1em
+    letter-spacing: .03em
+    text-transform: uppercase
     a
       color: $blue_teal
       font-weight: 700
       margin-right: 1em
       text-decoration: none
+    .fa
+      font-size: 1.2em
   .story_body
     margin: 1em 0 0 0
     h2
@@ -459,9 +469,9 @@ input[type="submit"]
       font-size: 1.6em
       padding: 0.2em 0
     p
-      font-size: 1.25em
+      font-size: 1em
       margin: 0
-      padding: 0.2em 0
+      padding: 0 0 0.5em 0
     input
       font-size: 1em
       padding: 0.5em
@@ -492,18 +502,20 @@ input[type="submit"]
         &:hover
           border-bottom: 1px solid $blue_dark
           box-shadow: inset 0 -2px 0 $blue_dark
+      p.signup_pg
+        font-family: 'Open Sans', sans-serif
 
 // theme b light
 .theme-four
   .story_leadart
     background-color: $black
-    border-top: $black
+    border-top: 3px solid $black
     span
       background-color: $black
       color: #ddd
       font-family: 'Open Sans', sans-serif
       font-variant: small-caps
-      margin-top: -18px
+      margin-top: -20px
       padding: 0 0.5em
       position: absolute
       right: 0
@@ -532,8 +544,9 @@ input[type="submit"]
     padding: 0 1.2em
     font-family: 'Open Sans', sans-serif
     font-size: 1.1em
-    i
+    .fa
       color: $blue_teal
+      font-size: 1.3em
     a
       color: $blue_teal
       font-weight: 700
@@ -552,14 +565,15 @@ input[type="submit"]
     display: none
   .story_ad
     height: 270px
+    margin-bottom: 1em
     img
       border-bottom: 2px solid #ddd
       border-top: 2px solid #ddd
-      padding: 0.5em 0
+      padding: 0.8em 0
   .signup
-    border-top: 2px solid $yellow_pop
-    border-bottom: 2px solid $yellow_pop
-    margin: 1em 1.5em
+    border-top: 3px solid $yellow_pop
+    border-bottom: 3px solid $yellow_pop
+    margin: 1em 0
     padding: 0.8em
     text-align: center
     h2
@@ -569,9 +583,9 @@ input[type="submit"]
     p, input
       font-family: 'Open Sans', sans-serif
     p
-      font-size: 1.25em
+      font-size: 1em
       margin: 0
-      padding: 0.5em 0
+      padding: 0 0 0.5em 0
     input
       border: none
       font-size: 1em
@@ -595,3 +609,5 @@ input[type="submit"]
         font-family: 'Open Sans', sans-serif
       a
         color: $link_text
+      p.signup_pg
+        font-family: 'Open Sans', sans-serif
