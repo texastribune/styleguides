@@ -47,13 +47,17 @@ $link_text: $blue_teal
   position: relative
   top: 160px
 
+body
+  @media screen and (min-width: 521px)
+    width: 400px
+
 // Font sizes
 .story
-  font-size: 18px
-  @media screen and (max-width: 799px)
-    font-size: 16px
-  @media screen and (max-width: 520px)
-    font-size: 14px
+  font-size: 14px
+  // @media screen and (max-width: 799px)
+  //   font-size: 16px
+  // @media screen and (max-width: 520px)
+  //   font-size: 14px
 
 // A few starter styles
 .story_leadart
@@ -83,6 +87,16 @@ input[type="submit"]
   img
     height: 250px
     width: 300px
+
+.themenum
+  color: #000
+  height: 70px
+  width: 70px
+  h1
+    font-family: 'Open Sans', sans-serif
+    font-weight: 700
+    margin-left: 0.5em
+
 
 // Light and dark themes
 .theme--dark
@@ -168,7 +182,7 @@ input[type="submit"]
       font-family: 'Open Sans', sans-serif
       font-size: 0.8em
       letter-spacing: 0.05em
-      padding: 0.25em 0.5em
+      padding: 0.25em 1em
       position: absolute
       left: 0
       text-transform: uppercase
@@ -177,7 +191,7 @@ input[type="submit"]
     color: #424242
     font-family: 'Open Sans', sans-serif
     font-size: 0.95em
-    padding: 0.8em
+    padding: 0.6em 0.8em 0.8em 0.8em
   .story_headline
     border-right: 4px solid $yellow_tribune
     padding: 0.4em 0.6em
@@ -248,7 +262,7 @@ input[type="submit"]
       color: #424242
       font-size: 1.2em
       font-weight: 700
-      padding: 0.4em
+      padding: 0.3em 0.4em 0.5em 0.4em
       width: 30%
 
 .theme-one
@@ -278,7 +292,8 @@ input[type="submit"]
       bottom: 4px
       color: #ddd
       font-family: 'Open Sans', sans-serif
-      font-size: 0.8em
+      font-size: 0.75em
+      letter-spacing: 0.05em
       padding: 0.25em 0.5em
       position: absolute
       right: 0
@@ -289,7 +304,7 @@ input[type="submit"]
     color: #424242
     font-family: 'Open Sans', sans-serif
     font-size: 0.875em
-    padding: 0.8em
+    padding: 0.8em 0.8em 1em 0.8em
   .story_meta--wrapper
     padding: 0.5em 0
     position: relative
@@ -406,6 +421,8 @@ input[type="submit"]
 
 // theme a light
 .theme-three
+  .story
+    margin-bottom: 3em
   .story_leadart
     position: relative
     span
@@ -415,7 +432,7 @@ input[type="submit"]
       bottom: 4px
       color: #ddd
       font-family: 'Open Sans', sans-serif
-      font-size: 0.8em
+      font-size: 0.75em
       letter-spacing: .03em
       padding: .25em .85em 0.25em
       position: absolute
@@ -454,7 +471,7 @@ input[type="submit"]
       width: 30%
   .story_byline
     margin: 0 0 0 0
-    padding: 0.5em 1.4em
+    padding: 0.5em 1.4em 0.7em 1.4em
     font-family: 'Open Sans', sans-serif
     font-size: 0.9em
     letter-spacing: .03em
@@ -530,6 +547,8 @@ input[type="submit"]
 
 // theme b light
 .theme-four
+  .story
+    margin-bottom: 3em
   .story_leadart
     background-color: $black
     border-top: 7px solid $black
@@ -537,9 +556,9 @@ input[type="submit"]
       background-color: $black
       color: #ddd
       font-family: 'Open Sans', sans-serif
-      font-size: 0.8em
+      font-size: 0.75em
       letter-spacing: 0.05em
-      margin-top: -25px
+      margin-top: -22px
       padding: .25em .85em 0.25em
       position: absolute
       right: 0
@@ -549,7 +568,7 @@ input[type="submit"]
     color: #fff
     font-family: 'Open Sans', sans-serif
     font-size: 0.9em
-    padding: 0.8em .8em 1.1em
+    padding: 0.6em 1em 0.8em 1em
   .story_headline
     border-right: 4px solid $yellow_tribune
     padding: 0.4em 0.6em
@@ -565,7 +584,7 @@ input[type="submit"]
     color: #888
     margin-bottom: 0.8em
     margin-top: 0.5em
-    padding: 0 1.2em
+    padding: 0 1em
     font-family: 'Open Sans', sans-serif
     font-size: 1.1em
     .fa
