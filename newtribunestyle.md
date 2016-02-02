@@ -211,6 +211,9 @@ For icons, we'll likely use Font Awesome, which is what we currently use.
 
 We'll follow the PRO method outlined on [this page](http://fortawesome.github.io/Font-Awesome/get-started/) in the Font Awesome documentation. We'll include the font-awesome directory inside the Sass for the Tribune project. Only icons currently used in the project will be precompiled; comment out any unused icons so they aren't included in the CSS, and then uncomment icons as they're included in the project.
 
+##### Documents
+For visual representations of documents, including PDFs, we'll use the Font Awesome [file-text-o icon](http://fortawesome.github.io/Font-Awesome/icon/file-text-o/).
+
 Responsive
 ----------
 
