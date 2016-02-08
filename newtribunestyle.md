@@ -315,6 +315,7 @@ This is an element of the story block, since it's an inline related content elem
 #### Related Media
 
 This related image is an element of the story block. If a related image exists outside of a story, then it would just have a class of `.related--image`, since related content that can be added to other blocks would be its own block.
+
 .story_relatedimage
 
 ```html

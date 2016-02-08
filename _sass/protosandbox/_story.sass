@@ -1,5 +1,4 @@
 // TODO: Develop variables' naming conventions
-$yellow_light: #ffda71
 $yellow_tribune: #ffc200
 $yellow_pop: #ffd000
 $blue_light: #a5d6e3
@@ -9,39 +8,6 @@ $black: #222
 
 $link_underline: $blue_light
 $link_text: $blue_teal
-
-// Toggle styles
-#showhide
-  background-color: white
-  border: 2px solid $black
-  color: $black
-  padding: 0.2em 0.5em
-  height: 20px
-  margin-left: 40px
-  position: fixed
-  text-decoration: none
-  top: 0
-  z-index: 10
-
-.toggles
-  background-color: white
-  height: 130px
-  position: fixed
-  top: 30px
-  width: 100%
-  z-index: 10
-  ul
-    list-style: none
-    li
-      margin: 0.5em 0
-      a
-        background-color: white
-        border: 2px solid $black
-        color: $black
-        padding: 0 0.5em
-        text-decoration: none
-        &:hover
-          background-color: $blue_teal
 
 .themes
   position: relative
@@ -98,191 +64,8 @@ input[type="submit"], input[type="email"]
     margin-left: 0.5em
 
 
-// Light and dark themes
-.theme--dark
-  .story_headline
-    background-color: $black
-    color: white
-  .story_leadart
-    background-color: $black
-  .theme-two
-    .story_byline
-      background-color: $black
-      color: white
-  .story_meta--wrapper
-    background-color: $black
-
-.theme--light
-  .story_headline
-    background-color: white
-    color: $black
-  .story_byline
-    color: $black
-
-// Font styles
-.headline--opensans
-  .story_headline
-    font-family: 'Open Sans', sans-serif
-
-.headline--playfair
-  .story_headline
-    font-family: 'Playfair Display', serif
-
-.bodytext--opensans
-  .story_body
-    p, h2
-      font-family: 'Open Sans', sans-serif
-
-.bodytext--playfair
-  .story_body
-    p, h2
-      font-family: 'Playfair Display', serif
-
-.bodytext--georgia
-  .story_body
-    p, h2
-      font-family: Georgia, serif
-
-.bodytext--noticia
-  .story_body
-    p, h2
-      font-family: 'Noticia Text', serif
-
-// Link styles
-.links--underlineonly
-  .story_body
-    a
-      border-bottom: 1px solid $link_underline
-      box-shadow: inset 0 -2px 0 $link_underline
-      text-decoration: none
-      &:hover
-        border-bottom: 1px solid $blue_dark
-        box-shadow: inset 0 -2px 0 $blue_dark
-
-.links--withcolor
-  .story_body
-    a
-      color: $link_text
-
-
-// Byline styles
-
-// Two layout themes
-// theme b dark
-.theme-one
-  .story
-    margin-bottom: 3em
-  .story_leadart
-    background-color: #f5f5f5
-    position: relative
-    span
-      background-color: transparentize($black, 0.25)
-      bottom: 5px
-      color: #ddd
-      font-family: 'Open Sans', sans-serif
-      font-size: 0.8em
-      letter-spacing: 0.05em
-      padding: 0.25em 1em
-      position: absolute
-      left: 0
-      text-transform: uppercase
-  figcaption
-    background-color: #f5f5f5
-    color: #424242
-    font-family: 'Open Sans', sans-serif
-    font-size: 0.95em
-    padding: 0.6em 0.8em 0.8em 0.8em
-  .story_headline
-    border-right: 4px solid $yellow_tribune
-    padding: 0.4em 0.6em
-    position: relative
-    width: 85%
-  .story_info--comments
-    border-top: 2px solid #ddd
-    margin: 0 1.2em
-    padding: 0.5em 0
-    a
-      color: $blue_teal
-      font-family: 'Open Sans', sans-serif
-      font-size: 1em
-      font-weight: 700
-      text-decoration: none
-  .story_byline
-    color: #888
-    margin-bottom: 1em
-    margin-top: 0.5em
-    padding: 0 0.8em
-    font-family: 'Open Sans', sans-serif
-    font-size: 1.1em
-    a
-      color: $blue_teal
-      font-weight: 700
-      text-decoration: none
-  .story_body
-    h2
-      padding: 0.5em 0.8em 0.5em 0.8em
-    p
-      padding: 0.5em 0.8em
-  .story_ad
-    background-color: #f5f5f5
-    height: 190px
-    margin-bottom: 3em
-    margin-top: 3em
-    img
-      height: 250px
-      margin-top: -30px
-      width: 300px
-  hr.hrsignup
-    display: none
-  .signup
-    background-color: $yellow_pop
-    margin: 1em 0
-    padding: 0.8em
-    text-align: center
-    h2, p, input
-      font-family: 'Open Sans', sans-serif
-    h2
-      color: $black
-      font-size: 1.6em
-      padding: 0.1em 0
-    p
-      font-size: 1em
-      margin: 0
-      padding: 0.25em 0 .75em
-    input[type="email"]
-      border: none
-      border: 1px solid white
-      color: #666
-      font-size: 1em
-      margin-right: 10px
-      padding: 0.7em
-      width: 55%
-    input[type="submit"]
-      background-color: $yellow_pop
-      border: 2px solid #424242
-      color: #424242
-      font-size: 1.2em
-      font-weight: 700
-      padding: 0.3em 0.4em 0.5em 0.4em
-      width: 30%
-
-.theme-one
-  &.full-theme
-    .story_headline
-      background-color: $black
-      color: white
-      font-family: 'Open Sans', sans-serif
-      letter-spacing: 0.03em
-    .story_body
-      a
-        color: $link_text
-      h2, p
-        font-family: 'Playfair Display', serif
-      p.signup_pg, h2.signup_header
-        font-family: 'Open Sans', sans-serif
-
-// theme a dark
-.theme-two
+// variation 1
+.variation-one
   .story
     margin-bottom: 3em
   .story_leadart
@@ -393,59 +176,58 @@ input[type="submit"], input[type="email"]
       font-weight: 700
       padding: 0.3em 0.3em 0.4em 0.3em
       width: 30%
-
-.theme-two
-  &.full-theme
-    .story_headline
-      background-color: $black
-      color: white
+  .story_headline
+    background-color: $black
+    color: white
+    font-family: 'Playfair Display', serif
+  .story_byline
+    background-color: $black
+    color: white
+  .story_meta--wrapper
+    background-color: $black
+  .story_body
+    p, h2
+      font-family: Georgia, serif
+    a
+      border-bottom: 1px solid $link_underline
+      box-shadow: inset 0 -2px 0 $link_underline
+      text-decoration: none
+      &:hover
+        border-bottom: 1px solid $blue_dark
+        box-shadow: inset 0 -2px 0 $blue_dark
+    p.signup_pg
+      font-family: 'Open Sans', sans-serif
+    h2.signup_header
       font-family: 'Playfair Display', serif
-    .story_byline
-      background-color: $black
-      color: white
-    .story_meta--wrapper
-      background-color: $black
-    .story_body
-      p, h2
-        font-family: Georgia, serif
-      a
-        border-bottom: 1px solid $link_underline
-        box-shadow: inset 0 -2px 0 $link_underline
-        text-decoration: none
-        &:hover
-          border-bottom: 1px solid $blue_dark
-          box-shadow: inset 0 -2px 0 $blue_dark
-      p.signup_pg
-        font-family: 'Open Sans', sans-serif
-      h2.signup_header
-        font-family: 'Playfair Display', serif
 
-// theme a light
-.theme-three
+
+// variation 2
+.variation-two
   .story
     margin-bottom: 3em
   .story_leadart
+    background-color: #f5f5f5
     position: relative
     span
       background-color: transparentize($black, 0.25)
-      border-left: 1px solid #fff
-      border-top: 1px solid #fff
-      bottom: 4px
+      bottom: 5px
       color: #ddd
       font-family: 'Open Sans', sans-serif
       font-size: 0.75em
-      letter-spacing: .03em
-      padding: .25em .85em 0.25em
+      letter-spacing: 0.05em
+      padding: 0.25em 0.5em
       position: absolute
       right: 0
       text-transform: uppercase
   figcaption
-    color: #666
+    background-color: #f5f5f5
+    border-bottom: 1px solid #ddd
+    color: #424242
     font-family: 'Open Sans', sans-serif
-    font-size: 0.9em
-    padding: 0.8em
+    font-size: 0.875em
+    padding: 0.8em 0.8em 1em 0.8em
   .story_meta--wrapper
-    padding: 0.5em 0
+    padding: 0.8em 0 0.5em 0
     position: relative
   .story_headline
     border-left: 5px solid $yellow_tribune
@@ -454,208 +236,103 @@ input[type="submit"], input[type="email"]
     padding: 0 0.5em
     position: relative
   .story_info
+    color: #aaa
+    font-family: 'Playfair Display', serif
+    font-size: 1em
     font-weight: 700
-    height: 20px
-    margin-bottom: 1em
-    hr.pub_date
-      border-top: 2px solid #ddd
-      float: left
-      margin-left: 1em
-      margin-right: 1em
-      width: 60%
-    p
-      color: #aaa
-      font-family: 'Noticia Text', serif
-      font-size: 1em
-      float: left
-      letter-spacing: .05em
-      width: 30%
+    letter-spacing: .03em
+    margin-top: 0.5em
+    text-align: center
+    font-variant: small-caps
+    text-transform: lowercase
+  .story_info--pub, .story_info--comments
+    font-family: 'Playfair Display', serif
+    padding: 0 0.5em
+  .story_info--pub
+    color: #888
+  .story_info--comments
+    color: $blue_teal
+    text-decoration: none
   .story_byline
     margin: 0 0 0 0
-    padding: 0.5em 1.4em 0.7em 1.4em
+    padding: 0.5em 1.4em
     font-family: 'Open Sans', sans-serif
-    font-size: 0.9em
-    letter-spacing: .03em
+    font-size: 1em
+    letter-spacing: .07em
     text-transform: uppercase
     a
-      color: $blue_teal
-      font-family: 'Noticia Text', serif
-      font-size: 1.1em
+      color: $blue_light
       font-weight: 700
-      margin-right: 1.1em
       text-decoration: none
-    .fa
-      font-size: 1.2em
   .story_body
-    margin: 1em 0 0 0
+    margin: 0.5em 0 0 0
     h2
       padding: 0.8em 0.8em 0.5em 0.8em
     p
       padding: 0.5em 0.8em
   .story_ad
-    height: 270px
-    margin: 1em 0 0 0
-    width: 100%
-  hr.hrsignup
-    border-top: 3px solid $yellow_pop
-    width: 85%
-  .signup
     background-color: #f5f5f5
-    margin: 0.5em 0 1em 0
-    padding: 0.5em 0.8em 0 0.8em
-    text-align: center
-    h2, p, input[type="submit"]
-      font-family: 'Open Sans', sans-serif
-    h2
-      font-size: 1.6em
-      padding: 0
-    p
-      font-size: 1em
-      margin: 0
-      padding: 0 0 0.8em 0
-    input
-      font-size: 1em
-      padding: 0.5em
-    input[type="email"]
-      border: none
-      border-bottom: 2px solid #ddd
-      font-family: 'Noticia Text', serif
-      color: #888
-      width: 60%
-    input[type="submit"]
-      background-color: $yellow_pop
-      border: none
-      color: $black
-      font-weight: 700
-      width: 30%
-
-.theme-three
-  &.full-theme
-    .story_headline
-      font-family: 'Open Sans', sans-serif
-    .story_body
-      p, h2
-        font-family: 'Noticia Text', serif
-      a
-        border-bottom: 1px solid $link_underline
-        box-shadow: inset 0 -2px 0 $link_underline
-        text-decoration: none
-        &:hover
-          border-bottom: 1px solid $blue_dark
-          box-shadow: inset 0 -2px 0 $blue_dark
-      p.signup_pg, h2.signup_header
-        font-family: 'Open Sans', sans-serif
-
-// theme b light
-.theme-four
-  .story
-    margin-bottom: 3em
-  .story_leadart
-    background-color: $black
-    border-top: 7px solid $black
-    position: relative
-    span
-      background-color: $black
-      color: #ddd
-      font-family: 'Open Sans', sans-serif
-      font-size: 0.75em
-      letter-spacing: 0.05em
-      margin-top: -22px
-      padding: .25em .85em 0.25em
-      position: absolute
-      right: 0
-      text-transform: uppercase
-  figcaption
-    background-color: $black
-    color: #fff
-    font-family: 'Open Sans', sans-serif
-    font-size: 0.9em
-    padding: 0.6em 1em 1em 1em
-  .story_headline
-    border-right: 4px solid $yellow_tribune
-    padding: 0.4em 0.6em
-    position: relative
-    width: 85%
-  .story_info--pub
-    color: #424242
-    font-family: 'Playfair Display', serif
-    font-size: 1.2em
-    font-style: italic
-    margin: 0 1.2em 1.5em 1.2em
-  .story_byline
-    color: #888
-    margin-bottom: 0.8em
-    margin-top: 0.5em
-    padding: 0 1em
-    font-family: 'Open Sans', sans-serif
-    font-size: 1.1em
-    .fa
-      color: $blue_teal
-      font-size: 1.3em
-    a
-      color: $blue_teal
-      font-weight: 700
-      text-decoration: none
-    span
-      color: #888
-      padding: 0 0.5em
-  .story_byline--link
-    font-family: 'Playfair Display', serif
-  .story_body
-    h2
-      padding: 0.8em 0.8em 0.5em 0.8em
-    p
-      padding: 0.5em 0.8em
+    border-bottom: 1px solid #ddd
+    border-top: 1px solid #ddd
+    height: 270px
+    img
+      padding: 10px 0
   hr.hrsignup
     display: none
-  .story_ad
-    border-bottom: 2px solid #ddd
-    border-top: 2px solid #ddd
-    height: 270px
-    margin: 1em
-    width: initial
-    img
-      padding-top: 0.7em
   .signup
-    border-top: 3px solid $yellow_pop
-    border-bottom: 3px solid $yellow_pop
+    background-color: #f5f5f5
+    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
     margin: 1em 0
-    padding: 0.5em 0.8em 0.8em 0.8em
+    padding: 0.8em
     text-align: center
     h2
-      font-family: 'Playfair Display', serif
       font-size: 1.6em
-      padding: 0
-    p, input
-      font-family: 'Open Sans', sans-serif
+      padding: 0.1em 0
+    h2, p, input
+      font-family: 'Playfair Display', serif
     p
+      font-family: 'Open Sans', sans-serif
       font-size: 1em
       margin: 0
-      padding: 0 0 0.5em 0
+      padding: 0.25em 0 .75em
     input
-      border: none
       font-size: 1em
       padding: 0.5em
     input[type="email"]
-      background-color: #f5f5f5
-      color: #888
+      border: 1px solid #fff
+      color: #aaa
+      font-family: 'Open Sans', sans-serif
+      margin-right: 10px
       width: 60%
     input[type="submit"]
-      background-color: $yellow_pop
-      color: #424242
+      background-color: #222
+      border: none
+      color: white
+      font-size: 1.2em
       font-weight: 700
+      padding: 0.3em 0.3em 0.4em 0.3em
       width: 30%
-
-.theme-four
-  &.full-theme
-    .story_headline
+  .story_headline
+    background-color: $black
+    color: white
+    font-family: 'Playfair Display', serif
+  .story_byline
+    background-color: $black
+    color: white
+  .story_meta--wrapper
+    background-color: $black
+  .story_body
+    p, h2
+      font-family: Georgia, serif
+    a
+      border-bottom: 1px solid $link_underline
+      box-shadow: inset 0 -2px 0 $link_underline
+      text-decoration: none
+      &:hover
+        border-bottom: 1px solid $blue_dark
+        box-shadow: inset 0 -2px 0 $blue_dark
+    p.signup_pg
+      font-family: 'Open Sans', sans-serif
+    h2.signup_header
       font-family: 'Playfair Display', serif
-    .story_body
-      p, h2
-        font-family: 'Open Sans', sans-serif
-      a
-        color: $link_text
-      p.signup_pg
-        font-family: 'Open Sans', sans-serif
-      h2.signup_header
-        font-family: 'Playfair Display', serif

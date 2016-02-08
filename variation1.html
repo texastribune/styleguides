@@ -1,24 +1,28 @@
 ---
 layout: protosandbox
-title: Theme 1
+title: Variation 1
 ---
 
 <body>
-  <div class="theme-one full-theme">
+  <div class="variation-one">
     <div class="themenum"><h1>1</h1></div>
     {% for story in site.data.stories_fpo %}
       <article class="story">
-        <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+        <div class="story_meta--wrapper">
+          <h1 itemprop="headline" class="story_headline">{{ story.headline }}</h1>
+        </div>
+        <p class="story_byline">by <a href="">{{ story.author }}</a></p>
         <figure class="story_leadart">
           <span>{{ story.photocredit }}</span>
           <img src="{{ story.leadart }}" alt="">
         </figure>
         <figcaption>{{ story.caption }}</figcaption>
-        <p class="story_byline">By <a href="">{{ story.author }}</a> on {{ story.pub_date }}</p>
+        <div class="story_info">
+          <p><span class="story_info--pub">{{ story.pub_date }}</span> | <a class="story_info--comments" href="">{{ story.num_comments }} Comments</a></p>
+        </div>
         <div class="story_body">
           {{ story.body }}
         </div>
-        <p class="story_info--comments"><a href=""><i class="fa fa-caret-right"></i> {{ story.num_comments }} Comments</a></p>
       </article>
     {% endfor %}
   </div>
