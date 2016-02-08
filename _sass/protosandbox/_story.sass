@@ -90,26 +90,28 @@ input[type="submit"], input[type="email"]
     font-size: 0.875em
     padding: 0.8em 0.8em 1em 0.8em
   .story_meta--wrapper
+    background-color: $black
     padding: 0.8em 0 0.5em 0
     position: relative
   .story_headline
+    background-color: $black
     border-left: 5px solid $yellow_tribune
+    color: white
+    font-family: 'Playfair Display', serif
     font-size: 2em
     margin-top: 0
     padding: 0 0.5em
     position: relative
   .story_info
     color: #aaa
-    font-family: 'Playfair Display', serif
+    font-family: 'Open Sans', sans-serif
     font-size: 1em
     font-weight: 700
     letter-spacing: .03em
     margin-top: 0.5em
     text-align: center
-    font-variant: small-caps
-    text-transform: lowercase
+    text-transform: uppercase
   .story_info--pub, .story_info--comments
-    font-family: 'Playfair Display', serif
     padding: 0 0.5em
   .story_info--pub
     color: #888
@@ -117,6 +119,8 @@ input[type="submit"], input[type="email"]
     color: $blue_teal
     text-decoration: none
   .story_byline
+    background-color: $black
+    color: white
     margin: 0 0 0 0
     padding: 0.5em 1.4em
     font-family: 'Open Sans', sans-serif
@@ -127,6 +131,20 @@ input[type="submit"], input[type="email"]
       color: $blue_light
       font-weight: 700
       text-decoration: none
+  .story_body
+    p, h2
+      font-family: Georgia, serif
+    a
+      border-bottom: 1px solid $link_underline
+      box-shadow: inset 0 -2px 0 $link_underline
+      text-decoration: none
+      &:hover
+        border-bottom: 1px solid $blue_dark
+        box-shadow: inset 0 -2px 0 $blue_dark
+    p.signup_pg
+      font-family: 'Open Sans', sans-serif
+    h2.signup_header
+      font-family: 'Playfair Display', serif
   .story_body
     margin: 0.5em 0 0 0
     h2
@@ -176,29 +194,6 @@ input[type="submit"], input[type="email"]
       font-weight: 700
       padding: 0.3em 0.3em 0.4em 0.3em
       width: 30%
-  .story_headline
-    background-color: $black
-    color: white
-    font-family: 'Playfair Display', serif
-  .story_byline
-    background-color: $black
-    color: white
-  .story_meta--wrapper
-    background-color: $black
-  .story_body
-    p, h2
-      font-family: Georgia, serif
-    a
-      border-bottom: 1px solid $link_underline
-      box-shadow: inset 0 -2px 0 $link_underline
-      text-decoration: none
-      &:hover
-        border-bottom: 1px solid $blue_dark
-        box-shadow: inset 0 -2px 0 $blue_dark
-    p.signup_pg
-      font-family: 'Open Sans', sans-serif
-    h2.signup_header
-      font-family: 'Playfair Display', serif
 
 
 // variation 2
