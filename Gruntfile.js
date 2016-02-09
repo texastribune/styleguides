@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       protosandbox: {
         files: {
-          'css/protosandbox.min.css': '_sass/protosandbox/app.sass'
+          'css/protosandbox.min.css': '_sass/protosandbox/app.scss'
         },
         options: {
           compass: true,
