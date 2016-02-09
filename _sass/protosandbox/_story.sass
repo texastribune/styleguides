@@ -40,7 +40,6 @@ body
   p
     font-size: 1.2em
     line-height: 1.5
-    padding: 0.5em 1.5em
   h2
     padding: 0.5em 1.5em
 input[type="submit"], input[type="email"]
@@ -145,6 +144,37 @@ input[type="submit"], input[type="email"]
       font-family: 'Open Sans', sans-serif
     h2.signup_header
       font-family: 'Playfair Display', serif
+    .story_related--reference
+      border: none
+      box-shadow: none
+      display: inline-block
+      padding: 0.5em 0.8em
+      width: 100%
+      &:hover
+        border: none
+        box-shadow: none
+      i
+        display: inline-block
+        float: left
+        font-size: 1.8em
+        padding: 0.2em 0 0 0.2em
+        width: 10%
+      .story_related--referenceinfo
+        float: left
+        width: 85%
+        h4, p
+          font-family: 'Open Sans', sans-serif
+        h4
+          border-bottom: 1px solid $link_underline
+          box-shadow: inset 0 -2px 0 $link_underline
+          clear: both
+          float: left
+          font-weight: 700
+          margin: 0
+        p
+          clear: both
+          font-size: 1em
+          padding: 0
   .story_body
     margin: 0.5em 0 0 0
     h2
