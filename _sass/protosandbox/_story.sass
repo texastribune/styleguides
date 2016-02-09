@@ -133,42 +133,46 @@ input[type="submit"], input[type="email"]
       font-family: Georgia, serif
     a
       border-bottom: 1px solid $link_underline
+      box-shadow: inset 0 -2px 0 0 $link_underline
       text-decoration: none
       &:hover
         border-bottom: 1px solid $blue_dark
+        box-shadow: inset 0 -2px 0 0 $blue_dark
     p.signup_pg
       font-family: 'Open Sans', sans-serif
     h2.signup_header
       font-family: 'Playfair Display', serif
     .story_related--reference
-      border: none
-      box-shadow: none
       display: inline-block
       padding: 0.5em 0.8em
-      width: 100%
-      &:hover
+      position: relative
+      a
         border: none
         box-shadow: none
-      i
+        &:hover
+          border: none
+          box-shadow: none
+      .story_related--referenceicon
         display: inline-block
         float: left
-        font-size: 1.8em
-        padding: 0.2em 0 0 0.2em
+        padding-top: 0.4em
         width: 10%
+      i
+        font-size: 1.8em
       .story_related--referenceinfo
+        display: inline-block
         float: left
-        width: 85%
+        width: 90%
         h4, p
           font-family: 'Open Sans', sans-serif
         h4
           border-bottom: 1px solid $link_underline
-          box-shadow: inset 0 -2px 0 $link_underline
-          clear: both
+          box-shadow: inset 0 -2px 0 0 $link_underline
           float: left
           font-weight: 700
           margin: 0
         p
-          clear: both
+          clear: left
           font-size: 1em
           padding: 0
     .story_disclosure
@@ -330,9 +334,11 @@ input[type="submit"], input[type="email"]
       font-family: Georgia, serif
     a
       border-bottom: 1px solid $link_underline
+      box-shadow: inset 0 -2px 0 0 $link_underline
       text-decoration: none
       &:hover
         border-bottom: 1px solid $blue_dark
+        box-shadow: inset 0 -2px 0 0 $blue_dark
     p.signup_pg
       font-family: 'Open Sans', sans-serif
     h2.signup_header
@@ -346,20 +352,22 @@ input[type="submit"], input[type="email"]
       margin: 1em 0
       padding: 0.8em
     .story_related--reference
-      border: none
-      box-shadow: none
       display: inline-block
       padding: 0.5em 0.8em
-      width: 100%
-      &:hover
+      position: relative
+      a
         border: none
         box-shadow: none
+        &:hover
+          border: none
+          box-shadow: none
       .story_related--referenceicon
-        width: 15%
+        display: inline-block
+        float: left
+        width: 20%
       i
         background-color: $blue_light
         color: white
-        float: left
         font-size: 3em
         padding: 0.3em
       .story_related--referenceinfo
@@ -370,12 +378,11 @@ input[type="submit"], input[type="email"]
         h4, p
           font-family: 'Open Sans', sans-serif
         h4
-          clear: both
           float: left
           font-weight: 700
           margin: 0
         p
-          clear: both
+          clear: left
           font-size: 1em
           padding: 0
   .story_ad
@@ -400,7 +407,7 @@ input[type="submit"], input[type="email"]
     p, input
       &:hover
         border-bottom: 1px solid $blue_dark
-        box-shadow: inset 0 -2px 0 $blue_dark
+        box-shadow: inset 0 -2px 0 0 $blue_dark
     p.signup_pg
       font-family: 'Open Sans', sans-serif
     p
@@ -425,7 +432,7 @@ input[type="submit"], input[type="email"]
     margin-top: 1em
     h2
       background-color: #222
-      color: #ddd
+      color: white
       font-family: 'Playfair Display', serif
       font-size: 1.2em
       font-weight: 500
