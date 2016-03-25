@@ -343,13 +343,28 @@ title: TribTalk
                 </code>
               </pre>
             </div>
-          <h3 class="sg-header">Main Article Detail Page</h3>
-            <p>Images on the main article detail page have a class of <span class="inline-class">.lede_art</span>.</p>
+          <h3 class="sg-header">Main Article Detail Page Lead Art</h3>
+            <p>Lead art images on the main article detail page have a class of <span class="inline-class">.lede_art</span>.</p>
             <div class="example-code">
               <btn class="show-hide">Example Code</btn>
               <pre>
                 <code>
                   &lt;img class="lede_art" src="" data-ar=""&gt;
+                </code>
+              </pre>
+            </div>
+          <h3 class="sg-header">Article Embedded Images</h3>
+            <p>If you're embedding images in a TribTalk article, use the example code below as a guide. Be sure to wrap the image in a link with a class of '.image-embed'. If you're floating the image right, change all inline float styles to right instead of the left included in the example code below. The alt text should describe the embedded image. The title should let people know that to enlarge the image, it should be clicked.</p>
+            <div class="example-code">
+              <btn class="show-hide">Example Code</btn>
+              <pre>
+                <code>
+                  &lt;a class="image-embed" href="IMAGE URL HERE" style="float: left;"&gt;
+                    &lt;img alt="ALT TEXT HERE" src="IMAGE URL HERE" style="width: WIDTHpx; height: HEIGHTpx; float: left;" title="Click image to enlarge" /&gt;
+                  &lt;/a&gt;
+                  &lt;small style="clear: left; float: left;"&gt;
+                    Click image to enlarge
+                  &lt;/small&gt;
                 </code>
               </pre>
             </div>
