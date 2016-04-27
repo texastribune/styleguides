@@ -146,6 +146,50 @@ Color
 
 Color should not be relied on to indicate something. Color enhances our content.
 
+#### Yellows
+
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #ffc200;"></div>
+  <span class="label">Tribune yellow<br/>$trib_yellow<br/>#ffc200</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #ffb900;"></div>
+  <span class="label">Yellow on gray bg<br/>$yellow_on_gray<br/>#ffb900</span>
+</div>
+
+<div style="clear: both;"></div>
+
+#### Grayscale
+
+The grayscale includes five shades of gray, and you should not need to use a gray outside of these options.
+
+Gray light is used for borders around ads.
+
+Off white is used as a background color.
+
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #222222;"></div>
+  <span class="label">Black<br/>$black<br/>#222222</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #4a4a4a;"></div>
+  <span class="label">Gray dark<br/>$gray_dark<br/>#4a4a4a</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #797979;"></div>
+  <span class="label">Gray medium<br/>$gray_medium<br/>#797979</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #D0D0D0;"></div>
+  <span class="label">Gray light<br/>$gray_light<br/>#D0D0D0</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #F3F3F3;"></div>
+  <span class="label">Off white<br/>$white_off<br/>#F3F3F3</span>
+</div>
+
+<div style="clear: both;"></div>
+
 Typography
 ----------
 
