@@ -402,6 +402,16 @@ There will be a few related content blocks.
 
 # States of Content
 
+Show
+----
+
+The icon that should be used to communicate the ability to switch an element to a show state displaying more content is the [fa-plus-square](http://fortawesome.github.io/Font-Awesome/icon/plus-square/).
+
+Hide
+----
+
+The icon that should be used to communicate the ability to switch an element to a hide state obscuring content is the [fa-minus-square](http://fortawesome.github.io/Font-Awesome/icon/minus-square/).
+
 # Experimental
 
 This includes classes and information on elements that represent what we're trying out, looking into next, and currently testing and iterating upon.
