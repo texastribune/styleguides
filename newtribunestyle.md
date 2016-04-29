@@ -172,6 +172,10 @@ Color should not be relied on to indicate something. Color enhances our content.
 
 #### Teal and Blue
 
+Use $color-blue-light for in-story hyperlinks, and as an icon background color.
+
+$color-teal-gray should be used on all linked words, including names in bylines. 
+
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #a1d2df;"></div>
   <span class="label">Light Blue<br/>$color-blue-light<br/>#a1d2df</span>
@@ -185,11 +189,11 @@ Color should not be relied on to indicate something. Color enhances our content.
 
 #### Grayscale
 
-The grayscale includes five shades of gray. You should not need to use a gray outside of these options.
+The grayscale includes pure black, pure white, and four shades of gray in between. You should not need to use a monochrome color outside of these options.
 
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #222222;"></div>
-  <span class="label">Black<br/>$color-black<br/>#222222</span>
+  <span class="label">Black<br/>$color-black-pure<br/>#222222</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #4a4a4a;"></div>
@@ -207,8 +211,18 @@ The grayscale includes five shades of gray. You should not need to use a gray ou
   <div class="colorfield" style="background: #F3F3F3;"></div>
   <span class="label">Off White<br/>$color-white-off<br/>#F3F3F3</span>
 </div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #FFFFFF;"></div>
+  <span class="label">Pure White<br/>$color-white-pure<br/>#FFFFFF</span>
+</div>
 
 <div style="clear: both;"></div>
+
+#### Backgrounds
+
+##### Use of Yellows on Backgrounds
+
+Yellow elements sitting on a $color-white-pure background should be in $color-yellow-tribune. Yellow elements sitting on $color-white-off should be in $color-yellow-dark.
 
 Typography
 ----------
@@ -296,11 +310,11 @@ Paragraph entities are given base font sizes and styles. Paragraphs are rendered
 
 #### Icons
 
-Icons usually fall into two categories, decorative and functional.
+Icons fall into two categories, decorative and functional.
 
 ##### Decorative
 
-Decorative icons usually act as a signposts and live near the content that they describe.
+Decorative icons act as a signposts and live near the content that they describe.
 
 ##### Functional
 
