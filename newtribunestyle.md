@@ -1,12 +1,19 @@
 ---
 layout: stylepage
 title: NewTribune
-typekit: brb4jmm
 css: newtribune.min.css
 ---
 
 <!-- masthead -->
 <div class="texastribune-page">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Open Sans:400,700,400italic,700italic', 'PT Serif:400,700,400italic, 700italic']
+    }
+  });
+</script>
 <div class="masthead sixteen columns">
   <img class="logo" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.jpg" title="TexasTribune">
 
@@ -132,8 +139,6 @@ It should be possible to tab through navigation.
 Performance
 -----------
 
-# Layout, Base, Blocks, Elements, and Modifiers
-
 Browser Compatibility
 ---------------------
 
@@ -145,6 +150,8 @@ Schema.org
 #### Articles
 Articles should be tagged with Schema.org item properties. These properties should be included after an HTML element's classes. An article should have an itemprop of 'articleBody'. Headlines should be given an itemprop of 'headline'. Lead art should be given the itemprop of 'associatedMedia'. Bylines' authors should have the itemprops of 'author' and 'creator.'  
 
+# Style Elements
+
 Color
 -----
 
@@ -154,11 +161,24 @@ Color should not be relied on to indicate something. Color enhances our content.
 
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #ffc200;"></div>
-  <span class="label">Tribune yellow<br/>$trib_yellow<br/>#ffc200</span>
+  <span class="label">Tribune Yellow<br/>$color-yellow-tribune<br/>#ffc200</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #ffb900;"></div>
-  <span class="label">Yellow on gray bg<br/>$yellow_on_gray<br/>#ffb900</span>
+  <span class="label">Dark Yellow<br/>$color-yellow-dark<br/>#ffb900</span>
+</div>
+
+<div style="clear: both;"></div>
+
+#### Teal and Blue
+
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #a1d2df;"></div>
+  <span class="label">Light Blue<br/>$color-blue-light<br/>#a1d2df</span>
+</div>
+<div class="swatch three columns column">
+  <div class="colorfield" style="background: #539bae;"></div>
+  <span class="label">Gray Teal<br/>$color-teal-gray<br/>#539bae</span>
 </div>
 
 <div style="clear: both;"></div>
@@ -173,23 +193,23 @@ Off white is used as a background color.
 
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #222222;"></div>
-  <span class="label">Black<br/>$black<br/>#222222</span>
+  <span class="label">Black<br/>$color-black<br/>#222222</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #4a4a4a;"></div>
-  <span class="label">Gray dark<br/>$gray_dark<br/>#4a4a4a</span>
+  <span class="label">Dark Gray<br/>$color-gray-dark<br/>#4a4a4a</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #797979;"></div>
-  <span class="label">Gray medium<br/>$gray_medium<br/>#797979</span>
+  <span class="label">Medium Gray<br/>$color-gray-medium<br/>#797979</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #D0D0D0;"></div>
-  <span class="label">Gray light<br/>$gray_light<br/>#D0D0D0</span>
+  <span class="label">Light Gray<br/>$color-gray-light<br/>#D0D0D0</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #F3F3F3;"></div>
-  <span class="label">Off white<br/>$white_off<br/>#F3F3F3</span>
+  <span class="label">Off White<br/>$color-white-off<br/>#F3F3F3</span>
 </div>
 
 <div style="clear: both;"></div>
@@ -200,6 +220,10 @@ Typography
 #### Fonts
 
 Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [Web Font Loader](https://github.com/typekit/webfontloader).
+
+##### Sans-serif
+
+##### Serif
 
 #### Font Size Sass
 
@@ -227,6 +251,8 @@ $xs: 1rem
 The classes for these sizes are ".font-xs", ".font-s", ".font-m", ".font-l", ".font-xl", and ".font-xxl".
 
 This is meant to roughly begin establishing a system to follow; the system and these sizes may be adjusted as we decide on what fonts we are using moving forward. This system was inspired in part by [our news apps typography styles](http://apps.texastribune.org/styles/#typography) to keep cohesion where it makes sense between the two sets of styles.
+
+# Content Elements
 
 #### Headers
 
@@ -335,8 +361,9 @@ Related Content
 
 There will be a few related content blocks.
 
-Experimental
-------------
+# States of Content
+
+# Experimental
 
 This includes classes and information on elements that represent what we're trying out, looking into next, and currently testing and iterating upon.
 
