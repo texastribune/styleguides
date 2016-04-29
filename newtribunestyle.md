@@ -219,11 +219,19 @@ Typography
 
 #### Fonts
 
-Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [Web Font Loader](https://github.com/typekit/webfontloader).
+The new official fonts for The Texas Tribune website are PT Serif and Open Sans.
+
+##### Loading &amp; Performance
+
+Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [Web Font Loader](https://github.com/typekit/webfontloader). Please keep load time and use cases in mind when diversifying your font-weight choices.
 
 ##### Sans-serif
 
+Open Sans is a sans serif font that comes in five weights. Similarly, only "regular" and "bold" will be used on Tribune proper. However, for this font pairing, the Interactive Data & Visuals Team is encouraged to use more than just the two main weights designated to the Tribune site. 
+
 ##### Serif
+
+ PT Serif is a serif font that comes in three weights. Only "regular" and "bold" will be used on Tribune proper.
 
 #### Font Size Sass
 
@@ -280,6 +288,20 @@ Paragraph entities are given base font sizes and styles.
 <p class="font-xs">This is an example paragraph.</p>
 
 #### Icons
+
+Icons usually fall into two categories, decorative and functional.
+
+##### Decorative
+
+Decorative icons usually act as a signposts and live near the content that they describe.
+
+##### Functional
+
+Functional icons tend to be action-oriented or link to other content.
+
+Some functional icons can also be considered buttons. These buttons should always have a background color of $color-blue-light and a color of $color-white-pure. If the icon is a corporate logo, use the official color specified in their brand guidelines for the background color. The icon should be 55 percent of the size of its background color and visually centered within this space. This is based on either height or width (whichever is larger). To obtain this measurement, multiply the largest button dimension H or W by 0.55 - the outcome is the size of the icon’s H or W respectively. 
+
+##### Font
 
 For icons, we'll likely use Font Awesome, which is what we currently use.
 
@@ -354,7 +376,13 @@ The ghost button can be applied to either the default yellow button or the teal 
 Ads
 ---
 
-The goal for ads is to develop a system that seamlessly responds across desktop and mobile. One possibility is to standardize ad sizes as much as possible across desktop and mobile. For example, most ads might be 300X250 px.
+We have an [ad styleguide](http://adstyles.herokuapp.com/) that encompasses ad units, ad sizes, and ad targeting. This styleguide defines which style elements should be applied to these ads.
+
+Advertisements should always have a surrounding padding of 10px in $color-white-off plus a 1px border of $color-gray-light.
+
+The top leaderboard (728x90) ad is the exception, in that it's not completely surrounded by this border, but is still segregated inside the same background color and contains a border on the side facing the site.
+
+Ads should be centered within the story content.
 
 Related Content
 ---------------
