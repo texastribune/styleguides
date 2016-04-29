@@ -185,11 +185,7 @@ Color should not be relied on to indicate something. Color enhances our content.
 
 #### Grayscale
 
-The grayscale includes five shades of gray, and you should not need to use a gray outside of these options.
-
-Gray light is used for borders around ads.
-
-Off white is used as a background color.
+The grayscale includes five shades of gray. You should not need to use a gray outside of these options.
 
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #222222;"></div>
@@ -248,12 +244,12 @@ There will likely be a base serif and a base sans-serif font. These are yet to b
 We then have different sizes that are relative to this root font size. There are two smaller sizes and three larger sizes. These are sized in rems, to make their sizes relative to the root px size. If every font size should be larger, an update can be made to the $font-root settings. If only one font size should be larger, then an update can be made to that specific relative setting.
 
 ```sass
-$xxl: 2.4rem
-$xl: 2rem
-$l: 1.8rem
-$m: 1.5rem
-$s: 1.2rem
-$xs: 1rem
+$font-xxl: 2.4rem
+$font-xl: 2rem
+$font-l: 1.8rem
+$font-m: 1.5rem
+$font-s: 1.2rem
+$font-xs: 1rem
 ```
 
 The classes for these sizes are ".font-xs", ".font-s", ".font-m", ".font-l", ".font-xl", and ".font-xxl".
