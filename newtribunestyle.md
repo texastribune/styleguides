@@ -251,8 +251,6 @@ $font-root-tablet: 16px
 $font-root-mobile: 14px
 ```
 
-There will likely be a base serif and a base sans-serif font. These are yet to be determined.
-
 We then have different sizes that are relative to this root font size. There are two smaller sizes and three larger sizes. These are sized in rems, to make their sizes relative to the root px size. If every font size should be larger, an update can be made to the $font-root settings. If only one font size should be larger, then an update can be made to that specific relative setting.
 
 ```sass
@@ -270,7 +268,7 @@ This is meant to roughly begin establishing a system to follow; the system and t
 
 #### Headers
 
-Header tags should be used on each page in the correct order to provide meaning and structure to the page with their use.
+Header tags should be used on each page in a hierarchical order to provide meaning and structure to the page with their use.
 
 Each header is given a font-size. The headers are designed such that you should not find yourself adjusting the size of the headers further within your CSS. If you change the header size, this is likely a sign that you should adjust which header you're using either to be one header up or one header down, depending on if you're making the header smaller or larger.
 
@@ -294,17 +292,19 @@ H4 headers are set to a font-size of $font-s.
 
 #### Headlines
 
-Headlines are elements that exist inside story blocks. Article headlines will use an h1 header. They will have a class of .story_headline. Headlines are rendered in PT Serif.
+##### Headlines within story blocks
+
+Headlines inside story blocks use an h1 header. They have a class of .story_headline. Headlines are rendered in PT Serif.
 
 #### Bylines
 
-Bylines are elements that exist within story blocks. They should use the class .story_byline. The times in bylines should use the HTML time tag.
+##### Bylines within story blocks
+
+Bylines within story blocks use the class .story_byline. The times in bylines should use the HTML time tag.
 
 #### Paragraphs
 
 Paragraph entities are given base font sizes and styles. Paragraphs are rendered in PT Serif.
-
-<p class="font-xs">This is an example paragraph.</p>
 
 #### Icons
 
@@ -318,13 +318,15 @@ Decorative icons act as a signposts and live near the content that they describe
 
 Functional icons tend to be action-oriented or link to other content.
 
-Some functional icons can also be considered buttons. These buttons should always have a background color of $color-blue-light and a color of $color-white-pure. If the icon is a corporate logo, use the official color specified in their brand guidelines for the background color. The icon should be 55 percent of the size of its background color and visually centered within this space. This is based on either height or width (whichever is larger). To obtain this measurement, multiply the largest button dimension H or W by 0.55 - the outcome is the size of the icon’s H or W respectively. 
+Some functional icons can also be considered buttons. These buttons should always have a background color of $color-blue-light and a color of $color-white-pure. If the icon is a corporate logo, use the official color specified in their brand guidelines for the background color. 
+
+The icon should be 55 percent of the size of its background color and visually centered within this space. This is based on either height or width (whichever is larger). To obtain this measurement, multiply the largest button dimension H or W by 0.55 - the outcome is the size of the icon’s H or W respectively. 
 
 ##### Font
 
 For icons, we'll likely use Font Awesome, which is what we currently use.
 
-We'll follow the PRO method outlined on [this page](http://fortawesome.github.io/Font-Awesome/get-started/) in the Font Awesome documentation. We'll include the font-awesome directory inside the Sass for the Tribune project. Only icons currently used in the project will be precompiled; comment out any unused icons so they aren't included in the CSS, and then uncomment icons as they're included in the project.
+We'll follow the [PRO method](http://fortawesome.github.io/Font-Awesome/get-started/) outlined in the Font Awesome documentation. We'll include the font-awesome directory inside the Sass for the Tribune project. Only icons currently used in the project will be precompiled; comment out any unused icons so they aren't included in the CSS, and then uncomment icons as they're included in the project.
 
 ##### Documents
 For visual representations of documents, including PDFs, we'll use the Font Awesome [file-text-o icon](http://fortawesome.github.io/Font-Awesome/icon/file-text-o/).
@@ -347,7 +349,8 @@ A vector-heavy image does better as a .png while a photo-heavy image does better
 
 #### Lead art
 
-Lead art is an element inside of a story block. It uses the figure html tag and has a class of .story_leadart. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
+##### Within story block
+Lead art inside of a story block uses the figure html tag and has a class of .story_leadart. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
 
 Video
 -----
@@ -359,7 +362,13 @@ Links
 
 Links are a base style element. To be more accessible, links should not be signified only by the use of color. Links should not unexpectedly open a new window.
 
-<a href="#">Click me, I go nowhere</a>
+##### Base links
+
+Base links are styled with color $color-teal-gray.
+
+##### Within story blocks
+
+Links within a story block are styled with a $color-blue-light underline.
 
 Inputs
 ------
