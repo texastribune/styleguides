@@ -256,18 +256,29 @@ The classes for these sizes are ".font-xs", ".font-s", ".font-m", ".font-l", ".f
 
 This is meant to roughly begin establishing a system to follow; the system and these sizes may be adjusted as we decide on what fonts we are using moving forward. This system was inspired in part by [our news apps typography styles](http://apps.texastribune.org/styles/#typography) to keep cohesion where it makes sense between the two sets of styles.
 
-# Content Elements
-
 #### Headers
 
-Each header (h1-h6) is then given font sizes, weights, and any other styles. Header tags should be used on each page in the correct order to provide meaning and structure to the page with their use.
+Header tags should be used on each page in the correct order to provide meaning and structure to the page with their use.
 
-<h1 class="header--xxl">h1 header example</h1>
-<h2 class="header--xl">h2 header example</h2>
-<h3 class="header--l">h3 header example</h3>
-<h4 class="header--m">h4 header example</h4>
-<h5 class="header--s">h5 header example</h5>
-<h6 class="header--xs">h6 header example</h6>
+Each header is given a font-size. The headers are designed such that you should not find yourself adjusting the size of the headers further within your CSS. If you change the header size, this is likely a sign that you should adjust which header you're using either to be one header up or one header down, depending on if you're making the header smaller or larger.
+
+##### H1
+
+H1 headers are set to a font-size of $font-xxl.
+
+##### H2
+
+H2 headers are set to a font-size of $font-l.
+
+##### H3
+
+H3 headers are set to a font-size of $font-m.
+
+##### H4
+
+H4 headers are set to a font-size of $font-s.
+
+# Content Elements
 
 #### Headlines
 
