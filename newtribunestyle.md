@@ -14,7 +14,9 @@ Stylesheet
 ==========
 {: .sg-header}
 
-This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2015. Some of its goals are to establish naming conventions and to create more modular, reusable styles for the Tribune. These modular styles will correspond with our content. They will also be designed mobile-first.
+This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2016. Its goals are to establish naming conventions and to create more modular, reusable styles for the Tribune. These modular styles will correspond with our content. They will also be designed mobile-first.
+
+The styleguide has three distinct sections. The first section s Styles, and this defines reusable style elements such as color and typography. The second section encompasses Content Elements, and this defines which styles are applied based on an element's content and context within the site. The third section is State, and this defines how states are applied to content elements based on actions taken by a person.
 
 </div><!-- end masthead -->
 
@@ -82,7 +84,9 @@ Naming Conventions
 
 ### Variable Names
 
-Variables are used for colors and fonts. They're defined in settings.scss. If the color or font name is more than one word, start with the more general word first. For example, for Tribune brand colors, name them "$tribune-yellow" and "$tribune-teal" instead of "$yellow-tribune" or "$teal-tribune".
+Variables are used for colors and fonts. They're defined in settings.scss. If the color or font name is more than one word, start with the more general word first. 
+
+Color variable names should always begin with $color. For example, for Tribune yellow, name use $color-yellow-tribune.
 
 ### Naming Conventions
 
