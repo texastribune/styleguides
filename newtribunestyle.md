@@ -275,7 +275,7 @@ Each header (h1-h6) is then given font sizes, weights, and any other styles. Hea
 
 #### Headlines
 
-Headlines are elements that exist inside story blocks. Article headlines will use an h1 header. They will have a class of .story_headline. 
+Headlines are elements that exist inside story blocks. Article headlines will use an h1 header. They will have a class of .story_headline. Headlines are rendered in PT Serif.
 
 #### Bylines
 
@@ -283,7 +283,7 @@ Bylines are elements that exist within story blocks. They should use the class .
 
 #### Paragraphs
 
-Paragraph entities are given base font sizes and styles.
+Paragraph entities are given base font sizes and styles. Paragraphs are rendered in PT Serif.
 
 <p class="font-xs">This is an example paragraph.</p>
 
@@ -324,6 +324,8 @@ How to approach using a responsive grid framework is still undecided.
 Images
 ------
 
+A vector-heavy image does better as a .png while a photo-heavy image does better as a .jpg. .gifs should always be set aside for animated images. Art should try to keep all images under 700? KB.  
+
 #### Lead art
 
 Lead art is an element inside of a story block. It uses the figure html tag and has a class of .story_leadart. It should have a figcaption that contains a caption and credit. Alt should be set to "" to instruct a screen reader to skip, as its purpose is decorative.
@@ -343,6 +345,8 @@ Links are a base style element. To be more accessible, links should not be signi
 Inputs
 ------
 
+Inputs with buttons should be attached to one another (i.e. search and email signups).
+
 #### Newsletter signups
 
 Newsletter signups are considered blocks, as they should be able to be reused on any place around the site. There may be times when newsletter signups are also elements; for example, there may be specific styles that apply to newsletter signups that appear inside of a story block. The class to use for newsletter signups is `.signup`.
@@ -352,26 +356,7 @@ If a newsletter signup appears inside of a story block, it will also include the
 Buttons
 -------
 
-Buttons are module elements. These updated button styles are inspired by styles 
-originally used by news apps projects.
-
-#### Yellow (default)
-
-The default button uses the class .button_default.
-
-<button class="button">.button_default</button>
-
-#### Teal
-
-The teal button uses the teal theme modifier and applies it to the default button.
-
-<button class="button-teal">.button_default--teal</button>
-
-#### Ghost
-
-The ghost button can be applied to either the default yellow button or the teal button. The classes for these buttons are .button_default--ghost.
-
-<button class="button-ghost">.button_default--ghost</button>
+Buttons are module elements.
 
 Ads
 ---
@@ -383,6 +368,11 @@ Advertisements should always have a surrounding padding of 10px in $color-white-
 The top leaderboard (728x90) ad is the exception, in that it's not completely surrounded by this border, but is still segregated inside the same background color and contains a border on the side facing the site.
 
 Ads should be centered within the story content.
+
+Informational Block
+-------------------
+
+Info text blocks contain ?ems of padding and sit on $color-white-off and should have a distinct and descriptive header. Examples of informational blocks include our comment policy and disclosures.
 
 Related Content
 ---------------
