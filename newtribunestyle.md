@@ -23,7 +23,7 @@ Stylesheet
 
 This is the new styleguide for [texastribune.org](http://www.texastribune.org), charting the direction our styles are heading in 2016. Its goals are to establish naming conventions and to create more modular, reusable styles for the Tribune. These modular styles will correspond with our content. They will also be designed mobile-first.
 
-The styleguide has three distinct sections. The first section s Styles, and this defines reusable style elements such as color and typography. The second section encompasses Content Elements, and this defines which styles are applied based on an element's content and context within the site. The third section is State, and this defines how states are applied to content elements based on actions taken by a person.
+The styleguide has three distinct sections. The first section is Styles, and it defines reusable style elements such as color and typography. The second section encompasses Content Elements, and it defines which styles are applied based on an element's content and context within the site. The third section is State, and it defines how states are applied to content elements based on actions taken by a person.
 
 </div><!-- end masthead -->
 
@@ -70,7 +70,7 @@ CSS is written in Sass. It's preferred that the Sass be .sass files.
 
 #### Nesting
 
-Sass should preferably be nested no more than three levels deep. It should be the exception and there should be a reason that it's being nested beyond three.
+Sass should preferably be nested no more than three levels deep.
 
 Javascript
 ----------
@@ -89,21 +89,19 @@ There are a few questions that should be asked and actions that should be taken 
 Naming Conventions
 ------------------
 
-### Variable Names
+#### Variable Names
 
-Variables are used for colors and fonts. They're defined in settings.scss. If the color or font name is more than one word, start with the more general word first. 
+Variables are used for colors and fonts. Variables are used to promote ease of updating base color and font styles if they change. Color styles are defined in _colors.sass, and font styles are defined in _typography.sass.
 
-Color variable names should always begin with $color. For example, for Tribune yellow, name use $color-yellow-tribune.
+Color variable names should always begin with $color. If the color or font name is more than one word, start with the more general word first. For example, for Tribune yellow, use $color-yellow-tribune, and for light blue, use $color-blue-light.
 
-### Naming Conventions
+#### Naming Conventions
 
 Classes following the [BEM naming convention](https://en.bem.info/method/naming-convention/) should be used in most cases. Ids should only be used in HTML as Javascript hooks.
 
-The naming of classes and ids should be done with the goal of creating modular entities to be reused and remixed throughout the site. There are no rules that always must be followed; however, this set of guidelines should be applicable to most situations. Things to keep in mind are also how easily searchable the classes and ids that you're using are, as well as if there are any potential clashes with current naming systems.
+The naming of classes should be done with the goal of creating modular entities to be reused and remixed throughout the site. There are no rules that always must be followed; however, this set of guidelines should be applicable to most situations. Things to keep in mind are also how easily searchable the classes and ids that you're using are, as well as if there are any potential clashes with current naming systems.
 
-Naming will follow the BEM methodology. Modular entities can be blocks or elements. They can have modifiers that describe their appearance and behavior.
-
-We will use the following words to refer to different entities within a page.
+Naming will follow the BEM methodology. Modular entities can be blocks or elements. They can have modifiers that describe their appearance (made of style components) and behavior (states).
 
 #### Base
 
@@ -402,15 +400,15 @@ There will be a few related content blocks.
 
 # States of Content
 
-Show
-----
+Expanded
+--------
 
-The icon that should be used to communicate the ability to switch an element to a show state displaying more content is the [fa-plus-square](http://fortawesome.github.io/Font-Awesome/icon/plus-square/).
+The icon that should be used to communicate the ability to switch an element to an expanded state displaying more content is the [fa-plus-square](http://fortawesome.github.io/Font-Awesome/icon/plus-square/).
 
-Hide
-----
+Collapsed
+---------
 
-The icon that should be used to communicate the ability to switch an element to a hide state obscuring content is the [fa-minus-square](http://fortawesome.github.io/Font-Awesome/icon/minus-square/).
+The icon that should be used to communicate the ability to switch an element to a collapsed state obscuring content is the [fa-minus-square](http://fortawesome.github.io/Font-Awesome/icon/minus-square/).
 
 # Experimental
 
