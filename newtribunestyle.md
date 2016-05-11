@@ -190,8 +190,12 @@ $color-teal-gray should be used on all linked words, including names in bylines.
 The grayscale includes pure black, pure white, and four shades of gray in between. You should not need to use a monochrome color outside of these options.
 
 <div class="swatch three columns column">
+  <div class="colorfield" style="background: #000000;"></div>
+  <span class="label">Black<br/>$color-black-pure<br/>#000000</span>
+</div>
+<div class="swatch three columns column">
   <div class="colorfield" style="background: #222222;"></div>
-  <span class="label">Black<br/>$color-black-pure<br/>#222222</span>
+  <span class="label">Black<br/>$color-black-off<br/>#222222</span>
 </div>
 <div class="swatch three columns column">
   <div class="colorfield" style="background: #4a4a4a;"></div>
@@ -237,32 +241,39 @@ Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [W
 
 Open Sans is a sans serif font that comes in five weights. Similarly, only "regular" and "bold" will be used on Tribune proper. However, for this font pairing, the Interactive Data & Visuals Team is encouraged to use more than just the two main weights designated to the Tribune site. 
 
+```sass
+$font-sansserif: 'Open Sans', sans-serif
+```
+
 ##### Serif
 
  PT Serif is a serif font that comes in three weights. Only "regular" and "bold" will be used on Tribune proper.
+
+ ```sass
+ $font-serif: 'PT Serif', serif
+ ```
 
 #### Font Size Sass
 
 A root font size, defined in settings, sets the absolute font size. This base font size should be set in px on the root html element. Root font size differs based on the device width, and changes at tablet (799px) and mobile (520px). Root font size determines the absolute size of typography elements while keeping their relative sizing consistent.
 
 ```sass
-$font-root: 18px
+$font-root: 16px
 $font-root-tablet: 16px
-$font-root-mobile: 14px
+$font-root-mobile: 15px
 ```
 
 We then have different sizes that are relative to this root font size. There are two smaller sizes and three larger sizes. These are sized in rems, to make their sizes relative to the root px size. If every font size should be larger, an update can be made to the $font-root settings. If only one font size should be larger, then an update can be made to that specific relative setting.
 
 ```sass
-$font-xxl: 2.4rem
 $font-xl: 2rem
-$font-l: 1.8rem
-$font-m: 1.5rem
-$font-s: 1.2rem
-$font-xs: 1rem
+$font-l: 1.5rem
+$font-m: 1.2rem
+$font-b: 1.1rem
+$font-s: 0.92rem
+$font-xs: 0.85rem
+$font-xxs: 0.7rem
 ```
-
-The classes for these sizes are ".font-xs", ".font-s", ".font-m", ".font-l", ".font-xl", and ".font-xxl".
 
 This is meant to roughly begin establishing a system to follow; the system and these sizes may be adjusted as we decide on what fonts we are using moving forward. This system was inspired in part by [our news apps typography styles](http://apps.texastribune.org/styles/#typography) to keep cohesion where it makes sense between the two sets of styles.
 
@@ -274,7 +285,7 @@ Each header is given a font-size. The headers are designed such that you should 
 
 ##### H1
 
-H1 headers are set to a font-size of $font-xxl.
+H1 headers are set to a font-size of $font-xl on desktop and decrease to $font-l on mobile.
 
 ##### H2
 
@@ -286,7 +297,7 @@ H3 headers are set to a font-size of $font-m.
 
 ##### H4
 
-H4 headers are set to a font-size of $font-s.
+H4 headers are set to a font-size of $font-s. They are by default $font-sansserif.
 
 # Content Elements
 
@@ -304,7 +315,7 @@ Bylines within story blocks use the class .story_byline. The times in bylines sh
 
 #### Paragraphs
 
-Paragraph entities are given base font sizes and styles. Paragraphs are rendered in PT Serif.
+Paragraph entities are given base font sizes and styles. The default paragraph size is $font-b. Paragraphs are rendered in $font-serif.
 
 #### Icons
 
