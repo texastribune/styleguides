@@ -231,7 +231,7 @@ Typography
 
 #### Fonts
 
-The new official fonts for The Texas Tribune website are PT Serif and Open Sans.
+The new official fonts for The Texas Tribune website are [PT Serif](https://www.google.com/fonts#UsePlace:use/Collection:PT+Serif) and [Open Sans](https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans).
 
 ##### Loading &amp; Performance
 
@@ -239,7 +239,7 @@ Fonts will be loaded from [Google Fonts](https://www.google.com/fonts/) using [W
 
 ##### Sans-serif
 
-Open Sans is a sans serif font that comes in five weights. Similarly, only "regular" and "bold" will be used on Tribune proper. However, for this font pairing, the Interactive Data & Visuals Team is encouraged to use more than just the two main weights designated to the Tribune site. 
+Open Sans is a sans-serif font that comes in five weights. Similarly, only "regular" and "bold" will be used on Tribune proper. However, for this font pairing, the Interactive Data & Visuals Team is encouraged to use more than just the two main weights designated to the Tribune site. 
 
 ```sass
 $font-sansserif: 'Open Sans', sans-serif
@@ -249,9 +249,9 @@ $font-sansserif: 'Open Sans', sans-serif
 
  PT Serif is a serif font that comes in three weights. Only "regular" and "bold" will be used on Tribune proper.
 
- ```sass
- $font-serif: 'PT Serif', serif
- ```
+```sass
+$font-serif: 'Pt Serif', serif
+```
 
 #### Font Size Sass
 
